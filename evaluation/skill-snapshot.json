@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-17",
+  "files": {
+    "skills/jacs-polishing/SKILL.md": "d06e9b0bc678754eb39c5a46748cbbd4b3a717daf854f64345604f6a1d61bbd8",
+    "skills/jacs-polishing/references/editing.md": "fdc47e47c5e2eaa1e2e22e898834853b28d2ed395bcbc9c3f421a5ae3485e9e7",
+    "skills/jacs-shared/SKILL.md": "5fb22a16483c8e482667e575c42caa41f397772937c0f296a0c4f396dc4cb8ba",
+    "skills/jacs-shared/references/chemistry-semantics.md": "a2a2351fbed6f74604eebb74ef94b9adc606a8b9e5f998df4328b334736d12db",
+    "skills/jacs-shared/references/journal-policy.md": "1e4e5e324a068571d07758c0a96f5b05d087e44a92e44508c09b8ff44f52cf82",
+    "skills/jacs-shared/references/pilot-findings.md": "a623bc788ea064ba23be49bdfc476aba2b7f4ed226abc61e0d0155be7b910152",
+    "skills/jacs-shared/references/project-facts.md": "ae0854bb21a1f97f94409659e88006f0094a2035f2257280b98a92923d1ca30f",
+    "skills/jacs-style-distill/SKILL.md": "d4badfd87aa75d183e98fee478d62f08e89440af567a9fc27c563f28e386de53",
+    "skills/jacs-style-distill/references/annotation-schema.md": "472f9dbe040e3848277e49725a87a7a38d632a18ae574509ccb32bb7de5ff12f",
+    "skills/jacs-style-distill/references/corpus-workflow.md": "85f753315643d8fe224a177426657efdef6ed8b23b62684b1ed969f98bb0c8f5",
+    "skills/jacs-writing/SKILL.md": "7e68ac622198f26c576905c72c899ef0084d86a3c72fe24f9cda16a2cedae17f",
+    "skills/jacs-writing/references/sections.md": "bd5dd8433a9e890578241a1236019a32201dbc5b2209ab5d1ee34f48a226e2a6",
+    "skills/jacs-shared/references/style-rules.jsonl": "c1bd586a81314168cbc2423e93ada920a7192a1d72ca5742c3ac08c90979f6e7"
+  }
+}

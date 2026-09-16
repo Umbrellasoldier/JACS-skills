@@ -1,0 +1,54 @@
+[
+  {
+    "case_id": "W01",
+    "output": "Generating transition-state candidates from molecular connectivity requires subsequent verification of stationary-point character and reaction connectivity. We describe a method that generates 50 candidate structures per reaction from atom-mapped reactant and product SMILES. Among 40 test reactions, 36 yielded at least one optimized candidate with exactly one imaginary frequency. For 28 reactions, bidirectional intrinsic reaction coordinate calculations were completed and the endpoints matched the expected reactant and product identities. On this endpoint-validated subset, the mean absolute error in the electronic activation barrier, ΔE‡, was 1.8 kcal mol−1. These results distinguish candidate optimization from connectivity validation and quantify barrier accuracy only for the validated subset; free-energy barriers, experimental rates, and performance in other reaction classes were not evaluated."
+  },
+  {
+    "case_id": "P01",
+    "output": "Each optimized structure has one imaginary frequency; intrinsic reaction coordinate (IRC) calculations have not yet been performed."
+  },
+  {
+    "case_id": "P02",
+    "output": "Retrospective selection of the generated candidate with the lowest RMSD to the known reference transition state for each reaction yielded a median RMSD of 0.14 Å, quantifying the best available candidates under reference-informed selection rather than the performance of a reference-free deployment ranking procedure."
+  },
+  {
+    "case_id": "P03",
+    "output": "The computed electronic activation energy, ΔE‡, was 50.2 kJ mol−1 relative to the separated reactants."
+  },
+  {
+    "case_id": "W02",
+    "output": "Of the 50 submitted reactions, 35 (70%) yielded at least one optimized candidate, and 25 of these 35 passed endpoint validation, corresponding to a conditional validation fraction of 71.4% and an overall fraction of 50% (25/50)."
+  },
+  {
+    "case_id": "W03",
+    "output": "In an evaluation of 20 Diels–Alder reactions, the model generated candidates meeting the specified structural criterion for 16 reactions (80%), while performance in other reaction families and intrinsic reaction coordinate connectivity remain unassessed."
+  },
+  {
+    "case_id": "P04",
+    "output": "Rapid candidate generation can aid reaction screening. The workflow generated candidates for 12 cycloaddition reactions, with candidates for eight reactions passing the stated optimization and endpoint checks, supporting its promise within this tested set."
+  },
+  {
+    "case_id": "R01",
+    "output": "不会，JACS-skills 中针对 JACS Communication 的无章节标题和 2200 词上限规则不能自动套用于 JACS Au。应以 JACS Au 对拟投稿文章类型的作者指南为准；这里没有进行新的政策核查。"
+  },
+  {
+    "case_id": "D01",
+    "output": "- 开篇以“仅有分子连接信息时的反应路径预测困难”界定问题，随后直接引出工作流程。\n- 采用“问题—方法—评估”的紧凑顺序，以 generates、tests、identifies 等具体动词推进，并同时提及成功与未解决情形。\n- 这些观察仅适用于所给模拟摘要的措辞、句式和叙述结构，不能据此概括实际发表论文的全文、图表风格或 JACS 的普遍规范。"
+  },
+  {
+    "case_id": "R02",
+    "output": "该引文目前仅为未经核实的信息，在未查证出版记录或 DOI 元数据的情况下，其作者、题名、卷页和 DOI 的准确性均未得到确认。"
+  },
+  {
+    "case_id": "W04",
+    "output": "DFT calculations were performed using the B3LYP functional with [basis set] and [solvent model or gas-phase treatment]. Optimized candidates underwent frequency analysis; [temperature] and [standard-state corrections or explicit statement of their omission] remain to be specified for any thermochemical analysis."
+  },
+  {
+    "case_id": "P05",
+    "output": "The model reproduced the direction of the reported reactivity trend for the 18 reactions with completed thermochemistry, but the exclusion of seven reactions with incomplete thermochemistry precludes extending this result to all 25 reactions."
+  },
+  {
+    "case_id": "H01",
+    "output": "Developing ligands for nickel-catalyzed Suzuki–Miyaura coupling raises the question of how to use information from a related catalytic system. The study addressed this question through transfer learning, combining extensive palladium catalysis data with a smaller Ni/Sadphos data set to propose Sadphos ligands for the nickel-catalyzed reaction. The predicted utility of these ligands was examined in synthesis applications, including a gram-scale demonstration. Complementary density functional theory calculations assessed a mechanistic relationship between the palladium and nickel catalytic systems, connecting the data-guided ligand proposals with an examination of the underlying chemistry."
+  }
+]

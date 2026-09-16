@@ -1,0 +1,11 @@
+{
+  "project_name": "AUTHOR_PROJECT",
+  "article_type": "Article",
+  "domain": "computational_reaction_chemistry",
+  "input_contract": [],
+  "canonical_terms": {},
+  "validation_stages": [],
+  "selection_protocol": "unknown",
+  "facts": [],
+  "source_note": "Template only. Add author-verified local sources; no research results are supplied."
+}

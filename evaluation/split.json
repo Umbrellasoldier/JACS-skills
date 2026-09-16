@@ -1,0 +1,35 @@
+{
+  "created_on": "2026-09-17",
+  "frozen_before_fulltext_analysis": true,
+  "development": [
+    "A04",
+    "A05",
+    "A07",
+    "A09",
+    "A10",
+    "B02",
+    "B03",
+    "B05",
+    "B06",
+    "B07",
+    "B09",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C08",
+    "C09",
+    "C10"
+  ],
+  "holdout": [
+    "A01",
+    "A02",
+    "A03",
+    "A06",
+    "A08",
+    "B04",
+    "C07"
+  ],
+  "author_overlap": [],
+  "method": "Manual topic balance plus normalized complete author-name overlap check; not an institutional-independence guarantee."
+}

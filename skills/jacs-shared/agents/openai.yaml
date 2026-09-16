@@ -1,0 +1,4 @@
+interface:
+  display_name: "JACS Shared References"
+  short_description: "Shared journal rules and chemistry references"
+  default_prompt: "Use $jacs-shared references to support the current JACS writing task."

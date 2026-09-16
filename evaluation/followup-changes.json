@@ -1,0 +1,92 @@
+{
+  "changes": [
+    {
+      "path": "skills/jacs-shared/references/journal-policy.md",
+      "before_sha256": "1e4e5e324a068571d07758c0a96f5b05d087e44a92e44508c09b8ff44f52cf82",
+      "after_sha256": "714e08518828af1396b033bd79c699677b683d1a6f71521717e2c7514a823499"
+    }
+  ],
+  "reason": "Limit policy-snapshot date reporting to questions where that JACS requirement is relevant; avoid unrelated metadata in journal routing answers.",
+  "followup_case": "R01",
+  "followup_output": "outputs/r01_followup.json",
+  "publication_whitespace_normalization": [
+    {
+      "path": ".gitignore",
+      "before_sha256": "e659bbb29c9803113c59f71227f60bfcc2e4981cce48dae407d80d46a916d880",
+      "after_sha256": "69a4ded23374b188e113f4a22ddceda9c7f28181b31d14da8764fe60b7a04095",
+      "change": "Removed trailing blank lines only; instruction semantics unchanged."
+    },
+    {
+      "path": "pyproject.toml",
+      "before_sha256": "fe6928242a9a12ff4f1500d60f194130f50667368906dd0f8383c7db5223afb9",
+      "after_sha256": "e0062f9132cf2e9929caccd278c51ec043e661447c680a0c669a8ad5f00d078e",
+      "change": "Removed trailing blank lines only; instruction semantics unchanged."
+    },
+    {
+      "path": "skills/jacs-polishing/SKILL.md",
+      "before_sha256": "d06e9b0bc678754eb39c5a46748cbbd4b3a717daf854f64345604f6a1d61bbd8",
+      "after_sha256": "634169fddae1b62b7f4f354e604f1c60c1c1963c5e152c1ea2ab485ddde85821",
+      "change": "Removed trailing blank lines only; instruction semantics unchanged."
+    },
+    {
+      "path": "skills/jacs-polishing/references/editing.md",
+      "before_sha256": "fdc47e47c5e2eaa1e2e22e898834853b28d2ed395bcbc9c3f421a5ae3485e9e7",
+      "after_sha256": "64f49cf16af8d9275f77ef9df33661f0f2c990ee2f7074eff7c689ae4b5dbd01",
+      "change": "Removed trailing blank lines only; instruction semantics unchanged."
+    },
+    {
+      "path": "skills/jacs-shared/SKILL.md",
+      "before_sha256": "5fb22a16483c8e482667e575c42caa41f397772937c0f296a0c4f396dc4cb8ba",
+      "after_sha256": "f9c1d914a8accd20887213aed6da58bb25776fd9bde706417f79cbc1027db307",
+      "change": "Removed trailing blank lines only; instruction semantics unchanged."
+    },
+    {
+      "path": "skills/jacs-shared/references/chemistry-semantics.md",
+      "before_sha256": "a2a2351fbed6f74604eebb74ef94b9adc606a8b9e5f998df4328b334736d12db",
+      "after_sha256": "811778e5c0a8492604e640b609bd8d8bdae41a820f498b597f4e1feb5bf94419",
+      "change": "Removed trailing blank lines only; instruction semantics unchanged."
+    },
+    {
+      "path": "skills/jacs-shared/references/pilot-findings.md",
+      "before_sha256": "a623bc788ea064ba23be49bdfc476aba2b7f4ed226abc61e0d0155be7b910152",
+      "after_sha256": "2ca1214a1e655c534f231b43a6051364f7cabffc81c80df8d8efc03124f3f624",
+      "change": "Removed trailing blank lines only; instruction semantics unchanged."
+    },
+    {
+      "path": "skills/jacs-shared/references/project-facts.md",
+      "before_sha256": "ae0854bb21a1f97f94409659e88006f0094a2035f2257280b98a92923d1ca30f",
+      "after_sha256": "2002b0fd878cde699be930cbd5aa2da56a419ed776d3ee73eef4ed30deda1852",
+      "change": "Removed trailing blank lines only; instruction semantics unchanged."
+    },
+    {
+      "path": "skills/jacs-style-distill/SKILL.md",
+      "before_sha256": "d4badfd87aa75d183e98fee478d62f08e89440af567a9fc27c563f28e386de53",
+      "after_sha256": "8e5f2d02ee4e8bc6fc079547c5d4cddd6c653ee7c1d3cac241e397ba93688952",
+      "change": "Removed trailing blank lines only; instruction semantics unchanged."
+    },
+    {
+      "path": "skills/jacs-style-distill/references/annotation-schema.md",
+      "before_sha256": "472f9dbe040e3848277e49725a87a7a38d632a18ae574509ccb32bb7de5ff12f",
+      "after_sha256": "444370ceeaaeb0d4c018a4a6a63b65be100c31ae59ac1011830d759bea8c732d",
+      "change": "Removed trailing blank lines only; instruction semantics unchanged."
+    },
+    {
+      "path": "skills/jacs-style-distill/references/corpus-workflow.md",
+      "before_sha256": "85f753315643d8fe224a177426657efdef6ed8b23b62684b1ed969f98bb0c8f5",
+      "after_sha256": "361f390c34ea19739794eb0f9635a6f105c97ea0373809c4136a298ee927cef1",
+      "change": "Removed trailing blank lines only; instruction semantics unchanged."
+    },
+    {
+      "path": "skills/jacs-writing/SKILL.md",
+      "before_sha256": "7e68ac622198f26c576905c72c899ef0084d86a3c72fe24f9cda16a2cedae17f",
+      "after_sha256": "9067f096bda30a8882c2d3df81b5ecffff3c2d5d160165eb900ea1f1e10a7111",
+      "change": "Removed trailing blank lines only; instruction semantics unchanged."
+    },
+    {
+      "path": "skills/jacs-writing/references/sections.md",
+      "before_sha256": "bd5dd8433a9e890578241a1236019a32201dbc5b2209ab5d1ee34f48a226e2a6",
+      "after_sha256": "0458fb6cc46d74137a6d943f21a67e9cd2e1cfb549e8423f31afb60ea29935dd",
+      "change": "Removed trailing blank lines only; instruction semantics unchanged."
+    }
+  ]
+}

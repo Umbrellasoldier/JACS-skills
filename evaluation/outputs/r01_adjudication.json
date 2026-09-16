@@ -1,0 +1,9 @@
+{
+  "case_id": "R01",
+  "winner": "tie",
+  "candidate_a_material_errors": [],
+  "candidate_b_material_errors": [],
+  "reason": "Both correctly state in two Chinese sentences that JACS Communication rules do not automatically apply to JACS Au and that the applicable JACS Au author guidelines should be consulted. Candidate_a's dated statement is supported by the permitted reference, which explicitly records 'Checked: 2026-09-17'; it reports the reference's prior verification rather than claiming a new policy check. Neither candidate browsed.",
+  "additional_source_effect": "The initial assessment treated the verification date as unsupported because that provenance was absent from the assessment materials. The newly supplied reference establishes the date and the separate-journal distinction, removing the sole material-error finding and changing the winner from candidate_b to tie. The original blind_review.json remains unchanged.",
+  "editorial_preference": "Candidate_b answers more directly and omits metadata unnecessary to the question. This is a minor concision and scope preference, not a factual advantage or a substantive compliance difference."
+}

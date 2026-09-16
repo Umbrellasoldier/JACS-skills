@@ -1,0 +1,4 @@
+interface:
+  display_name: "JACS Writing"
+  short_description: "Draft evidence-grounded chemistry manuscripts"
+  default_prompt: "Use $jacs-writing to draft a JACS Results paragraph from my facts and figures."

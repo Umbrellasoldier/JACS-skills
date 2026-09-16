@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.py[cod]
+.ruff_cache/
+local/
+.env
+.env.*
+*.pdf
+*.docx
+*.xyz
+*.ckpt
+*.pt
+*.pkl
+*.sqlite*
+dist/

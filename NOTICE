@@ -1,0 +1,13 @@
+JACS-skills
+Copyright 2026 Umbrellasoldier and contributors.
+
+Architecture inspiration:
+Yuan1z0825/nature-skills, commit 2375e0abdf42158ef149256f2c64b1f759a0d274
+https://github.com/Yuan1z0825/nature-skills
+The upstream project is licensed under Apache-2.0, with component-specific notices.
+This implementation independently authors the JACS instructions, corpus observations,
+scripts, and synthetic evaluation examples; it does not bundle upstream skills.
+
+Journal policies are linked to ACS primary sources. Article metadata and source locators
+identify the original publications; this project's license does not relicense those papers.
+No ACS endorsement or affiliation is implied.

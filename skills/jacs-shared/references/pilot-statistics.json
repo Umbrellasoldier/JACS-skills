@@ -1,0 +1,376 @@
+{
+  "split": "development",
+  "paper_count": 8,
+  "paper_ids": [
+    "A07",
+    "A10",
+    "B06",
+    "C03",
+    "C05",
+    "C06",
+    "C08",
+    "C10"
+  ],
+  "word_count": 31005,
+  "excluded_blocks": {
+    "non_main_prose": 416
+  },
+  "method": "Unicode word tokens with internal apostrophes/hyphens; sentence counts are punctuation estimates. Connectors counted anywhere, case-insensitively. Main prose includes abstract and theory; excludes headings, methods, captions, tables, back matter and other splits. Not rhetorical annotation.",
+  "sections": [
+    {
+      "paper_id": "A07",
+      "section": "abstract",
+      "paragraphs": 1,
+      "words": 198,
+      "sentence_estimate": 10,
+      "connectors": {
+        "thus": 1
+      }
+    },
+    {
+      "paper_id": "A07",
+      "section": "conclusion",
+      "paragraphs": 1,
+      "words": 230,
+      "sentence_estimate": 9,
+      "connectors": {
+        "thus": 1
+      }
+    },
+    {
+      "paper_id": "A07",
+      "section": "introduction",
+      "paragraphs": 6,
+      "words": 1365,
+      "sentence_estimate": 54,
+      "connectors": {
+        "thus": 2,
+        "however": 2
+      }
+    },
+    {
+      "paper_id": "A07",
+      "section": "results_discussion",
+      "paragraphs": 26,
+      "words": 3818,
+      "sentence_estimate": 166,
+      "connectors": {
+        "thus": 1,
+        "however": 7
+      }
+    },
+    {
+      "paper_id": "A10",
+      "section": "abstract",
+      "paragraphs": 1,
+      "words": 200,
+      "sentence_estimate": 7,
+      "connectors": {}
+    },
+    {
+      "paper_id": "A10",
+      "section": "conclusion",
+      "paragraphs": 1,
+      "words": 381,
+      "sentence_estimate": 10,
+      "connectors": {
+        "however": 2
+      }
+    },
+    {
+      "paper_id": "A10",
+      "section": "introduction",
+      "paragraphs": 5,
+      "words": 768,
+      "sentence_estimate": 20,
+      "connectors": {
+        "however": 1,
+        "moreover": 1
+      }
+    },
+    {
+      "paper_id": "A10",
+      "section": "results_discussion",
+      "paragraphs": 22,
+      "words": 2827,
+      "sentence_estimate": 101,
+      "connectors": {
+        "furthermore": 2,
+        "however": 2
+      }
+    },
+    {
+      "paper_id": "B06",
+      "section": "abstract",
+      "paragraphs": 1,
+      "words": 100,
+      "sentence_estimate": 4,
+      "connectors": {}
+    },
+    {
+      "paper_id": "B06",
+      "section": "conclusion",
+      "paragraphs": 1,
+      "words": 108,
+      "sentence_estimate": 6,
+      "connectors": {}
+    },
+    {
+      "paper_id": "B06",
+      "section": "introduction",
+      "paragraphs": 6,
+      "words": 611,
+      "sentence_estimate": 20,
+      "connectors": {}
+    },
+    {
+      "paper_id": "B06",
+      "section": "results_discussion",
+      "paragraphs": 28,
+      "words": 2627,
+      "sentence_estimate": 129,
+      "connectors": {
+        "nevertheless": 2,
+        "thus": 1,
+        "therefore": 2,
+        "furthermore": 2,
+        "however": 3
+      }
+    },
+    {
+      "paper_id": "C03",
+      "section": "abstract",
+      "paragraphs": 1,
+      "words": 262,
+      "sentence_estimate": 10,
+      "connectors": {}
+    },
+    {
+      "paper_id": "C03",
+      "section": "conclusion",
+      "paragraphs": 4,
+      "words": 367,
+      "sentence_estimate": 16,
+      "connectors": {
+        "however": 1,
+        "thus": 1
+      }
+    },
+    {
+      "paper_id": "C03",
+      "section": "introduction",
+      "paragraphs": 4,
+      "words": 643,
+      "sentence_estimate": 25,
+      "connectors": {
+        "however": 2
+      }
+    },
+    {
+      "paper_id": "C03",
+      "section": "results_discussion",
+      "paragraphs": 22,
+      "words": 3061,
+      "sentence_estimate": 113,
+      "connectors": {
+        "thus": 2,
+        "however": 5,
+        "therefore": 2
+      }
+    },
+    {
+      "paper_id": "C03",
+      "section": "theory",
+      "paragraphs": 6,
+      "words": 855,
+      "sentence_estimate": 29,
+      "connectors": {
+        "thus": 2,
+        "however": 2,
+        "therefore": 1
+      }
+    },
+    {
+      "paper_id": "C05",
+      "section": "abstract",
+      "paragraphs": 1,
+      "words": 165,
+      "sentence_estimate": 7,
+      "connectors": {
+        "thus": 1
+      }
+    },
+    {
+      "paper_id": "C05",
+      "section": "conclusion",
+      "paragraphs": 1,
+      "words": 220,
+      "sentence_estimate": 8,
+      "connectors": {}
+    },
+    {
+      "paper_id": "C05",
+      "section": "introduction",
+      "paragraphs": 7,
+      "words": 942,
+      "sentence_estimate": 31,
+      "connectors": {
+        "however": 4
+      }
+    },
+    {
+      "paper_id": "C05",
+      "section": "results_discussion",
+      "paragraphs": 17,
+      "words": 3140,
+      "sentence_estimate": 102,
+      "connectors": {
+        "however": 6,
+        "thus": 5
+      }
+    },
+    {
+      "paper_id": "C06",
+      "section": "abstract",
+      "paragraphs": 1,
+      "words": 160,
+      "sentence_estimate": 6,
+      "connectors": {}
+    },
+    {
+      "paper_id": "C06",
+      "section": "conclusion",
+      "paragraphs": 1,
+      "words": 214,
+      "sentence_estimate": 8,
+      "connectors": {}
+    },
+    {
+      "paper_id": "C06",
+      "section": "introduction",
+      "paragraphs": 5,
+      "words": 720,
+      "sentence_estimate": 26,
+      "connectors": {
+        "however": 1,
+        "furthermore": 1
+      }
+    },
+    {
+      "paper_id": "C06",
+      "section": "results_discussion",
+      "paragraphs": 18,
+      "words": 2706,
+      "sentence_estimate": 99,
+      "connectors": {
+        "furthermore": 3,
+        "thus": 7
+      }
+    },
+    {
+      "paper_id": "C08",
+      "section": "abstract",
+      "paragraphs": 1,
+      "words": 119,
+      "sentence_estimate": 6,
+      "connectors": {}
+    },
+    {
+      "paper_id": "C08",
+      "section": "conclusion",
+      "paragraphs": 1,
+      "words": 102,
+      "sentence_estimate": 6,
+      "connectors": {}
+    },
+    {
+      "paper_id": "C08",
+      "section": "introduction",
+      "paragraphs": 2,
+      "words": 235,
+      "sentence_estimate": 11,
+      "connectors": {}
+    },
+    {
+      "paper_id": "C08",
+      "section": "results_discussion",
+      "paragraphs": 25,
+      "words": 1868,
+      "sentence_estimate": 93,
+      "connectors": {
+        "however": 3
+      }
+    },
+    {
+      "paper_id": "C10",
+      "section": "abstract",
+      "paragraphs": 1,
+      "words": 139,
+      "sentence_estimate": 6,
+      "connectors": {}
+    },
+    {
+      "paper_id": "C10",
+      "section": "conclusion",
+      "paragraphs": 1,
+      "words": 132,
+      "sentence_estimate": 5,
+      "connectors": {
+        "furthermore": 1
+      }
+    },
+    {
+      "paper_id": "C10",
+      "section": "introduction",
+      "paragraphs": 6,
+      "words": 586,
+      "sentence_estimate": 21,
+      "connectors": {
+        "however": 2,
+        "thus": 1
+      }
+    },
+    {
+      "paper_id": "C10",
+      "section": "results_discussion",
+      "paragraphs": 10,
+      "words": 1136,
+      "sentence_estimate": 44,
+      "connectors": {
+        "thus": 2
+      }
+    }
+  ],
+  "connectors": {
+    "however": {
+      "count": 43,
+      "per_1000_words": 1.3869,
+      "papers_with_term": 8
+    },
+    "therefore": {
+      "count": 5,
+      "per_1000_words": 0.1613,
+      "papers_with_term": 2
+    },
+    "furthermore": {
+      "count": 9,
+      "per_1000_words": 0.2903,
+      "papers_with_term": 4
+    },
+    "moreover": {
+      "count": 1,
+      "per_1000_words": 0.0323,
+      "papers_with_term": 1
+    },
+    "nevertheless": {
+      "count": 2,
+      "per_1000_words": 0.0645,
+      "papers_with_term": 1
+    },
+    "thus": {
+      "count": 27,
+      "per_1000_words": 0.8708,
+      "papers_with_term": 6
+    }
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "JACS Polishing"
+  short_description: "Polish chemistry prose while preserving evidence"
+  default_prompt: "Use $jacs-polishing to improve this paragraph without changing its scientific meaning."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "JACS Style Distillation"
+  short_description: "Derive traceable writing rules from JACS papers"
+  default_prompt: "Use $jacs-style-distill to extract evidence-linked writing patterns from these papers."

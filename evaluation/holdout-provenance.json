@@ -1,0 +1,10 @@
+{
+  "case_id": "H01",
+  "paper_id": "A08",
+  "doi": "10.1021/jacs.5c00838",
+  "split": "holdout",
+  "source_locator": "BioC:PMC12063614:abstract:offset=183",
+  "source_url": "https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_json/PMC12063614/unicode",
+  "source_sha256": "6642bf1192fb03c8291594cf13c894c4236caa9941fa093f4eb2cb83a4d2d6b2",
+  "facts_preparation": "Authoring agent paraphrase of source abstract, after freezing initial style-rule cards. No source wording is used as a reproduction target."
+}

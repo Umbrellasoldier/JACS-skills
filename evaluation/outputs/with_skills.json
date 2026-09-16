@@ -1,0 +1,54 @@
+[
+  {
+    "case_id": "W01",
+    "output": "Generating candidate transition-state structures from molecular connectivity offers a route to computational reaction characterization. We present a method that generates 50 candidate structures per reaction from atom-mapped reactant and product SMILES. Among 40 test reactions, 36 yielded at least one optimized candidate with a single imaginary frequency. For 28 reactions, bidirectional intrinsic reaction coordinate calculations were completed and the resulting endpoints matched the expected identities. On this endpoint-validated subset, the mean absolute error in electronic activation energies, ΔE‡, was 1.8 kcal mol−1. These results establish candidate-generation and pathway-validation performance within the tested set; free-energy barriers, experimental rates, and applicability to other reaction classes remain unassessed."
+  },
+  {
+    "case_id": "P01",
+    "output": "Each optimized structure has one imaginary frequency; the IRC calculations have not yet been performed."
+  },
+  {
+    "case_id": "P02",
+    "output": "Retrospectively selecting, for each reaction, the candidate with the lowest RMSD to the known reference transition state yielded a median RMSD of 0.14 Å, quantifying the best available generated candidates under reference-informed selection without evaluating reference-free deployment ranking performance."
+  },
+  {
+    "case_id": "P03",
+    "output": "The computed electronic activation energy, ΔE‡, was 50.2 kJ mol−1 relative to the separated reactants."
+  },
+  {
+    "case_id": "W02",
+    "output": "Of the 50 submitted reactions, 35 produced at least one optimized candidate, and 25 of these 35 passed endpoint validation. The conditional endpoint-validation fraction was therefore 71.4% (25/35), corresponding to an overall fraction of 50.0% (25/50)."
+  },
+  {
+    "case_id": "W03",
+    "output": "For 16 of 20 evaluated Diels–Alder reactions, the model yielded candidates meeting the specified structural criterion, with other reaction families and IRC connectivity remaining unassessed."
+  },
+  {
+    "case_id": "P04",
+    "output": "Rapid candidate generation can facilitate reaction screening. The workflow generated candidates for 12 cycloaddition reactions, with eight reactions passing the stated optimization and endpoint checks. These results support its promise within the tested set."
+  },
+  {
+    "case_id": "R01",
+    "output": "不能自动套用，这两项规则属于 JACS Communication，而 JACS Au 是独立期刊。JACS-skills 所载 JACS 政策快照核查于 2026 年 9 月 17 日；JACS Au 的要求应另查其作者指南，本回答未进行新的政策核查。"
+  },
+  {
+    "case_id": "D01",
+    "output": "- 修辞顺序清晰：第 1 句提出仅凭分子连接信息预测反应路径的困难，第 2 句介绍候选生成与连接性检验，第 3 句限定评估集合并呈现成功与未解决情形。\n- 语言以简短陈述句和明确主语推进，方法句采用主动表达，结果句保留未解决案例，语气克制。\n- 这些观察仅适用于这份三句模拟摘要，可作为摘要写作启发；因无实际论文、DOI、正文或图表，不能据此归纳 JACS 的通行文风、正文结构或图文论证模式，也无法检验跨文献反例。"
+  },
+  {
+    "case_id": "R02",
+    "output": "这条引文尚未经独立核验，其作者、题名、卷页及 DOI 的准确性均未确立，仅凭所给信息无法确认其真实性。"
+  },
+  {
+    "case_id": "W04",
+    "output": "Density functional theory calculations used B3LYP with [basis set] and [solvent model or gas-phase specification]. Optimized candidates underwent frequency analysis; reporting any thermochemical quantities additionally requires [temperature] and [standard-state corrections, or confirmation that none were applied]."
+  },
+  {
+    "case_id": "P05",
+    "output": "The model reproduced the direction of the reported reactivity trend for the 18 reactions with completed thermochemistry, but the exclusion of seven reactions lacking thermochemistry leaves performance across all 25 reactions unestablished."
+  },
+  {
+    "case_id": "H01",
+    "output": "Developing ligands for Ni-catalyzed Suzuki–Miyaura coupling motivates testing whether knowledge from Pd catalysis can guide a system represented by a smaller data set. The study used transfer learning to combine extensive Pd catalysis data with a smaller Ni/Sadphos data set and propose Sadphos ligands for the Ni-catalyzed reaction. Predicted ligand utility was examined through synthesis applications, including a gram-scale demonstration. Density functional theory calculations assessed a mechanistic relationship between the catalytic systems, providing a chemical perspective on the transfer-learning approach."
+  }
+]

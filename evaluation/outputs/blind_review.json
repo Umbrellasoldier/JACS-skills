@@ -1,0 +1,95 @@
+[
+  {
+    "case_id": "W01",
+    "winner": "tie",
+    "candidate_a_material_errors": [],
+    "candidate_b_material_errors": [],
+    "reason": "Both satisfy the 100–140-word limit (116 and 105 whitespace-delimited words), preserve 50 candidates per reaction and the 36/40 and 28/40 validation stages, and restrict the 1.8 kcal mol−1 electronic-barrier MAE to the endpoint-validated subset. Their closing emphasis differs without a material difference in accuracy or scope."
+  },
+  {
+    "case_id": "P01",
+    "winner": "tie",
+    "candidate_a_material_errors": [],
+    "candidate_b_material_errors": [],
+    "reason": "Both return one grammatical sentence and preserve one imaginary frequency per optimized structure and the fact that IRC calculations have not been performed. Expanding IRC in candidate_b is an editorial choice whose necessity cannot be determined from the supplied context."
+  },
+  {
+    "case_id": "P02",
+    "winner": "tie",
+    "candidate_a_material_errors": [],
+    "candidate_b_material_errors": [],
+    "reason": "Both preserve per-reaction retrospective selection against the known reference, the median RMSD of 0.14 Å, and the exclusion of reference-free deployment ranking from the performance claim. Both meet the one-sentence compression requirement clearly."
+  },
+  {
+    "case_id": "P03",
+    "winner": "tie",
+    "candidate_a_material_errors": [],
+    "candidate_b_material_errors": [],
+    "reason": "The outputs are identical. Both correctly round 12.0 × 4.184 = 50.208 to 50.2 kJ mol−1 and retain the electronic activation-energy quantity and separated-reactant reference."
+  },
+  {
+    "case_id": "W02",
+    "winner": "tie",
+    "candidate_a_material_errors": [],
+    "candidate_b_material_errors": [],
+    "reason": "Both correctly distinguish conditional endpoint validation, 25/35 = 71.4%, from overall validation, 25/50 = 50%. Candidate_a also gives the valid optimization fraction of 70%; neither invents uncertainty or statistical significance, and both meet the requested short-paragraph format."
+  },
+  {
+    "case_id": "W03",
+    "winner": "tie",
+    "candidate_a_material_errors": [],
+    "candidate_b_material_errors": [],
+    "reason": "Both replace the universal claim with the observed structural-criterion outcome for 16 of 20 Diels–Alder reactions and explicitly retain the unassessed reaction families and IRC connectivity. Candidate_a's additional 80% is correct; the remaining differences are editorial."
+  },
+  {
+    "case_id": "P04",
+    "winner": "tie",
+    "candidate_a_material_errors": [],
+    "candidate_b_material_errors": [],
+    "reason": "Both produce concise, unheaded passages linking screening motivation, candidates for 12 cycloaddition reactions, eight passing the stated checks, and promise confined to the tested set. Candidate_b more directly identifies candidates as the objects of the checks, but candidate_a's reaction-level shorthand is understandable and does not materially change the result."
+  },
+  {
+    "case_id": "R01",
+    "winner": "candidate_b",
+    "candidate_a_material_errors": [
+      "Introduces a specific JACS-skills policy-snapshot verification date, 2026-09-17, that is not established by the supplied task. This is an unsupported provenance claim; the supplied evidence does not determine whether the date is actually false."
+    ],
+    "candidate_b_material_errors": [],
+    "reason": "Both correctly answer in two Chinese sentences that JACS Communication rules do not automatically apply to JACS Au and neither claims to have performed a new check. Candidate_b stays within the available information, whereas candidate_a adds an unsupported dated verification assertion."
+  },
+  {
+    "case_id": "D01",
+    "winner": "tie",
+    "candidate_a_material_errors": [],
+    "candidate_b_material_errors": [],
+    "reason": "Both use at most three Chinese bullets, accurately identify the supplied abstract's problem–method–evaluation progression and acknowledgment of unresolved cases, and limit their observations to the synthetic abstract. Neither generalizes the sample into established JACS norms or invents evidence from a full paper, DOI, figures, or tables."
+  },
+  {
+    "case_id": "R02",
+    "winner": "tie",
+    "candidate_a_material_errors": [],
+    "candidate_b_material_errors": [],
+    "reason": "Both provide one Chinese sentence stating that citation accuracy remains unverified, without declaring the citation authentic or inventing a corrected DOI. Their descriptions of the missing verification are substantively equivalent."
+  },
+  {
+    "case_id": "W04",
+    "winner": "tie",
+    "candidate_a_material_errors": [],
+    "candidate_b_material_errors": [],
+    "reason": "Both supply two English sentences, retain B3LYP and frequency analysis, and explicitly mark the missing basis and environmental treatment. Both appropriately make temperature and standard-state reporting conditional on thermochemical analysis instead of asserting that such analysis occurred or assuming conventional settings."
+  },
+  {
+    "case_id": "P05",
+    "winner": "tie",
+    "candidate_a_material_errors": [],
+    "candidate_b_material_errors": [],
+    "reason": "Both preserve reproduction of the trend direction for the 18 reactions with completed thermochemistry, exclusion of seven reactions, and the inability to establish performance across all 25. Candidate_b's 'incomplete thermochemistry' more exactly mirrors the supplied completion status; candidate_a's shorthand is a minor precision difference in context, not a material change in the comparison or its limitation."
+  },
+  {
+    "case_id": "H01",
+    "winner": "tie",
+    "candidate_a_material_errors": [],
+    "candidate_b_material_errors": [],
+    "reason": "Both meet the 80–110-word requirement (89 and 80 whitespace-delimited words) and clearly connect the ligand-design problem to transfer learning from extensive Pd data and smaller Ni/Sadphos data. Both retain synthesis applications, the gram-scale demonstration, and DFT assessment of a mechanistic relationship without inventing accuracy, data-set sizes, speedups, or novelty priority."
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "case_id": "W01",
+    "task": "根据下列模拟事实写一个 100–140 词的 JACS 英文摘要，仅返回摘要。方法由映射的反应物和产物 SMILES 生成候选结构。在 40 个测试反应中，36 个至少得到一个完成优化且具有一个虚频的候选；其中 28 个完成双向 IRC 并通过预期端点身份检查。在这 28 个反应上，电子能垒 ΔE‡ 的 MAE 为 1.8 kcal/mol。每反应生成 50 个候选。没有自由能、实验速率或其他反应类别的结果。所有事实为评测合成材料。"
+  },
+  {
+    "case_id": "P01",
+    "task": "Polish this sentence for a JACS manuscript. Return only one sentence: 'Each optimized structure have one imaginary frequency; the IRC calculations has not yet been performed.'"
+  },
+  {
+    "case_id": "P02",
+    "task": "Compress the following synthetic Results passage to one English sentence while retaining its scientific meaning: 'For each reaction, we selected the candidate having the lowest RMSD to the known reference transition state. This retrospective selection gave a median RMSD of 0.14 Å. The result measures the best available generated candidate under reference-informed selection and does not measure the performance of a reference-free deployment ranking procedure.'"
+  },
+  {
+    "case_id": "P03",
+    "task": "Rewrite the following synthetic statement for JACS, expressing energy in kJ mol−1 to one decimal place, and return only the sentence. Use 1 kcal = 4.184 kJ: 'The computed electronic activation energy, ΔE‡, was 12.0 kcal mol−1 relative to the separated reactants.'"
+  },
+  {
+    "case_id": "W02",
+    "task": "Write one short JACS Results paragraph from these synthetic facts: 50 reactions were submitted; 35 produced at least one optimized candidate; 25 of those 35 passed endpoint validation. Report both the conditional endpoint-validation fraction and the overall fraction. No uncertainty estimates or statistical test were supplied. Return only the paragraph."
+  },
+  {
+    "case_id": "W03",
+    "task": "Rewrite this synthetic claim as one defensible JACS sentence using the supplied evidence. Draft: 'Our universally applicable model solves transition-state prediction across all organic reactions.' Evidence: evaluated on 20 Diels–Alder reactions, 16 yielded candidates meeting the specified structural criterion, other reaction families and IRC connectivity were not assessed. Return only the sentence."
+  },
+  {
+    "case_id": "P04",
+    "task": "Convert these synthetic Article notes into a concise JACS Communication passage without adding new results. Input: 'Introduction: Rapid candidate generation is useful for reaction screening. Results and Discussion: The workflow generated candidates for 12 cycloaddition reactions, with eight passing the stated optimization and endpoint checks. Conclusion: The workflow is promising within this tested set.' Return only the passage."
+  },
+  {
+    "case_id": "R01",
+    "task": "I am writing for JACS Au. Does the JACS-skills rule that a Communication must have no section headings and at most 2200 words automatically apply? Answer in two Chinese sentences, without browsing or claiming a new policy check."
+  },
+  {
+    "case_id": "D01",
+    "task": "仅依据这份模拟摘要提炼文风，最多三条中文要点。材料不是实际发表论文，也没有 DOI、正文或图表：'Predicting reaction pathways remains challenging when only molecular connectivity is available. We introduce a workflow that generates candidate structures and tests their connectivity. Evaluation on a defined cycloaddition set identifies both successful pathways and unresolved cases.' 请说明这种材料能支持什么范围的观察。"
+  },
+  {
+    "case_id": "R02",
+    "task": "Here is an unverified citation: Doe, J. An Example Reaction Study. J. Am. Chem. Soc. 2024, 146, 1–5. DOI: 10.1021/jacs.fake123. Do not browse. Give a one-sentence Chinese assessment of whether its accuracy has been established, without inventing a corrected DOI."
+  },
+  {
+    "case_id": "W04",
+    "task": "Draft two English Computational Details sentences from these synthetic notes: DFT calculations used B3LYP; optimized candidates underwent frequency analysis; basis set, solvent model, temperature, and standard-state corrections were not supplied. Do not assume conventional values. Use explicit placeholders for necessary missing settings."
+  },
+  {
+    "case_id": "P05",
+    "task": "Shorten this synthetic scientific statement without removing its limitation. Return one English sentence: 'Within the 18 reactions with completed thermochemistry, the model reproduced the direction of the reported reactivity trend. The remaining seven reactions did not have completed thermochemistry and were excluded from this comparison, so the result cannot establish performance for all 25 reactions.'"
+  },
+  {
+    "case_id": "H01",
+    "task": "Write an 80–110-word English problem-and-approach paragraph for a broad chemistry audience using only these source-derived notes. Return only the paragraph. Notes: a study used extensive Pd catalysis data and a smaller Ni/Sadphos data set for transfer learning to propose Sadphos ligands for Ni-catalyzed Suzuki–Miyaura coupling. Predicted ligand utility was examined through synthesis applications, including a gram-scale demonstration. DFT calculations assessed a mechanistic relationship between the two catalytic systems. No numerical accuracy, training-set size, or speedup is supplied. Source: DOI 10.1021/jacs.5c00838. Avoid asserting novelty priority beyond these notes."
+  }
+]
