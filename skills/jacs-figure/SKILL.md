@@ -19,6 +19,8 @@ materials and biological chemistry; its observations are conditional, not a whol
   label change does not authorize changing scientific content or rebuilding the whole figure.
 - **Audit or export:** read [QA](references/qa.md) and the applicable
   [graphics policy](../jacs-shared/references/graphics-policy.md).
+- **Submission readiness:** also read [submission review](references/submission-readiness.md)
+  to distinguish export quality, scientific meaning and completeness of the submission package.
 - **Derive style from papers:** use the figure route in
   [jacs-style-distill](../jacs-style-distill/SKILL.md); captions alone do not establish visual style.
 
@@ -84,8 +86,11 @@ Never report `UNKNOWN` as passed or reuse a QA report after changing its figure.
 Read the delivered figure together with its delivered caption. Readers must be able to
 identify the statistic, sample unit/n, interval meaning, signed difference, normalization,
 reference and missing-value encoding where applicable. Metadata alone is insufficient;
-carry these facts through assembly and export. The renderer appends known facts without
-inventing definitions; check them against the author's prose for omissions or contradictions.
+carry these facts through assembly and export. Keep publication prose separate from the
+reproduction record. The renderer supports an authored caption and a separate facts file;
+its compatibility composer appends facts but does not establish publication-ready prose.
+Check either mode against the source for omissions and contradictions. Synthetic templates
+can demonstrate a usable design; they cannot establish readiness of a research figure.
 
 Deliver requested formats with the specification, plotting source/version, data or source
 index, caption facts and concise QA notes. Keep source papers and private project data local.

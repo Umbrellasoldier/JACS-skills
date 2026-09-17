@@ -1,10 +1,10 @@
 {
   "data_status": "synthetic",
   "claim": "Demonstrate the figure contract using synthetic examples.",
-  "caption": "Synthetic accounting of one sequential reaction cohort; fractions at bar ends show passed/entered.",
+  "caption": "Synthetic accounting of a sequential cohort of 100 reactions at one fixed illustrative snapshot. Passed, failed and pending counts are mutually exclusive among reactions entering each stage. Gray segments denote reactions not yet entered, including failures and pending cases upstream. Fractions give passed/entered for the indicated stage. At the final endpoint check, 61 of 70 entered reactions pass (87.1% conditional completion), equivalent to 61 of the original 100 reactions (61% overall completion). Final-stage gray includes 20 upstream failures and 10 upstream pending reactions. The illustrative gates are candidate generation, optimization convergence, exactly one imaginary mode, and matching both intended IRC endpoints; one imaginary mode alone does not establish a valid TS.",
   "kind": "stages",
   "profile": "double",
-  "height_pt": 240,
+  "height_pt": 230,
   "population": "illustrative reactions",
   "population_total": 100,
   "unit_of_analysis": "reactions",
@@ -38,5 +38,8 @@
       "criterion": "both endpoints matched the intended reactant/product identities"
     }
   ],
-  "raster_class": "color"
+  "raster_class": "color",
+  "width_pt": 450,
+  "observation_window": "One fixed illustrative snapshot; upstream pending reactions have not entered later stages",
+  "caption_mode": "authored"
 }

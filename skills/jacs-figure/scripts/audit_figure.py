@@ -102,6 +102,7 @@ def measure_matplotlib(fig, groups: list[dict] | None = None) -> dict:
 
 
 def audit_pdf(path: Path, width_pt: float, height_pt: float, min_font_pt: float = 4.5) -> dict:
+    from audit_strokes import audit_strokes
     from pypdf import PdfReader
 
     reader = PdfReader(path)
@@ -164,12 +165,14 @@ def audit_pdf(path: Path, width_pt: float, height_pt: float, min_font_pt: float 
         findings.append(
             finding("pdf_text_size", "PASS", f"Effective text minimum {min(sizes):.3f} pt")
         )
+    findings.append(audit_strokes(reader))
     return {
         "pdf_sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
         "findings": findings,
         "minimum_text_pt": min(sizes) if sizes else None,
         "scope": (
-            "MediaBox and extractable transformed text; not all glyphs, paths, image DPI, "
+            "MediaBox, extractable transformed text and supported path strokes; not all glyphs, "
+            "image DPI, "
             "chemical identity or data correctness"
         ),
     }

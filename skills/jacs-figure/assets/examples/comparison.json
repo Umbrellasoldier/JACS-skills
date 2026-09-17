@@ -1,7 +1,7 @@
 {
   "data_status": "synthetic",
   "claim": "Demonstrate the figure contract using synthetic examples.",
-  "caption": "Comparison of three illustrative methods on the same six reactions; repeated values are distinct observations.",
+  "caption": "Synthetic absolute activation Gibbs-energy errors for the same six reactions per illustrative method. Points show all observations; pale connectors join the same reaction across methods, and horizontal offsets preserve coincident values. Dark segments denote medians (Baseline, 5.5; Method A, 3.5; Method B, 2.5 kcal mol−1), not uncertainty intervals. No significance inference is made from the connector slopes.",
   "kind": "comparison",
   "profile": "single",
   "height_pt": 180,
@@ -101,5 +101,6 @@
     }
   ],
   "raster_class": "color",
-  "quantity_definition": "Absolute activation Gibbs-energy error against the synthetic reference"
+  "quantity_definition": "Absolute activation Gibbs-energy error against the synthetic reference",
+  "caption_mode": "authored"
 }

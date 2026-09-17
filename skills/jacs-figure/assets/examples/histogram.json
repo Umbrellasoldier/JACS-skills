@@ -1,10 +1,11 @@
 {
   "data_status": "synthetic",
   "profile": "single",
-  "height_pt": 180,
+  "height_pt": 285,
   "raster_class": "color",
   "claim": "Demonstrate an encoding with synthetic values.",
-  "caption": "Synthetic observation counts compared using common bins.",
+  "caption": "Synthetic activation Gibbs-energy errors (prediction minus reference), n = 32 reactions per illustrative predictor. Facets share both axes and 1 kcal mol−1 bins with edges from −3 to 5 kcal mol−1. Bins include their left edge; the last bin also includes its right edge. All observations are counted.",
+  "caption_mode": "authored",
   "kind": "distribution",
   "metric": "$\\Delta G^{\\ddagger}$ error",
   "quantity_definition": "Signed activation Gibbs-energy error = prediction minus reference",
@@ -493,7 +494,7 @@
       "value": 0.653
     }
   ],
-  "zero_reference": true,
+  "zero_reference": false,
   "display": "histogram",
   "bin_edges": [
     -3,
@@ -505,5 +506,6 @@
     3,
     4,
     5
-  ]
+  ],
+  "facet_groups": true
 }

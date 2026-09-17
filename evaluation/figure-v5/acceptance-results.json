@@ -1,0 +1,358 @@
+{
+  "run_at": "2026-09-17T14:23:55.441683+00:00",
+  "cases_sha256": "84faf87875a1a44a936f789828830503a3df1b433a7c883abea182a8f51aaf44",
+  "renderer_sha256": "30e3ef081c6df6bb14dfd23b7982d62a8a19784d8c7753f8ce40165444a6d9bf",
+  "cases": [
+    {
+      "id": "F01",
+      "purpose": "Render energy from original synthetic data without changing measurements",
+      "expected": [
+        "MECHANICAL_PASS"
+      ],
+      "observed": "MECHANICAL_PASS",
+      "findings": [
+        {
+          "check": "physical_size",
+          "status": "PASS",
+          "detail": "Measured (360.0, 180.0) pt"
+        },
+        {
+          "check": "pdf_text_size",
+          "status": "PASS",
+          "detail": "Effective text minimum 4.900 pt"
+        },
+        {
+          "check": "pdf_path_strokes",
+          "status": "PASS",
+          "detail": "19 painted path strokes checked at 0.5 pt; 0 require attention",
+          "minimum_stroke_pt": 0.7,
+          "thin_strokes": [],
+          "unknown": [],
+          "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+        },
+        {
+          "check": "measured_layout",
+          "status": "PASS",
+          "detail": "No detected text clipping or overlap; declared panel groups align"
+        }
+      ],
+      "pdf_sha256": "01b38963637e8a94bb681789afd9822da1d15f6aa6b1eca24bd56f21bc54ead2",
+      "provenance": {
+        "spec_sha256": "3ca7129539b23e9b6b8104c5a1f915f321219c97b320ec01f57a7be9326d2ff3",
+        "sources": [],
+        "input_records": 6,
+        "excluded_records": 0,
+        "data_sha256": "1fbd84b495e11cab88a5c3d77e1fa61a3e0e1efbe15fe7daacad87ab31b9e7f0"
+      },
+      "input_preserved": true,
+      "passed": true
+    },
+    {
+      "id": "F02",
+      "purpose": "Render parity from original synthetic data without changing measurements",
+      "expected": [
+        "MECHANICAL_PASS"
+      ],
+      "observed": "MECHANICAL_PASS",
+      "findings": [
+        {
+          "check": "physical_size",
+          "status": "PASS",
+          "detail": "Measured (400.0, 215.0) pt"
+        },
+        {
+          "check": "pdf_text_size",
+          "status": "PASS",
+          "detail": "Effective text minimum 5.600 pt"
+        },
+        {
+          "check": "pdf_path_strokes",
+          "status": "PASS",
+          "detail": "56 painted path strokes checked at 0.5 pt; 0 require attention",
+          "minimum_stroke_pt": 0.65,
+          "thin_strokes": [],
+          "unknown": [],
+          "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+        },
+        {
+          "check": "measured_layout",
+          "status": "PASS",
+          "detail": "No detected text clipping or overlap; declared panel groups align"
+        }
+      ],
+      "pdf_sha256": "baabc57d15697101f57785fb691baa88916c3f3985adb6ebf5abe4f7d9a81dca",
+      "provenance": {
+        "spec_sha256": "684b024ffe181a279179f9fad36492e33478373d63f3dfdecaf2b4105ad97c96",
+        "sources": [],
+        "input_records": 12,
+        "excluded_records": 0,
+        "data_sha256": "8021f182ff40392adfabd7d4025284c1e605916fc3225c5349667e0627387d38"
+      },
+      "input_preserved": true,
+      "passed": true
+    },
+    {
+      "id": "F03",
+      "purpose": "Render stages from original synthetic data without changing measurements",
+      "expected": [
+        "MECHANICAL_PASS"
+      ],
+      "observed": "MECHANICAL_PASS",
+      "findings": [
+        {
+          "check": "physical_size",
+          "status": "PASS",
+          "detail": "Measured (450.0, 230.0) pt"
+        },
+        {
+          "check": "pdf_text_size",
+          "status": "PASS",
+          "detail": "Effective text minimum 6.000 pt"
+        },
+        {
+          "check": "pdf_path_strokes",
+          "status": "PASS",
+          "detail": "27 painted path strokes checked at 0.5 pt; 0 require attention",
+          "minimum_stroke_pt": 0.5,
+          "thin_strokes": [],
+          "unknown": [],
+          "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+        },
+        {
+          "check": "measured_layout",
+          "status": "PASS",
+          "detail": "No detected text clipping or overlap; declared panel groups align"
+        }
+      ],
+      "pdf_sha256": "bb5b8953af20fc2361091be7ff0901517726048722c0f5e8508be3bc6ef7419b",
+      "provenance": {
+        "spec_sha256": "1aa913b1bf96baf593cc5bcb6a92217a239ddc0c0b9f2ca6a58102c7ba4cefe7",
+        "sources": [],
+        "input_records": 4,
+        "excluded_records": 0,
+        "data_sha256": "defe86162faf8519632cf11605ba4be9770604b1c394f0e556502a59051220b4"
+      },
+      "input_preserved": true,
+      "passed": true
+    },
+    {
+      "id": "F04",
+      "purpose": "Render comparison from original synthetic data without changing measurements",
+      "expected": [
+        "MECHANICAL_PASS"
+      ],
+      "observed": "MECHANICAL_PASS",
+      "findings": [
+        {
+          "check": "physical_size",
+          "status": "PASS",
+          "detail": "Measured (240.0, 180.0) pt"
+        },
+        {
+          "check": "pdf_text_size",
+          "status": "PASS",
+          "detail": "Effective text minimum 5.600 pt"
+        },
+        {
+          "check": "pdf_path_strokes",
+          "status": "PASS",
+          "detail": "40 painted path strokes checked at 0.5 pt; 0 require attention",
+          "minimum_stroke_pt": 0.65,
+          "thin_strokes": [],
+          "unknown": [],
+          "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+        },
+        {
+          "check": "measured_layout",
+          "status": "PASS",
+          "detail": "No detected text clipping or overlap; declared panel groups align"
+        }
+      ],
+      "pdf_sha256": "9fcc168129fc746c23531c6d164695386336fc5924cbc558b093401694063ae5",
+      "provenance": {
+        "spec_sha256": "95e1d22320e34cee832d35442a7c6fbd6e3113d66d5e55fda8b077a3cef8f284",
+        "sources": [],
+        "input_records": 18,
+        "excluded_records": 0,
+        "data_sha256": "beb9a46f28539dc0bd727df12557f2b2e204fb50cbeebaa3829fae6d5fd0550f"
+      },
+      "input_preserved": true,
+      "passed": true
+    },
+    {
+      "id": "F05",
+      "purpose": "Render workflow from original synthetic data without changing measurements",
+      "expected": [
+        "MECHANICAL_PASS"
+      ],
+      "observed": "MECHANICAL_PASS",
+      "findings": [
+        {
+          "check": "physical_size",
+          "status": "PASS",
+          "detail": "Measured (504.0, 175.0) pt"
+        },
+        {
+          "check": "pdf_text_size",
+          "status": "PASS",
+          "detail": "Effective text minimum 6.000 pt"
+        },
+        {
+          "check": "pdf_path_strokes",
+          "status": "PASS",
+          "detail": "16 painted path strokes checked at 0.5 pt; 0 require attention",
+          "minimum_stroke_pt": 0.8,
+          "thin_strokes": [],
+          "unknown": [],
+          "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+        },
+        {
+          "check": "measured_layout",
+          "status": "PASS",
+          "detail": "No detected text clipping or overlap; declared panel groups align"
+        }
+      ],
+      "pdf_sha256": "01d54f7469bbebe636305f15deb79aae39889fddcc19c415b8d277d1830fb466",
+      "provenance": {
+        "spec_sha256": "0c7de9dc38b82272f5380d82503c2d1e175fbc0a51a63b63ff8d73809c0d514f",
+        "sources": [],
+        "input_records": 6,
+        "excluded_records": 0,
+        "data_sha256": "9d7073512d0a31727704bab6d376d2e78ae92db64be447eea2d7a19735c3d8a8"
+      },
+      "input_preserved": true,
+      "passed": true
+    },
+    {
+      "id": "F06",
+      "purpose": "Render structures from original synthetic data without changing measurements",
+      "expected": [
+        "REVIEW_REQUIRED"
+      ],
+      "observed": "REVIEW_REQUIRED",
+      "findings": [
+        {
+          "check": "physical_size",
+          "status": "PASS",
+          "detail": "Measured (240.0, 124.0) pt"
+        },
+        {
+          "check": "pdf_text_size",
+          "status": "PASS",
+          "detail": "Effective text minimum 6.000 pt"
+        },
+        {
+          "check": "pdf_path_strokes",
+          "status": "WARN",
+          "detail": "31 painted path strokes checked at 0.5 pt; 1 require attention",
+          "minimum_stroke_pt": 0.4,
+          "thin_strokes": [
+            {
+              "minimum_pt": 0.4,
+              "maximum_pt": 0.4,
+              "status": "WARN",
+              "filled_same_color": true,
+              "object": "page"
+            }
+          ],
+          "unknown": [],
+          "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+        },
+        {
+          "check": "embedded_panel_layout",
+          "status": "UNKNOWN",
+          "detail": "SVG labels, molecular bonds and panel collisions need visual inspection"
+        }
+      ],
+      "pdf_sha256": "46ffa84bc6f7110e1a309605346aa40a46a0615a485367f256173739d92220c5",
+      "provenance": {
+        "spec_sha256": "6cd536ffac9f74847c253ef9db1f10d1cc190d2e3f7157b2528b6f5b1bbfd4c8",
+        "sources": [],
+        "input_records": 2,
+        "excluded_records": 0,
+        "data_sha256": "944914d7932611535a2a84da87bb53172b73c92cdac2632f13cf0222380b6c33"
+      },
+      "input_preserved": true,
+      "passed": true
+    },
+    {
+      "id": "F07",
+      "purpose": "Reject unconverted mixed energy units",
+      "expected": [
+        "REJECTED"
+      ],
+      "observed": "REJECTED",
+      "reason": "Mixed unit; explicitly reconcile before plotting",
+      "input_preserved": true,
+      "passed": true
+    },
+    {
+      "id": "F08",
+      "purpose": "Reject unequal paired reaction populations",
+      "expected": [
+        "REJECTED"
+      ],
+      "observed": "REJECTED",
+      "reason": "Methods have different reaction sets; supply a declared matched population",
+      "input_preserved": true,
+      "passed": true
+    },
+    {
+      "id": "F09",
+      "purpose": "Reject stage accounting that exceeds entrants",
+      "expected": [
+        "REJECTED"
+      ],
+      "observed": "REJECTED",
+      "reason": "passed + failed + pending must equal the preceding population",
+      "input_preserved": true,
+      "passed": true
+    },
+    {
+      "id": "F10",
+      "purpose": "Reject nonpositive log data without dropping observations",
+      "expected": [
+        "REJECTED"
+      ],
+      "observed": "REJECTED",
+      "reason": "Log scale requires positive values; no implicit filtering or offset",
+      "input_preserved": true,
+      "passed": true
+    },
+    {
+      "id": "F11",
+      "purpose": "Reject a TOC wider than its publication box",
+      "expected": [
+        "REJECTED"
+      ],
+      "observed": "REJECTED",
+      "reason": "TOC must fit within 234 \u00d7 126 pt",
+      "input_preserved": true,
+      "passed": true
+    },
+    {
+      "id": "F12",
+      "purpose": "Detect unequal comparable panel alignment independently of text collisions",
+      "expected": [
+        "FAIL"
+      ],
+      "observed": "FAIL",
+      "findings": [
+        {
+          "check": "panel_alignment",
+          "status": "FAIL",
+          "detail": "['a', 'b']"
+        },
+        {
+          "check": "panel_alignment",
+          "status": "FAIL",
+          "detail": "['a', 'b']"
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "passed": 12,
+  "total": 12,
+  "scope": "Mechanical acceptance, not blind aesthetic or scientific-author validation"
+}

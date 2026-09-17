@@ -1,0 +1,1 @@
+使用给定的 jacs-figure skill，为这张预测表做一张可用于论文讨论的图，比较 Control 与 Candidate 的偏差和准确度。量为活化 Gibbs 能，单位 kcal/mol；同一个 reaction_id 为配对反应。全部是合成教学数据，不能作为研究成果提交。请提供正式英文图注、PDF/SVG/PNG、可复现输入和源码，以及明确的投稿准备程度评价。图的类型和布局由你按数据选择。

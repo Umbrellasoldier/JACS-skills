@@ -5,15 +5,15 @@
 面向计算反应化学、化学机器学习和生物正交反应的论文写作与科研绘图技能包。
 从作者事实起草、润色文字、制作可复现图表，并从可定位的 JACS 全文与实际图像中提炼规律。
 
-**v0.4.0 修复绘图的科学表达与可读性。**
-图注自动承接统计定义、n、参考态和误差摘要；配对重复值区分显示，密集一致性散点支持方法分面。
-组图以同一批反应的分析问题组织，热图更紧凑，缺失明确标为 NA；TOC 加入具体反应结构。
-17 个合成示例全部附读者可直接使用的图注，示例不代表真实研究结果。
+**v0.5.0 把投稿审阅问题落实到规则、工具和 17 幅示例。**
+新增实际 PDF 线宽检查、保留观测值的散点排布、带宽敏感性显示和共享坐标直方图分面。
+热图与区间图的摘要可从保留值复算；阶段统计区分未进入与失败，图注按论文语言编写并另附事实记录。
+所有示例仍是合成演示，技术通过不代表真实研究的投稿准备完成。
 
-![同一批合成反应的偏差和绝对误差覆盖率](examples/figures/showcase.png)
+![同一批合成反应的有符号误差与绝对误差覆盖率](examples/figures/showcase.png)
 
-查看[新版图库和图注](examples/figures/README.md)、[修复与验证](evaluation/figure-v4/REPORT.md)、
-[图型选型表](skills/jacs-figure/references/chart-catalog.md)。
+查看[新版图库和图注](examples/figures/README.md)、[修复与逐图复核](evaluation/figure-v5/REPORT.md)、
+[投稿审阅规则](skills/jacs-figure/references/submission-readiness.md)。
 绘图文献证据仍为 [50 篇 JACS、199 幅实看图](skills/jacs-shared/references/figure-study-v3.md)，
 本轮依据实际示例的复核修复工作流，没有把文献覆盖量或机械检查当作成图质量证明。
 
@@ -96,20 +96,20 @@ uv run --locked --group figures --group chemistry python skills/jacs-figure/scri
 | 热图 | 显式缺失与零分开、颜色范围覆盖数据、带量纲色标 |
 
 另支持原生 `panel_grid`、SVG 多面板组图，以及独立的 TOC 尺寸、字体和 TIFF 分辨率设置。
-升级提示：SVG 组图的每个 panel 需提供 `caption` 或 `caption_file`；作者图注和自动补充的已知事实一起交付。
+升级提示：SVG 组图的每个 panel 需提供 `caption` 或 `caption_file`；支持正式图注与复现事实分开交付，保留自动补充模式以兼容旧输入。
 输出含 PDF、SVG、PNG、可重跑规格、图注和实际 QA JSON；TOC 自动附 TIFF。
 结构模板生成二维图，三维 TS 面板需要真实结构和对应渲染器。
 机械检查通过后仍须查看成图，`UNKNOWN` 项不视为通过。
 
 见[原创合成示例](examples/figures/README.md)、[数据规格](skills/jacs-figure/references/figure-contract.md)、
 [标签与排版](skills/jacs-figure/references/labels-layout-scale.md)、[配色方案](skills/jacs-figure/references/color-design.md)、
-[官方图形要求](skills/jacs-shared/references/graphics-policy.md)和[新版绘图评测](evaluation/figure-v4/REPORT.md)。
+[官方图形要求](skills/jacs-shared/references/graphics-policy.md)和[新版绘图评测](evaluation/figure-v5/REPORT.md)。
 
 复现全套示例及色觉模拟：
 
 ```bash
 uv run --locked --group figures --group chemistry python scripts/build_figure_gallery.py
-uv run --locked --group figures python skills/jacs-figure/scripts/preview_color.py local/figure-v4/gallery/showcase.png --output-dir local/color-review
+uv run --locked --group figures python skills/jacs-figure/scripts/preview_color.py local/figure-v5/gallery/showcase.png --output-dir local/color-review
 ```
 
 默认浅填色、较清晰轮廓和深灰文字；方法颜色跨图一致，并用形状／线型辅助辨识。

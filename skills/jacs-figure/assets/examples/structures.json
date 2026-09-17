@@ -1,7 +1,7 @@
 {
   "data_status": "synthetic",
   "claim": "Demonstrate the figure contract using synthetic examples.",
-  "caption": "Two lactic-acid enantiomers with the same connectivity. Labels state the configuration encoded by the supplied SMILES.",
+  "caption": "Synthetic illustration of two-dimensional lactic-acid stereochemical depictions. Wedges specify the supplied stereochemistry; the corresponding canonical isomeric SMILES retain distinct S and R configurations. These drawings are not optimized geometries, and their displayed bond lengths carry no structural measurements.",
   "kind": "structures",
   "profile": "single",
   "height_pt": 124,
@@ -18,5 +18,6 @@
     }
   ],
   "raster_class": "color",
-  "title": "Lactic-acid enantiomers"
+  "title": "Lactic-acid enantiomers",
+  "caption_mode": "authored"
 }

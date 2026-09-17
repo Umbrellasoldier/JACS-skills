@@ -1,10 +1,11 @@
 {
   "data_status": "synthetic",
   "profile": "single",
-  "height_pt": 180,
+  "height_pt": 260,
   "raster_class": "color",
   "claim": "Demonstrate an encoding with synthetic values.",
-  "caption": "Small synthetic samples for comparing observations and density estimates.",
+  "caption": "Synthetic activation Gibbs-energy errors (prediction minus reference), n = 32 reactions per illustrative predictor. Points show all observations; horizontal offsets separate coincident values. Solid half violins show Gaussian kernel density estimates with bandwidth h = 0.35 times the sample SD; dashed curves use 2h. Each density is scaled to the same maximum width. Dark segments denote medians. The change in lobes with bandwidth precludes interpreting these shapes alone as distinct reaction populations.",
+  "caption_mode": "authored",
   "kind": "distribution",
   "metric": "$\\Delta G^{\\ddagger}$ error",
   "quantity_definition": "Signed activation Gibbs-energy error = prediction minus reference",
@@ -495,5 +496,7 @@
   ],
   "zero_reference": true,
   "display": "violin",
-  "bandwidth": 0.35
+  "bandwidth": 0.35,
+  "point_layout": "swarm",
+  "show_bandwidth_sensitivity": true
 }

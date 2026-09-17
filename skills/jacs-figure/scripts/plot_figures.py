@@ -11,7 +11,7 @@ import textwrap
 from pathlib import Path
 
 from audit_figure import audit_layout, audit_pdf, measure_matplotlib, verdict
-from figure_caption import compose_caption
+from figure_caption import caption_facts, compose_caption
 from figure_spec import digest, load
 from figure_style import PALETTE, axis_label, encodings, point_style
 from statistical_figures import curve, distribution, heatmap, interval
@@ -49,8 +49,10 @@ def energy(fig, spec: dict, ax=None) -> dict:
                 )
             key = (x, y, row["state"])
             if key not in labels:
+                label = spec.get("state_labels", {}).get(row["state"], row["state"])
+                separator = "  " if spec.get("level_label_layout") == "inline" else "\n"
                 ax.annotate(
-                    f"{row['state']}\n{y:g}",
+                    f"{label}{separator}{y:g}",
                     (x, y),
                     xytext=(0, 5),
                     textcoords="offset points",
@@ -137,6 +139,17 @@ def parity(fig, spec: dict) -> dict:
         if faceted and i:
             ax.tick_params(labelleft=False)
             residual.tick_params(labelleft=False)
+        if faceted:
+            for panel, letter in ((ax, chr(97 + i)), (residual, chr(97 + len(pairs) + i))):
+                panel.text(
+                    0.02,
+                    0.98,
+                    letter,
+                    transform=panel.transAxes,
+                    va="top",
+                    fontweight="bold",
+                    fontsize=8,
+                )
     if not faceted:
         ax, residual = pairs[0]
         ax.set_xlabel(axis_label(f"Reference {spec['quantity']}", spec["unit"]))
@@ -200,26 +213,34 @@ def stages(fig, spec: dict) -> dict:
             color=colors["previous_attrition"],
             height=0.62,
             edgecolor="none",
-            label="Earlier attrition" if i == 0 else None,
+            label="Not entered" if i == 0 else None,
         )
         ax.text(
-            spec["population_total"] * 1.035,
+            1.04,
             i,
             f"{row['passed']}/{row['entered']}",
             va="center",
             fontsize=7,
+            transform=ax.get_yaxis_transform(),
+            clip_on=False,
         )
     ax.set_yticks(range(len(spec["data"])), [r["stage"] for r in spec["data"]])
     ax.invert_yaxis()
-    ax.set_xlim(0, spec["population_total"] * 1.36)
+    ax.set_xlim(0, spec["population_total"])
     ax.set_xlabel(f"Number of {spec['unit_of_analysis']}")
     ax.legend(loc="lower left", bbox_to_anchor=(0, 1), ncol=2, fontsize=7)
+    ax.text(1.04, 1.02, "Passed /\nentered", transform=ax.transAxes, fontsize=7)
     return {
         "counts": spec["data"],
         "rate_label": "passed / entered at this stage",
-        "earlier_attrition": (
+        "not_entered": (
             "failed or pending at prior stages, never included in this stage's denominator"
         ),
+        "overall_completion": {
+            "passed": spec["data"][-1]["passed"],
+            "initial": spec["population_total"],
+            "fraction": spec["data"][-1]["overall_rate"],
+        },
     }
 
 
@@ -239,9 +260,9 @@ def comparison(fig, spec: dict, ax=None) -> dict:
         ax.plot(
             np.arange(len(names)) + offsets[reaction],
             [lookup[reaction, m] for m in names],
-            color="#BBBBBB",
-            linewidth=0.5,
-            alpha=0.45,
+            color="#A3ADB7",
+            linewidth=0.65,
+            alpha=0.8,
             zorder=1,
         )
     summaries = {}
@@ -403,7 +424,16 @@ def render(spec_path: Path, output: Path, overwrite: bool = False) -> dict:
     if output.suffix:
         raise ValueError("Output is a prefix without a file extension")
     output.parent.mkdir(parents=True, exist_ok=True)
-    extensions = [".svg", ".pdf", ".png", ".qa.json", ".spec.json", ".caption.txt", ".layout.json"]
+    extensions = [
+        ".svg",
+        ".pdf",
+        ".png",
+        ".qa.json",
+        ".spec.json",
+        ".caption.txt",
+        ".layout.json",
+        ".caption-facts.json",
+    ]
     if spec["profile"] == "toc" or spec.get("tiff", False):
         extensions.append(".tiff")
     if not overwrite and any(output.with_suffix(ext).exists() for ext in extensions):
@@ -456,6 +486,10 @@ def render(spec_path: Path, output: Path, overwrite: bool = False) -> dict:
                 # every format instead of re-solving layout for PDF/SVG/PNG DPI.
                 fig.canvas.draw()
                 fig.set_layout_engine("none")
+                from point_layout import pack_points
+
+                details["point_layout"] = pack_points(fig)
+                fig.canvas.draw()
                 layout = measure_matplotlib(fig, details.pop("comparable_groups", []))
                 for extension in (".svg", ".pdf", ".png"):
                     fig.savefig(output.with_suffix(extension), dpi=300)
@@ -482,6 +516,18 @@ def render(spec_path: Path, output: Path, overwrite: bool = False) -> dict:
             }
         )
     delivered_caption = compose_caption(spec, details)
+    facts = caption_facts(spec, details)
+    output.with_suffix(".caption-facts.json").write_text(
+        json.dumps(facts, ensure_ascii=False, indent=2) + "\n"
+    )
+    if any(row["unresolved_spacing"] for row in details.get("point_layout", [])):
+        result["findings"].append(
+            {
+                "check": "point_spacing",
+                "status": "WARN",
+                "detail": "Points overlap at final size; widen, facet or change display",
+            }
+        )
     result.update(
         schema_version=2,
         kind=spec["kind"],
@@ -493,6 +539,12 @@ def render(spec_path: Path, output: Path, overwrite: bool = False) -> dict:
         caption=delivered_caption,
         author_caption=spec["caption"],
         visual_review="required",
+        readiness={
+            "technical": "See mechanical findings",
+            "visual": "Requires inspection of final PDF/SVG at delivery size",
+            "scientific": "Requires data, definition and caption review",
+            "submission": "Not established by this renderer",
+        },
         renderer_sha256=digest(Path(__file__)),
         implementation_sha256={
             name: digest(Path(__file__).parent / name)
@@ -504,6 +556,8 @@ def render(spec_path: Path, output: Path, overwrite: bool = False) -> dict:
                 "figure_style.py",
                 "statistical_figures.py",
                 "figure_caption.py",
+                "audit_strokes.py",
+                "point_layout.py",
             )
         },
         raster_export={

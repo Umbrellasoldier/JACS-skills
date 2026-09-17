@@ -10,6 +10,8 @@ def compose_caption(spec: dict, details: dict, *, nested: bool = False) -> str:
     parts = [spec["caption"].strip()]
     if not nested and spec["data_status"] == "synthetic" and "synthetic" not in parts[0].lower():
         parts.append("Synthetic demonstration; not research results.")
+    if spec.get("caption_mode") == "authored":
+        return " ".join(parts) + "\n"
     for key, label in (
         ("population", "Population"),
         ("unit_of_analysis", "Observation unit"),
@@ -119,7 +121,8 @@ def compose_caption(spec: dict, details: dict, *, nested: bool = False) -> str:
         parts.append(
             "Bars show counts relative to the initial cohort. Labels give passed/entered "
             "for that stage; only preceding passes enter the next stage. "
-            "Earlier attrition is excluded from the conditional denominator."
+            "The not-entered segment includes upstream failures and pending observations; "
+            "it is excluded from the conditional denominator."
         )
         parts.extend(f"{r['stage']}: {r['criterion']}." for r in spec["data"] if "criterion" in r)
     elif kind == "structures":
@@ -145,3 +148,34 @@ def compose_caption(spec: dict, details: dict, *, nested: bool = False) -> str:
         count = len(spec["panels"])
         return "\n\n".join([" ".join(parts[:-count]), *parts[-count:]]) + "\n"
     return " ".join(parts) + "\n"
+
+
+def caption_facts(spec: dict, details: dict) -> dict:
+    """Keep reviewable definitions separate from publication prose; never infer missing facts."""
+    keys = (
+        "population",
+        "unit_of_analysis",
+        "quantity_definition",
+        "estimate_definition",
+        "interval_definition",
+        "reference",
+        "conditions",
+        "normalization",
+        "column_definitions",
+        "missing_reasons",
+        "observation_window",
+        "state_definitions",
+    )
+    facts = {
+        "data_status": spec["data_status"],
+        "definitions": {key: spec[key] for key in keys if key in spec},
+        "computed_display_facts": details,
+        "caption_mode": spec.get("caption_mode", "compose"),
+        "review": "Check facts against final caption; prose is not validated automatically",
+    }
+    if spec["kind"] == "panel_grid":
+        facts["panels"] = {
+            panel["label"]: caption_facts(panel["spec"], details["panels"][panel["label"]])
+            for panel in spec["panels"]
+        }
+    return facts

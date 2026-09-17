@@ -111,7 +111,12 @@ def text(root, x, y, value, size=8, weight="normal"):
 
 
 def molecular_svg(
-    smiles: str, width: float, height: float, bond_highlights=None
+    smiles: str,
+    width: float,
+    height: float,
+    bond_highlights=None,
+    proposed_bonds=None,
+    separate_fragments=False,
 ) -> tuple[ET.Element, dict]:
     from rdkit import Chem
     from rdkit.Chem.Draw import rdMolDraw2D
@@ -120,6 +125,32 @@ def molecular_svg(
     if mol is None:
         raise ValueError("Invalid SMILES; molecular identity cannot be inferred")
     canonical = Chem.MolToSmiles(mol, isomericSmiles=True)
+    if separate_fragments and len(Chem.GetMolFrags(mol)) > 1:
+        if bond_highlights or proposed_bonds:
+            raise ValueError("Separate fragments before applying atom-index bond encodings")
+        fragments = Chem.GetMolFrags(mol, asMols=True)
+        gap = 12
+        part_width = (width - gap * (len(fragments) - 1)) / len(fragments)
+        if part_width < 20:
+            raise ValueError("Too many fragments for readable plus separators")
+        root = ET.Element(tag("svg"), {"viewBox": f"0 0 {width} {height}"})
+        for i, fragment in enumerate(fragments):
+            child, _ = molecular_svg(Chem.MolToSmiles(fragment), part_width, height)
+            prefix_ids(child, f"fragment{i}_")
+            child.attrib.update(
+                x=str(i * (part_width + gap)), y="0", width=str(part_width), height=str(height)
+            )
+            root.append(child)
+            if i < len(fragments) - 1:
+                text(root, (i + 1) * part_width + i * gap + 3, height / 2 + 3, "+", size=9)
+        return root, {
+            "input_smiles": smiles,
+            "canonical_isomeric_smiles": canonical,
+            "atom_count": mol.GetNumAtoms(),
+            "formal_charge": Chem.GetFormalCharge(mol),
+            "fragment_separators": "+",
+            "geometry": "2D depiction, not a TS geometry",
+        }
     drawer = rdMolDraw2D.MolDraw2DSVG(int(width), int(height), -1, -1, True)
     options = drawer.drawOptions()
     options.fixedFontSize = 8
@@ -144,12 +175,34 @@ def molecular_svg(
     )
     drawer.FinishDrawing()
     root = parse_svg(drawer.GetDrawingText().encode())
+    proposed_ids = []
+    for pair in proposed_bonds or []:
+        if len(pair) != 2 or any(
+            isinstance(i, bool) or not isinstance(i, int) or not 0 <= i < mol.GetNumAtoms()
+            for i in pair
+        ):
+            raise ValueError("Proposed bonds need two valid zero-based atom indices")
+        bond = mol.GetBondBetweenAtoms(*pair)
+        if bond is None or bond.GetBondType() != Chem.BondType.SINGLE:
+            raise ValueError("Proposed links must identify single edges in the supplied graph")
+        proposed_ids.append(bond.GetIdx())
+    for element in root.iter(tag("path")):
+        if any(f"bond-{i}" in element.get("class", "").split() for i in proposed_ids):
+            element.set(
+                "style",
+                "fill:none;stroke:#356E96;stroke-width:1.0px;"
+                "stroke-dasharray:3,2;stroke-linecap:butt;stroke-linejoin:round",
+            )
     return root, {
         "input_smiles": smiles,
         "canonical_isomeric_smiles": canonical,
         "atom_count": mol.GetNumAtoms(),
         "formal_charge": Chem.GetFormalCharge(mol),
         "highlighted_bond_atom_pairs": bond_highlights or [],
+        "proposed_bond_atom_pairs": proposed_bonds or [],
+        "graph_convention": "Dashed edges are proposed links, not bond orders or measured distances"
+        if proposed_bonds
+        else None,
         "geometry": "2D depiction, not optimized or experimentally measured geometry",
     }
 
@@ -164,7 +217,9 @@ def draw(spec: dict, base: Path) -> tuple[bytes, dict]:
     margin, gap, label_space = 8, 12, 15
     top = 24 if spec.get("title") else margin
     note_lines = spec.get("note", "").splitlines()
-    note_space = 8 * len(note_lines) + 4 if note_lines else 0
+    note_size = 8 if spec["profile"] == "toc" else 7
+    note_step = note_size + 2
+    note_space = note_step * len(note_lines) + 4 if note_lines else 0
     bottom = 16 if spec["data_status"] == "synthetic" else 8
     cell_width = (width - 2 * margin - (columns - 1) * gap) / columns
     cell_height = (height - top - bottom - note_space - (rows - 1) * gap) / rows
@@ -185,7 +240,12 @@ def draw(spec: dict, base: Path) -> tuple[bytes, dict]:
         positions[panel.get("id", panel["label"])] = (x, y)
         if "smiles" in panel:
             child, record = molecular_svg(
-                panel["smiles"], cell_width, cell_height - label_space, panel.get("bond_highlights")
+                panel["smiles"],
+                cell_width,
+                cell_height - label_space,
+                panel.get("bond_highlights"),
+                panel.get("proposed_bonds"),
+                panel.get("separate_fragments", False),
             )
         else:
             import hashlib
@@ -254,7 +314,13 @@ def draw(spec: dict, base: Path) -> tuple[bytes, dict]:
                 },
             )
     for i, line in enumerate(note_lines):
-        text(root, margin, height - bottom - note_space + 8 + 8 * i, line, size=6)
+        text(
+            root,
+            margin,
+            height - bottom - note_space + note_size + note_step * i,
+            line,
+            size=note_size,
+        )
     if spec["data_status"] == "synthetic":
         text(root, margin, height - 4, "SYNTHETIC DEMONSTRATION", size=6)
     return ET.tostring(root, encoding="utf-8", xml_declaration=True), {

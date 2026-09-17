@@ -1,0 +1,166 @@
+[
+  {
+    "example": "boxplot",
+    "records": 96,
+    "fields": [
+      "observation_id",
+      "group",
+      "value"
+    ],
+    "preserved": true
+  },
+  {
+    "example": "violin",
+    "records": 96,
+    "fields": [
+      "observation_id",
+      "group",
+      "value"
+    ],
+    "preserved": true
+  },
+  {
+    "example": "ecdf",
+    "records": 96,
+    "fields": [
+      "observation_id",
+      "group",
+      "value"
+    ],
+    "preserved": true
+  },
+  {
+    "example": "histogram",
+    "records": 96,
+    "fields": [
+      "observation_id",
+      "group",
+      "value"
+    ],
+    "preserved": true
+  },
+  {
+    "example": "parity",
+    "records": 12,
+    "fields": [
+      "reaction_id",
+      "method",
+      "reference_value",
+      "predicted"
+    ],
+    "preserved": true
+  },
+  {
+    "example": "agreement",
+    "records": 216,
+    "fields": [
+      "reaction_id",
+      "method",
+      "reference_value",
+      "predicted"
+    ],
+    "preserved": true
+  },
+  {
+    "example": "comparison",
+    "records": 18,
+    "fields": [
+      "reaction_id",
+      "method",
+      "value"
+    ],
+    "preserved": true
+  },
+  {
+    "example": "stages",
+    "records": 4,
+    "fields": [
+      "stage",
+      "passed",
+      "failed",
+      "pending"
+    ],
+    "preserved": true
+  },
+  {
+    "example": "energy",
+    "records": 6,
+    "fields": [
+      "path",
+      "order",
+      "energy"
+    ],
+    "preserved": true
+  },
+  {
+    "example": "learning",
+    "records": 21,
+    "fields": [
+      "series",
+      "x",
+      "y",
+      "lower",
+      "upper",
+      "replicates"
+    ],
+    "preserved": true
+  },
+  {
+    "example": "spectra",
+    "records": 302,
+    "fields": [
+      "x",
+      "y",
+      "raw_y"
+    ],
+    "preserved": true
+  },
+  {
+    "example": "intervals",
+    "change": "Replaced illustrative unspecified bounds with four means ± sample SD from eight retained synthetic values per row; not inferred from the previous bounds."
+  },
+  {
+    "example": "heatmap",
+    "change": "Replaced eight unsupported tutorial summaries and one null with nine MAEs derived from the existing 72-reaction cohort. Three reference-sorted equal-size strata, n=24 each. No observations discarded and no artificial missingness."
+  },
+  {
+    "example": "spectra",
+    "change": "Display names State I/II changed to Model I/II; numeric values, raw values and normalization preserved."
+  },
+  {
+    "example": "energy",
+    "change": "Distinct state IDs and display labels for TS_A/TS_B and P_A/P_B; numeric levels unchanged."
+  },
+  {
+    "example": "workflow",
+    "change": "Conceptual sequence now separates graph edits, 3D embedding and validation. No undocumented ranking rule is claimed."
+  },
+  {
+    "example": "toc",
+    "change": "Same reactant/scaffold SMILES; explicit fragment plus and dashed proposed graph edges replace product emphasis. No TS geometry inferred."
+  },
+  {
+    "example": "showcase",
+    "recomputed_statistics": {
+      "Baseline": {
+        "n": 72,
+        "mean_signed_error": 0.16031178941811824,
+        "median_signed_error": 0.026219771135632897,
+        "mae": 1.8144638434276907
+      },
+      "Refined": {
+        "n": 72,
+        "mean_signed_error": -0.027992300918056354,
+        "median_signed_error": -0.009980894104543836,
+        "mae": 0.5147252882413581
+      },
+      "Transfer": {
+        "n": 72,
+        "mean_signed_error": -0.0519186748044114,
+        "median_signed_error": 0.11064410821743298,
+        "mae": 1.1706670659136362
+      }
+    },
+    "description": "Plot center is median; panel title is signed-error distribution, not bias."
+  }
+]

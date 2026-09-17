@@ -98,6 +98,15 @@ def validate_statistical(spec: dict, rows: list[dict]) -> None:
             raise ValueError("value_transform must be identity or absolute")
         if mode not in {"box", "violin", "ecdf", "histogram"}:
             raise ValueError("distribution display must be box, violin, ecdf or histogram")
+        if spec.setdefault("point_layout", "jitter") not in {"jitter", "swarm"}:
+            raise ValueError("point_layout must be jitter or swarm")
+        for field in ("facet_groups", "show_bandwidth_sensitivity"):
+            if field in spec and not isinstance(spec[field], bool):
+                raise ValueError(f"{field} must be boolean")
+        if spec.get("facet_groups") and mode != "histogram":
+            raise ValueError("facet_groups is supported for histograms only")
+        if spec.get("show_bandwidth_sensitivity") and mode != "violin":
+            raise ValueError("Bandwidth sensitivity is supported for violins only")
         seen = set()
         for row in rows:
             required(row, ("observation_id", "group", "value"))
@@ -244,6 +253,8 @@ def validate(spec: dict) -> dict:
         raise ValueError(f"Unknown figure kind: {spec['kind']}")
     if spec["data_status"] not in {"real", "synthetic"}:
         raise ValueError("data_status must be real or synthetic")
+    if spec.setdefault("caption_mode", "compose") not in {"compose", "authored"}:
+        raise ValueError("caption_mode must be compose or authored")
     profile = spec.setdefault("profile", "single")
     if profile not in PROFILES:
         raise ValueError(f"Unknown profile: {profile}")
@@ -273,6 +284,8 @@ def validate(spec: dict) -> dict:
         raise ValueError("Each data record must be an object")
     kind = spec["kind"]
     if kind == "energy":
+        if spec.get("level_label_layout", "stacked") not in {"stacked", "inline"}:
+            raise ValueError("level_label_layout must be stacked or inline")
         same_metadata(spec, rows, ("quantity", "unit", "reference", "conditions"))
         if spec["quantity"] not in {"E", "H", "G"}:
             raise ValueError("Energy quantity must be E, H or G")
@@ -382,6 +395,8 @@ def validate(spec: dict) -> dict:
                 raise ValueError("panel_grid supports single-axis quantitative panels only")
             if child["data_status"] != spec["data_status"]:
                 raise ValueError("Panel data_status differs from the composite")
+            if child.get("facet_groups"):
+                raise ValueError("Faceted histograms need a standalone figure")
             panel["spec"] = child
         if not labels or len(set(labels)) != len(labels):
             raise ValueError("Panel labels must be nonempty and unique")

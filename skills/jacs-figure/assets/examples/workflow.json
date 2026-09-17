@@ -1,7 +1,7 @@
 {
   "data_status": "synthetic",
   "claim": "Demonstrate the figure contract using synthetic examples.",
-  "caption": "Illustrative transition-state search workflow. Stages describe proposed operations, not observed successful outcomes.",
+  "caption": "Synthetic concept diagram of a transition-state search workflow, read left to right in the upper row and right to left below. Atom-mapped endpoint graphs specify candidate bond edits; a separate embedding step must turn proposed connectivity into 3D seeds. Blue boxes identify proposal-generation modules. Subsequent TS optimization, vibrational characterization, and IRC endpoint matching are separate validation operations. Arrows show intended information flow, not demonstrated success or a chemical mechanism. No particular embedding algorithm, ranking rule, or measured efficiency is asserted.",
   "kind": "workflow",
   "profile": "double",
   "height_pt": 175,
@@ -14,22 +14,22 @@
     },
     {
       "id": "1",
-      "label": "Bond-order proposals",
+      "label": "Propose bond edits",
       "emphasis": true
     },
     {
       "id": "2",
-      "label": "3D candidates",
-      "emphasis": false
-    },
-    {
-      "id": "3",
-      "label": "Reference-free ranking",
+      "label": "Embed 3D seeds",
       "emphasis": true
     },
     {
+      "id": "3",
+      "label": "TS optimization",
+      "emphasis": false
+    },
+    {
       "id": "4",
-      "label": "TS optimization and vibrations",
+      "label": "Vibrational check",
       "emphasis": false
     },
     {
@@ -39,5 +39,6 @@
     }
   ],
   "raster_class": "color",
-  "reading_order": "serpentine"
+  "reading_order": "serpentine",
+  "caption_mode": "authored"
 }

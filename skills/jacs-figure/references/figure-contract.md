@@ -28,6 +28,7 @@ Common fields:
 | `kind` | `energy`, `parity`, `stages`, `comparison`, `workflow`, `structures`, `distribution`, `interval`, `curve`, `heatmap`, `panel_grid`, `assembly` |
 | `data_status` | `real` or `synthetic`; synthetic output carries a visible label |
 | `claim`, `caption` | Author-supplied bounded claim and caption; no automatically invented conclusion |
+| `caption_mode` | `compose` (default) appends facts; `authored` exports supplied prose and a separate facts file. Neither validates scientific prose. |
 | `quantity_definition`, `normalization` | Optional supplied definitions carried into the delivered caption; define signed differences and transformation references here |
 | `profile` | `single`, `double`, `si`, `toc`; defaults live in `figure_spec.py` |
 | `width_pt`, `height_pt` | Physical dimensions in points; 72 points = 1 inch |
@@ -63,6 +64,8 @@ unit correctly; grouped distributions do not imply a paired test. `group_order` 
 order every observed group. At most six groups/curve series use the bundled palette; beyond
 that, facet or write an explicit encoding. Category jitter is deterministic and changes only
 the category coordinate. No outliers are removed.
+`point_layout: swarm` packs points after final layout, moves only the category coordinate,
+and records remaining spacing conflicts. It does not promise a readable display at arbitrary n.
 
 - `box`: Q1–Q3, median, whiskers at observed points inside 1.5 IQR fences; all raw observations
   remain visible, including outliers. Quantiles use NumPy's linear method.
@@ -73,6 +76,8 @@ the category coordinate. No outliers are removed.
   Half densities and raw observations occupy separate sides. QA records local-mode counts
   at the stated and doubled bandwidth on a 150-point grid; sensitivity is not a test of
   whether subpopulations exist. Do not tune the bandwidth to manufacture a preferred shape.
+  `show_bandwidth_sensitivity: true` overlays a dashed density at twice the bandwidth;
+  both densities use their own equal maximum-width normalization.
 - `ecdf`: empirical cumulative fractions, steps without smoothing; includes all observations
   and extends tails to a common domain. Use signed values for bias/distribution questions;
   use `value_transform: absolute` for absolute-error threshold coverage. This explicit option
@@ -81,11 +86,15 @@ the category coordinate. No outliers are removed.
   Heights are counts; normalization to density is not implicit. NumPy closes the last bin
   on the right. A count histogram with unequal bins is not a density comparison. The default
   draws outlines to avoid mixed fill colors. Bins cover displayed values after any explicit transform.
+  `facet_groups: true` instead uses one row per group with common bins and axes; allocate
+  adequate height. This option is standalone and cannot be nested in the single-axis panel grid.
 
 `interval` draws supplied bounds without calling them confidence intervals. Set
 `interval_definition` to SD, SE, confidence/credible interval with level and method, or an
 accurate noninferential description. The estimate must lie within its bounds. A reference
 line is optional, not automatically interpreted as a null hypothesis.
+Use `estimate_definition` to record what the point estimates; the renderer does not infer
+it from bounds. The gallery's mean ± SD example retains its underlying synthetic values.
 
 `curve` requires strictly increasing x within each series. Sort explicitly upstream if needed
 and preserve the original input. `series_roles` maps names to `observed` (points, default),
@@ -110,6 +119,9 @@ as 0. Optional `missing_label` changes the label, not its meaning. The colorbar 
 and unit, with four ticks by default (a diverging map includes its center). `colorbar_ticks`
 must increase within the limits. Use `column_definitions` to explain domain/split labels and n
 when known; do not invent missing reasons or sample counts. A small matrix need not have square cells.
+`column_label` names the column axis; `value_format` controls cell precision (default `.2g`,
+e.g. `.2f` for consistent decimal places). Retained n, IDs and raw errors support upstream
+recalculation; the renderer itself draws supplied summaries without recomputing them.
 
 The unit string `dimensionless` omits an unnecessary parenthesis. Common display aliases
 such as `kcal/mol` → `kcal mol⁻¹` change typography only; numerical units never change.
@@ -121,7 +133,7 @@ strings without changing existing string IDs or leading zeros.
 Method comparisons require one record per reaction per method and the same reaction set.
 Replicate-level or unpaired data need a separately declared analysis and suitable plot; do not
 mislabel replicates as independent reactions just to use this template. Parity MAE/RMSE are
-recorded for the actual plotted records and appended to the caption. `facet_methods: true`
+recorded for the actual plotted records (also appended in compose mode). `facet_methods: true`
 separates parity methods into columns with common domains and a residual row. Allocate height
 and width for the number of methods; this option does not guarantee readability for many columns.
 The comparison template shows observations, paired lines and medians, with no inferred error bars.
@@ -130,9 +142,9 @@ not move. Coincident y values can still crowd at large n, so inspect or use a di
 
 Stage counts satisfy `passed + failed + pending = entered`; entered is the initial population
 or the preceding stage's passed count. A later stage with no entrants has an undefined
-conditional rate, not zero. Earlier attrition remains visible and is excluded from the next
-conditional denominator. Branching workflows require separate cohorts; this template is a
-single sequential cohort.
+conditional rate, not zero. The neutral not-entered segment includes upstream failures and
+pending cases, excluded from the conditional denominator. Record `observation_window` when
+pending work makes the snapshot relevant. Branching workflows require separate cohorts.
 
 PNG is a 300 dpi preview. Declare the TIFF content class; exporting a low-resolution source
 at a higher DPI does not restore its detail. Embedded raster panels require a separate source
@@ -146,6 +158,13 @@ canonical isomeric identities are recorded; original SMILES remain in the saved 
 Structure examples may add `title`, a short multiline `note`, and left-to-right `edges` between
 neighboring nodes in one row. A node's optional `bond_highlights` contains zero-based atom-index
 pairs; each must be an actual bond in that supplied molecule. Highlights need an authored meaning.
+`proposed_bonds` instead draws specified single edges as dashed blue links in a supplied
+candidate graph; this is an editing convention, not a TS geometry or computed bond order.
+`separate_fragments: true` adds plus signs between disconnected SMILES components and cannot
+be combined with atom-index highlights. TOC notes use 8 pt lettering; check space after wrapping.
+Energy `state_labels` can map stable state IDs to display labels such as `TS$_A$`.
+`level_label_layout: inline` places the state and energy on one line when neighboring
+levels would overlap a stacked label. Inspect label-versus-level collisions after export.
 Workflow nodes can set `emphasis: true`; other nodes remain neutral. Default row traversal is
 serpentine, with `reading_order: row_major` available for an explicitly authored layout.
 
@@ -154,7 +173,7 @@ serpentine, with `reading_order: row_major` available for an explicitly authored
 Use `panel_grid` for compatible quantitative panels that benefit from laying out native axes
 together. Supported children: energy, comparison, distribution, interval, curve, heatmap. The
 outer canvas controls geometry; child physical-size hints are not separately imposed. Labels,
-roles, child definitions and computed statistics all enter one delivered caption. Population
+roles, child definitions and computed statistics enter the caption in compose mode. Population
 text describes the connection; it does not automatically prove that IDs or study cohorts match.
 Custom code or SVG composition remains appropriate for unequal panel areas and chemical schemes.
 
@@ -163,10 +182,12 @@ Caption files are read with source hashes and embedded in the rerunnable specifi
 bundle does not depend on their original location. This is a migration requirement for older
 assembly inputs; a generic overall caption cannot explain unknown embedded marks.
 
-The saved `caption` remains author prose. The generated `.caption.txt` combines that prose with
-known definitions, n, metrics, references and panel captions from this rendering. Rerendering the
-saved spec does not append these facts repeatedly. Inspect the delivered text for contradictions;
-the composer is not a semantic fact checker and does not infer missing scientific definitions.
+The saved `caption` remains author prose. With `caption_mode: compose` (the compatibility
+default), `.caption.txt` combines it with known definitions and panel facts. With `authored`,
+the supplied prose is exported without metadata appendices; synthetic status still survives.
+Both modes write `.caption-facts.json`, including child definitions and computed statistics.
+Rerendering does not duplicate facts. The composer does not validate prose or infer missing
+definitions: review caption, facts and source together before delivery.
 
 ## Original examples
 
@@ -180,7 +201,7 @@ the composer is not a semantic fact checker and does not infer missing scientifi
 - [Box and raw observations](../assets/examples/boxplot.json), [violin](../assets/examples/violin.json),
   [ECDF](../assets/examples/ecdf.json), [histogram](../assets/examples/histogram.json)
 - [Point and interval](../assets/examples/intervals.json), [learning curve and SD band](../assets/examples/learning.json)
-- [Spectra](../assets/examples/spectra.json), [matrix with missing cell](../assets/examples/heatmap.json)
+- [Spectra](../assets/examples/spectra.json), [reference-stratified MAE matrix](../assets/examples/heatmap.json)
 - [Larger parity/residual example](../assets/examples/agreement.json)
 - [Shared-cohort signed-error and absolute-error panels](../assets/examples/showcase.json)
 
