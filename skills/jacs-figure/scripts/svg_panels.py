@@ -110,7 +110,9 @@ def text(root, x, y, value, size=8, weight="normal"):
     element.text = str(value)
 
 
-def molecular_svg(smiles: str, width: float, height: float) -> tuple[ET.Element, dict]:
+def molecular_svg(
+    smiles: str, width: float, height: float, bond_highlights=None
+) -> tuple[ET.Element, dict]:
     from rdkit import Chem
     from rdkit.Chem.Draw import rdMolDraw2D
 
@@ -123,7 +125,23 @@ def molecular_svg(smiles: str, width: float, height: float) -> tuple[ET.Element,
     options.fixedFontSize = 8
     options.bondLineWidth = 0.8
     options.padding = 0.1
-    drawer.DrawMolecule(mol)
+    highlights = []
+    for pair in bond_highlights or []:
+        if len(pair) != 2 or any(
+            isinstance(i, bool) or not isinstance(i, int) or i < 0 or i >= mol.GetNumAtoms()
+            for i in pair
+        ):
+            raise ValueError("Bond highlights need two valid zero-based atom indices")
+        bond = mol.GetBondBetweenAtoms(*pair)
+        if bond is None:
+            raise ValueError("Highlighted atom pair is not a bond in the supplied molecule")
+        highlights.append(bond.GetIdx())
+    drawer.DrawMolecule(
+        mol,
+        highlightAtoms=[],
+        highlightBonds=highlights,
+        highlightBondColors={i: (0.66, 0.81, 0.91) for i in highlights},
+    )
     drawer.FinishDrawing()
     root = parse_svg(drawer.GetDrawingText().encode())
     return root, {
@@ -131,6 +149,7 @@ def molecular_svg(smiles: str, width: float, height: float) -> tuple[ET.Element,
         "canonical_isomeric_smiles": canonical,
         "atom_count": mol.GetNumAtoms(),
         "formal_charge": Chem.GetFormalCharge(mol),
+        "highlighted_bond_atom_pairs": bond_highlights or [],
         "geometry": "2D depiction, not optimized or experimentally measured geometry",
     }
 
@@ -143,9 +162,12 @@ def draw(spec: dict, base: Path) -> tuple[bytes, dict]:
         raise ValueError("columns must be positive")
     rows = math.ceil(len(panels) / columns)
     margin, gap, label_space = 8, 12, 15
+    top = 24 if spec.get("title") else margin
+    note_lines = spec.get("note", "").splitlines()
+    note_space = 8 * len(note_lines) + 4 if note_lines else 0
     bottom = 16 if spec["data_status"] == "synthetic" else 8
     cell_width = (width - 2 * margin - (columns - 1) * gap) / columns
-    cell_height = (height - margin - bottom - (rows - 1) * gap) / rows
+    cell_height = (height - top - bottom - note_space - (rows - 1) * gap) / rows
     if min(cell_width, cell_height - label_space) < 25:
         raise ValueError("Panels are too small; increase the figure or split the assembly")
     root = ET.Element(
@@ -153,12 +175,18 @@ def draw(spec: dict, base: Path) -> tuple[bytes, dict]:
         {"width": f"{width}pt", "height": f"{height}pt", "viewBox": f"0 0 {width} {height}"},
     )
     ET.SubElement(root, tag("rect"), {"width": "100%", "height": "100%", "fill": "white"})
+    if spec.get("title"):
+        text(root, margin, 12, spec["title"], size=8, weight="bold")
     provenance = []
+    positions = {}
     for i, panel in enumerate(panels):
         x = margin + (i % columns) * (cell_width + gap)
-        y = margin + (i // columns) * (cell_height + gap)
+        y = top + (i // columns) * (cell_height + gap)
+        positions[panel.get("id", panel["label"])] = (x, y)
         if "smiles" in panel:
-            child, record = molecular_svg(panel["smiles"], cell_width, cell_height - label_space)
+            child, record = molecular_svg(
+                panel["smiles"], cell_width, cell_height - label_space, panel.get("bond_highlights")
+            )
         else:
             import hashlib
 
@@ -190,6 +218,43 @@ def draw(spec: dict, base: Path) -> tuple[bytes, dict]:
         )
         root.append(child)
         provenance.append({"panel": panel.get("id", panel["label"]), **record})
+    if spec.get("edges"):
+        defs = ET.SubElement(root, tag("defs"))
+        marker = ET.SubElement(
+            defs,
+            tag("marker"),
+            {
+                "id": "scheme-arrow",
+                "viewBox": "0 0 10 10",
+                "refX": "9",
+                "refY": "5",
+                "markerWidth": "5",
+                "markerHeight": "5",
+                "orient": "auto",
+            },
+        )
+        ET.SubElement(marker, tag("path"), {"d": "M 0 1 L 9 5 L 0 9 Z", "fill": "#74808C"})
+        for start, end in spec["edges"]:
+            x1, y1 = positions[start]
+            x2, y2 = positions[end]
+            if y1 != y2 or abs(x2 - x1 - cell_width - gap) > 1e-6:
+                raise ValueError("Structure arrows support left-to-right neighbors in one row")
+            y = y1 + label_space + (cell_height - label_space) / 2
+            ET.SubElement(
+                root,
+                tag("line"),
+                {
+                    "x1": str(x1 + cell_width),
+                    "y1": str(y),
+                    "x2": str(x2 - 1),
+                    "y2": str(y),
+                    "stroke": "#74808C",
+                    "stroke-width": "0.8",
+                    "marker-end": "url(#scheme-arrow)",
+                },
+            )
+    for i, line in enumerate(note_lines):
+        text(root, margin, height - bottom - note_space + 8 + 8 * i, line, size=6)
     if spec["data_status"] == "synthetic":
         text(root, margin, height - 4, "SYNTHETIC DEMONSTRATION", size=6)
     return ET.tostring(root, encoding="utf-8", xml_declaration=True), {

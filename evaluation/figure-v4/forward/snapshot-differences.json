@@ -1,0 +1,30 @@
+{
+  "scope": "Frozen forward test versus final v0.4 source; no changes to input data",
+  "files": [
+    {
+      "path": "jacs-figure/assets/examples/toc.json",
+      "snapshot_sha256": "9a3c563b1077bbe3dbee0646327c1268487099c496832825666439ddec4505f3",
+      "final_sha256": "6e0eeefbc8322c811d69e608dcccfd6986cd1a8673d392c7b218c48954a46b3f"
+    },
+    {
+      "path": "jacs-figure/scripts/plot_figures.py",
+      "snapshot_sha256": "62968e3e50b212b3e3fae24e83bd575849c419da6ab50c8dc22277aff3ada049",
+      "final_sha256": "3cbb579ee921c7d904b4f9a199f2a2854aa5cdd17c9b18c3d912f065a7e6186d"
+    },
+    {
+      "path": "jacs-figure/scripts/figure_caption.py",
+      "snapshot_sha256": "e2c1052bca272010956ca939851d2816d9c917473b946a60abbef10c83fb34c7",
+      "final_sha256": "0219dfcd6261ecac4052ae9e0f1c32be7372dca706bfbfa963d2ee2739e99e82"
+    },
+    {
+      "path": "jacs-figure/scripts/figure_spec.py",
+      "snapshot_sha256": "f143c150b470802d448c39c8f42c0ada732ffff5aa83bc2fde24f775127141ba",
+      "final_sha256": "5a2b92b6e05e12c1c8f1b286005fe929ab9cb34c7580886931ecb8dc97fe3cc0"
+    },
+    {
+      "path": "jacs-figure/scripts/svg_panels.py",
+      "snapshot_sha256": "41118f0b563cbb47c5d410b53c14dda7ebe4ead03c13eeff7792b7179ec39e23",
+      "final_sha256": "c21d419a09b5f62cd93ee936db86295cfa1e285309080961ef34c182452ebd10"
+    }
+  ]
+}

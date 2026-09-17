@@ -50,3 +50,10 @@ this JACS sample. Correlation, parity and Bland–Altman answer different questi
 Avoid pie/donut charts for fine comparisons, uncalibrated bubble area, 3D bars, radar areas,
 unreconciled waterfalls and Sankey widths with no quantitative mapping. A published example
 of a chart is evidence that it occurs, not proof that it is the best choice.
+
+For model errors, choose the statistic before the display: signed error shows bias, absolute
+error supports a within-threshold fraction, and paired error differences show which reactions
+improve or worsen. A left-shifted signed-error CDF is not evidence of higher accuracy. A small
+sample's KDE lobes can change substantially with bandwidth; inspect raw observations and
+sensitivity before interpreting chemical subgroups. These are analytical cautions, not new
+frequency claims about the literature corpus.

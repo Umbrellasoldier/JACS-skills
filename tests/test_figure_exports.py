@@ -93,7 +93,11 @@ class FigureExportTests(unittest.TestCase):
             "learning",
             "spectra",
             "heatmap",
+            "agreement",
+            "showcase",
         ):
+            if name == "toc" and not CHEMISTRY:
+                continue
             with self.subTest(name=name), tempfile.TemporaryDirectory() as temp:
                 source = SCRIPTS.parent / "assets/examples" / (name + ".json")
                 raw = source.read_bytes()
@@ -173,6 +177,7 @@ class FigureExportTests(unittest.TestCase):
         self.assertEqual(root.find(tag("g")).get("clip-path"), "url(#panel_c)")
         self.assertEqual(root.find(tag("use")).get("href"), "#panel_line")
 
+    @unittest.skipUnless(CHEMISTRY, "TOC example uses chemical structures")
     def test_tiff_pixel_dimensions_follow_content_resolution(self):
         from PIL import Image
         from plot_figures import render
@@ -205,7 +210,10 @@ class FigureExportTests(unittest.TestCase):
                 "claim": "Test",
                 "caption": "Synthetic",
                 "height_pt": 100,
-                "panels": [{"label": "a", "svg": "one.svg"}, {"label": "b", "svg": "one.svg"}],
+                "panels": [
+                    {"label": "a", "svg": "one.svg", "caption": "Original annotation."},
+                    {"label": "b", "svg": "one.svg", "caption": "Repeated annotation."},
+                ],
             }
             (base / "spec.json").write_text(json.dumps(spec))
             render(base / "spec.json", base / "first")

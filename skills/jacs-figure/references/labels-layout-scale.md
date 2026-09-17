@@ -51,6 +51,10 @@ sparse horizontal grids only where they help comparisons. Do not add point jitte
 the measured coordinate, spline unsupported trends, trim inconvenient tails, or average
 away failures. Dense scatter may use smaller/rasterized points, hexbin or facets with an
 explicit count/density key; source rows and exclusions remain traceable.
+Count distinct visible locations as well as records: equal values can hide one another.
+For paired categories, a small stable offset per ID may separate ties while preserving the
+pairing; never jitter either measured coordinate of a parity plot. Inspect which series is
+drawn last. Open symbols cannot by themselves solve severe overplotting; facets may be clearer.
 
 Direct-label a few separated lines near their ends, adding a small leader only if needed.
 Use a compact legend above or in empty plot space when direct labels collide. Don't cover
@@ -62,6 +66,8 @@ At final size, compare an error bar's visible length with the marker diameter. A
 symbol can conceal a small SD bar even when all coordinates and font sizes pass checks.
 Use a smaller mean marker, a taller panel or a clearer interval encoding when dispersion is
 part of the claim; never enlarge the numerical interval for visibility.
+Use a lighter area fill than the outlines or overlaid observations. Half densities with
+separate raw points and outline histograms are useful when filled regions obscure the data.
 
 ## Typography at the final physical size
 
@@ -94,6 +100,10 @@ x/y limits **and equal data aspect**; a square frame alone does not establish eq
 Use roughly 4–6 readable major ticks as a starting point, not a fixed constraint. Numeric
 and time ticks should normally be horizontal. Use 2:1-ish wide panels for long trajectories,
 near-square domains for pairwise relationships, and extra height for long category lists.
+For sparse learning curves, label enough of the actual training sizes to identify settings
+on the log axis. For a small heatmap, size the cells and colorbar for its few values; a compact
+rectangular matrix may work better than large square tiles. Fewer colorbar labels can suffice
+when cells already show exact values. Keep the full quantitative range and explicit missing key.
 
 Bars that encode magnitude start at zero. Scatter, spectra and interval plots may use a
 focused range with clear ticks; do not hide outliers. Log scale is suitable for multiplicative
@@ -114,6 +124,10 @@ category order, hue mapping and precision. For a mechanism narrative, allocate m
 to the decisive evidence; a wide overview above two/three smaller analyses often works.
 Align plot rectangles, not just PNG outer edges. Reserve gutters for labels and colorbars;
 start with ~12–18 pt horizontal and ~16–24 pt vertical spacing, then inspect real text.
+First establish the shared question and each panel's population or derivation. Allocate space
+by reading task, not the desire to demonstrate many chart types. When composing existing SVGs,
+their outer boxes do not expose internal axes; use joint native layout or an explicitly designed
+composition when plot edges need alignment. Panel captions must follow the panels into the export.
 
 Panel letters follow reading order, usually left-to-right/top-to-bottom; the sample does
 not justify a mandatory letter case. A shared legend or colorbar is useful only when its

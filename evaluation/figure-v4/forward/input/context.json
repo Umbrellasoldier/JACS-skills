@@ -1,0 +1,17 @@
+{
+  "data_status": "synthetic",
+  "quantity": "activation Gibbs energy",
+  "unit": "kcal/mol",
+  "reference": "separated reactants",
+  "conditions": {
+    "temperature_K": 298.15,
+    "solvent": "not modeled",
+    "theory": "synthetic values; no electronic-structure calculation"
+  },
+  "population": "48 matched hypothetical reactions",
+  "methods": {
+    "Model A": "illustrative predictor A",
+    "Model B": "illustrative predictor B"
+  },
+  "scope": "illustrate descriptive model comparison; no statistical significance claims"
+}

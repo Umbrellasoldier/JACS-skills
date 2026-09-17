@@ -1,0 +1,39 @@
+{
+  "energy": {
+    "raw_values_preserved": true
+  },
+  "parity": {
+    "raw_values_preserved": true
+  },
+  "agreement": {
+    "raw_values_preserved": true
+  },
+  "comparison": {
+    "raw_values_preserved": true
+  },
+  "boxplot": {
+    "raw_values_preserved": true
+  },
+  "violin": {
+    "raw_values_preserved": true
+  },
+  "ecdf": {
+    "raw_values_preserved": true
+  },
+  "histogram": {
+    "raw_values_preserved": true
+  },
+  "intervals": {
+    "raw_values_preserved": true
+  },
+  "heatmap": {
+    "raw_values_preserved": true
+  },
+  "learning": {
+    "raw_values_preserved": true
+  },
+  "spectra": {
+    "raw_values_preserved": true,
+    "change": "Each spectrum explicitly divided by its sampled maximum; raw_y retained"
+  }
+}

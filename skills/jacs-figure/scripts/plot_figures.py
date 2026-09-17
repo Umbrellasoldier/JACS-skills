@@ -11,6 +11,7 @@ import textwrap
 from pathlib import Path
 
 from audit_figure import audit_layout, audit_pdf, measure_matplotlib, verdict
+from figure_caption import compose_caption
 from figure_spec import digest, load
 from figure_style import PALETTE, axis_label, encodings, point_style
 from statistical_figures import curve, distribution, heatmap, interval
@@ -22,8 +23,8 @@ def series(rows: list[dict], key: str) -> list[str]:
     return list(dict.fromkeys(row[key] for row in rows))
 
 
-def energy(fig, spec: dict) -> dict:
-    ax = fig.subplots()
+def energy(fig, spec: dict, ax=None) -> dict:
+    ax = fig.subplots() if ax is None else ax
     rows = spec["data"]
     names = series(rows, "path")
     colors = encodings(spec, names)
@@ -76,70 +77,100 @@ def energy(fig, spec: dict) -> dict:
 def parity(fig, spec: dict) -> dict:
     import numpy as np
 
-    horizontal = spec["width_pt"] >= 400
-    axes = fig.subplots(1, 2) if horizontal else fig.subplots(2, 1)
-    ax, residual = axes
     rows = spec["data"]
     names = series(rows, "method")
     colors = encodings(spec, names)
+    faceted = spec.get("facet_methods", False)
+    if faceted:
+        axes = fig.subplots(2, len(names), squeeze=False, gridspec_kw={"height_ratios": [1, 0.65]})
+        pairs = list(zip(axes[0], axes[1], strict=True))
+    else:
+        horizontal = spec["width_pt"] >= 400
+        axes = fig.subplots(1, 2) if horizontal else fig.subplots(2, 1)
+        pairs = [tuple(axes)]
     metrics = {}
-    for name in names:
+    values = [r[key] for r in rows for key in ("reference_value", "predicted")]
+    lo, hi = min(values), max(values)
+    if spec["scale"] == "log":
+        lo, hi = lo / 1.1, hi * 1.1
+    else:
+        padding = max((hi - lo) * 0.08, 0.1)
+        lo, hi = lo - padding, hi + padding
+    residual_values = [r["predicted"] - r["reference_value"] for r in rows]
+    bound = max(max(abs(v) for v in residual_values) * 1.12, 0.1)
+    for i, name in enumerate(names):
+        ax, residual = pairs[i] if faceted else pairs[0]
         data = [r for r in rows if r["method"] == name]
         reference = np.array([r["reference_value"] for r in data])
         predicted = np.array([r["predicted"] for r in data])
         error = predicted - reference
-        opts = {**point_style(colors[name]), "s": 19, "alpha": 0.9}
-        raster = len(data) > 10000
-        ax.scatter(reference, predicted, label=name, rasterized=raster, **opts)
-        residual.scatter(reference, error, rasterized=raster, **opts)
+        opts = {**point_style(colors[name], open_fill=True), "s": 10 if len(data) > 40 else 14}
+        ax.scatter(reference, predicted, label=name, rasterized=len(data) > 10000, **opts)
+        residual.scatter(reference, error, rasterized=len(data) > 10000, **opts)
         metrics[name] = {
             "n": len(data),
             "mae": float(np.abs(error).mean()),
             "rmse": float(np.sqrt(np.mean(error**2))),
             "residual": "predicted minus reference",
         }
-    values = [r[key] for r in rows for key in ("reference_value", "predicted")]
-    lo, hi = min(values), max(values)
-    if spec["scale"] == "log":
-        lo, hi = lo / 1.1, hi * 1.1
-        ax.set_xscale("log")
-        ax.set_yscale("log")
-        residual.set_xscale("log")
+        if faceted:
+            ax.set_title(
+                f"{name}\nn = {len(data)}; MAE = {metrics[name]['mae']:.2f}", fontsize=8, pad=8
+            )
+    for i, (ax, residual) in enumerate(pairs):
+        if spec["scale"] == "log":
+            ax.set_xscale("log")
+            ax.set_yscale("log")
+            residual.set_xscale("log")
+        ax.plot([lo, hi], [lo, hi], color=PALETTE["axis"], linestyle="--", linewidth=0.7, zorder=0)
+        ax.set(xlim=(lo, hi), ylim=(lo, hi))
+        ax.set_box_aspect(1)
+        residual.axhline(0, color=PALETTE["axis"], linestyle="--", linewidth=0.7, zorder=0)
+        residual.set(xlim=(lo, hi), ylim=(-bound, bound))
+        residual.set_box_aspect(0.65 if faceted else 1)
+        residual.set_xlabel(axis_label(f"Reference {spec['quantity']}", spec["unit"]))
+        if i == 0:
+            ax.set_ylabel(axis_label(f"Predicted {spec['quantity']}", spec["unit"]))
+            residual.set_ylabel(
+                axis_label("Residual" if faceted else "Prediction − reference", spec["unit"])
+            )
+        if faceted and i:
+            ax.tick_params(labelleft=False)
+            residual.tick_params(labelleft=False)
+    if not faceted:
+        ax, residual = pairs[0]
+        ax.set_xlabel(axis_label(f"Reference {spec['quantity']}", spec["unit"]))
+        ax.legend(loc="upper left")
+        fig.get_layout_engine().set(rect=(0, 0, 1, 1 - 12 / spec["height_pt"]))
+        for label, panel in zip(("a", "b"), (ax, residual), strict=True):
+            panel.set_title(label, loc="left", pad=8, fontweight="bold", fontsize=8)
+    groups = []
+    if faceted:
+        for row in range(2):
+            groups.append(
+                {
+                    "panels": [str(row * len(names) + i) for i in range(len(names))],
+                    "orientation": "row",
+                    "equal_size": True,
+                }
+            )
+        groups.extend(
+            {"panels": [str(i), str(i + len(names))], "orientation": "column", "equal_size": False}
+            for i in range(len(names))
+        )
     else:
-        padding = max((hi - lo) * 0.08, 0.1)
-        lo, hi = lo - padding, hi + padding
-    ax.plot([lo, hi], [lo, hi], color="#555555", linestyle="--", linewidth=0.7)
-    ax.set(
-        xlim=(lo, hi),
-        ylim=(lo, hi),
-        xlabel=axis_label(f"Reference {spec['quantity']}", spec["unit"]),
-        ylabel=axis_label(f"Predicted {spec['quantity']}", spec["unit"]),
-    )
-    residual.axhline(0, color="#555555", linestyle="--", linewidth=0.7)
-    residual.set(
-        xlim=(lo, hi),
-        xlabel=axis_label(f"Reference {spec['quantity']}", spec["unit"]),
-        ylabel=axis_label("Prediction − reference", spec["unit"]),
-    )
-    ax.legend(loc="upper left")
-    # Reserve physical headroom for labels even when aspect-constrained axes
-    # consume the available subplot height in a different font environment.
-    fig.get_layout_engine().set(rect=(0, 0, 1, 1 - 12 / spec["height_pt"]))
-    for label, panel in zip(("a", "b"), axes, strict=True):
-        panel.set_box_aspect(1)
-        # Titles participate in constrained layout across Matplotlib versions;
-        # offset annotations can extend beyond the page even when axes fit.
-        panel.set_title(label, loc="left", pad=8, fontweight="bold", fontsize=8)
-    return {
-        "encoding": colors,
-        "metrics": metrics,
-        "comparable_groups": [
+        groups = [
             {
                 "panels": ["0", "1"],
                 "orientation": "row" if horizontal else "column",
                 "equal_size": True,
             }
-        ],
+        ]
+    return {
+        "encoding": colors,
+        "metrics": metrics,
+        "faceted_methods": bool(faceted),
+        "comparable_groups": groups,
     }
 
 
@@ -192,18 +223,21 @@ def stages(fig, spec: dict) -> dict:
     }
 
 
-def comparison(fig, spec: dict) -> dict:
+def comparison(fig, spec: dict, ax=None) -> dict:
     import numpy as np
 
-    ax = fig.subplots()
+    ax = fig.subplots() if ax is None else ax
     rows = spec["data"]
     names = series(rows, "method")
     colors = encodings(spec, names)
     ids = series(rows, "reaction_id")
     lookup = {(r["reaction_id"], r["method"]): r["value"] for r in rows}
+    offsets = dict(
+        zip(ids, np.linspace(-0.14, 0.14, len(ids)) if len(ids) > 1 else [0], strict=True)
+    )
     for reaction in ids:
         ax.plot(
-            range(len(names)),
+            np.arange(len(names)) + offsets[reaction],
             [lookup[reaction, m] for m in names],
             color="#BBBBBB",
             linewidth=0.5,
@@ -214,21 +248,24 @@ def comparison(fig, spec: dict) -> dict:
     for i, name in enumerate(names):
         values = [lookup[r, name] for r in ids]
         ax.scatter(
-            [i] * len(values),
+            [i + offsets[r] for r in ids],
             values,
             s=16,
-            **point_style(colors[name]),
+            **point_style(colors[name], open_fill=True),
             zorder=2,
             rasterized=len(values) > 10000,
         )
         median = float(np.median(values))
-        ax.plot([i - 0.14, i + 0.14], [median, median], color="black", linewidth=1.2, zorder=3)
+        ax.plot(
+            [i - 0.14, i + 0.14], [median, median], color=PALETTE["text"], linewidth=0.9, zorder=3
+        )
         summaries[name] = {"n": len(values), "median": median}
-    ax.set_xticks(range(len(names)), names)
+    ax.set_xticks(range(len(names)), [f"{n}\nn = {len(ids)}" for n in names])
     ax.set_ylabel(axis_label(spec["metric"], spec["unit"]))
     ax.set_yscale(spec["scale"])
     ax.margins(x=0.2)
     return {
+        "category_offsets_by_reaction": offsets,
         "encoding": colors,
         "summary": summaries,
         "paired_lines": "same reaction across methods",
@@ -252,7 +289,10 @@ def workflow(fig, spec: dict) -> dict:
     positions = {}
     w, h = 0.76 / columns, 0.62 / rows
     for i, node in enumerate(nodes):
-        x = (i % columns + 0.5) / columns
+        column = i % columns
+        if (i // columns) % 2 and spec.get("reading_order", "serpentine") == "serpentine":
+            column = columns - 1 - column
+        x = (column + 0.5) / columns
         y = 1 - (i // columns + 0.5) / rows
         positions[node["id"]] = (x, y)
         box = FancyBboxPatch(
@@ -260,8 +300,8 @@ def workflow(fig, spec: dict) -> dict:
             w,
             h,
             boxstyle="round,pad=0.005,rounding_size=0.012",
-            facecolor=PALETTE["fills"][i % len(PALETTE["fills"])],
-            edgecolor=PALETTE["categorical"][i % len(PALETTE["categorical"])],
+            facecolor=PALETTE["fills"][0] if node.get("emphasis") else "#F4F6F8",
+            edgecolor=PALETTE["categorical"][0] if node.get("emphasis") else "#C7CFD6",
             linewidth=0.8,
         )
         ax.add_patch(box)
@@ -314,6 +354,35 @@ DRAW = {
     "curve": curve,
     "heatmap": heatmap,
 }
+
+
+def panel_grid(fig, spec: dict) -> dict:
+    import math
+
+    panels = spec["panels"]
+    columns = min(spec["columns"], len(panels))
+    rows = math.ceil(len(panels) / columns)
+    axes = fig.subplots(rows, columns, squeeze=False)
+    facts = {}
+    for i, panel in enumerate(panels):
+        ax = axes.flat[i]
+        child = panel["spec"]
+        facts[panel["label"]] = DRAW[child["kind"]](fig, child, ax=ax)
+        ax.set_title(f"{panel['label']}  {panel['title']}", loc="left", fontsize=8, pad=9)
+    for ax in list(axes.flat)[len(panels) :]:
+        fig.delaxes(ax)
+    groups = []
+    # Colorbars introduce an additional layout constraint. Check those composites
+    # visually rather than asserting equal widths between unlike panel roles.
+    if all(p["spec"]["kind"] != "heatmap" for p in panels):
+        for row in range(rows):
+            ids = [str(i) for i in range(row * columns, min((row + 1) * columns, len(panels)))]
+            if len(ids) > 1:
+                groups.append({"panels": ids, "orientation": "row", "equal_size": True})
+    return {"panels": facts, "population": spec["population"], "comparable_groups": groups}
+
+
+DRAW["panel_grid"] = panel_grid
 
 
 def copy_assets(spec: dict, base: Path, prefix: Path) -> None:
@@ -412,15 +481,17 @@ def render(spec_path: Path, output: Path, overwrite: bool = False) -> dict:
                 "detail": "SVG labels, molecular bonds and panel collisions need visual inspection",
             }
         )
+    delivered_caption = compose_caption(spec, details)
     result.update(
-        schema_version=1,
+        schema_version=2,
         kind=spec["kind"],
         profile=spec["profile"],
         data_status=spec["data_status"],
         provenance=provenance,
         details=details,
         claim=spec["claim"],
-        caption=spec["caption"],
+        caption=delivered_caption,
+        author_caption=spec["caption"],
         visual_review="required",
         renderer_sha256=digest(Path(__file__)),
         implementation_sha256={
@@ -432,6 +503,7 @@ def render(spec_path: Path, output: Path, overwrite: bool = False) -> dict:
                 "svg_panels.py",
                 "figure_style.py",
                 "statistical_figures.py",
+                "figure_caption.py",
             )
         },
         raster_export={
@@ -453,7 +525,7 @@ def render(spec_path: Path, output: Path, overwrite: bool = False) -> dict:
     output.with_suffix(".spec.json").write_text(
         json.dumps(spec, ensure_ascii=False, indent=2) + "\n"
     )
-    output.with_suffix(".caption.txt").write_text(spec["caption"] + "\n", encoding="utf-8")
+    output.with_suffix(".caption.txt").write_text(delivered_caption, encoding="utf-8")
     result["files"] = {
         ext: {"name": output.with_suffix(ext).name, "sha256": digest(output.with_suffix(ext))}
         for ext in extensions

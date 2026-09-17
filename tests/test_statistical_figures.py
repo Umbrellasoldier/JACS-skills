@@ -108,7 +108,9 @@ class StatisticalDataTests(unittest.TestCase):
                 self.assertEqual(facts["summary"]["A"]["bin_counts"], [3, 2])
             else:
                 self.assertEqual(fig.axes[0].lines[0].get_ydata()[-1], 1)
-                self.assertEqual(list(fig.axes[0].lines[0].get_xdata()), [0, 0, 1, 1, 2, 100])
+                self.assertEqual(list(fig.axes[0].lines[0].get_xdata())[1:-1], [0, 1, 1, 2, 100])
+                self.assertLess(fig.axes[0].lines[0].get_xdata()[0], 0)
+                self.assertGreater(fig.axes[0].lines[0].get_xdata()[-1], 100)
             plt.close(fig)
 
     @unittest.skipUnless(importlib.util.find_spec("matplotlib"), "Install figures group")

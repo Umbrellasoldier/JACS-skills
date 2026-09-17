@@ -19,12 +19,21 @@ Pale fills cover area; medium lines carry precise positions. Small pale marks ne
 edge. Do not use pale yellow for small text, white text on a pale bar, excessive transparency
 on thin lines, or washed-out axes. Keep light backgrounds white rather than tinting every
 panel. Bands may use low-opacity fills, but data lines and markers remain legible.
+Judge colored area as well as the palette: large pale boxes can still dominate a sparse figure.
+Use neutral workflow steps and a supplied focal role rather than assigning each step a new hue.
+Let raw observations remain distinguishable from box or density fills. If several histogram
+fills mix into a muddy third color, use outlines or comparable facets; reducing all contrast
+does not resolve their overlapping geometry.
 
 Quantitative color has a different job: use the supplied sequential blue map for ordered
 magnitudes and the blue–neutral–apricot map for meaningful negative/positive deviations.
 Give quantity, units, limits and center. Keep absent cells gray with an explicit missing
 label; do not interpolate a fake value or replace it by zero. Colorbar limits must not
 silently clip data. A diverging map is not required just because two groups are compared.
+For an error matrix, dark high-error cells legitimately attract attention. Match the reading
+question through ordering, cell size and factual annotation; do not flatten the color range to
+make the preferred method look better. Distinguish missingness from low values with a label and,
+when useful, a hatch. Give a missing reason only when the source establishes it.
 
 Check **the actual rendered chart**, not only palette swatches: grayscale, protan/deutan
 and tritan simulations, small-size reading and white-background line visibility. The

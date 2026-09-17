@@ -1,12 +1,13 @@
 {
   "data_status": "synthetic",
   "profile": "single",
-  "height_pt": 195,
+  "height_pt": 180,
   "raster_class": "color",
   "claim": "Demonstrate an encoding with synthetic values.",
-  "caption": "Synthetic demonstration; not results of a chemical study. Empirical cumulative fractions; no smoothing or fitted CDF.",
+  "caption": "Synthetic demonstration; not results of a chemical study. Fraction of reactions within an absolute error threshold.",
   "kind": "distribution",
-  "metric": "Barrier error",
+  "metric": "Absolute $\\Delta G^{\\ddagger}$ error",
+  "quantity_definition": "Signed activation Gibbs-energy error = prediction minus reference",
   "unit": "kcal/mol",
   "population": "32 synthetic reactions per group",
   "unit_of_analysis": "reaction",
@@ -492,5 +493,7 @@
       "value": 0.653
     }
   ],
-  "display": "ecdf"
+  "zero_reference": false,
+  "display": "ecdf",
+  "value_transform": "absolute"
 }

@@ -14,6 +14,10 @@ scientific symbols, arrow directions, scales, color/marker consistency, legend p
 structure identity, crowded bonds and repeated view orientations. Check grayscale or color
 vision accessibility where color carries a distinction. Avoid whitespace or salience changes
 that hide a control or failure. Statistical annotation requires actual statistical evidence.
+Check coincident values, drawing order and interval-to-marker size: record counts can pass
+while observations or error bars are hidden. For a density, examine bandwidth sensitivity
+when interpreting its shape. For a matrix, inspect missing cells beside low values at final
+size. A renderer's no-collision result does not establish hierarchy or scientific narrative.
 
 The bundled renderer writes measured layout geometry for Matplotlib figures and audits the
 exported PDF. To inspect a separately generated one-page PDF:
@@ -51,3 +55,9 @@ checks, warnings resolved by visual review and any remaining limit. Reference th
 hash. Do not claim human review when only an agent inspected the figure. Synthetic examples
 remain visibly labeled. Submission files follow the relevant current journal/TOC policy;
 preview PNG and editable SVG have distinct roles. Keep a reproducible source/spec/environment.
+
+Read only the actual delivered figure and caption for a second pass: can a reader determine
+what each mark means, what n counts, which subtraction/normalization was used, what intervals
+represent and how missingness is encoded? Verify that assembled panel definitions survived.
+Then use the source to check those statements. The caption composer carries known facts but
+cannot resolve conflicting author prose, undefined method names or unsupported causal claims.

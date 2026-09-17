@@ -7,19 +7,32 @@ import textwrap
 from figure_style import PALETTE, axis_label, encodings, point_style, quiet_grid
 
 
-def distribution(fig, spec: dict) -> dict:
+def distribution(fig, spec: dict, ax=None) -> dict:
     import numpy as np
+    from matplotlib.colors import to_rgba
 
-    ax = fig.subplots()
+    ax = fig.subplots() if ax is None else ax
     rows = spec["data"]
     names = spec["group_order"]
     style = encodings(spec, names)
     mode = spec["display"]
     summaries = {}
     skipped = []
+    sensitivity = {}
     rng = np.random.default_rng(0)
+    all_values = np.array([r["value"] for r in rows])
+    transform = spec.get("value_transform", "identity")
+    if transform == "absolute":
+        all_values = np.abs(all_values)
+    pad = max(float(np.ptp(all_values)), 0.1) * 0.035
+    domain = (
+        0 if transform == "absolute" else float(all_values.min()) - pad,
+        float(all_values.max()) + pad,
+    )
     for i, name in enumerate(names):
         values = np.array([r["value"] for r in rows if r["group"] == name])
+        if transform == "absolute":
+            values = np.abs(values)
         q1, median, q3 = np.quantile(values, [0.25, 0.5, 0.75], method="linear")
         summaries[name] = {
             "n": len(values),
@@ -38,7 +51,7 @@ def distribution(fig, spec: dict) -> dict:
                 whis=1.5,
                 manage_ticks=False,
                 medianprops={"color": PALETTE["text"], "linewidth": 1.1},
-                boxprops={"facecolor": fill, "edgecolor": color, "linewidth": 0.8},
+                boxprops={"facecolor": to_rgba(fill, 0.30), "edgecolor": color, "linewidth": 0.8},
                 whiskerprops={"color": color, "linewidth": 0.8},
                 capprops={"color": color, "linewidth": 0.8},
             )
@@ -56,11 +69,22 @@ def distribution(fig, spec: dict) -> dict:
                     points=150,
                     bw_method=spec["bandwidth"],
                 )["bodies"][0]
-                body.set(facecolor=fill, edgecolor=color, linewidth=0.8, alpha=0.8)
+                for path in body.get_paths():
+                    path.vertices[:, 0] = np.minimum(path.vertices[:, 0], i)
+                body.set(facecolor=to_rgba(fill, 0.45), edgecolor=color, linewidth=0.8, alpha=None)
+                grid = np.linspace(values.min(), values.max(), 150)
+                mode_counts = []
+                for factor in (spec["bandwidth"], 2 * spec["bandwidth"]):
+                    h = factor * np.std(values, ddof=1)
+                    density = np.exp(-0.5 * ((grid[:, None] - values) / h) ** 2).mean(axis=1)
+                    mode_counts.append(
+                        int(np.sum((density[1:-1] > density[:-2]) & (density[1:-1] > density[2:])))
+                    )
+                sensitivity[name] = mode_counts
             else:
                 skipped.append(name)
             ax.plot(
-                [i - 0.13, i + 0.13],
+                [i - 0.30, i],
                 [median, median],
                 color=PALETTE["text"],
                 linewidth=1.2,
@@ -68,8 +92,8 @@ def distribution(fig, spec: dict) -> dict:
             )
         elif mode == "ecdf":
             values = np.sort(values)
-            x = np.r_[values[0], values]
-            y = np.r_[0, np.arange(1, len(values) + 1) / len(values)]
+            x = np.r_[domain[0], values, domain[1]]
+            y = np.r_[0, np.arange(1, len(values) + 1) / len(values), 1]
             ax.step(
                 x,
                 y,
@@ -82,7 +106,6 @@ def distribution(fig, spec: dict) -> dict:
             summaries[name]["cumulative_mass"] = 1.0
         elif mode == "histogram":
             counts, edges = np.histogram(values, bins=spec["bin_edges"])
-            ax.stairs(counts, edges, color=color, fill=True, alpha=0.2, linewidth=0)
             ax.stairs(
                 counts,
                 edges,
@@ -94,13 +117,16 @@ def distribution(fig, spec: dict) -> dict:
             summaries[name]["bin_counts"] = counts.tolist()
         if mode in {"box", "violin"}:
             # Jitter affects only categorical position, never the measurement coordinate.
-            jitter = rng.uniform(-0.14, 0.14, len(values))
+            jitter = (
+                rng.uniform(0.08, 0.30, len(values))
+                if mode == "violin"
+                else rng.uniform(-0.22, 0.22, len(values))
+            )
             ax.scatter(
                 i + jitter,
                 values,
-                s=11,
-                **point_style(style[name]),
-                alpha=0.8,
+                s=5 if len(values) > 40 else 8,
+                **{**point_style(style[name], open_fill=True), "linewidths": 0.45},
                 zorder=3,
                 rasterized=len(values) > 10000,
             )
@@ -115,6 +141,10 @@ def distribution(fig, spec: dict) -> dict:
         ax.set_ylabel("Cumulative fraction" if mode == "ecdf" else "Count")
         ax.set_ylim(bottom=0, top=1.04 if mode == "ecdf" else None)
         ax.legend(loc="best", handlelength=2.2)
+        if mode == "ecdf":
+            ax.set_xlim(domain)
+    if spec.get("zero_reference") and spec["scale"] == "linear":
+        ax.axhline(0, color=PALETTE["axis"], linewidth=0.7, linestyle="--", zorder=1.5)
     quiet_grid(ax)
     return {
         "encoding": style,
@@ -124,6 +154,9 @@ def distribution(fig, spec: dict) -> dict:
         if mode == "box"
         else None,
         "violin_bandwidth_factor": spec.get("bandwidth") if mode == "violin" else None,
+        "kde_mode_counts_at_bandwidth_and_double": sensitivity,
+        "bandwidth_sensitive_groups": [k for k, v in sensitivity.items() if v[0] != v[1]],
+        "display_transform": transform,
         "violin_normalization": "Equal maximum width; KDE computed in raw measurement units"
         if mode == "violin"
         else None,
@@ -136,10 +169,10 @@ def distribution(fig, spec: dict) -> dict:
     }
 
 
-def interval(fig, spec: dict) -> dict:
+def interval(fig, spec: dict, ax=None) -> dict:
     import numpy as np
 
-    ax = fig.subplots()
+    ax = fig.subplots() if ax is None else ax
     rows = spec["data"]
     style = encodings(spec, ["Estimate"])["Estimate"]
     estimates = np.array([r["estimate"] for r in rows])
@@ -158,7 +191,7 @@ def interval(fig, spec: dict) -> dict:
         capthick=0.8,
         zorder=2,
     )
-    ax.scatter(estimates, y, s=25, **point_style(style), zorder=3)
+    ax.scatter(estimates, y, s=12, **point_style(style, open_fill=True), zorder=3)
     ax.set_yticks(y, [textwrap.fill(r["label"], 24) for r in rows])
     ax.invert_yaxis()
     if "reference_value" in spec:
@@ -174,8 +207,10 @@ def interval(fig, spec: dict) -> dict:
     }
 
 
-def curve(fig, spec: dict) -> dict:
-    ax = fig.subplots()
+def curve(fig, spec: dict, ax=None) -> dict:
+    from matplotlib.ticker import NullFormatter
+
+    ax = fig.subplots() if ax is None else ax
     rows = spec["data"]
     names = list(dict.fromkeys(row["series"] for row in rows))
     style = encodings(spec, names)
@@ -190,7 +225,7 @@ def curve(fig, spec: dict) -> dict:
                 [r["lower"] for r in data],
                 [r["upper"] for r in data],
                 color=encoding["fill"],
-                alpha=0.4,
+                alpha=0.28,
                 linewidth=0,
                 zorder=1,
             )
@@ -199,8 +234,8 @@ def curve(fig, spec: dict) -> dict:
             ax.scatter(
                 x,
                 y,
-                s=19,
-                **point_style(encoding),
+                s=12,
+                **point_style(encoding, open_fill=True),
                 label=name,
                 zorder=3,
                 rasterized=len(data) > 10000,
@@ -227,6 +262,11 @@ def curve(fig, spec: dict) -> dict:
         ax.axhline(0, color=PALETTE["axis"], linewidth=0.65, linestyle="--")
     ax.legend(loc="best", handlelength=2.3)
     ax.margins(x=0.06, y=0.12)
+    if "x_ticks" in spec:
+        limits = ax.get_xlim()
+        ax.set_xticks(spec["x_ticks"], [f"{v:g}" for v in spec["x_ticks"]])
+        ax.xaxis.set_minor_formatter(NullFormatter())
+        ax.set_xlim(limits)
     quiet_grid(ax)
     return {
         "encoding": style,
@@ -240,11 +280,12 @@ def curve(fig, spec: dict) -> dict:
     }
 
 
-def heatmap(fig, spec: dict) -> dict:
+def heatmap(fig, spec: dict, ax=None) -> dict:
     import numpy as np
     from matplotlib.colors import LinearSegmentedColormap, Normalize, TwoSlopeNorm
+    from matplotlib.patches import Rectangle
 
-    ax = fig.subplots()
+    ax = fig.subplots() if ax is None else ax
     row_names, col_names = spec["row_order"], spec["column_order"]
     values = np.full((len(row_names), len(col_names)), np.nan)
     for row in spec["data"]:
@@ -278,10 +319,22 @@ def heatmap(fig, spec: dict) -> dict:
     ax.tick_params(which="minor", length=0)
     for spine in ax.spines.values():
         spine.set_visible(False)
-    if spec.get("annotate", True):
-        for (i, j), value in np.ndenumerate(values):
+    for (i, j), value in np.ndenumerate(values):
+        if np.isnan(value):
+            ax.add_patch(
+                Rectangle(
+                    (j - 0.5, i - 0.5),
+                    1,
+                    1,
+                    facecolor="#F5F6F7",
+                    edgecolor="#C9CED3",
+                    hatch="///",
+                    linewidth=0.3,
+                )
+            )
+        if spec.get("annotate", True) or np.isnan(value):
             if np.isnan(value):
-                label, color = "—", PALETTE["text"]
+                label, color = spec.get("missing_label", "NA"), PALETTE["text"]
             else:
                 label = f"{value:.2g}"
                 rgb = np.array(cmap(norm(value))[:3])
@@ -290,6 +343,13 @@ def heatmap(fig, spec: dict) -> dict:
                 color = "white" if luminance < 0.3 else PALETTE["text"]
             ax.text(j, i, label, ha="center", va="center", fontsize=7, color=color)
     bar = fig.colorbar(im, ax=ax, pad=0.035, fraction=0.055)
+    ticks = spec.get(
+        "colorbar_ticks",
+        [spec["vmin"], spec["center"], spec["vmax"]]
+        if spec["color_scale"] == "diverging"
+        else np.linspace(spec["vmin"], spec["vmax"], 4),
+    )
+    bar.set_ticks(ticks)
     bar.outline.set_visible(False)
     bar.solids.set_rasterized(False)
     bar.solids.set_edgecolor("face")
@@ -300,7 +360,7 @@ def heatmap(fig, spec: dict) -> dict:
         "center": spec.get("center"),
         "missing_cells": int(np.isnan(values).sum()),
         "observed_cells": int(np.isfinite(values).sum()),
-        "missing_encoding": "Gray cell and em dash; distinct from observed zero",
+        "missing_encoding": "Hatched neutral cell and explicit missing label; distinct from zero",
         "row_order": row_names,
         "column_order": col_names,
     }

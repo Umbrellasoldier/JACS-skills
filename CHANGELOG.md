@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.4.0 — 2026-09-17
+
+Carry statistical definitions, sample sizes, references and measured error summaries into delivered
+captions. Native quantitative panel grids retain child definitions; SVG assemblies require a
+caption or caption file for each panel and bundle it for reruns. This tightens the assembly schema.
+
+Separate paired ties with stable category offsets; offer method facets with shared domains for
+dense parity plots. Lighten support fills, separate half-density/raw-point layers, use outline
+histograms, extend ECDF tails, and support explicit absolute-value displays. Preserve raw values.
+Add normalization provenance and meaningful curve ticks; reduce small-matrix area and colorbar
+ticks, and mark missing cells with NA and hatching. Rebuild the shared-cohort example and replace
+the generic TOC with a checked connectivity illustration. Publish captions beside all 17 previews.
+
+Update conditional design and delivery guidance following the critical review. Verify caption
+survival, coincident records, normalization, numerical domains and actual exports with regressions.
+Literature counts and historical evaluations remain evidence about their original versions.
+
 ## 0.3.0 — 2026-09-17
 
 Upgrade `jacs-figure` with a light-fill, clear-outline palette, professional axis and legend

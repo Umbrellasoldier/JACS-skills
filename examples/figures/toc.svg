@@ -1,113 +1,32 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
-  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="234pt" height="126pt" viewBox="0 0 234 126" xmlns="http://www.w3.org/2000/svg" version="1.1">
- <metadata>
-  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-   <cc:Work>
-    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-09-17T16:17:59.596461</dc:date>
-    <dc:format>image/svg+xml</dc:format>
-    <dc:creator>
-     <cc:Agent>
-      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
-     </cc:Agent>
-    </dc:creator>
-   </cc:Work>
-  </rdf:RDF>
- </metadata>
- <defs>
-  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
- </defs>
- <g id="figure_1">
-  <g id="patch_1">
-   <path d="M 0 126 
-L 234 126 
-L 234 0 
-L 0 0 
-z
-" style="fill: #ffffff"/>
-  </g>
-  <g id="axes_1">
-   <g id="patch_2">
-    <path d="M 19.47816 90.5058 
-L 71.00184 90.5058 
-Q 73.5852 90.5058 73.5852 89.26596 
-L 73.5852 26.65404 
-Q 73.5852 25.4142 71.00184 25.4142 
-L 19.47816 25.4142 
-Q 16.8948 25.4142 16.8948 26.65404 
-L 16.8948 89.26596 
-Q 16.8948 90.5058 19.47816 90.5058 
-z
-" clip-path="url(#p616e7850fc)" style="fill: #a8cee8; stroke: #4e86af; stroke-width: 0.8; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_3">
-    <path d="M 91.23816 90.5058 
-L 142.76184 90.5058 
-Q 145.3452 90.5058 145.3452 89.26596 
-L 145.3452 26.65404 
-Q 145.3452 25.4142 142.76184 25.4142 
-L 91.23816 25.4142 
-Q 88.6548 25.4142 88.6548 26.65404 
-L 88.6548 89.26596 
-Q 88.6548 90.5058 91.23816 90.5058 
-z
-" clip-path="url(#p616e7850fc)" style="fill: #f3c8a8; stroke: #b98255; stroke-width: 0.8; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_4">
-    <path d="M 162.99816 90.5058 
-L 214.52184 90.5058 
-Q 217.1052 90.5058 217.1052 89.26596 
-L 217.1052 26.65404 
-Q 217.1052 25.4142 214.52184 25.4142 
-L 162.99816 25.4142 
-Q 160.4148 25.4142 160.4148 26.65404 
-L 160.4148 89.26596 
-Q 160.4148 90.5058 162.99816 90.5058 
-z
-" clip-path="url(#p616e7850fc)" style="fill: #a4d6c8; stroke: #428f80; stroke-width: 0.8; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_5">
-    <path d="M 74.506027 57.96 
-Q 81.116859 57.96 86.833265 57.96 
-" clip-path="url(#p616e7850fc)" style="fill: none; stroke: #303c4b; stroke-width: 0.8; stroke-linecap: round"/>
-    <path d="M 83.633265 56.36 
-L 86.833265 57.96 
-L 83.633265 59.56 
-z
-" clip-path="url(#p616e7850fc)" style="fill: #303c4b; stroke: #303c4b; stroke-width: 0.8; stroke-linecap: round"/>
-   </g>
-   <g id="patch_6">
-    <path d="M 146.266027 57.96 
-Q 152.876859 57.96 158.593265 57.96 
-" clip-path="url(#p616e7850fc)" style="fill: none; stroke: #303c4b; stroke-width: 0.8; stroke-linecap: round"/>
-    <path d="M 155.393265 56.36 
-L 158.593265 57.96 
-L 155.393265 59.56 
-z
-" clip-path="url(#p616e7850fc)" style="fill: #303c4b; stroke: #303c4b; stroke-width: 0.8; stroke-linecap: round"/>
-   </g>
-   <g id="text_1">
-    <text style="font-size: 8px; font-family: 'Liberation Sans', 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; fill: #303c4b" transform="translate(26.68125 55.688375)">Chemical</text>
-    <text style="font-size: 8px; font-family: 'Liberation Sans', 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; fill: #303c4b" transform="translate(32.8675 64.646625)">inputs</text>
-   </g>
-   <g id="text_2">
-    <text style="font-size: 8px; font-family: 'Liberation Sans', 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; fill: #303c4b" transform="translate(96.55 55.688375)">Candidate</text>
-    <text style="font-size: 8px; font-family: 'Liberation Sans', 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; fill: #303c4b" transform="translate(95.245625 64.646625)">generation</text>
-   </g>
-   <g id="text_3">
-    <text style="font-size: 8px; font-family: 'Liberation Sans', 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; fill: #303c4b" transform="translate(179.97375 55.688375)">Path</text>
-    <text style="font-size: 8px; font-family: 'Liberation Sans', 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; fill: #303c4b" transform="translate(169.06625 64.646625)">validation</text>
-   </g>
-  </g>
-  <g id="text_4">
-   <text style="font-size: 6px; font-family: 'Liberation Sans', 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: middle; fill: #303c4b" x="117" y="123.492188" transform="rotate(-0 117 123.492188)">SYNTHETIC DEMONSTRATION</text>
-  </g>
- </g>
- <defs>
-  <clipPath id="p616e7850fc">
-   <rect x="9.36" y="6.3" width="215.28" height="103.32"/>
-  </clipPath>
- </defs>
-</svg>
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="234.0pt" height="126.0pt" viewBox="0 0 234.0 126.0"><rect width="100%" height="100%" fill="white" /><text x="8" y="12" font-family="Liberation Sans,DejaVu Sans,sans-serif" font-size="8" font-weight="bold" fill="#222222">Bond-order proposals for TS search</text><text x="8.0" y="33.0" font-family="Liberation Sans,DejaVu Sans,sans-serif" font-size="8" font-weight="normal" fill="#222222">Reactants</text><svg version="1.1" baseProfile="full" xml:space="preserve" width="103.0" height="59.0" viewBox="0.0 0.0 103.0 59.0" x="8.0" y="39.0" preserveAspectRatio="xMidYMid meet">
+
+<rect style="opacity:1.0;fill:#FFFFFF;stroke:none" width="103.0" height="59.0" x="0.0" y="0.0"> </rect>
+<path class="bond-0 atom-0 atom-1" d="M 10.3,43.7 L 38.9,31.6" style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+<path class="bond-0 atom-0 atom-1" d="M 12.1,48.0 L 38.2,36.9" style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+<path class="bond-1 atom-1 atom-2" d="M 38.9,31.6 L 63.7,50.3" style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+<path class="bond-2 atom-2 atom-3" d="M 63.7,50.3 L 92.3,38.1" style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+<path class="bond-2 atom-2 atom-3" d="M 64.4,44.9 L 90.5,33.8" style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+<path class="bond-3 atom-4 atom-5" d="M 35.8,8.5 L 66.8,8.5" style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+<path class="bond-3 atom-4 atom-5" d="M 35.8,13.2 L 66.8,13.2" style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+<path d="M 37.5,32.2 L 38.9,31.6 L 40.1,32.5" style="fill:none;stroke:#000000;stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;" />
+<path d="M 62.5,49.3 L 63.7,50.3 L 65.1,49.6" style="fill:none;stroke:#000000;stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;" />
+</svg><text x="123.0" y="33.0" font-family="Liberation Sans,DejaVu Sans,sans-serif" font-size="8" font-weight="normal" fill="#222222">Product connectivity</text><svg version="1.1" baseProfile="full" xml:space="preserve" width="103.0" height="59.0" viewBox="0.0 0.0 103.0 59.0" x="123.0" y="39.0" preserveAspectRatio="xMidYMid meet">
+
+<rect style="opacity:1.0;fill:#FFFFFF;stroke:none" width="103.0" height="59.0" x="0.0" y="0.0"> </rect>
+<path class="bond-5 atom-0 atom-5" d="M 65.7,5.9 L 79.1,29.1 L 77.1,30.3 L 63.7,7.0 Z" style="fill:#A8CEE8;fill-rule:evenodd;fill-opacity:1;stroke:#A8CEE8;stroke-width:0.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;" />
+<path class="bond-3 atom-3 atom-4" d="M 36.9,5.9 L 38.9,7.0 L 25.5,30.3 L 23.5,29.1 Z" style="fill:#A8CEE8;fill-rule:evenodd;fill-opacity:1;stroke:#A8CEE8;stroke-width:0.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;" />
+<path class="bond-0 atom-0 atom-1" d="M 78.1,29.7 L 64.7,52.9" style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+<path class="bond-1 atom-1 atom-2" d="M 64.7,52.9 L 37.9,52.9" style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+<path class="bond-1 atom-1 atom-2" d="M 62.4,48.9 L 40.2,48.9" style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+<path class="bond-2 atom-2 atom-3" d="M 37.9,52.9 L 24.5,29.7" style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+<path class="bond-3 atom-3 atom-4" d="M 24.5,29.7 L 37.9,6.5" style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+<path class="bond-4 atom-4 atom-5" d="M 37.9,6.5 L 64.7,6.5" style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+<path class="bond-5 atom-5 atom-0" d="M 64.7,6.5 L 78.1,29.7" style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+<path d="M 77.4,30.8 L 78.1,29.7 L 77.4,28.5" style="fill:none;stroke:#000000;stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;" />
+<path d="M 65.4,51.7 L 64.7,52.9 L 63.4,52.9" style="fill:none;stroke:#000000;stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;" />
+<path d="M 39.2,52.9 L 37.9,52.9 L 37.2,51.7" style="fill:none;stroke:#000000;stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;" />
+<path d="M 25.2,30.8 L 24.5,29.7 L 25.2,28.5" style="fill:none;stroke:#000000;stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;" />
+<path d="M 37.2,7.6 L 37.9,6.5 L 39.2,6.5" style="fill:none;stroke:#000000;stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;" />
+<path d="M 63.4,6.5 L 64.7,6.5 L 65.4,7.6" style="fill:none;stroke:#000000;stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;" />
+</svg><defs><marker id="scheme-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M 0 1 L 9 5 L 0 9 Z" fill="#74808C" /></marker></defs><line x1="111.0" y1="68.5" x2="122.0" y2="68.5" stroke="#74808C" stroke-width="0.8" marker-end="url(#scheme-arrow)" /><text x="8" y="106.0" font-family="Liberation Sans,DejaVu Sans,sans-serif" font-size="6" font-weight="normal" fill="#222222">Propose TS → optimize → vibrations → IRC → endpoints</text><text x="8" y="122.0" font-family="Liberation Sans,DejaVu Sans,sans-serif" font-size="6" font-weight="normal" fill="#222222">SYNTHETIC DEMONSTRATION</text></svg>

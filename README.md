@@ -5,23 +5,24 @@
 面向计算反应化学、化学机器学习和生物正交反应的论文写作与科研绘图技能包。
 从作者事实起草、润色文字、制作可复现图表，并从可定位的 JACS 全文与实际图像中提炼规律。
 
-**v0.3.0 升级绘图技能：淡亮配色、31 项图型目录、17 幅原创示例。**
-绘图学习累计覆盖 **50 篇 JACS、199 幅实看图**；本轮新增 36 篇／150 幅，
-涵盖计算、催化、光谱、材料与生物化学。样本是有目的的开放获取选样，不代表全刊统一风格。
-新增箱线、小提琴、ECDF、直方图、点区间、带状曲线和热图；细化点线、图例、专业标签、单位、字号、坐标和组图规则，
-并适配 Data 插件的数据分析绘图设计模式。
+**v0.4.0 修复绘图的科学表达与可读性。**
+图注自动承接统计定义、n、参考态和误差摘要；配对重复值区分显示，密集一致性散点支持方法分面。
+组图以同一批反应的分析问题组织，热图更紧凑，缺失明确标为 NA；TOC 加入具体反应结构。
+17 个合成示例全部附读者可直接使用的图注，示例不代表真实研究结果。
 
-![新版合成示例：分布、学习曲线、区间估计和热图](examples/figures/showcase.png)
+![同一批合成反应的偏差和绝对误差覆盖率](examples/figures/showcase.png)
 
-查看[完整示例图库](examples/figures/README.md)、[50 篇文献学习记录](skills/jacs-shared/references/figure-study-v3.md)、
-[图型选型表](skills/jacs-figure/references/chart-catalog.md)和[本轮验证](evaluation/figure-v3/REPORT.md)。
+查看[新版图库和图注](examples/figures/README.md)、[修复与验证](evaluation/figure-v4/REPORT.md)、
+[图型选型表](skills/jacs-figure/references/chart-catalog.md)。
+绘图文献证据仍为 [50 篇 JACS、199 幅实看图](skills/jacs-shared/references/figure-study-v3.md)，
+本轮依据实际示例的复核修复工作流，没有把文献覆盖量或机械检查当作成图质量证明。
 
 写作语料仍包含 34 篇候选题录、
 8 篇开发组全文的结构化处理、35 条来源标注及 5 条条件式文风规则。
 原始全文不随包分发；公开内容是题录、来源位置、哈希、原创观察和统计。
 另有一篇留出论文用于写作评测，其内容未用于规则提炼。
 绘图 v0.2 的 14 篇／49 幅记录和评测保持原样；v0.3 的新增开发集为 30 篇／127 幅，
-另有预先留出的 6 篇／23 幅在规则冻结后查看。提供十类绘图模板、SVG 组图及单独的 TOC 导出规格。
+另有预先留出的 6 篇／23 幅在规则冻结后查看。提供十类绘图模板、原生数据组图、SVG 组图及单独的 TOC 导出规格。
 
 ## 技能
 
@@ -94,20 +95,21 @@ uv run --locked --group figures --group chemistry python skills/jacs-figure/scri
 | 曲线与误差带 | 点／模型／参考线语义、真实 x 间距、区间定义；支持对数与逆向光谱轴 |
 | 热图 | 显式缺失与零分开、颜色范围覆盖数据、带量纲色标 |
 
-另支持 SVG 多面板组图，以及独立的 TOC 尺寸、字体和 TIFF 分辨率设置。
+另支持原生 `panel_grid`、SVG 多面板组图，以及独立的 TOC 尺寸、字体和 TIFF 分辨率设置。
+升级提示：SVG 组图的每个 panel 需提供 `caption` 或 `caption_file`；作者图注和自动补充的已知事实一起交付。
 输出含 PDF、SVG、PNG、可重跑规格、图注和实际 QA JSON；TOC 自动附 TIFF。
 结构模板生成二维图，三维 TS 面板需要真实结构和对应渲染器。
 机械检查通过后仍须查看成图，`UNKNOWN` 项不视为通过。
 
 见[原创合成示例](examples/figures/README.md)、[数据规格](skills/jacs-figure/references/figure-contract.md)、
 [标签与排版](skills/jacs-figure/references/labels-layout-scale.md)、[配色方案](skills/jacs-figure/references/color-design.md)、
-[官方图形要求](skills/jacs-shared/references/graphics-policy.md)和[新版绘图评测](evaluation/figure-v3/REPORT.md)。
+[官方图形要求](skills/jacs-shared/references/graphics-policy.md)和[新版绘图评测](evaluation/figure-v4/REPORT.md)。
 
 复现全套示例及色觉模拟：
 
 ```bash
 uv run --locked --group figures --group chemistry python scripts/build_figure_gallery.py
-uv run --locked --group figures python skills/jacs-figure/scripts/preview_color.py local/figure-v3/gallery/showcase.png --output-dir local/color-review
+uv run --locked --group figures python skills/jacs-figure/scripts/preview_color.py local/figure-v4/gallery/showcase.png --output-dir local/color-review
 ```
 
 默认浅填色、较清晰轮廓和深灰文字；方法颜色跨图一致，并用形状／线型辅助辨识。

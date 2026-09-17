@@ -1,12 +1,13 @@
 {
   "data_status": "synthetic",
   "profile": "single",
-  "height_pt": 195,
+  "height_pt": 180,
   "raster_class": "color",
   "claim": "Demonstrate an encoding with synthetic values.",
-  "caption": "Synthetic demonstration; not results of a chemical study. Boxes: Q1–Q3; center: median; whiskers: observations within 1.5 IQR; every raw point is shown, including outliers.",
+  "caption": "Synthetic signed-error distributions for three illustrative predictors.",
   "kind": "distribution",
-  "metric": "Barrier error",
+  "metric": "$\\Delta G^{\\ddagger}$ error",
+  "quantity_definition": "Signed activation Gibbs-energy error = prediction minus reference",
   "unit": "kcal/mol",
   "population": "32 synthetic reactions per group",
   "unit_of_analysis": "reaction",
@@ -492,5 +493,6 @@
       "value": 0.653
     }
   ],
+  "zero_reference": true,
   "display": "box"
 }

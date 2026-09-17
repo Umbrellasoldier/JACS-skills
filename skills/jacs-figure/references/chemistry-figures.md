@@ -63,3 +63,9 @@ Reduce detail according to the TOC purpose, then render at its own physical size
 a full results page. Use the separate [TOC policy](../../jacs-shared/references/graphics-policy.md).
 An AI-generated illustration, if explicitly requested, needs a separate current policy check,
 scientific review and provenance; it does not supply numeric or structural evidence.
+
+Make the chemical problem identifiable: supplied reactant/product connectivity, a relevant
+structural contrast, or another concrete chemical object should explain what the method acts
+on. Three generic boxes such as input/generation/validation rarely communicate that specificity.
+Name the central operation and distinguish its proposals from verified outcomes. A connectivity
+arrow or highlighted product bond does not establish a TS geometry or a validated mechanism.

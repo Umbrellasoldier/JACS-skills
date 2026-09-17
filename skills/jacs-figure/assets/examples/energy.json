@@ -1,10 +1,10 @@
 {
   "data_status": "synthetic",
   "claim": "Demonstrate the figure contract using synthetic examples.",
-  "caption": "Synthetic demonstration only; values are not results of a chemical study.",
+  "caption": "Synthetic level diagram illustrating two alternative pathways. R, TS and P are schematic states; molecular identities are not supplied in this level-only tutorial.",
   "kind": "energy",
   "profile": "double",
-  "height_pt": 220,
+  "height_pt": 180,
   "quantity": "G",
   "unit": "kcal/mol",
   "reference": "separated reactants",
@@ -52,5 +52,11 @@
       "energy": -2
     }
   ],
-  "raster_class": "color"
+  "raster_class": "color",
+  "width_pt": 360,
+  "state_definitions": {
+    "R": "separated reactants at the common energy zero",
+    "TS": "schematic activation maximum on each path",
+    "P": "path-dependent product state"
+  }
 }

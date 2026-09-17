@@ -1,0 +1,1 @@
+Synthetic demonstration; not results of a chemical study. Population: four synthetic reaction families. Quantity definition: Activation Gibbs-energy difference: method B minus method A. Points: supplied estimates. Intervals: Illustrative supplied bounds; no CI inference. Dashed reference: 0; crossing it alone does not establish statistical significance.
