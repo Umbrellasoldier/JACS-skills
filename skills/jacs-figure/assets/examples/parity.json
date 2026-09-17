@@ -1,11 +1,11 @@
 {
   "data_status": "synthetic",
   "claim": "Demonstrate the figure contract using synthetic examples.",
-  "caption": "Synthetic demonstration only; values are not results of a chemical study.",
+  "caption": "Synthetic prediction/reference pairs; method names identify illustrative predictors.",
   "kind": "parity",
   "profile": "double",
   "height_pt": 260,
-  "quantity": "activation free energy",
+  "quantity": "$\\Delta G^{\\ddagger}$",
   "unit": "kcal/mol",
   "reference": "separated reactants",
   "conditions": {
@@ -88,5 +88,7 @@
       "predicted": 39
     }
   ],
-  "raster_class": "color"
+  "raster_class": "color",
+  "population": "Same six synthetic reactions for both methods",
+  "quantity_definition": "Activation Gibbs energy relative to separated reactants"
 }

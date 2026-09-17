@@ -1,0 +1,2215 @@
+{
+  "kind": "panel_grid",
+  "profile": "double",
+  "width_pt": 504,
+  "height_pt": 225,
+  "columns": 2,
+  "data_status": "synthetic",
+  "claim": "Characterize signed bias and absolute-error coverage in the same cohort",
+  "population": "Same 72 synthetic reactions and three prediction methods in both panels",
+  "caption": "Synthetic activation-barrier benchmark. Both panels use all of the same prediction/reference pairs; method labels identify illustrative predictors, not measured performance of real methods.",
+  "panels": [
+    {
+      "label": "a",
+      "title": "Bias and spread",
+      "role": "Signed-error distribution",
+      "spec": {
+        "kind": "distribution",
+        "data_status": "synthetic",
+        "profile": "single",
+        "claim": "Compare bias and absolute error in the same synthetic reaction cohort",
+        "caption": "Derived from the supplied prediction/reference pairs in agreement.json.",
+        "population": "Same 72 synthetic reactions per method",
+        "unit_of_analysis": "reaction",
+        "quantity_definition": "Activation Gibbs-energy error = prediction minus reference",
+        "unit": "kcal/mol",
+        "data": [
+          {
+            "observation_id": "R001",
+            "group": "Baseline",
+            "value": -1.013146089996516
+          },
+          {
+            "observation_id": "R002",
+            "group": "Baseline",
+            "value": 4.16939814119562
+          },
+          {
+            "observation_id": "R003",
+            "group": "Baseline",
+            "value": 1.6991540422863807
+          },
+          {
+            "observation_id": "R004",
+            "group": "Baseline",
+            "value": 0.9999119834868466
+          },
+          {
+            "observation_id": "R005",
+            "group": "Baseline",
+            "value": 0.05792877759354198
+          },
+          {
+            "observation_id": "R006",
+            "group": "Baseline",
+            "value": 0.30167208773535137
+          },
+          {
+            "observation_id": "R007",
+            "group": "Baseline",
+            "value": -1.2364132719016805
+          },
+          {
+            "observation_id": "R008",
+            "group": "Baseline",
+            "value": 1.8612757773806834
+          },
+          {
+            "observation_id": "R009",
+            "group": "Baseline",
+            "value": -1.531248307306143
+          },
+          {
+            "observation_id": "R010",
+            "group": "Baseline",
+            "value": 3.3915400259290616
+          },
+          {
+            "observation_id": "R011",
+            "group": "Baseline",
+            "value": -0.5135649458341831
+          },
+          {
+            "observation_id": "R012",
+            "group": "Baseline",
+            "value": -1.8349764513854794
+          },
+          {
+            "observation_id": "R013",
+            "group": "Baseline",
+            "value": 1.27188986816833
+          },
+          {
+            "observation_id": "R014",
+            "group": "Baseline",
+            "value": -1.1769663354130593
+          },
+          {
+            "observation_id": "R015",
+            "group": "Baseline",
+            "value": -1.522861313512129
+          },
+          {
+            "observation_id": "R016",
+            "group": "Baseline",
+            "value": -3.7960013384399858
+          },
+          {
+            "observation_id": "R017",
+            "group": "Baseline",
+            "value": -2.7071690875587624
+          },
+          {
+            "observation_id": "R018",
+            "group": "Baseline",
+            "value": 2.30897231787481
+          },
+          {
+            "observation_id": "R019",
+            "group": "Baseline",
+            "value": 0.7729576166882488
+          },
+          {
+            "observation_id": "R020",
+            "group": "Baseline",
+            "value": 2.665733792567483
+          },
+          {
+            "observation_id": "R021",
+            "group": "Baseline",
+            "value": -0.005489235322276187
+          },
+          {
+            "observation_id": "R022",
+            "group": "Baseline",
+            "value": -1.4671587387525555
+          },
+          {
+            "observation_id": "R023",
+            "group": "Baseline",
+            "value": -6.383297886020745
+          },
+          {
+            "observation_id": "R024",
+            "group": "Baseline",
+            "value": 3.077428073917204
+          },
+          {
+            "observation_id": "R025",
+            "group": "Baseline",
+            "value": -1.817504834151844
+          },
+          {
+            "observation_id": "R026",
+            "group": "Baseline",
+            "value": -0.23340611684044532
+          },
+          {
+            "observation_id": "R027",
+            "group": "Baseline",
+            "value": -2.87496590084724
+          },
+          {
+            "observation_id": "R028",
+            "group": "Baseline",
+            "value": 0.7558723998672541
+          },
+          {
+            "observation_id": "R029",
+            "group": "Baseline",
+            "value": -0.3249146418040567
+          },
+          {
+            "observation_id": "R030",
+            "group": "Baseline",
+            "value": -0.9337903629790105
+          },
+          {
+            "observation_id": "R031",
+            "group": "Baseline",
+            "value": -0.39843754130710707
+          },
+          {
+            "observation_id": "R032",
+            "group": "Baseline",
+            "value": -1.7967392665336241
+          },
+          {
+            "observation_id": "R033",
+            "group": "Baseline",
+            "value": -1.850674175776284
+          },
+          {
+            "observation_id": "R034",
+            "group": "Baseline",
+            "value": 4.165345256149369
+          },
+          {
+            "observation_id": "R035",
+            "group": "Baseline",
+            "value": -2.1168820335643126
+          },
+          {
+            "observation_id": "R036",
+            "group": "Baseline",
+            "value": 0.5825145407279511
+          },
+          {
+            "observation_id": "R037",
+            "group": "Baseline",
+            "value": 2.172900892258916
+          },
+          {
+            "observation_id": "R038",
+            "group": "Baseline",
+            "value": 0.719601750977894
+          },
+          {
+            "observation_id": "R039",
+            "group": "Baseline",
+            "value": 2.2838007413574957
+          },
+          {
+            "observation_id": "R040",
+            "group": "Baseline",
+            "value": 0.37902739835166344
+          },
+          {
+            "observation_id": "R041",
+            "group": "Baseline",
+            "value": -2.734660291087639
+          },
+          {
+            "observation_id": "R042",
+            "group": "Baseline",
+            "value": 2.507565532112814
+          },
+          {
+            "observation_id": "R043",
+            "group": "Baseline",
+            "value": -0.4740064685964036
+          },
+          {
+            "observation_id": "R044",
+            "group": "Baseline",
+            "value": 1.6414086374717236
+          },
+          {
+            "observation_id": "R045",
+            "group": "Baseline",
+            "value": 2.7180294410943704
+          },
+          {
+            "observation_id": "R046",
+            "group": "Baseline",
+            "value": 4.0145470917492485
+          },
+          {
+            "observation_id": "R047",
+            "group": "Baseline",
+            "value": 0.10795562222872235
+          },
+          {
+            "observation_id": "R048",
+            "group": "Baseline",
+            "value": -0.9194066792408684
+          },
+          {
+            "observation_id": "R049",
+            "group": "Baseline",
+            "value": 0.9039856708640732
+          },
+          {
+            "observation_id": "R050",
+            "group": "Baseline",
+            "value": -0.1639857210046589
+          },
+          {
+            "observation_id": "R051",
+            "group": "Baseline",
+            "value": -1.8590036469089295
+          },
+          {
+            "observation_id": "R052",
+            "group": "Baseline",
+            "value": -2.3315074385861614
+          },
+          {
+            "observation_id": "R053",
+            "group": "Baseline",
+            "value": 3.7378034537471496
+          },
+          {
+            "observation_id": "R054",
+            "group": "Baseline",
+            "value": -0.5343052270353077
+          },
+          {
+            "observation_id": "R055",
+            "group": "Baseline",
+            "value": -4.787259306387549
+          },
+          {
+            "observation_id": "R056",
+            "group": "Baseline",
+            "value": 1.2153351633188265
+          },
+          {
+            "observation_id": "R057",
+            "group": "Baseline",
+            "value": -1.898894660655447
+          },
+          {
+            "observation_id": "R058",
+            "group": "Baseline",
+            "value": 1.8790690203628877
+          },
+          {
+            "observation_id": "R059",
+            "group": "Baseline",
+            "value": 2.852324667133786
+          },
+          {
+            "observation_id": "R060",
+            "group": "Baseline",
+            "value": 2.9831355556412538
+          },
+          {
+            "observation_id": "R061",
+            "group": "Baseline",
+            "value": -1.8178124469743402
+          },
+          {
+            "observation_id": "R062",
+            "group": "Baseline",
+            "value": -1.7352046174680407
+          },
+          {
+            "observation_id": "R063",
+            "group": "Baseline",
+            "value": -1.0601432976949425
+          },
+          {
+            "observation_id": "R064",
+            "group": "Baseline",
+            "value": 4.381042956669983
+          },
+          {
+            "observation_id": "R065",
+            "group": "Baseline",
+            "value": 0.11619417429967527
+          },
+          {
+            "observation_id": "R066",
+            "group": "Baseline",
+            "value": -0.5028335825610633
+          },
+          {
+            "observation_id": "R067",
+            "group": "Baseline",
+            "value": 5.119494819986421
+          },
+          {
+            "observation_id": "R068",
+            "group": "Baseline",
+            "value": 0.496951725405129
+          },
+          {
+            "observation_id": "R069",
+            "group": "Baseline",
+            "value": -0.17991042047431627
+          },
+          {
+            "observation_id": "R070",
+            "group": "Baseline",
+            "value": 0.9105303362722807
+          },
+          {
+            "observation_id": "R071",
+            "group": "Baseline",
+            "value": 1.8696234295766745
+          },
+          {
+            "observation_id": "R072",
+            "group": "Baseline",
+            "value": -3.0149322644215033
+          },
+          {
+            "observation_id": "R001",
+            "group": "Transfer",
+            "value": 0.8281660146373291
+          },
+          {
+            "observation_id": "R002",
+            "group": "Transfer",
+            "value": -1.4498774104656142
+          },
+          {
+            "observation_id": "R003",
+            "group": "Transfer",
+            "value": -0.5425594922768298
+          },
+          {
+            "observation_id": "R004",
+            "group": "Transfer",
+            "value": 0.08640608957392004
+          },
+          {
+            "observation_id": "R005",
+            "group": "Transfer",
+            "value": -0.5377446071356404
+          },
+          {
+            "observation_id": "R006",
+            "group": "Transfer",
+            "value": 0.14454227748014503
+          },
+          {
+            "observation_id": "R007",
+            "group": "Transfer",
+            "value": -2.396761446779636
+          },
+          {
+            "observation_id": "R008",
+            "group": "Transfer",
+            "value": -1.6960131476981708
+          },
+          {
+            "observation_id": "R009",
+            "group": "Transfer",
+            "value": -0.8017784043683385
+          },
+          {
+            "observation_id": "R010",
+            "group": "Transfer",
+            "value": 0.13488212686094592
+          },
+          {
+            "observation_id": "R011",
+            "group": "Transfer",
+            "value": 0.20216858367641422
+          },
+          {
+            "observation_id": "R012",
+            "group": "Transfer",
+            "value": -1.1527690528978276
+          },
+          {
+            "observation_id": "R013",
+            "group": "Transfer",
+            "value": -2.335047674017874
+          },
+          {
+            "observation_id": "R014",
+            "group": "Transfer",
+            "value": 0.9405578308317608
+          },
+          {
+            "observation_id": "R015",
+            "group": "Transfer",
+            "value": 0.2992594779772286
+          },
+          {
+            "observation_id": "R016",
+            "group": "Transfer",
+            "value": 1.4218461860975928
+          },
+          {
+            "observation_id": "R017",
+            "group": "Transfer",
+            "value": 0.9754084329616539
+          },
+          {
+            "observation_id": "R018",
+            "group": "Transfer",
+            "value": -1.5487462583836251
+          },
+          {
+            "observation_id": "R019",
+            "group": "Transfer",
+            "value": -1.5424491134870664
+          },
+          {
+            "observation_id": "R020",
+            "group": "Transfer",
+            "value": -1.6509503914508254
+          },
+          {
+            "observation_id": "R021",
+            "group": "Transfer",
+            "value": -0.7040572232661155
+          },
+          {
+            "observation_id": "R022",
+            "group": "Transfer",
+            "value": -0.2425523547627435
+          },
+          {
+            "observation_id": "R023",
+            "group": "Transfer",
+            "value": -1.049530116178012
+          },
+          {
+            "observation_id": "R024",
+            "group": "Transfer",
+            "value": -3.3767951723287943
+          },
+          {
+            "observation_id": "R025",
+            "group": "Transfer",
+            "value": -0.7618265787353629
+          },
+          {
+            "observation_id": "R026",
+            "group": "Transfer",
+            "value": 1.0905947557669187
+          },
+          {
+            "observation_id": "R027",
+            "group": "Transfer",
+            "value": 1.1859383468519127
+          },
+          {
+            "observation_id": "R028",
+            "group": "Transfer",
+            "value": -0.8906990689833343
+          },
+          {
+            "observation_id": "R029",
+            "group": "Transfer",
+            "value": -2.244158668292929
+          },
+          {
+            "observation_id": "R030",
+            "group": "Transfer",
+            "value": -0.6345597617226346
+          },
+          {
+            "observation_id": "R031",
+            "group": "Transfer",
+            "value": -2.4581689506946547
+          },
+          {
+            "observation_id": "R032",
+            "group": "Transfer",
+            "value": 0.7392592769060933
+          },
+          {
+            "observation_id": "R033",
+            "group": "Transfer",
+            "value": 0.6591381318066531
+          },
+          {
+            "observation_id": "R034",
+            "group": "Transfer",
+            "value": -0.5465840461974842
+          },
+          {
+            "observation_id": "R035",
+            "group": "Transfer",
+            "value": -3.2227084339595926
+          },
+          {
+            "observation_id": "R036",
+            "group": "Transfer",
+            "value": 1.477870287849047
+          },
+          {
+            "observation_id": "R037",
+            "group": "Transfer",
+            "value": 1.7536578525285798
+          },
+          {
+            "observation_id": "R038",
+            "group": "Transfer",
+            "value": -0.3812218927760327
+          },
+          {
+            "observation_id": "R039",
+            "group": "Transfer",
+            "value": 0.5086317719848097
+          },
+          {
+            "observation_id": "R040",
+            "group": "Transfer",
+            "value": -1.0094791637654623
+          },
+          {
+            "observation_id": "R041",
+            "group": "Transfer",
+            "value": -1.1914048771424604
+          },
+          {
+            "observation_id": "R042",
+            "group": "Transfer",
+            "value": 1.1309688836962373
+          },
+          {
+            "observation_id": "R043",
+            "group": "Transfer",
+            "value": -0.6567245573991585
+          },
+          {
+            "observation_id": "R044",
+            "group": "Transfer",
+            "value": 2.522636185344229
+          },
+          {
+            "observation_id": "R045",
+            "group": "Transfer",
+            "value": 2.204094657668999
+          },
+          {
+            "observation_id": "R046",
+            "group": "Transfer",
+            "value": 0.6804031377148361
+          },
+          {
+            "observation_id": "R047",
+            "group": "Transfer",
+            "value": -0.14865917411949425
+          },
+          {
+            "observation_id": "R048",
+            "group": "Transfer",
+            "value": 1.3226514263861606
+          },
+          {
+            "observation_id": "R049",
+            "group": "Transfer",
+            "value": 0.6517587856803679
+          },
+          {
+            "observation_id": "R050",
+            "group": "Transfer",
+            "value": 2.268265418833833
+          },
+          {
+            "observation_id": "R051",
+            "group": "Transfer",
+            "value": 1.147655448763473
+          },
+          {
+            "observation_id": "R052",
+            "group": "Transfer",
+            "value": 0.18081057996298
+          },
+          {
+            "observation_id": "R053",
+            "group": "Transfer",
+            "value": 1.8422820322254
+          },
+          {
+            "observation_id": "R054",
+            "group": "Transfer",
+            "value": 1.6401528424714371
+          },
+          {
+            "observation_id": "R055",
+            "group": "Transfer",
+            "value": 1.4332431783868316
+          },
+          {
+            "observation_id": "R056",
+            "group": "Transfer",
+            "value": -1.5119727837414594
+          },
+          {
+            "observation_id": "R057",
+            "group": "Transfer",
+            "value": 0.6831963686138778
+          },
+          {
+            "observation_id": "R058",
+            "group": "Transfer",
+            "value": -1.9224594318244748
+          },
+          {
+            "observation_id": "R059",
+            "group": "Transfer",
+            "value": -1.758397032269361
+          },
+          {
+            "observation_id": "R060",
+            "group": "Transfer",
+            "value": 0.1877811080694931
+          },
+          {
+            "observation_id": "R061",
+            "group": "Transfer",
+            "value": -0.5333422290403398
+          },
+          {
+            "observation_id": "R062",
+            "group": "Transfer",
+            "value": -1.767527127465753
+          },
+          {
+            "observation_id": "R063",
+            "group": "Transfer",
+            "value": 2.7095446846988054
+          },
+          {
+            "observation_id": "R064",
+            "group": "Transfer",
+            "value": 0.8634849264814584
+          },
+          {
+            "observation_id": "R065",
+            "group": "Transfer",
+            "value": -0.5043073545370493
+          },
+          {
+            "observation_id": "R066",
+            "group": "Transfer",
+            "value": -0.5812958578367642
+          },
+          {
+            "observation_id": "R067",
+            "group": "Transfer",
+            "value": 2.4725439737495556
+          },
+          {
+            "observation_id": "R068",
+            "group": "Transfer",
+            "value": 1.2684531414306086
+          },
+          {
+            "observation_id": "R069",
+            "group": "Transfer",
+            "value": 1.4708865552082528
+          },
+          {
+            "observation_id": "R070",
+            "group": "Transfer",
+            "value": -0.2599578098488031
+          },
+          {
+            "observation_id": "R071",
+            "group": "Transfer",
+            "value": 0.20795909658353562
+          },
+          {
+            "observation_id": "R072",
+            "group": "Transfer",
+            "value": 0.9378422041707211
+          },
+          {
+            "observation_id": "R001",
+            "group": "Refined",
+            "value": 0.5441460441172392
+          },
+          {
+            "observation_id": "R002",
+            "group": "Refined",
+            "value": 0.610299824009318
+          },
+          {
+            "observation_id": "R003",
+            "group": "Refined",
+            "value": -0.4135126770245705
+          },
+          {
+            "observation_id": "R004",
+            "group": "Refined",
+            "value": 0.4538420159238683
+          },
+          {
+            "observation_id": "R005",
+            "group": "Refined",
+            "value": -0.7702341421869665
+          },
+          {
+            "observation_id": "R006",
+            "group": "Refined",
+            "value": -0.22701366115427035
+          },
+          {
+            "observation_id": "R007",
+            "group": "Refined",
+            "value": -0.02846063066472304
+          },
+          {
+            "observation_id": "R008",
+            "group": "Refined",
+            "value": -0.9022179306603597
+          },
+          {
+            "observation_id": "R009",
+            "group": "Refined",
+            "value": -0.009875826856074355
+          },
+          {
+            "observation_id": "R010",
+            "group": "Refined",
+            "value": -0.8784847456425053
+          },
+          {
+            "observation_id": "R011",
+            "group": "Refined",
+            "value": 0.3626903645394002
+          },
+          {
+            "observation_id": "R012",
+            "group": "Refined",
+            "value": 0.9277193533348154
+          },
+          {
+            "observation_id": "R013",
+            "group": "Refined",
+            "value": -0.47593750156655545
+          },
+          {
+            "observation_id": "R014",
+            "group": "Refined",
+            "value": -0.3277667702307703
+          },
+          {
+            "observation_id": "R015",
+            "group": "Refined",
+            "value": -1.3685267096877318
+          },
+          {
+            "observation_id": "R016",
+            "group": "Refined",
+            "value": -0.05686584060064703
+          },
+          {
+            "observation_id": "R017",
+            "group": "Refined",
+            "value": -0.3380192639971007
+          },
+          {
+            "observation_id": "R018",
+            "group": "Refined",
+            "value": -1.3065861157253895
+          },
+          {
+            "observation_id": "R019",
+            "group": "Refined",
+            "value": -0.2409860884712458
+          },
+          {
+            "observation_id": "R020",
+            "group": "Refined",
+            "value": 1.29904220765245
+          },
+          {
+            "observation_id": "R021",
+            "group": "Refined",
+            "value": -0.7549615819736815
+          },
+          {
+            "observation_id": "R022",
+            "group": "Refined",
+            "value": 0.19882873493879316
+          },
+          {
+            "observation_id": "R023",
+            "group": "Refined",
+            "value": 1.1130232885579936
+          },
+          {
+            "observation_id": "R024",
+            "group": "Refined",
+            "value": 0.6112177681729634
+          },
+          {
+            "observation_id": "R025",
+            "group": "Refined",
+            "value": -0.06968450500689904
+          },
+          {
+            "observation_id": "R026",
+            "group": "Refined",
+            "value": 1.1336149739956944
+          },
+          {
+            "observation_id": "R027",
+            "group": "Refined",
+            "value": -0.723440572297168
+          },
+          {
+            "observation_id": "R028",
+            "group": "Refined",
+            "value": -0.24998100639812293
+          },
+          {
+            "observation_id": "R029",
+            "group": "Refined",
+            "value": -0.21233648364022883
+          },
+          {
+            "observation_id": "R030",
+            "group": "Refined",
+            "value": 0.01815118542285532
+          },
+          {
+            "observation_id": "R031",
+            "group": "Refined",
+            "value": -0.6043138189273565
+          },
+          {
+            "observation_id": "R032",
+            "group": "Refined",
+            "value": -1.562789038491914
+          },
+          {
+            "observation_id": "R033",
+            "group": "Refined",
+            "value": 0.7185051080530123
+          },
+          {
+            "observation_id": "R034",
+            "group": "Refined",
+            "value": -0.8552647933641211
+          },
+          {
+            "observation_id": "R035",
+            "group": "Refined",
+            "value": 0.07250979931541224
+          },
+          {
+            "observation_id": "R036",
+            "group": "Refined",
+            "value": 1.6169652623541513
+          },
+          {
+            "observation_id": "R037",
+            "group": "Refined",
+            "value": -0.08788687722605815
+          },
+          {
+            "observation_id": "R038",
+            "group": "Refined",
+            "value": 0.048164190226781756
+          },
+          {
+            "observation_id": "R039",
+            "group": "Refined",
+            "value": -1.1982177662405675
+          },
+          {
+            "observation_id": "R040",
+            "group": "Refined",
+            "value": -0.47044445290950065
+          },
+          {
+            "observation_id": "R041",
+            "group": "Refined",
+            "value": -0.44925353860138983
+          },
+          {
+            "observation_id": "R042",
+            "group": "Refined",
+            "value": -0.48472000734235365
+          },
+          {
+            "observation_id": "R043",
+            "group": "Refined",
+            "value": 0.5862239986600031
+          },
+          {
+            "observation_id": "R044",
+            "group": "Refined",
+            "value": 0.1276115776800708
+          },
+          {
+            "observation_id": "R045",
+            "group": "Refined",
+            "value": 0.2322145405128513
+          },
+          {
+            "observation_id": "R046",
+            "group": "Refined",
+            "value": 1.339660190572701
+          },
+          {
+            "observation_id": "R047",
+            "group": "Refined",
+            "value": 0.20740385504549863
+          },
+          {
+            "observation_id": "R048",
+            "group": "Refined",
+            "value": -0.10666417181906773
+          },
+          {
+            "observation_id": "R049",
+            "group": "Refined",
+            "value": -1.2953851404508558
+          },
+          {
+            "observation_id": "R050",
+            "group": "Refined",
+            "value": -0.010085961353013317
+          },
+          {
+            "observation_id": "R051",
+            "group": "Refined",
+            "value": -0.6360263562514952
+          },
+          {
+            "observation_id": "R052",
+            "group": "Refined",
+            "value": 0.5184408798347029
+          },
+          {
+            "observation_id": "R053",
+            "group": "Refined",
+            "value": 0.15267336116953345
+          },
+          {
+            "observation_id": "R054",
+            "group": "Refined",
+            "value": -0.07565724582638111
+          },
+          {
+            "observation_id": "R055",
+            "group": "Refined",
+            "value": 1.30542449473604
+          },
+          {
+            "observation_id": "R056",
+            "group": "Refined",
+            "value": 0.03681818073642873
+          },
+          {
+            "observation_id": "R057",
+            "group": "Refined",
+            "value": 0.3962336960422874
+          },
+          {
+            "observation_id": "R058",
+            "group": "Refined",
+            "value": -0.002651537323075104
+          },
+          {
+            "observation_id": "R059",
+            "group": "Refined",
+            "value": -0.4975782704294165
+          },
+          {
+            "observation_id": "R060",
+            "group": "Refined",
+            "value": 0.6130099401816
+          },
+          {
+            "observation_id": "R061",
+            "group": "Refined",
+            "value": 0.18669932721260452
+          },
+          {
+            "observation_id": "R062",
+            "group": "Refined",
+            "value": 0.048728667053485
+          },
+          {
+            "observation_id": "R063",
+            "group": "Refined",
+            "value": 0.20126137945380407
+          },
+          {
+            "observation_id": "R064",
+            "group": "Refined",
+            "value": 0.526269637753277
+          },
+          {
+            "observation_id": "R065",
+            "group": "Refined",
+            "value": -0.2744993371920401
+          },
+          {
+            "observation_id": "R066",
+            "group": "Refined",
+            "value": -0.872588883776853
+          },
+          {
+            "observation_id": "R067",
+            "group": "Refined",
+            "value": 0.5471855958318592
+          },
+          {
+            "observation_id": "R068",
+            "group": "Refined",
+            "value": -0.6174959682877166
+          },
+          {
+            "observation_id": "R069",
+            "group": "Refined",
+            "value": 0.30540512886116034
+          },
+          {
+            "observation_id": "R070",
+            "group": "Refined",
+            "value": 0.13655260153626614
+          },
+          {
+            "observation_id": "R071",
+            "group": "Refined",
+            "value": -0.08141799014073303
+          },
+          {
+            "observation_id": "R072",
+            "group": "Refined",
+            "value": 0.32585037014994
+          }
+        ],
+        "display": "box",
+        "zero_reference": true,
+        "metric": "$\\Delta G^{\\ddagger}$ error"
+      }
+    },
+    {
+      "label": "b",
+      "title": "Absolute-error coverage",
+      "role": "Fraction within a threshold",
+      "spec": {
+        "kind": "distribution",
+        "data_status": "synthetic",
+        "profile": "single",
+        "claim": "Compare bias and absolute error in the same synthetic reaction cohort",
+        "caption": "Derived from the supplied prediction/reference pairs in agreement.json.",
+        "population": "Same 72 synthetic reactions per method",
+        "unit_of_analysis": "reaction",
+        "quantity_definition": "Activation Gibbs-energy error = prediction minus reference",
+        "unit": "kcal/mol",
+        "data": [
+          {
+            "observation_id": "R001",
+            "group": "Baseline",
+            "value": -1.013146089996516
+          },
+          {
+            "observation_id": "R002",
+            "group": "Baseline",
+            "value": 4.16939814119562
+          },
+          {
+            "observation_id": "R003",
+            "group": "Baseline",
+            "value": 1.6991540422863807
+          },
+          {
+            "observation_id": "R004",
+            "group": "Baseline",
+            "value": 0.9999119834868466
+          },
+          {
+            "observation_id": "R005",
+            "group": "Baseline",
+            "value": 0.05792877759354198
+          },
+          {
+            "observation_id": "R006",
+            "group": "Baseline",
+            "value": 0.30167208773535137
+          },
+          {
+            "observation_id": "R007",
+            "group": "Baseline",
+            "value": -1.2364132719016805
+          },
+          {
+            "observation_id": "R008",
+            "group": "Baseline",
+            "value": 1.8612757773806834
+          },
+          {
+            "observation_id": "R009",
+            "group": "Baseline",
+            "value": -1.531248307306143
+          },
+          {
+            "observation_id": "R010",
+            "group": "Baseline",
+            "value": 3.3915400259290616
+          },
+          {
+            "observation_id": "R011",
+            "group": "Baseline",
+            "value": -0.5135649458341831
+          },
+          {
+            "observation_id": "R012",
+            "group": "Baseline",
+            "value": -1.8349764513854794
+          },
+          {
+            "observation_id": "R013",
+            "group": "Baseline",
+            "value": 1.27188986816833
+          },
+          {
+            "observation_id": "R014",
+            "group": "Baseline",
+            "value": -1.1769663354130593
+          },
+          {
+            "observation_id": "R015",
+            "group": "Baseline",
+            "value": -1.522861313512129
+          },
+          {
+            "observation_id": "R016",
+            "group": "Baseline",
+            "value": -3.7960013384399858
+          },
+          {
+            "observation_id": "R017",
+            "group": "Baseline",
+            "value": -2.7071690875587624
+          },
+          {
+            "observation_id": "R018",
+            "group": "Baseline",
+            "value": 2.30897231787481
+          },
+          {
+            "observation_id": "R019",
+            "group": "Baseline",
+            "value": 0.7729576166882488
+          },
+          {
+            "observation_id": "R020",
+            "group": "Baseline",
+            "value": 2.665733792567483
+          },
+          {
+            "observation_id": "R021",
+            "group": "Baseline",
+            "value": -0.005489235322276187
+          },
+          {
+            "observation_id": "R022",
+            "group": "Baseline",
+            "value": -1.4671587387525555
+          },
+          {
+            "observation_id": "R023",
+            "group": "Baseline",
+            "value": -6.383297886020745
+          },
+          {
+            "observation_id": "R024",
+            "group": "Baseline",
+            "value": 3.077428073917204
+          },
+          {
+            "observation_id": "R025",
+            "group": "Baseline",
+            "value": -1.817504834151844
+          },
+          {
+            "observation_id": "R026",
+            "group": "Baseline",
+            "value": -0.23340611684044532
+          },
+          {
+            "observation_id": "R027",
+            "group": "Baseline",
+            "value": -2.87496590084724
+          },
+          {
+            "observation_id": "R028",
+            "group": "Baseline",
+            "value": 0.7558723998672541
+          },
+          {
+            "observation_id": "R029",
+            "group": "Baseline",
+            "value": -0.3249146418040567
+          },
+          {
+            "observation_id": "R030",
+            "group": "Baseline",
+            "value": -0.9337903629790105
+          },
+          {
+            "observation_id": "R031",
+            "group": "Baseline",
+            "value": -0.39843754130710707
+          },
+          {
+            "observation_id": "R032",
+            "group": "Baseline",
+            "value": -1.7967392665336241
+          },
+          {
+            "observation_id": "R033",
+            "group": "Baseline",
+            "value": -1.850674175776284
+          },
+          {
+            "observation_id": "R034",
+            "group": "Baseline",
+            "value": 4.165345256149369
+          },
+          {
+            "observation_id": "R035",
+            "group": "Baseline",
+            "value": -2.1168820335643126
+          },
+          {
+            "observation_id": "R036",
+            "group": "Baseline",
+            "value": 0.5825145407279511
+          },
+          {
+            "observation_id": "R037",
+            "group": "Baseline",
+            "value": 2.172900892258916
+          },
+          {
+            "observation_id": "R038",
+            "group": "Baseline",
+            "value": 0.719601750977894
+          },
+          {
+            "observation_id": "R039",
+            "group": "Baseline",
+            "value": 2.2838007413574957
+          },
+          {
+            "observation_id": "R040",
+            "group": "Baseline",
+            "value": 0.37902739835166344
+          },
+          {
+            "observation_id": "R041",
+            "group": "Baseline",
+            "value": -2.734660291087639
+          },
+          {
+            "observation_id": "R042",
+            "group": "Baseline",
+            "value": 2.507565532112814
+          },
+          {
+            "observation_id": "R043",
+            "group": "Baseline",
+            "value": -0.4740064685964036
+          },
+          {
+            "observation_id": "R044",
+            "group": "Baseline",
+            "value": 1.6414086374717236
+          },
+          {
+            "observation_id": "R045",
+            "group": "Baseline",
+            "value": 2.7180294410943704
+          },
+          {
+            "observation_id": "R046",
+            "group": "Baseline",
+            "value": 4.0145470917492485
+          },
+          {
+            "observation_id": "R047",
+            "group": "Baseline",
+            "value": 0.10795562222872235
+          },
+          {
+            "observation_id": "R048",
+            "group": "Baseline",
+            "value": -0.9194066792408684
+          },
+          {
+            "observation_id": "R049",
+            "group": "Baseline",
+            "value": 0.9039856708640732
+          },
+          {
+            "observation_id": "R050",
+            "group": "Baseline",
+            "value": -0.1639857210046589
+          },
+          {
+            "observation_id": "R051",
+            "group": "Baseline",
+            "value": -1.8590036469089295
+          },
+          {
+            "observation_id": "R052",
+            "group": "Baseline",
+            "value": -2.3315074385861614
+          },
+          {
+            "observation_id": "R053",
+            "group": "Baseline",
+            "value": 3.7378034537471496
+          },
+          {
+            "observation_id": "R054",
+            "group": "Baseline",
+            "value": -0.5343052270353077
+          },
+          {
+            "observation_id": "R055",
+            "group": "Baseline",
+            "value": -4.787259306387549
+          },
+          {
+            "observation_id": "R056",
+            "group": "Baseline",
+            "value": 1.2153351633188265
+          },
+          {
+            "observation_id": "R057",
+            "group": "Baseline",
+            "value": -1.898894660655447
+          },
+          {
+            "observation_id": "R058",
+            "group": "Baseline",
+            "value": 1.8790690203628877
+          },
+          {
+            "observation_id": "R059",
+            "group": "Baseline",
+            "value": 2.852324667133786
+          },
+          {
+            "observation_id": "R060",
+            "group": "Baseline",
+            "value": 2.9831355556412538
+          },
+          {
+            "observation_id": "R061",
+            "group": "Baseline",
+            "value": -1.8178124469743402
+          },
+          {
+            "observation_id": "R062",
+            "group": "Baseline",
+            "value": -1.7352046174680407
+          },
+          {
+            "observation_id": "R063",
+            "group": "Baseline",
+            "value": -1.0601432976949425
+          },
+          {
+            "observation_id": "R064",
+            "group": "Baseline",
+            "value": 4.381042956669983
+          },
+          {
+            "observation_id": "R065",
+            "group": "Baseline",
+            "value": 0.11619417429967527
+          },
+          {
+            "observation_id": "R066",
+            "group": "Baseline",
+            "value": -0.5028335825610633
+          },
+          {
+            "observation_id": "R067",
+            "group": "Baseline",
+            "value": 5.119494819986421
+          },
+          {
+            "observation_id": "R068",
+            "group": "Baseline",
+            "value": 0.496951725405129
+          },
+          {
+            "observation_id": "R069",
+            "group": "Baseline",
+            "value": -0.17991042047431627
+          },
+          {
+            "observation_id": "R070",
+            "group": "Baseline",
+            "value": 0.9105303362722807
+          },
+          {
+            "observation_id": "R071",
+            "group": "Baseline",
+            "value": 1.8696234295766745
+          },
+          {
+            "observation_id": "R072",
+            "group": "Baseline",
+            "value": -3.0149322644215033
+          },
+          {
+            "observation_id": "R001",
+            "group": "Transfer",
+            "value": 0.8281660146373291
+          },
+          {
+            "observation_id": "R002",
+            "group": "Transfer",
+            "value": -1.4498774104656142
+          },
+          {
+            "observation_id": "R003",
+            "group": "Transfer",
+            "value": -0.5425594922768298
+          },
+          {
+            "observation_id": "R004",
+            "group": "Transfer",
+            "value": 0.08640608957392004
+          },
+          {
+            "observation_id": "R005",
+            "group": "Transfer",
+            "value": -0.5377446071356404
+          },
+          {
+            "observation_id": "R006",
+            "group": "Transfer",
+            "value": 0.14454227748014503
+          },
+          {
+            "observation_id": "R007",
+            "group": "Transfer",
+            "value": -2.396761446779636
+          },
+          {
+            "observation_id": "R008",
+            "group": "Transfer",
+            "value": -1.6960131476981708
+          },
+          {
+            "observation_id": "R009",
+            "group": "Transfer",
+            "value": -0.8017784043683385
+          },
+          {
+            "observation_id": "R010",
+            "group": "Transfer",
+            "value": 0.13488212686094592
+          },
+          {
+            "observation_id": "R011",
+            "group": "Transfer",
+            "value": 0.20216858367641422
+          },
+          {
+            "observation_id": "R012",
+            "group": "Transfer",
+            "value": -1.1527690528978276
+          },
+          {
+            "observation_id": "R013",
+            "group": "Transfer",
+            "value": -2.335047674017874
+          },
+          {
+            "observation_id": "R014",
+            "group": "Transfer",
+            "value": 0.9405578308317608
+          },
+          {
+            "observation_id": "R015",
+            "group": "Transfer",
+            "value": 0.2992594779772286
+          },
+          {
+            "observation_id": "R016",
+            "group": "Transfer",
+            "value": 1.4218461860975928
+          },
+          {
+            "observation_id": "R017",
+            "group": "Transfer",
+            "value": 0.9754084329616539
+          },
+          {
+            "observation_id": "R018",
+            "group": "Transfer",
+            "value": -1.5487462583836251
+          },
+          {
+            "observation_id": "R019",
+            "group": "Transfer",
+            "value": -1.5424491134870664
+          },
+          {
+            "observation_id": "R020",
+            "group": "Transfer",
+            "value": -1.6509503914508254
+          },
+          {
+            "observation_id": "R021",
+            "group": "Transfer",
+            "value": -0.7040572232661155
+          },
+          {
+            "observation_id": "R022",
+            "group": "Transfer",
+            "value": -0.2425523547627435
+          },
+          {
+            "observation_id": "R023",
+            "group": "Transfer",
+            "value": -1.049530116178012
+          },
+          {
+            "observation_id": "R024",
+            "group": "Transfer",
+            "value": -3.3767951723287943
+          },
+          {
+            "observation_id": "R025",
+            "group": "Transfer",
+            "value": -0.7618265787353629
+          },
+          {
+            "observation_id": "R026",
+            "group": "Transfer",
+            "value": 1.0905947557669187
+          },
+          {
+            "observation_id": "R027",
+            "group": "Transfer",
+            "value": 1.1859383468519127
+          },
+          {
+            "observation_id": "R028",
+            "group": "Transfer",
+            "value": -0.8906990689833343
+          },
+          {
+            "observation_id": "R029",
+            "group": "Transfer",
+            "value": -2.244158668292929
+          },
+          {
+            "observation_id": "R030",
+            "group": "Transfer",
+            "value": -0.6345597617226346
+          },
+          {
+            "observation_id": "R031",
+            "group": "Transfer",
+            "value": -2.4581689506946547
+          },
+          {
+            "observation_id": "R032",
+            "group": "Transfer",
+            "value": 0.7392592769060933
+          },
+          {
+            "observation_id": "R033",
+            "group": "Transfer",
+            "value": 0.6591381318066531
+          },
+          {
+            "observation_id": "R034",
+            "group": "Transfer",
+            "value": -0.5465840461974842
+          },
+          {
+            "observation_id": "R035",
+            "group": "Transfer",
+            "value": -3.2227084339595926
+          },
+          {
+            "observation_id": "R036",
+            "group": "Transfer",
+            "value": 1.477870287849047
+          },
+          {
+            "observation_id": "R037",
+            "group": "Transfer",
+            "value": 1.7536578525285798
+          },
+          {
+            "observation_id": "R038",
+            "group": "Transfer",
+            "value": -0.3812218927760327
+          },
+          {
+            "observation_id": "R039",
+            "group": "Transfer",
+            "value": 0.5086317719848097
+          },
+          {
+            "observation_id": "R040",
+            "group": "Transfer",
+            "value": -1.0094791637654623
+          },
+          {
+            "observation_id": "R041",
+            "group": "Transfer",
+            "value": -1.1914048771424604
+          },
+          {
+            "observation_id": "R042",
+            "group": "Transfer",
+            "value": 1.1309688836962373
+          },
+          {
+            "observation_id": "R043",
+            "group": "Transfer",
+            "value": -0.6567245573991585
+          },
+          {
+            "observation_id": "R044",
+            "group": "Transfer",
+            "value": 2.522636185344229
+          },
+          {
+            "observation_id": "R045",
+            "group": "Transfer",
+            "value": 2.204094657668999
+          },
+          {
+            "observation_id": "R046",
+            "group": "Transfer",
+            "value": 0.6804031377148361
+          },
+          {
+            "observation_id": "R047",
+            "group": "Transfer",
+            "value": -0.14865917411949425
+          },
+          {
+            "observation_id": "R048",
+            "group": "Transfer",
+            "value": 1.3226514263861606
+          },
+          {
+            "observation_id": "R049",
+            "group": "Transfer",
+            "value": 0.6517587856803679
+          },
+          {
+            "observation_id": "R050",
+            "group": "Transfer",
+            "value": 2.268265418833833
+          },
+          {
+            "observation_id": "R051",
+            "group": "Transfer",
+            "value": 1.147655448763473
+          },
+          {
+            "observation_id": "R052",
+            "group": "Transfer",
+            "value": 0.18081057996298
+          },
+          {
+            "observation_id": "R053",
+            "group": "Transfer",
+            "value": 1.8422820322254
+          },
+          {
+            "observation_id": "R054",
+            "group": "Transfer",
+            "value": 1.6401528424714371
+          },
+          {
+            "observation_id": "R055",
+            "group": "Transfer",
+            "value": 1.4332431783868316
+          },
+          {
+            "observation_id": "R056",
+            "group": "Transfer",
+            "value": -1.5119727837414594
+          },
+          {
+            "observation_id": "R057",
+            "group": "Transfer",
+            "value": 0.6831963686138778
+          },
+          {
+            "observation_id": "R058",
+            "group": "Transfer",
+            "value": -1.9224594318244748
+          },
+          {
+            "observation_id": "R059",
+            "group": "Transfer",
+            "value": -1.758397032269361
+          },
+          {
+            "observation_id": "R060",
+            "group": "Transfer",
+            "value": 0.1877811080694931
+          },
+          {
+            "observation_id": "R061",
+            "group": "Transfer",
+            "value": -0.5333422290403398
+          },
+          {
+            "observation_id": "R062",
+            "group": "Transfer",
+            "value": -1.767527127465753
+          },
+          {
+            "observation_id": "R063",
+            "group": "Transfer",
+            "value": 2.7095446846988054
+          },
+          {
+            "observation_id": "R064",
+            "group": "Transfer",
+            "value": 0.8634849264814584
+          },
+          {
+            "observation_id": "R065",
+            "group": "Transfer",
+            "value": -0.5043073545370493
+          },
+          {
+            "observation_id": "R066",
+            "group": "Transfer",
+            "value": -0.5812958578367642
+          },
+          {
+            "observation_id": "R067",
+            "group": "Transfer",
+            "value": 2.4725439737495556
+          },
+          {
+            "observation_id": "R068",
+            "group": "Transfer",
+            "value": 1.2684531414306086
+          },
+          {
+            "observation_id": "R069",
+            "group": "Transfer",
+            "value": 1.4708865552082528
+          },
+          {
+            "observation_id": "R070",
+            "group": "Transfer",
+            "value": -0.2599578098488031
+          },
+          {
+            "observation_id": "R071",
+            "group": "Transfer",
+            "value": 0.20795909658353562
+          },
+          {
+            "observation_id": "R072",
+            "group": "Transfer",
+            "value": 0.9378422041707211
+          },
+          {
+            "observation_id": "R001",
+            "group": "Refined",
+            "value": 0.5441460441172392
+          },
+          {
+            "observation_id": "R002",
+            "group": "Refined",
+            "value": 0.610299824009318
+          },
+          {
+            "observation_id": "R003",
+            "group": "Refined",
+            "value": -0.4135126770245705
+          },
+          {
+            "observation_id": "R004",
+            "group": "Refined",
+            "value": 0.4538420159238683
+          },
+          {
+            "observation_id": "R005",
+            "group": "Refined",
+            "value": -0.7702341421869665
+          },
+          {
+            "observation_id": "R006",
+            "group": "Refined",
+            "value": -0.22701366115427035
+          },
+          {
+            "observation_id": "R007",
+            "group": "Refined",
+            "value": -0.02846063066472304
+          },
+          {
+            "observation_id": "R008",
+            "group": "Refined",
+            "value": -0.9022179306603597
+          },
+          {
+            "observation_id": "R009",
+            "group": "Refined",
+            "value": -0.009875826856074355
+          },
+          {
+            "observation_id": "R010",
+            "group": "Refined",
+            "value": -0.8784847456425053
+          },
+          {
+            "observation_id": "R011",
+            "group": "Refined",
+            "value": 0.3626903645394002
+          },
+          {
+            "observation_id": "R012",
+            "group": "Refined",
+            "value": 0.9277193533348154
+          },
+          {
+            "observation_id": "R013",
+            "group": "Refined",
+            "value": -0.47593750156655545
+          },
+          {
+            "observation_id": "R014",
+            "group": "Refined",
+            "value": -0.3277667702307703
+          },
+          {
+            "observation_id": "R015",
+            "group": "Refined",
+            "value": -1.3685267096877318
+          },
+          {
+            "observation_id": "R016",
+            "group": "Refined",
+            "value": -0.05686584060064703
+          },
+          {
+            "observation_id": "R017",
+            "group": "Refined",
+            "value": -0.3380192639971007
+          },
+          {
+            "observation_id": "R018",
+            "group": "Refined",
+            "value": -1.3065861157253895
+          },
+          {
+            "observation_id": "R019",
+            "group": "Refined",
+            "value": -0.2409860884712458
+          },
+          {
+            "observation_id": "R020",
+            "group": "Refined",
+            "value": 1.29904220765245
+          },
+          {
+            "observation_id": "R021",
+            "group": "Refined",
+            "value": -0.7549615819736815
+          },
+          {
+            "observation_id": "R022",
+            "group": "Refined",
+            "value": 0.19882873493879316
+          },
+          {
+            "observation_id": "R023",
+            "group": "Refined",
+            "value": 1.1130232885579936
+          },
+          {
+            "observation_id": "R024",
+            "group": "Refined",
+            "value": 0.6112177681729634
+          },
+          {
+            "observation_id": "R025",
+            "group": "Refined",
+            "value": -0.06968450500689904
+          },
+          {
+            "observation_id": "R026",
+            "group": "Refined",
+            "value": 1.1336149739956944
+          },
+          {
+            "observation_id": "R027",
+            "group": "Refined",
+            "value": -0.723440572297168
+          },
+          {
+            "observation_id": "R028",
+            "group": "Refined",
+            "value": -0.24998100639812293
+          },
+          {
+            "observation_id": "R029",
+            "group": "Refined",
+            "value": -0.21233648364022883
+          },
+          {
+            "observation_id": "R030",
+            "group": "Refined",
+            "value": 0.01815118542285532
+          },
+          {
+            "observation_id": "R031",
+            "group": "Refined",
+            "value": -0.6043138189273565
+          },
+          {
+            "observation_id": "R032",
+            "group": "Refined",
+            "value": -1.562789038491914
+          },
+          {
+            "observation_id": "R033",
+            "group": "Refined",
+            "value": 0.7185051080530123
+          },
+          {
+            "observation_id": "R034",
+            "group": "Refined",
+            "value": -0.8552647933641211
+          },
+          {
+            "observation_id": "R035",
+            "group": "Refined",
+            "value": 0.07250979931541224
+          },
+          {
+            "observation_id": "R036",
+            "group": "Refined",
+            "value": 1.6169652623541513
+          },
+          {
+            "observation_id": "R037",
+            "group": "Refined",
+            "value": -0.08788687722605815
+          },
+          {
+            "observation_id": "R038",
+            "group": "Refined",
+            "value": 0.048164190226781756
+          },
+          {
+            "observation_id": "R039",
+            "group": "Refined",
+            "value": -1.1982177662405675
+          },
+          {
+            "observation_id": "R040",
+            "group": "Refined",
+            "value": -0.47044445290950065
+          },
+          {
+            "observation_id": "R041",
+            "group": "Refined",
+            "value": -0.44925353860138983
+          },
+          {
+            "observation_id": "R042",
+            "group": "Refined",
+            "value": -0.48472000734235365
+          },
+          {
+            "observation_id": "R043",
+            "group": "Refined",
+            "value": 0.5862239986600031
+          },
+          {
+            "observation_id": "R044",
+            "group": "Refined",
+            "value": 0.1276115776800708
+          },
+          {
+            "observation_id": "R045",
+            "group": "Refined",
+            "value": 0.2322145405128513
+          },
+          {
+            "observation_id": "R046",
+            "group": "Refined",
+            "value": 1.339660190572701
+          },
+          {
+            "observation_id": "R047",
+            "group": "Refined",
+            "value": 0.20740385504549863
+          },
+          {
+            "observation_id": "R048",
+            "group": "Refined",
+            "value": -0.10666417181906773
+          },
+          {
+            "observation_id": "R049",
+            "group": "Refined",
+            "value": -1.2953851404508558
+          },
+          {
+            "observation_id": "R050",
+            "group": "Refined",
+            "value": -0.010085961353013317
+          },
+          {
+            "observation_id": "R051",
+            "group": "Refined",
+            "value": -0.6360263562514952
+          },
+          {
+            "observation_id": "R052",
+            "group": "Refined",
+            "value": 0.5184408798347029
+          },
+          {
+            "observation_id": "R053",
+            "group": "Refined",
+            "value": 0.15267336116953345
+          },
+          {
+            "observation_id": "R054",
+            "group": "Refined",
+            "value": -0.07565724582638111
+          },
+          {
+            "observation_id": "R055",
+            "group": "Refined",
+            "value": 1.30542449473604
+          },
+          {
+            "observation_id": "R056",
+            "group": "Refined",
+            "value": 0.03681818073642873
+          },
+          {
+            "observation_id": "R057",
+            "group": "Refined",
+            "value": 0.3962336960422874
+          },
+          {
+            "observation_id": "R058",
+            "group": "Refined",
+            "value": -0.002651537323075104
+          },
+          {
+            "observation_id": "R059",
+            "group": "Refined",
+            "value": -0.4975782704294165
+          },
+          {
+            "observation_id": "R060",
+            "group": "Refined",
+            "value": 0.6130099401816
+          },
+          {
+            "observation_id": "R061",
+            "group": "Refined",
+            "value": 0.18669932721260452
+          },
+          {
+            "observation_id": "R062",
+            "group": "Refined",
+            "value": 0.048728667053485
+          },
+          {
+            "observation_id": "R063",
+            "group": "Refined",
+            "value": 0.20126137945380407
+          },
+          {
+            "observation_id": "R064",
+            "group": "Refined",
+            "value": 0.526269637753277
+          },
+          {
+            "observation_id": "R065",
+            "group": "Refined",
+            "value": -0.2744993371920401
+          },
+          {
+            "observation_id": "R066",
+            "group": "Refined",
+            "value": -0.872588883776853
+          },
+          {
+            "observation_id": "R067",
+            "group": "Refined",
+            "value": 0.5471855958318592
+          },
+          {
+            "observation_id": "R068",
+            "group": "Refined",
+            "value": -0.6174959682877166
+          },
+          {
+            "observation_id": "R069",
+            "group": "Refined",
+            "value": 0.30540512886116034
+          },
+          {
+            "observation_id": "R070",
+            "group": "Refined",
+            "value": 0.13655260153626614
+          },
+          {
+            "observation_id": "R071",
+            "group": "Refined",
+            "value": -0.08141799014073303
+          },
+          {
+            "observation_id": "R072",
+            "group": "Refined",
+            "value": 0.32585037014994
+          }
+        ],
+        "display": "ecdf",
+        "value_transform": "absolute",
+        "metric": "Absolute $\\Delta G^{\\ddagger}$ error"
+      }
+    }
+  ]
+}

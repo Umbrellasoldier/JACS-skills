@@ -29,6 +29,9 @@ backend choice. The bundled Python templates are optional tools, not the entire 
 ## Scientific meaning before styling
 
 Record the claim, source data, panel roles, quantities/units, population and target format.
+For a composite, state how the panels' populations or derivations connect to the same
+question. A gallery of unrelated chart types is not a research narrative. Prefer fewer
+panels when another chart adds no necessary evidence.
 Read [chemistry semantics](../jacs-shared/references/chemistry-semantics.md) when energies,
 transition states, pathways or model comparisons are involved. Keep generated candidates,
 frequency characterization, IRC and endpoint validation distinct. Preserve reaction IDs,
@@ -48,6 +51,8 @@ fill/strong-outline palette. [Visual evidence](references/visual-rules.md) expla
 Select complementary panels for a shared question; equal-size comparisons and unequal-size
 explanatory panels are both valid. Reuse semantic colors across the manuscript and redundant
 markers/labels where helpful. Do not infer an official palette or panel-letter convention.
+Choose fill area, mark density and emphasis together: pale colors do not make a crowded
+plot readable. Check coincident observations and drawing order, not just record counts.
 
 Choose the narrowest column format that keeps the actual content readable. For a small
 structure pair or short stage sequence, inspect a single-column design before allocating
@@ -57,7 +62,7 @@ to the caption when the figure remains self-contained.
 
 The bundled [renderer](scripts/plot_figures.py) accepts JSON specifications and optional CSV
 data. [Examples and schema](references/figure-contract.md#bundled-specifications) describe the
-ten plot families and SVG assembly. Do not force unsupported data into a helper. Resolve scripts and assets relative to this SKILL.md. Keep the
+ten plot families, a native quantitative panel grid and SVG assembly. Do not force unsupported data into a helper. Resolve scripts and assets relative to this SKILL.md. Keep the
 input intact. Use an isolated output directory and the task's available environment; the
 repository's locked `figures` group supplies plotting dependencies and `chemistry` adds RDKit.
 
@@ -76,6 +81,11 @@ data, dimension, text and layout checks; repair deterministic failures and inspe
 The bundled auditor explicitly leaves chemical correctness, many graphic collisions and
 unsupported objects to visual review. `MECHANICAL_PASS` is not complete scientific approval.
 Never report `UNKNOWN` as passed or reuse a QA report after changing its figure.
+Read the delivered figure together with its delivered caption. Readers must be able to
+identify the statistic, sample unit/n, interval meaning, signed difference, normalization,
+reference and missing-value encoding where applicable. Metadata alone is insufficient;
+carry these facts through assembly and export. The renderer appends known facts without
+inventing definitions; check them against the author's prose for omissions or contradictions.
 
 Deliver requested formats with the specification, plotting source/version, data or source
 index, caption facts and concise QA notes. Keep source papers and private project data local.

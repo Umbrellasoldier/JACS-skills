@@ -1,21 +1,22 @@
 {
   "data_status": "synthetic",
   "claim": "Demonstrate the figure contract using synthetic examples.",
-  "caption": "Depiction demonstration of two supplied stereochemical identities; no measured or optimized geometry is implied.",
+  "caption": "Two lactic-acid enantiomers with the same connectivity. Labels state the configuration encoded by the supplied SMILES.",
   "kind": "structures",
   "profile": "single",
-  "height_pt": 160,
+  "height_pt": 124,
   "data": [
     {
       "id": "isomer-a",
-      "label": "Stereoisomer A",
+      "label": "1 (S)",
       "smiles": "C[C@H](O)C(=O)O"
     },
     {
       "id": "isomer-b",
-      "label": "Stereoisomer B",
+      "label": "2 (R)",
       "smiles": "C[C@@H](O)C(=O)O"
     }
   ],
-  "raster_class": "color"
+  "raster_class": "color",
+  "title": "Lactic-acid enantiomers"
 }

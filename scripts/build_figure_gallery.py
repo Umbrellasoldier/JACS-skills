@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reproduce the original synthetic v0.3 gallery; keep full bundles in ignored local storage."""
+"""Reproduce the synthetic v0.4 gallery; keep full bundles in ignored local storage."""
 
 from __future__ import annotations
 
@@ -9,7 +9,6 @@ import json
 import math
 import shutil
 import sys
-import xml.etree.ElementTree as ET
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -31,7 +30,7 @@ def synthetic_specs() -> list[str]:
     common = {
         "data_status": "synthetic",
         "profile": "single",
-        "height_pt": 195,
+        "height_pt": 180,
         "raster_class": "color",
         "claim": "Demonstrate an encoding with synthetic values.",
         "caption": "Synthetic demonstration; not results of a chemical study.",
@@ -49,11 +48,13 @@ def synthetic_specs() -> list[str]:
     base = {
         **common,
         "kind": "distribution",
-        "metric": "Barrier error",
+        "metric": r"$\Delta G^{\ddagger}$ error",
+        "quantity_definition": "Signed activation Gibbs-energy error = prediction minus reference",
         "unit": "kcal/mol",
         "population": "32 synthetic reactions per group",
         "unit_of_analysis": "reaction",
         "data": values,
+        "zero_reference": True,
     }
     for mode, name in [
         ("box", "boxplot"),
@@ -64,24 +65,31 @@ def synthetic_specs() -> list[str]:
         spec = {**copy.deepcopy(base), "display": mode}
         if mode == "violin":
             spec["bandwidth"] = 0.35
-            spec["caption"] += " Gaussian KDE factor 0.35; median and every observation shown."
+            spec["caption"] = (
+                "Small synthetic samples for comparing observations and density estimates."
+            )
         elif mode == "box":
-            spec["caption"] += (
-                " Boxes: Q1–Q3; center: median; whiskers: observations within 1.5 IQR;"
-                " every raw point is shown, including outliers."
+            spec["caption"] = (
+                "Synthetic signed-error distributions for three illustrative predictors."
             )
         elif mode == "histogram":
-            spec["bin_edges"] = list(range(-6, 9))
-            spec["caption"] += " Shared unit-width bins; counts, not density."
+            spec["bin_edges"] = list(range(-3, 6))
+            spec["caption"] = "Synthetic observation counts compared using common bins."
         else:
-            spec["caption"] += " Empirical cumulative fractions; no smoothing or fitted CDF."
+            spec.update(
+                value_transform="absolute",
+                metric=r"Absolute $\Delta G^{\ddagger}$ error",
+                zero_reference=False,
+            )
+            spec["caption"] += " Fraction of reactions within an absolute error threshold."
         write(name, spec)
     write(
         "intervals",
         {
             **common,
             "kind": "interval",
-            "metric": "Barrier difference",
+            "metric": r"$\Delta\Delta G^{\ddagger}$ (B − A)",
+            "quantity_definition": "Activation Gibbs-energy difference: method B minus method A",
             "unit": "kcal/mol",
             "population": "four synthetic reaction families",
             "interval_definition": "Illustrative supplied bounds; no CI inference",
@@ -103,7 +111,14 @@ def synthetic_specs() -> list[str]:
             replicates = rng.normal(multiplier * (20 / math.sqrt(n) + 0.3), 0.12, 8)
             mean, sd = float(replicates.mean()), float(replicates.std(ddof=1))
             learning.append(
-                {"series": name, "x": n, "y": mean, "lower": mean - sd, "upper": mean + sd}
+                {
+                    "series": name,
+                    "x": n,
+                    "y": mean,
+                    "lower": mean - sd,
+                    "upper": mean + sd,
+                    "replicates": replicates.tolist(),
+                }
             )
     write(
         "learning",
@@ -116,6 +131,10 @@ def synthetic_specs() -> list[str]:
             "y_unit": "kcal/mol",
             "population": "Eight independently generated synthetic values per setting",
             "x_scale": "log",
+            "x_ticks": [50, 200, 800, 3200],
+            "quantity_definition": (
+                "MAE of predicted activation Gibbs energies against synthetic reference values"
+            ),
             "connect_observations": True,
             "interval_definition": "Mean ± sample SD across eight synthetic runs",
             "caption": common["caption"] + " Points: means of eight synthetic runs;"
@@ -130,6 +149,12 @@ def synthetic_specs() -> list[str]:
                 -(((x - 1625 + shift) / 55) ** 2)
             )
             spectral.append({"series": name, "x": float(x), "y": float(y)})
+    for name in ("State I", "State II"):
+        peak = max(r["y"] for r in spectral if r["series"] == name)
+        for row in spectral:
+            if row["series"] == name:
+                row["raw_y"] = row["y"]
+                row["y"] /= peak
     write(
         "spectra",
         {
@@ -139,7 +164,15 @@ def synthetic_specs() -> list[str]:
             "x_unit": "cm-1",
             "y_quantity": "Normalized intensity",
             "y_unit": "dimensionless",
-            "population": "Two synthetic model spectra",
+            "population": "Two synthetic two-Gaussian model spectra",
+            "normalization": (
+                "Each model spectrum divided by its maximum sampled raw_y; no area normalization"
+            ),
+            "caption": (
+                "Synthetic model spectra. Gaussian centers: State I, 1320 and 1625 cm-1; "
+                "State II, 1355 and 1590 cm-1. Peak shifts are model inputs, "
+                "not measured chemical assignments."
+            ),
             "reverse_x": True,
             "series_roles": {"State I": "model", "State II": "model"},
             "data": spectral,
@@ -152,15 +185,25 @@ def synthetic_specs() -> list[str]:
         {
             **common,
             "kind": "heatmap",
-            "height_pt": 185,
+            "height_pt": 128,
+            "colorbar_ticks": [0, 1.5, 3, 4.5],
+            "missing_label": "NA",
             "quantity": "MAE",
             "unit": "kcal/mol",
-            "population": "Synthetic benchmark",
+            "population": (
+                "Illustrative benchmark cells; these summaries have no reaction-level sample counts"
+            ),
+            "quantity_definition": "Illustrative MAE of activation Gibbs-energy predictions",
+            "column_definitions": {
+                "In-domain": "within the training chemical domain",
+                "New scaffold": "scaffold-held-out domain",
+                "New charge": "charge-held-out domain",
+            },
             "row_order": rows,
             "column_order": cols,
             "vmin": 0,
             "vmax": 4.5,
-            "caption": common["caption"] + " Gray dash: unavailable, not zero.",
+            "caption": common["caption"] + " NA: unavailable; reason unspecified.",
             "data": [
                 {"row": r, "column": c, "value": grid[i][j]}
                 for i, r in enumerate(rows)
@@ -169,7 +212,14 @@ def synthetic_specs() -> list[str]:
         },
     )
     parity = json.loads((ASSETS / "parity.json").read_text())
-    parity.update(width_pt=504, height_pt=240, quantity=r"$\Delta G^{\ddagger}$", data=[])
+    parity.update(
+        width_pt=504,
+        height_pt=300,
+        quantity=r"$\Delta G^{\ddagger}$",
+        data=[],
+        facet_methods=True,
+        population="Same 72 synthetic reactions for every method",
+    )
     references = rng.uniform(4, 32, 72)
     for name, error in [("Baseline", 2.3), ("Transfer", 1.4), ("Refined", 0.8)]:
         for i, ref in enumerate(references):
@@ -197,7 +247,7 @@ def synthetic_specs() -> list[str]:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output-dir", type=Path, default=ROOT / "local/figure-v3/gallery")
+    parser.add_argument("--output-dir", type=Path, default=ROOT / "local/figure-v4/gallery")
     parser.add_argument(
         "--publish", action="store_true", help="Copy original PNG/SVG examples into repo"
     )
@@ -214,43 +264,76 @@ def main() -> int:
                 "verdict": qa["verdict"],
                 "files": qa["files"],
                 "implementation_sha256": qa["implementation_sha256"],
-                "visual_review": "Pending; see evaluation/figure-v3/REPORT.md for actual review",
+                "visual_review": "Pending; see evaluation/figure-v4/REPORT.md for actual review",
             }
         )
         print(name, qa["verdict"], flush=True)
         if qa["verdict"] == "FAIL":
             print(json.dumps(qa["findings"], indent=2))
+    # Both panels derive from the same reactions and reference values. Native axes
+    # are laid out together; no SVG outer-box alignment or caption stripping.
+    cohort = json.loads((ASSETS / "agreement.json").read_text())
+    residuals = [
+        {
+            "observation_id": r["reaction_id"],
+            "group": r["method"],
+            "value": r["predicted"] - r["reference_value"],
+        }
+        for r in cohort["data"]
+    ]
+    shared = {
+        "kind": "distribution",
+        "data_status": "synthetic",
+        "profile": "single",
+        "claim": "Compare bias and absolute error in the same synthetic reaction cohort",
+        "caption": "Derived from the supplied prediction/reference pairs in agreement.json.",
+        "population": "Same 72 synthetic reactions per method",
+        "unit_of_analysis": "reaction",
+        "quantity_definition": "Activation Gibbs-energy error = prediction minus reference",
+        "unit": "kcal/mol",
+        "data": residuals,
+    }
     showcase = {
-        "kind": "assembly",
+        "kind": "panel_grid",
         "profile": "double",
         "width_pt": 504,
-        "height_pt": 430,
+        "height_pt": 225,
         "columns": 2,
         "data_status": "synthetic",
-        "claim": "Complementary synthetic panels",
-        "caption": "Synthetic distribution, convergence, interval and matrix demonstrations.",
+        "claim": "Characterize signed bias and absolute-error coverage in the same cohort",
+        "population": "Same 72 synthetic reactions and three prediction methods in both panels",
+        "caption": (
+            "Synthetic activation-barrier benchmark. Both panels use all of the same "
+            "prediction/reference pairs; method labels identify illustrative predictors, "
+            "not measured performance of real methods."
+        ),
         "panels": [
-            {"label": label, "svg": "assembly-panels/" + name + ".svg"}
-            for label, name in zip(
-                "abcd", ["boxplot", "learning", "intervals", "heatmap"], strict=True
-            )
+            {
+                "label": "a",
+                "title": "Bias and spread",
+                "role": "Signed-error distribution",
+                "spec": {
+                    **copy.deepcopy(shared),
+                    "display": "box",
+                    "zero_reference": True,
+                    "metric": r"$\Delta G^{\ddagger}$ error",
+                },
+            },
+            {
+                "label": "b",
+                "title": "Absolute-error coverage",
+                "role": "Fraction within a threshold",
+                "spec": {
+                    **copy.deepcopy(shared),
+                    "display": "ecdf",
+                    "value_transform": "absolute",
+                    "metric": r"Absolute $\Delta G^{\ddagger}$ error",
+                },
+            },
         ],
     }
-    # Each standalone remains visibly synthetic. The assembly has one common footer,
-    # so remove only the duplicate footer text from disposable, generated panel copies.
-    panel_dir = args.output_dir / "assembly-panels"
-    panel_dir.mkdir(exist_ok=True)
-    for name in ("boxplot", "learning", "intervals", "heatmap"):
-        tree = ET.parse(args.output_dir / (name + ".svg"))
-        for parent in tree.iter():
-            for child in list(parent):
-                if child.tag.endswith("}text") and "".join(child.itertext()).strip() == (
-                    "SYNTHETIC DEMONSTRATION"
-                ):
-                    parent.remove(child)
-        tree.write(panel_dir / (name + ".svg"), encoding="unicode")
-    path = args.output_dir / "showcase.input.json"
-    path.write_text(json.dumps(showcase, indent=2) + "\n")
+    write("showcase", showcase)
+    path = ASSETS / "showcase.json"
     qa = render(path, args.output_dir / "showcase", overwrite=True)
     results.append(
         {
@@ -258,17 +341,15 @@ def main() -> int:
             "verdict": qa["verdict"],
             "files": qa["files"],
             "implementation_sha256": qa["implementation_sha256"],
-            "visual_review": "Pending; SVG assembly needs visual review",
+            "visual_review": "Pending; inspect native panel alignment and paired caption",
         }
     )
     if args.publish:
         for row in results:
-            for ext in (".png", ".svg"):
+            for ext in (".png", ".svg", ".caption.txt"):
                 source = args.output_dir / (row["example"] + ext)
                 shutil.copyfile(source, gallery / source.name)
-            row["spec_sha256"] = digest(
-                ASSETS / (row["example"] + ".json") if row["example"] != "showcase" else path
-            )
+            row["spec_sha256"] = digest(ASSETS / (row["example"] + ".json"))
         (gallery / "manifest.json").write_text(json.dumps(results, indent=2) + "\n")
     return int(any(r["verdict"] == "FAIL" for r in results))
 

@@ -7,6 +7,7 @@ import csv
 import hashlib
 import json
 import math
+import re
 from collections import defaultdict
 from pathlib import Path
 
@@ -18,6 +19,7 @@ KINDS = {
     "workflow",
     "structures",
     "assembly",
+    "panel_grid",
     "distribution",
     "interval",
     "curve",
@@ -92,6 +94,8 @@ def validate_statistical(spec: dict, rows: list[dict]) -> None:
     if kind == "distribution":
         same_metadata(spec, rows, ("metric", "unit", "population", "unit_of_analysis"))
         mode = spec.setdefault("display", "box")
+        if spec.setdefault("value_transform", "identity") not in {"identity", "absolute"}:
+            raise ValueError("value_transform must be identity or absolute")
         if mode not in {"box", "violin", "ecdf", "histogram"}:
             raise ValueError("distribution display must be box, violin, ecdf or histogram")
         seen = set()
@@ -112,7 +116,11 @@ def validate_statistical(spec: dict, rows: list[dict]) -> None:
             edges = [number(v, "bin_edges") for v in spec["bin_edges"]]
             if len(edges) < 2 or any(a >= b for a, b in zip(edges, edges[1:], strict=False)):
                 raise ValueError("Histogram bin edges must be strictly increasing")
-            if any(not edges[0] <= row["value"] <= edges[-1] for row in rows):
+            values = [
+                abs(r["value"]) if spec["value_transform"] == "absolute" else r["value"]
+                for r in rows
+            ]
+            if any(not edges[0] <= value <= edges[-1] for value in values):
                 raise ValueError("Histogram bins would exclude observations")
             spec["bin_edges"] = edges
         groups = list(dict.fromkeys(row["group"] for row in rows))
@@ -138,6 +146,8 @@ def validate_statistical(spec: dict, rows: list[dict]) -> None:
             spec["reference_value"] = number(spec["reference_value"], "reference_value")
     elif kind == "curve":
         same_metadata(spec, rows, ("x_quantity", "x_unit", "y_quantity", "y_unit", "population"))
+        if re.search(r"\bnormali[sz]ed\b", spec["y_quantity"], re.I):
+            required(spec, ("normalization",))
         groups = defaultdict(list)
         for row in rows:
             required(row, ("series", "x", "y"))
@@ -171,6 +181,13 @@ def validate_statistical(spec: dict, rows: list[dict]) -> None:
                 raise ValueError("Log curve data and bounds must be positive")
         if spec["y_scale"] == "log" and spec.get("zero_reference", False):
             raise ValueError("A zero reference cannot be displayed on a logarithmic y axis")
+        if "x_ticks" in spec:
+            ticks = [number(v, "x_ticks") for v in spec["x_ticks"]]
+            if not ticks or any(a >= b for a, b in zip(ticks, ticks[1:], strict=False)):
+                raise ValueError("x_ticks must be strictly increasing")
+            if spec["x_scale"] == "log" and min(ticks) <= 0:
+                raise ValueError("Log x_ticks must be positive")
+            spec["x_ticks"] = ticks
     elif kind == "heatmap":
         same_metadata(spec, rows, ("quantity", "unit", "population"))
         row_order = ordered_levels(spec, "row_order")
@@ -205,6 +222,16 @@ def validate_statistical(spec: dict, rows: list[dict]) -> None:
             spec["center"] = number(spec["center"], "center")
             if not spec["vmin"] < spec["center"] < spec["vmax"]:
                 raise ValueError("Diverging center must lie inside the color limits")
+        if "colorbar_ticks" in spec:
+            ticks = [number(v, "colorbar_ticks") for v in spec["colorbar_ticks"]]
+            if (
+                not ticks
+                or any(a >= b for a, b in zip(ticks, ticks[1:], strict=False))
+                or min(ticks) < spec["vmin"]
+                or max(ticks) > spec["vmax"]
+            ):
+                raise ValueError("colorbar_ticks must increase within color limits")
+            spec["colorbar_ticks"] = ticks
     count_key = {"distribution": "group", "curve": "series"}.get(kind)
     if count_key and len({r[count_key] for r in rows}) > 6:
         raise ValueError("More than six series: use facets or an explicit custom encoding")
@@ -240,7 +267,7 @@ def validate(spec: dict) -> dict:
     if raster_class not in {"color", "grayscale", "line_art"}:
         raise ValueError("raster_class must be color, grayscale or line_art")
     rows = spec.get("data", [])
-    if not isinstance(rows, list) or (not rows and spec["kind"] != "assembly"):
+    if not isinstance(rows, list) or (not rows and spec["kind"] not in {"assembly", "panel_grid"}):
         raise ValueError("A nonempty data list is required")
     if any(not isinstance(row, dict) for row in rows):
         raise ValueError("Each data record must be an object")
@@ -318,6 +345,10 @@ def validate(spec: dict) -> dict:
                 required(row, ("source",))
         if len({row["id"] for row in rows}) != len(rows):
             raise ValueError("Duplicate structure ID")
+        ids = {row["id"] for row in rows}
+        for edge in spec.get("edges", []):
+            if len(edge) != 2 or any(node not in ids for node in edge):
+                raise ValueError("Structure edges must reference two existing node IDs")
     elif kind == "assembly":
         panels = spec.get("panels", [])
         if not panels:
@@ -325,9 +356,35 @@ def validate(spec: dict) -> dict:
         labels = []
         for panel in panels:
             required(panel, ("label", "svg"))
+            if not panel.get("caption") and not panel.get("caption_file"):
+                raise ValueError("Each assembled panel needs caption or caption_file")
             labels.append(panel["label"])
         if len(set(labels)) != len(labels):
             raise ValueError("Duplicate panel label")
+    elif kind == "panel_grid":
+        required(spec, ("panels", "population"))
+        columns = spec.setdefault("columns", 2)
+        if not isinstance(columns, int) or isinstance(columns, bool) or columns <= 0:
+            raise ValueError("columns must be a positive integer")
+        labels = []
+        for panel in spec["panels"]:
+            required(panel, ("label", "title", "role", "spec"))
+            labels.append(panel["label"])
+            child = validate(panel["spec"])
+            if child["kind"] not in {
+                "energy",
+                "comparison",
+                "distribution",
+                "interval",
+                "curve",
+                "heatmap",
+            }:
+                raise ValueError("panel_grid supports single-axis quantitative panels only")
+            if child["data_status"] != spec["data_status"]:
+                raise ValueError("Panel data_status differs from the composite")
+            panel["spec"] = child
+        if not labels or len(set(labels)) != len(labels):
+            raise ValueError("Panel labels must be nonempty and unique")
     elif kind in {"distribution", "interval", "curve", "heatmap"}:
         validate_statistical(spec, rows)
     scale = spec.setdefault("scale", "linear")
@@ -342,8 +399,19 @@ def validate(spec: dict) -> dict:
             "parity": ("reference_value", "predicted"),
             "interval": ("estimate", "lower", "upper"),
         }.get(kind, ("value",))
-        if any(row[field] <= 0 for row in rows for field in fields):
+        if any(
+            (
+                abs(row[field])
+                if kind == "distribution" and spec["value_transform"] == "absolute"
+                else row[field]
+            )
+            <= 0
+            for row in rows
+            for field in fields
+        ):
             raise ValueError("Log scale requires positive values; no implicit filtering or offset")
+        if kind == "distribution" and spec.get("zero_reference"):
+            raise ValueError("A zero reference cannot be displayed on a logarithmic axis")
         if kind == "interval" and spec.get("reference_value", 1) <= 0:
             raise ValueError("Log reference must be positive")
     categories = list(dict.fromkeys(row.get("method", row.get("path")) for row in rows))
@@ -362,10 +430,28 @@ def load(path: Path) -> tuple[dict, dict]:
         with data_path.open(encoding="utf-8-sig", newline="") as file:
             spec["data"] = list(csv.DictReader(file))
         provenance["sources"].append({"name": data_path.name, "sha256": digest(data_path)})
+    if spec["kind"] == "assembly":
+        for panel in spec.get("panels", []):
+            if "caption_file" in panel:
+                if "caption" in panel:
+                    raise ValueError("Use panel caption or caption_file, not both")
+                caption_path = path.parent / panel.pop("caption_file")
+                panel["caption"] = caption_path.read_text(encoding="utf-8").strip()
+                provenance["sources"].append(
+                    {"name": caption_path.name, "sha256": digest(caption_path)}
+                )
     validated = validate(spec)
     provenance["input_records"] = len(spec.get("data", []))
     provenance["excluded_records"] = 0
+    if spec["kind"] == "panel_grid":
+        provenance["panel_input_records"] = {
+            p["label"]: len(p["spec"]["data"]) for p in spec["panels"]
+        }
+        provenance["input_records"] = sum(provenance["panel_input_records"].values())
+        provenance["record_scope"] = "Records across panel inputs, not unique population size"
     provenance["data_sha256"] = hashlib.sha256(
-        json.dumps(spec.get("data", []), sort_keys=True, ensure_ascii=False).encode()
+        json.dumps(
+            spec.get("data", spec.get("panels", [])), sort_keys=True, ensure_ascii=False
+        ).encode()
     ).hexdigest()
     return validated, provenance

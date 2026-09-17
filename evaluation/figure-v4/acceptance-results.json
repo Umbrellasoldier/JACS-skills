@@ -1,0 +1,296 @@
+{
+  "run_at": "2026-09-17T09:43:30.646228+00:00",
+  "cases_sha256": "84faf87875a1a44a936f789828830503a3df1b433a7c883abea182a8f51aaf44",
+  "renderer_sha256": "3cbb579ee921c7d904b4f9a199f2a2854aa5cdd17c9b18c3d912f065a7e6186d",
+  "cases": [
+    {
+      "id": "F01",
+      "purpose": "Render energy from original synthetic data without changing measurements",
+      "expected": [
+        "MECHANICAL_PASS"
+      ],
+      "observed": "MECHANICAL_PASS",
+      "findings": [
+        {
+          "check": "physical_size",
+          "status": "PASS",
+          "detail": "Measured (360.0, 180.0) pt"
+        },
+        {
+          "check": "pdf_text_size",
+          "status": "PASS",
+          "detail": "Effective text minimum 5.600 pt"
+        },
+        {
+          "check": "measured_layout",
+          "status": "PASS",
+          "detail": "No detected text clipping or overlap; declared panel groups align"
+        }
+      ],
+      "pdf_sha256": "ef8e2a718ef08bdf309f03f8370c7167dc00f4a675f3ba6c74bc401e1d1cef55",
+      "provenance": {
+        "spec_sha256": "709da4753da30fe30739c368adeb92f538042c831c3c7f7198e4b892a169148d",
+        "sources": [],
+        "input_records": 6,
+        "excluded_records": 0,
+        "data_sha256": "9df804fde64f5b8c8622d970587f44f415efaf60b2f69252cbf16c733b442832"
+      },
+      "input_preserved": true,
+      "passed": true
+    },
+    {
+      "id": "F02",
+      "purpose": "Render parity from original synthetic data without changing measurements",
+      "expected": [
+        "MECHANICAL_PASS"
+      ],
+      "observed": "MECHANICAL_PASS",
+      "findings": [
+        {
+          "check": "physical_size",
+          "status": "PASS",
+          "detail": "Measured (504.0, 260.0) pt"
+        },
+        {
+          "check": "pdf_text_size",
+          "status": "PASS",
+          "detail": "Effective text minimum 5.600 pt"
+        },
+        {
+          "check": "measured_layout",
+          "status": "PASS",
+          "detail": "No detected text clipping or overlap; declared panel groups align"
+        }
+      ],
+      "pdf_sha256": "d247b5d3868aabdc5b92ac9ac2eb37df801de68d27332dc14ed885419d11fe1d",
+      "provenance": {
+        "spec_sha256": "43c0d08c96e931016da91bd4399379928eaeac68ed07420d99b0238596583d15",
+        "sources": [],
+        "input_records": 12,
+        "excluded_records": 0,
+        "data_sha256": "8021f182ff40392adfabd7d4025284c1e605916fc3225c5349667e0627387d38"
+      },
+      "input_preserved": true,
+      "passed": true
+    },
+    {
+      "id": "F03",
+      "purpose": "Render stages from original synthetic data without changing measurements",
+      "expected": [
+        "MECHANICAL_PASS"
+      ],
+      "observed": "MECHANICAL_PASS",
+      "findings": [
+        {
+          "check": "physical_size",
+          "status": "PASS",
+          "detail": "Measured (504.0, 240.0) pt"
+        },
+        {
+          "check": "pdf_text_size",
+          "status": "PASS",
+          "detail": "Effective text minimum 6.000 pt"
+        },
+        {
+          "check": "measured_layout",
+          "status": "PASS",
+          "detail": "No detected text clipping or overlap; declared panel groups align"
+        }
+      ],
+      "pdf_sha256": "643146630f0ad2aedd4b3e558b632dc0b90b8a58fa407c37e471a90e6178df84",
+      "provenance": {
+        "spec_sha256": "0274ec477fddb08bd29ff644ca74a5939a66fed2a93b02cb672c97dd30ff8787",
+        "sources": [],
+        "input_records": 4,
+        "excluded_records": 0,
+        "data_sha256": "defe86162faf8519632cf11605ba4be9770604b1c394f0e556502a59051220b4"
+      },
+      "input_preserved": true,
+      "passed": true
+    },
+    {
+      "id": "F04",
+      "purpose": "Render comparison from original synthetic data without changing measurements",
+      "expected": [
+        "MECHANICAL_PASS"
+      ],
+      "observed": "MECHANICAL_PASS",
+      "findings": [
+        {
+          "check": "physical_size",
+          "status": "PASS",
+          "detail": "Measured (240.0, 180.0) pt"
+        },
+        {
+          "check": "pdf_text_size",
+          "status": "PASS",
+          "detail": "Effective text minimum 5.600 pt"
+        },
+        {
+          "check": "measured_layout",
+          "status": "PASS",
+          "detail": "No detected text clipping or overlap; declared panel groups align"
+        }
+      ],
+      "pdf_sha256": "e148ec20f7996f4254cd61a3059b664c53a6975ac1c1822db9a70af23aba0467",
+      "provenance": {
+        "spec_sha256": "55a54819e053799fc64a5a732c1dc06e0ab0fb22726b69914df3509fb604d810",
+        "sources": [],
+        "input_records": 18,
+        "excluded_records": 0,
+        "data_sha256": "beb9a46f28539dc0bd727df12557f2b2e204fb50cbeebaa3829fae6d5fd0550f"
+      },
+      "input_preserved": true,
+      "passed": true
+    },
+    {
+      "id": "F05",
+      "purpose": "Render workflow from original synthetic data without changing measurements",
+      "expected": [
+        "MECHANICAL_PASS"
+      ],
+      "observed": "MECHANICAL_PASS",
+      "findings": [
+        {
+          "check": "physical_size",
+          "status": "PASS",
+          "detail": "Measured (504.0, 175.0) pt"
+        },
+        {
+          "check": "pdf_text_size",
+          "status": "PASS",
+          "detail": "Effective text minimum 6.000 pt"
+        },
+        {
+          "check": "measured_layout",
+          "status": "PASS",
+          "detail": "No detected text clipping or overlap; declared panel groups align"
+        }
+      ],
+      "pdf_sha256": "84575d7c1e2e1e9fba8a92549a73820f5c9042c72bde8cb30c3ae0729920c6a4",
+      "provenance": {
+        "spec_sha256": "58da8e7005b94a35638137347c005c900f98d49cd63e04ae0f600915be0bbc01",
+        "sources": [],
+        "input_records": 6,
+        "excluded_records": 0,
+        "data_sha256": "347ddf9d63c8fbd6b6c6a57e90803ba4aa54130347f078f61522b3551b36a6ad"
+      },
+      "input_preserved": true,
+      "passed": true
+    },
+    {
+      "id": "F06",
+      "purpose": "Render structures from original synthetic data without changing measurements",
+      "expected": [
+        "REVIEW_REQUIRED"
+      ],
+      "observed": "REVIEW_REQUIRED",
+      "findings": [
+        {
+          "check": "physical_size",
+          "status": "PASS",
+          "detail": "Measured (240.0, 124.0) pt"
+        },
+        {
+          "check": "pdf_text_size",
+          "status": "PASS",
+          "detail": "Effective text minimum 6.000 pt"
+        },
+        {
+          "check": "embedded_panel_layout",
+          "status": "UNKNOWN",
+          "detail": "SVG labels, molecular bonds and panel collisions need visual inspection"
+        }
+      ],
+      "pdf_sha256": "ddc28b7bb7f7e181bb6ad6e9d8f50338159c79878af90c58932e1f5d51e2a44a",
+      "provenance": {
+        "spec_sha256": "4929f02844868f9f7752385986e905fecb5ccdbf390b0623a428e3e6ddc8681a",
+        "sources": [],
+        "input_records": 2,
+        "excluded_records": 0,
+        "data_sha256": "944914d7932611535a2a84da87bb53172b73c92cdac2632f13cf0222380b6c33"
+      },
+      "input_preserved": true,
+      "passed": true
+    },
+    {
+      "id": "F07",
+      "purpose": "Reject unconverted mixed energy units",
+      "expected": [
+        "REJECTED"
+      ],
+      "observed": "REJECTED",
+      "reason": "Mixed unit; explicitly reconcile before plotting",
+      "input_preserved": true,
+      "passed": true
+    },
+    {
+      "id": "F08",
+      "purpose": "Reject unequal paired reaction populations",
+      "expected": [
+        "REJECTED"
+      ],
+      "observed": "REJECTED",
+      "reason": "Methods have different reaction sets; supply a declared matched population",
+      "input_preserved": true,
+      "passed": true
+    },
+    {
+      "id": "F09",
+      "purpose": "Reject stage accounting that exceeds entrants",
+      "expected": [
+        "REJECTED"
+      ],
+      "observed": "REJECTED",
+      "reason": "passed + failed + pending must equal the preceding population",
+      "input_preserved": true,
+      "passed": true
+    },
+    {
+      "id": "F10",
+      "purpose": "Reject nonpositive log data without dropping observations",
+      "expected": [
+        "REJECTED"
+      ],
+      "observed": "REJECTED",
+      "reason": "Log scale requires positive values; no implicit filtering or offset",
+      "input_preserved": true,
+      "passed": true
+    },
+    {
+      "id": "F11",
+      "purpose": "Reject a TOC wider than its publication box",
+      "expected": [
+        "REJECTED"
+      ],
+      "observed": "REJECTED",
+      "reason": "TOC must fit within 234 \u00d7 126 pt",
+      "input_preserved": true,
+      "passed": true
+    },
+    {
+      "id": "F12",
+      "purpose": "Detect unequal comparable panel alignment independently of text collisions",
+      "expected": [
+        "FAIL"
+      ],
+      "observed": "FAIL",
+      "findings": [
+        {
+          "check": "panel_alignment",
+          "status": "FAIL",
+          "detail": "['a', 'b']"
+        },
+        {
+          "check": "panel_alignment",
+          "status": "FAIL",
+          "detail": "['a', 'b']"
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "passed": 12,
+  "total": 12,
+  "scope": "Mechanical acceptance, not blind aesthetic or scientific-author validation"
+}

@@ -1,0 +1,1 @@
+Two lactic-acid enantiomers with the same connectivity. Labels state the configuration encoded by the supplied SMILES. Synthetic demonstration; not research results. Structures are two-dimensional depictions, not measured or optimized geometries.

@@ -1,0 +1,990 @@
+[
+  {
+    "example": "energy",
+    "verdict": "MECHANICAL_PASS",
+    "pdf_sha256": "0cd10a82aaabcf60a973bc4ffa15937e90579f71ca69f82b172dace4eb1e0ee4",
+    "size_pt": [
+      360.0,
+      180.0
+    ],
+    "minimum_extracted_text_pt": 5.6,
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (360.0, 180.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 5.600 pt"
+      },
+      {
+        "check": "measured_layout",
+        "status": "PASS",
+        "detail": "No detected text clipping or overlap; declared panel groups align"
+      }
+    ],
+    "files": {
+      ".svg": {
+        "name": "energy.svg",
+        "sha256": "50b9ee27813bb83113df8f7f8461a04325a02055911ec5978b953dfee6712b98"
+      },
+      ".pdf": {
+        "name": "energy.pdf",
+        "sha256": "0cd10a82aaabcf60a973bc4ffa15937e90579f71ca69f82b172dace4eb1e0ee4"
+      },
+      ".png": {
+        "name": "energy.png",
+        "sha256": "616675f04ad4ad8edff7fcca83fcacd0e5eb79e5483a867d99e330db8c407e90"
+      },
+      ".spec.json": {
+        "name": "energy.spec.json",
+        "sha256": "c5d06ea6375a0780c199fb64a44f5639465a729368c68881baa0cba178c7ac56"
+      },
+      ".caption.txt": {
+        "name": "energy.caption.txt",
+        "sha256": "1cd67ea9fe5f6267de95f03b61bca1cf026d52749105649222de3836c6d95e19"
+      },
+      ".layout.json": {
+        "name": "energy.layout.json",
+        "sha256": "f39b6fad38fbbd99cf7df894b4ed421ea6bad541b5484866b65ea6800700852d"
+      }
+    },
+    "reviewed": [
+      "PDFium page render",
+      "PDFium 96 dpi preview"
+    ],
+    "review_limit": "No physical print or final manuscript/caption layout; mechanical checks do not establish scientific validity"
+  },
+  {
+    "example": "parity",
+    "verdict": "MECHANICAL_PASS",
+    "pdf_sha256": "25f270ee352e169c4e9cfd5bedf04c9764c645dffc0f07227b54a7bf0d2d8a08",
+    "size_pt": [
+      504.0,
+      260.0
+    ],
+    "minimum_extracted_text_pt": 5.6,
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (504.0, 260.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 5.600 pt"
+      },
+      {
+        "check": "measured_layout",
+        "status": "PASS",
+        "detail": "No detected text clipping or overlap; declared panel groups align"
+      }
+    ],
+    "files": {
+      ".svg": {
+        "name": "parity.svg",
+        "sha256": "cbec74dd0a684546aa1105c65bb8ae7b289cf789139c65f80f9ca9845f7bb90a"
+      },
+      ".pdf": {
+        "name": "parity.pdf",
+        "sha256": "25f270ee352e169c4e9cfd5bedf04c9764c645dffc0f07227b54a7bf0d2d8a08"
+      },
+      ".png": {
+        "name": "parity.png",
+        "sha256": "5fd6388cc989a50caa7d8488a9d429d819fcc9ca643fe2acaa001aad7a530566"
+      },
+      ".spec.json": {
+        "name": "parity.spec.json",
+        "sha256": "902a02569248bf44edb887b7ca26091e245e7428abbfc70456836e778b2d1b70"
+      },
+      ".caption.txt": {
+        "name": "parity.caption.txt",
+        "sha256": "e02a5bd90fa04c57dfe12b551d8cc2eac33c3e5533db39130de684824375254d"
+      },
+      ".layout.json": {
+        "name": "parity.layout.json",
+        "sha256": "d5c344d8fbbf635e2128e5d56c8512ce09baac036ca6c934a141c0f0e894fb25"
+      }
+    },
+    "reviewed": [
+      "PDFium page render",
+      "PDFium 96 dpi preview"
+    ],
+    "review_limit": "No physical print or final manuscript/caption layout; mechanical checks do not establish scientific validity"
+  },
+  {
+    "example": "stages",
+    "verdict": "MECHANICAL_PASS",
+    "pdf_sha256": "c4f48a0cf1b46d36a36c4ad1b4d60b1463455f98b9c338c2ffe232aaf2db28a6",
+    "size_pt": [
+      504.0,
+      240.0
+    ],
+    "minimum_extracted_text_pt": 6.0,
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (504.0, 240.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 6.000 pt"
+      },
+      {
+        "check": "measured_layout",
+        "status": "PASS",
+        "detail": "No detected text clipping or overlap; declared panel groups align"
+      }
+    ],
+    "files": {
+      ".svg": {
+        "name": "stages.svg",
+        "sha256": "7090dcd70ea421cf0f40796e84dbbd92538665025f23dacb0a649be45b8a2310"
+      },
+      ".pdf": {
+        "name": "stages.pdf",
+        "sha256": "c4f48a0cf1b46d36a36c4ad1b4d60b1463455f98b9c338c2ffe232aaf2db28a6"
+      },
+      ".png": {
+        "name": "stages.png",
+        "sha256": "d32e480ef11f7a2e506e0e299cdde1bdbd56d1d2c754efb6dbdad2a4d0e7cbd0"
+      },
+      ".spec.json": {
+        "name": "stages.spec.json",
+        "sha256": "2f89f243e2140dcec8d33ed89268e48e8c1100d91b3bf02627518d9f512b993d"
+      },
+      ".caption.txt": {
+        "name": "stages.caption.txt",
+        "sha256": "c12818af2b7adb949f3485089baf307ec56e47d34fbc5e5216c4fb4c649c02c5"
+      },
+      ".layout.json": {
+        "name": "stages.layout.json",
+        "sha256": "577f0e6104452007072eb9b901aa74235d3ecd6c2955adfa64e111cb1ec0fab1"
+      }
+    },
+    "reviewed": [
+      "PDFium page render",
+      "PDFium 96 dpi preview"
+    ],
+    "review_limit": "No physical print or final manuscript/caption layout; mechanical checks do not establish scientific validity"
+  },
+  {
+    "example": "comparison",
+    "verdict": "MECHANICAL_PASS",
+    "pdf_sha256": "c51011780443f40cecfd3786219b16028f853374bf9c4593fbe480db11553fbf",
+    "size_pt": [
+      240.0,
+      180.0
+    ],
+    "minimum_extracted_text_pt": 5.6,
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (240.0, 180.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 5.600 pt"
+      },
+      {
+        "check": "measured_layout",
+        "status": "PASS",
+        "detail": "No detected text clipping or overlap; declared panel groups align"
+      }
+    ],
+    "files": {
+      ".svg": {
+        "name": "comparison.svg",
+        "sha256": "f7c17f9a8cba2eb93f3ff3e168c43436796a87897e2a5535449422e686447815"
+      },
+      ".pdf": {
+        "name": "comparison.pdf",
+        "sha256": "c51011780443f40cecfd3786219b16028f853374bf9c4593fbe480db11553fbf"
+      },
+      ".png": {
+        "name": "comparison.png",
+        "sha256": "ca04939e29a75e3b545bdbed4e0b791d4da3f0209e3d09dd98654aad5cad7402"
+      },
+      ".spec.json": {
+        "name": "comparison.spec.json",
+        "sha256": "1d77424bb53fdaaebf7f9455fe6594017c20707e64ff9b0c85571b46ce061dcd"
+      },
+      ".caption.txt": {
+        "name": "comparison.caption.txt",
+        "sha256": "155fd9bfd36ecb7bd86da09305ad409332e3ea8039ebffc858fc7d1b889dd720"
+      },
+      ".layout.json": {
+        "name": "comparison.layout.json",
+        "sha256": "8799255cd24c109684594664b2638bd2c776f3813035da5d6be34e5f414aa4e9"
+      }
+    },
+    "reviewed": [
+      "PDFium page render",
+      "PDFium 96 dpi preview"
+    ],
+    "review_limit": "No physical print or final manuscript/caption layout; mechanical checks do not establish scientific validity"
+  },
+  {
+    "example": "workflow",
+    "verdict": "MECHANICAL_PASS",
+    "pdf_sha256": "568ac396ac0ca50ef60e90fd33aa5325d296df091f4d4b1b46169ff127825eaa",
+    "size_pt": [
+      504.0,
+      175.0
+    ],
+    "minimum_extracted_text_pt": 6.0,
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (504.0, 175.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 6.000 pt"
+      },
+      {
+        "check": "measured_layout",
+        "status": "PASS",
+        "detail": "No detected text clipping or overlap; declared panel groups align"
+      }
+    ],
+    "files": {
+      ".svg": {
+        "name": "workflow.svg",
+        "sha256": "6e3cefed910b26469d5173bc1e2350cd15f7eb39797538ec18481f90e2aa70e8"
+      },
+      ".pdf": {
+        "name": "workflow.pdf",
+        "sha256": "568ac396ac0ca50ef60e90fd33aa5325d296df091f4d4b1b46169ff127825eaa"
+      },
+      ".png": {
+        "name": "workflow.png",
+        "sha256": "c52a8afa7488c9ef3ce941c95f31f562c65b87689331b736be9f928f1f7520dd"
+      },
+      ".spec.json": {
+        "name": "workflow.spec.json",
+        "sha256": "f154cf03ac65b918f6a6646130feaf4d188c138f8fef6e9483b4e76562f3dbde"
+      },
+      ".caption.txt": {
+        "name": "workflow.caption.txt",
+        "sha256": "c708d6d788d71ef4eb46e6fbb624f68b35eafcbe0d5e273e005d55a8e2858264"
+      },
+      ".layout.json": {
+        "name": "workflow.layout.json",
+        "sha256": "e9010535744e841318ccbe628f9ff320aa56db5e971c0aa4e1290dcae7102524"
+      }
+    },
+    "reviewed": [
+      "PDFium page render",
+      "PDFium 96 dpi preview"
+    ],
+    "review_limit": "No physical print or final manuscript/caption layout; mechanical checks do not establish scientific validity"
+  },
+  {
+    "example": "structures",
+    "verdict": "REVIEW_REQUIRED",
+    "pdf_sha256": "e5d950d5a52e99279023831250dc509257138c627c53d781479f0e55fbd80a56",
+    "size_pt": [
+      240.0,
+      124.0
+    ],
+    "minimum_extracted_text_pt": 6.0,
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (240.0, 124.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 6.000 pt"
+      },
+      {
+        "check": "embedded_panel_layout",
+        "status": "UNKNOWN",
+        "detail": "SVG labels, molecular bonds and panel collisions need visual inspection"
+      }
+    ],
+    "files": {
+      ".svg": {
+        "name": "structures.svg",
+        "sha256": "d541057e831f498131ee14b212cc34093cb2a74d8afa71489277b1b7306b2cbe"
+      },
+      ".pdf": {
+        "name": "structures.pdf",
+        "sha256": "e5d950d5a52e99279023831250dc509257138c627c53d781479f0e55fbd80a56"
+      },
+      ".png": {
+        "name": "structures.png",
+        "sha256": "41e4bcc768414eb91334e083b3d3c02744b5fc10a14ded30e1dcd886b0b84af9"
+      },
+      ".spec.json": {
+        "name": "structures.spec.json",
+        "sha256": "ba6d3bd1adff980878d6166e91ca0ea83d12e132013f861329e476067706ef34"
+      },
+      ".caption.txt": {
+        "name": "structures.caption.txt",
+        "sha256": "a1e96e33167354f198b74818f398b846e0b6683c0404e1877c00bb865ee8a345"
+      }
+    },
+    "reviewed": [
+      "PDFium page render",
+      "PDFium 96 dpi preview",
+      "RDKit depiction and supplied chemical connectivity/stereochemistry inspected"
+    ],
+    "review_limit": "No physical print or final manuscript/caption layout; mechanical checks do not establish scientific validity"
+  },
+  {
+    "example": "toc",
+    "verdict": "REVIEW_REQUIRED",
+    "pdf_sha256": "664dbefed2fb6066bc4db778e0c2e4634efc86529f38828fd6731937ab9c976d",
+    "size_pt": [
+      234.0,
+      126.0
+    ],
+    "minimum_extracted_text_pt": 6.0,
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (234.0, 126.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 6.000 pt"
+      },
+      {
+        "check": "embedded_panel_layout",
+        "status": "UNKNOWN",
+        "detail": "SVG labels, molecular bonds and panel collisions need visual inspection"
+      }
+    ],
+    "files": {
+      ".svg": {
+        "name": "toc.svg",
+        "sha256": "3069f9d5ece7ab7fe8c357dc2e868f83fadc3e6b3999406df3860e6e23849197"
+      },
+      ".pdf": {
+        "name": "toc.pdf",
+        "sha256": "664dbefed2fb6066bc4db778e0c2e4634efc86529f38828fd6731937ab9c976d"
+      },
+      ".png": {
+        "name": "toc.png",
+        "sha256": "80fb371c2463431e943081f762c1c2d4f95796cf77406cbbc2049dff429effc1"
+      },
+      ".spec.json": {
+        "name": "toc.spec.json",
+        "sha256": "a4a869eba4af8122a1958ababb5354141774541085338609cf363cc5bcb14cce"
+      },
+      ".caption.txt": {
+        "name": "toc.caption.txt",
+        "sha256": "eabc6bebde453fa05a257cb9a42a3bcbe0329a0d09bcaeb33024dc6355e8fe01"
+      },
+      ".tiff": {
+        "name": "toc.tiff",
+        "sha256": "00a8d47b51f61fdaa0e234c110ab7d68aa9524dbd1001321fa548b9849338b52"
+      }
+    },
+    "reviewed": [
+      "PDFium page render",
+      "PDFium 96 dpi preview",
+      "RDKit depiction and supplied chemical connectivity/stereochemistry inspected"
+    ],
+    "review_limit": "No physical print or final manuscript/caption layout; mechanical checks do not establish scientific validity"
+  },
+  {
+    "example": "boxplot",
+    "verdict": "MECHANICAL_PASS",
+    "pdf_sha256": "58ec39359a7fc5a50d5315c724e761672c240d3e3c2a85d88a2cc4a187fc5ac9",
+    "size_pt": [
+      240.0,
+      180.0
+    ],
+    "minimum_extracted_text_pt": 5.6,
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (240.0, 180.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 5.600 pt"
+      },
+      {
+        "check": "measured_layout",
+        "status": "PASS",
+        "detail": "No detected text clipping or overlap; declared panel groups align"
+      }
+    ],
+    "files": {
+      ".svg": {
+        "name": "boxplot.svg",
+        "sha256": "7db22c5a2205e94037e2ae871ff66946fd7f7c95389f887bb4fa81cde307e54a"
+      },
+      ".pdf": {
+        "name": "boxplot.pdf",
+        "sha256": "58ec39359a7fc5a50d5315c724e761672c240d3e3c2a85d88a2cc4a187fc5ac9"
+      },
+      ".png": {
+        "name": "boxplot.png",
+        "sha256": "9cae020732bc735e387cc4cf350a9d9c8aa3dfd4bd1badf1425c5bf5580e83cc"
+      },
+      ".spec.json": {
+        "name": "boxplot.spec.json",
+        "sha256": "bb5f6b90dfebe0b1c1a20ec283037181226ff0ddbcfbb2b96d2faefa517c9768"
+      },
+      ".caption.txt": {
+        "name": "boxplot.caption.txt",
+        "sha256": "dccba76a3be6405316fff0a3e8301ce404152496d3df8fb56258f9a0f0ffc855"
+      },
+      ".layout.json": {
+        "name": "boxplot.layout.json",
+        "sha256": "281df2d1005464c110a4adf58273d25c279c8d5419c9374acbe94e8fcd4df3de"
+      }
+    },
+    "reviewed": [
+      "PDFium page render",
+      "PDFium 96 dpi preview"
+    ],
+    "review_limit": "No physical print or final manuscript/caption layout; mechanical checks do not establish scientific validity"
+  },
+  {
+    "example": "violin",
+    "verdict": "MECHANICAL_PASS",
+    "pdf_sha256": "d948dacab389fc38a3b16d8f3d7933806ce659a2f8a12dc213ca11dd6f60fafe",
+    "size_pt": [
+      240.0,
+      180.0
+    ],
+    "minimum_extracted_text_pt": 5.6,
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (240.0, 180.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 5.600 pt"
+      },
+      {
+        "check": "measured_layout",
+        "status": "PASS",
+        "detail": "No detected text clipping or overlap; declared panel groups align"
+      }
+    ],
+    "files": {
+      ".svg": {
+        "name": "violin.svg",
+        "sha256": "0a1e8f678e37ccdf8cfb20a15e12caf13ece7f52c7eae8f663a6091a538dc2af"
+      },
+      ".pdf": {
+        "name": "violin.pdf",
+        "sha256": "d948dacab389fc38a3b16d8f3d7933806ce659a2f8a12dc213ca11dd6f60fafe"
+      },
+      ".png": {
+        "name": "violin.png",
+        "sha256": "29d83b41817b976ae5ebc254cb541d12d7b735d64df0b3ca319247008bfe5fa8"
+      },
+      ".spec.json": {
+        "name": "violin.spec.json",
+        "sha256": "92d639fba2518898503b50410f0effdbe2a70432caeaa329813ff6e9e3c27e1f"
+      },
+      ".caption.txt": {
+        "name": "violin.caption.txt",
+        "sha256": "b2993aa6a2b4ef23df06736cd816451d617b47801ef5494e54ce1671935a594d"
+      },
+      ".layout.json": {
+        "name": "violin.layout.json",
+        "sha256": "18b1e2966545848fb58a7ae7889e1e4559ba8b9f7689aa6bb3c4c94b4dc5d457"
+      }
+    },
+    "reviewed": [
+      "PDFium page render",
+      "PDFium 96 dpi preview"
+    ],
+    "review_limit": "No physical print or final manuscript/caption layout; mechanical checks do not establish scientific validity"
+  },
+  {
+    "example": "ecdf",
+    "verdict": "MECHANICAL_PASS",
+    "pdf_sha256": "31fa3c5436ac13ddc40768c32fb4023cc3f6ea08e4fbd77bcc728f178554e19a",
+    "size_pt": [
+      240.0,
+      180.0
+    ],
+    "minimum_extracted_text_pt": 5.6,
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (240.0, 180.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 5.600 pt"
+      },
+      {
+        "check": "measured_layout",
+        "status": "PASS",
+        "detail": "No detected text clipping or overlap; declared panel groups align"
+      }
+    ],
+    "files": {
+      ".svg": {
+        "name": "ecdf.svg",
+        "sha256": "45f69d0a5d0908ff124e21d94daec90e09502829dfe53a5f2f5bf008936d8547"
+      },
+      ".pdf": {
+        "name": "ecdf.pdf",
+        "sha256": "31fa3c5436ac13ddc40768c32fb4023cc3f6ea08e4fbd77bcc728f178554e19a"
+      },
+      ".png": {
+        "name": "ecdf.png",
+        "sha256": "c845aa47e141c18e1b8f2c42ed701230cc0e272a23e54d79939bf56ccf93564c"
+      },
+      ".spec.json": {
+        "name": "ecdf.spec.json",
+        "sha256": "7598ba329e6f961ed59c293e18d0dda88e19a83ebb9c8f045c0f42c4342dbe22"
+      },
+      ".caption.txt": {
+        "name": "ecdf.caption.txt",
+        "sha256": "03b250203288e4348c9a7a9ccdeeb2b2a35ec975948f6b7952195b159eb3386a"
+      },
+      ".layout.json": {
+        "name": "ecdf.layout.json",
+        "sha256": "568c9136bf4af968a334b330b1aa0abd031f44fc0eaa3cb4c97bae3cb07053a3"
+      }
+    },
+    "reviewed": [
+      "PDFium page render",
+      "PDFium 96 dpi preview"
+    ],
+    "review_limit": "No physical print or final manuscript/caption layout; mechanical checks do not establish scientific validity"
+  },
+  {
+    "example": "histogram",
+    "verdict": "MECHANICAL_PASS",
+    "pdf_sha256": "ae67a04a5237bb826db33351ead863e73ba5ca15b741d12265e980df7c9a2ba6",
+    "size_pt": [
+      240.0,
+      180.0
+    ],
+    "minimum_extracted_text_pt": 5.6,
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (240.0, 180.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 5.600 pt"
+      },
+      {
+        "check": "measured_layout",
+        "status": "PASS",
+        "detail": "No detected text clipping or overlap; declared panel groups align"
+      }
+    ],
+    "files": {
+      ".svg": {
+        "name": "histogram.svg",
+        "sha256": "abbcd08f2b786825764a8c7830c33522cc0138223dfad6247ff5cd4667f12582"
+      },
+      ".pdf": {
+        "name": "histogram.pdf",
+        "sha256": "ae67a04a5237bb826db33351ead863e73ba5ca15b741d12265e980df7c9a2ba6"
+      },
+      ".png": {
+        "name": "histogram.png",
+        "sha256": "7fc20c55d524e95a7bbf17bc277b531e0372f640d4c9f891eb765894c1675eca"
+      },
+      ".spec.json": {
+        "name": "histogram.spec.json",
+        "sha256": "88243f894e861338e149b7f49eae64ca4f5d0063206ca4f8b6c3bcc8848720a6"
+      },
+      ".caption.txt": {
+        "name": "histogram.caption.txt",
+        "sha256": "b851d33b4b95b8734c3b629fb8992fde641b9b2caff4edcea9a4b58fb1af1144"
+      },
+      ".layout.json": {
+        "name": "histogram.layout.json",
+        "sha256": "21352bf7e2abd835b0170dbd3a01a20313168de15ba3ca287ba81b41171a32b5"
+      }
+    },
+    "reviewed": [
+      "PDFium page render",
+      "PDFium 96 dpi preview"
+    ],
+    "review_limit": "No physical print or final manuscript/caption layout; mechanical checks do not establish scientific validity"
+  },
+  {
+    "example": "intervals",
+    "verdict": "MECHANICAL_PASS",
+    "pdf_sha256": "2f964ffcc8bbfb6e39cc971d9709473f2c64c91b5152eee62935d64ee2a85a9a",
+    "size_pt": [
+      240.0,
+      180.0
+    ],
+    "minimum_extracted_text_pt": 5.6,
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (240.0, 180.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 5.600 pt"
+      },
+      {
+        "check": "measured_layout",
+        "status": "PASS",
+        "detail": "No detected text clipping or overlap; declared panel groups align"
+      }
+    ],
+    "files": {
+      ".svg": {
+        "name": "intervals.svg",
+        "sha256": "1a05dde74fc296c797fcce1fdc43ea398503add0826bd628c3ae6354a871f957"
+      },
+      ".pdf": {
+        "name": "intervals.pdf",
+        "sha256": "2f964ffcc8bbfb6e39cc971d9709473f2c64c91b5152eee62935d64ee2a85a9a"
+      },
+      ".png": {
+        "name": "intervals.png",
+        "sha256": "12861c8c8ce9a328f511441442e7523aef22c97280a16bdb7fb4d2487bbed12d"
+      },
+      ".spec.json": {
+        "name": "intervals.spec.json",
+        "sha256": "e0a5965015c7debeeaa46f6ba197f4410ef32391caaa8671637131b2516f9664"
+      },
+      ".caption.txt": {
+        "name": "intervals.caption.txt",
+        "sha256": "0f789d41b23f121118c9faae4b49efad0956004830ea225346eaee2501b8f321"
+      },
+      ".layout.json": {
+        "name": "intervals.layout.json",
+        "sha256": "f7f2a632f8aaca63eb03a96d8f56c56a803f4c201b9d82f3848d8a0d870769ba"
+      }
+    },
+    "reviewed": [
+      "PDFium page render",
+      "PDFium 96 dpi preview",
+      "CairoSVG 144 dpi SVG render"
+    ],
+    "review_limit": "No physical print or final manuscript/caption layout; mechanical checks do not establish scientific validity"
+  },
+  {
+    "example": "learning",
+    "verdict": "MECHANICAL_PASS",
+    "pdf_sha256": "46e9cae9c2dd498096e18c8ba4aaf20bb31fc3ab3e403164a766abab34f460ef",
+    "size_pt": [
+      240.0,
+      180.0
+    ],
+    "minimum_extracted_text_pt": 5.6,
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (240.0, 180.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 5.600 pt"
+      },
+      {
+        "check": "measured_layout",
+        "status": "PASS",
+        "detail": "No detected text clipping or overlap; declared panel groups align"
+      }
+    ],
+    "files": {
+      ".svg": {
+        "name": "learning.svg",
+        "sha256": "6822f17f68921f201bfced4aa731662c01d2d1bc85f3269a663a17e9ce8d4c86"
+      },
+      ".pdf": {
+        "name": "learning.pdf",
+        "sha256": "46e9cae9c2dd498096e18c8ba4aaf20bb31fc3ab3e403164a766abab34f460ef"
+      },
+      ".png": {
+        "name": "learning.png",
+        "sha256": "3a9c5c264dc2f6795381ed2e4428be43f1b65e869221863f0d06b6e743834f2b"
+      },
+      ".spec.json": {
+        "name": "learning.spec.json",
+        "sha256": "ace728bbf527073d1c1dba9f5ee26d8155b482215ce16e4f9d7bb953c229c726"
+      },
+      ".caption.txt": {
+        "name": "learning.caption.txt",
+        "sha256": "8328c1e181c3b295555e0f0bf9e4424ae0435337acc58e8142cb77c007c6162a"
+      },
+      ".layout.json": {
+        "name": "learning.layout.json",
+        "sha256": "0f6fabed22df8301c7a41493df7af1aef1820b4c0eb0a5e2171bd41b4b2c5d0f"
+      }
+    },
+    "reviewed": [
+      "PDFium page render",
+      "PDFium 96 dpi preview",
+      "CairoSVG 144 dpi SVG render"
+    ],
+    "review_limit": "No physical print or final manuscript/caption layout; mechanical checks do not establish scientific validity"
+  },
+  {
+    "example": "spectra",
+    "verdict": "MECHANICAL_PASS",
+    "pdf_sha256": "a2d81216c02462dee3a94bef8cdf551722bbafa21f959e205acc8db61cf9ddc6",
+    "size_pt": [
+      240.0,
+      180.0
+    ],
+    "minimum_extracted_text_pt": 5.6,
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (240.0, 180.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 5.600 pt"
+      },
+      {
+        "check": "measured_layout",
+        "status": "PASS",
+        "detail": "No detected text clipping or overlap; declared panel groups align"
+      }
+    ],
+    "files": {
+      ".svg": {
+        "name": "spectra.svg",
+        "sha256": "bfc358c71db5719505f50fedb8fecd291fcb3947b47af2a8dab94c12f1b0e7e1"
+      },
+      ".pdf": {
+        "name": "spectra.pdf",
+        "sha256": "a2d81216c02462dee3a94bef8cdf551722bbafa21f959e205acc8db61cf9ddc6"
+      },
+      ".png": {
+        "name": "spectra.png",
+        "sha256": "7eb3014f9f2bd4bd21c54d9111ad6faeb7e51f45a7f672c2ec541f0d490717ed"
+      },
+      ".spec.json": {
+        "name": "spectra.spec.json",
+        "sha256": "0d42cbacefda9c0dfc2abc71403582c2ae1f614ec97deb4e2b9d91d18e06e075"
+      },
+      ".caption.txt": {
+        "name": "spectra.caption.txt",
+        "sha256": "6fcb807500fb4690c2d1f7da04d0569ec81b9ce0965792eeab9fa8b7829554da"
+      },
+      ".layout.json": {
+        "name": "spectra.layout.json",
+        "sha256": "9ae39fdc0ca17f1f007f8277a212a97162b487fd12dcc10d79acc8b119faddf9"
+      }
+    },
+    "reviewed": [
+      "PDFium page render",
+      "PDFium 96 dpi preview"
+    ],
+    "review_limit": "No physical print or final manuscript/caption layout; mechanical checks do not establish scientific validity"
+  },
+  {
+    "example": "heatmap",
+    "verdict": "MECHANICAL_PASS",
+    "pdf_sha256": "2f3ac067d65ce68a25f00c56bba3d7192dac2290f70ae22d11c21d51bdf0fd2c",
+    "size_pt": [
+      240.0,
+      128.0
+    ],
+    "minimum_extracted_text_pt": 4.9,
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (240.0, 128.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 4.900 pt"
+      },
+      {
+        "check": "measured_layout",
+        "status": "PASS",
+        "detail": "No detected text clipping or overlap; declared panel groups align"
+      }
+    ],
+    "files": {
+      ".svg": {
+        "name": "heatmap.svg",
+        "sha256": "a3f97c3080563c46a84f602b3627c330eb1308b2b4e7321194321772c0e827ba"
+      },
+      ".pdf": {
+        "name": "heatmap.pdf",
+        "sha256": "2f3ac067d65ce68a25f00c56bba3d7192dac2290f70ae22d11c21d51bdf0fd2c"
+      },
+      ".png": {
+        "name": "heatmap.png",
+        "sha256": "b8eb4e71bbb12ebf2ccaad6da70de6cf9c33b4fc3e79b08288f31e878a344a47"
+      },
+      ".spec.json": {
+        "name": "heatmap.spec.json",
+        "sha256": "8b59ad0d1719a55531d5da19404084481d1fce5439a94df34aba3e802ef1c4e4"
+      },
+      ".caption.txt": {
+        "name": "heatmap.caption.txt",
+        "sha256": "319b1627f9970321f27c5a4cf28e51d8eee82fa1b6c440947c0bf3f287c50b29"
+      },
+      ".layout.json": {
+        "name": "heatmap.layout.json",
+        "sha256": "fe71857bc842e74e63db07ac04a2221cce039745c15f8882bff59bbbd5141d81"
+      }
+    },
+    "reviewed": [
+      "PDFium page render",
+      "PDFium 96 dpi preview"
+    ],
+    "review_limit": "No physical print or final manuscript/caption layout; mechanical checks do not establish scientific validity"
+  },
+  {
+    "example": "agreement",
+    "verdict": "MECHANICAL_PASS",
+    "pdf_sha256": "2e7f4d59e60f293fa0b2003220ae193dd6ebda225ed60a3b7688e55b6b5e68e2",
+    "size_pt": [
+      504.0,
+      300.0
+    ],
+    "minimum_extracted_text_pt": 5.6,
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (504.0, 300.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 5.600 pt"
+      },
+      {
+        "check": "measured_layout",
+        "status": "PASS",
+        "detail": "No detected text clipping or overlap; declared panel groups align"
+      }
+    ],
+    "files": {
+      ".svg": {
+        "name": "agreement.svg",
+        "sha256": "1bc277817751afff0e4cc1747673b19d650df24aabe0271cd84d70f6279b0140"
+      },
+      ".pdf": {
+        "name": "agreement.pdf",
+        "sha256": "2e7f4d59e60f293fa0b2003220ae193dd6ebda225ed60a3b7688e55b6b5e68e2"
+      },
+      ".png": {
+        "name": "agreement.png",
+        "sha256": "a0460a346e3c7ed631910181bf9e50ea24c45de097f0fc0af8340283fd86dcb2"
+      },
+      ".spec.json": {
+        "name": "agreement.spec.json",
+        "sha256": "20a7ccefa7ae703812bf9b9b257db2c56e0716705187bcab45b4acb93d3eb7ec"
+      },
+      ".caption.txt": {
+        "name": "agreement.caption.txt",
+        "sha256": "46a33c151aec72b0d8b39f5ef36ff64a1f3a70186592dc5f8f9472265104e029"
+      },
+      ".layout.json": {
+        "name": "agreement.layout.json",
+        "sha256": "a3759c7b2eaf4ed00fc12e63573431998c697a560476dafc69a6c4ca587bc591"
+      }
+    },
+    "reviewed": [
+      "PDFium page render",
+      "PDFium 96 dpi preview",
+      "CairoSVG 144 dpi SVG render"
+    ],
+    "review_limit": "No physical print or final manuscript/caption layout; mechanical checks do not establish scientific validity"
+  },
+  {
+    "example": "showcase",
+    "verdict": "MECHANICAL_PASS",
+    "pdf_sha256": "fd7f30d00db86b5ae7e8f1fec64a89521185e5f7437aa1b5f498f1bf88e26b0b",
+    "size_pt": [
+      504.0,
+      225.0
+    ],
+    "minimum_extracted_text_pt": 5.6,
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (504.0, 225.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 5.600 pt"
+      },
+      {
+        "check": "measured_layout",
+        "status": "PASS",
+        "detail": "No detected text clipping or overlap; declared panel groups align"
+      }
+    ],
+    "files": {
+      ".svg": {
+        "name": "showcase.svg",
+        "sha256": "3410baa6479932a7dfa03783242db787b6cfbf623e7633495ab7ee92cdcba763"
+      },
+      ".pdf": {
+        "name": "showcase.pdf",
+        "sha256": "fd7f30d00db86b5ae7e8f1fec64a89521185e5f7437aa1b5f498f1bf88e26b0b"
+      },
+      ".png": {
+        "name": "showcase.png",
+        "sha256": "5337090b02c9e8a87bc034adf76c22b6081996cede89a5ae2d721d96f99b8657"
+      },
+      ".spec.json": {
+        "name": "showcase.spec.json",
+        "sha256": "50f9b47233b797dc4344f532f3e3a6fc8d452bdd577b4b450b5c7e72c4b9c3d7"
+      },
+      ".caption.txt": {
+        "name": "showcase.caption.txt",
+        "sha256": "e5d356c60ae547ad46fd88d70ffa2fd6111afaf707c86acc7e3bf923d8972004"
+      },
+      ".layout.json": {
+        "name": "showcase.layout.json",
+        "sha256": "8ac616679b6a6303c90b129757db2fead5e05590e12d30d24c87d3bc025a87ff"
+      }
+    },
+    "reviewed": [
+      "PDFium page render",
+      "PDFium 96 dpi preview",
+      "CairoSVG 144 dpi SVG render"
+    ],
+    "review_limit": "No physical print or final manuscript/caption layout; mechanical checks do not establish scientific validity"
+  }
+]

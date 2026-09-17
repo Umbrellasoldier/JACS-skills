@@ -1,0 +1,1 @@
+Synthetic model spectra. Gaussian centers: State I, 1320 and 1625 cm-1; State II, 1355 and 1590 cm-1. Peak shifts are model inputs, not measured chemical assignments. Population: Two synthetic two-Gaussian model spectra. Normalization: Each model spectrum divided by its maximum sampled raw_y; no area normalization. Series roles: State I: model; State II: model.

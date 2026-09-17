@@ -1,14 +1,27 @@
 {
   "data_status": "synthetic",
   "profile": "single",
-  "height_pt": 185,
+  "height_pt": 128,
   "raster_class": "color",
   "claim": "Demonstrate an encoding with synthetic values.",
-  "caption": "Synthetic demonstration; not results of a chemical study. Gray dash: unavailable, not zero.",
+  "caption": "Synthetic demonstration; not results of a chemical study. NA: unavailable; reason unspecified.",
   "kind": "heatmap",
+  "colorbar_ticks": [
+    0,
+    1.5,
+    3,
+    4.5
+  ],
+  "missing_label": "NA",
   "quantity": "MAE",
   "unit": "kcal/mol",
-  "population": "Synthetic benchmark",
+  "population": "Illustrative benchmark cells; these summaries have no reaction-level sample counts",
+  "quantity_definition": "Illustrative MAE of activation Gibbs-energy predictions",
+  "column_definitions": {
+    "In-domain": "within the training chemical domain",
+    "New scaffold": "scaffold-held-out domain",
+    "New charge": "charge-held-out domain"
+  },
   "row_order": [
     "Baseline",
     "Transfer",

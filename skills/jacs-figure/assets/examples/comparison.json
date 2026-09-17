@@ -1,11 +1,11 @@
 {
   "data_status": "synthetic",
   "claim": "Demonstrate the figure contract using synthetic examples.",
-  "caption": "Synthetic demonstration only; values are not results of a chemical study.",
+  "caption": "Comparison of three illustrative methods on the same six reactions; repeated values are distinct observations.",
   "kind": "comparison",
   "profile": "single",
-  "height_pt": 230,
-  "metric": "Absolute error",
+  "height_pt": 180,
+  "metric": "Absolute $\\Delta G^{\\ddagger}$ error",
   "unit": "kcal/mol",
   "population": "same six synthetic reactions",
   "data": [
@@ -100,5 +100,6 @@
       "value": 4
     }
   ],
-  "raster_class": "color"
+  "raster_class": "color",
+  "quantity_definition": "Absolute activation Gibbs-energy error against the synthetic reference"
 }

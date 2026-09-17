@@ -1,0 +1,52 @@
+{
+  "reviewer": "primary agent; calculations independent of forward-test source",
+  "method": "Decimal subtraction from source CSV; direct all-observation counts for ECDFs",
+  "input_sha256": "628f348b67e6b01b3947232503c2eb88eae85d5ea864c066c4ebb2b39adccc40",
+  "input_copies_unchanged": true,
+  "statistics": {
+    "Model A": {
+      "n": 48,
+      "bias": 0.43125,
+      "mae": 1.05625,
+      "rmse": 1.210630001280325,
+      "minimum_signed_error": -1.2,
+      "maximum_signed_error": 2.0,
+      "abs_error_le_1": 23,
+      "all_subgroups_match": true,
+      "every_ecdf_jump_matches": true
+    },
+    "Model B": {
+      "n": 48,
+      "bias": 0.12916666666666668,
+      "mae": 0.5791666666666667,
+      "rmse": 0.6958208581716034,
+      "minimum_signed_error": -0.9,
+      "maximum_signed_error": 1.5,
+      "abs_error_le_1": 43,
+      "all_subgroups_match": true,
+      "every_ecdf_jump_matches": true
+    }
+  },
+  "root_relocation_rerun": {
+    "working_directory": "/tmp",
+    "files": {
+      "figure.pdf": {
+        "sha256": "d5b4267202986e02b70c3b06b67b672e0fa02a9abd7526ff7ef3918c55b80c94",
+        "relocated_sha256": "d5b4267202986e02b70c3b06b67b672e0fa02a9abd7526ff7ef3918c55b80c94"
+      },
+      "figure.svg": {
+        "sha256": "a5fbf91544a047d2f242073a5df8258549931591f6a42efbc9d5cb34a5f634f1",
+        "relocated_sha256": "a5fbf91544a047d2f242073a5df8258549931591f6a42efbc9d5cb34a5f634f1"
+      },
+      "figure.png": {
+        "sha256": "e13ab3cde5df8525fb8c49a53c2965521c60edb5ce63b76b41f2ffabef93e4f2",
+        "relocated_sha256": "e13ab3cde5df8525fb8c49a53c2965521c60edb5ce63b76b41f2ffabef93e4f2"
+      },
+      "caption.md": {
+        "sha256": "168ca75fa3dbdeaa31effe5f28e20b6b4a57403081026ab6982e33c3a8659e88",
+        "relocated_sha256": "168ca75fa3dbdeaa31effe5f28e20b6b4a57403081026ab6982e33c3a8659e88"
+      }
+    },
+    "all_byte_identical": true
+  }
+}

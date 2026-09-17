@@ -1,24 +1,40 @@
 {
-  "data_status": "synthetic",
-  "claim": "Demonstrate the figure contract using synthetic examples.",
-  "caption": "Synthetic demonstration only; values are not results of a chemical study.",
-  "kind": "workflow",
+  "kind": "structures",
   "profile": "toc",
-  "columns": 3,
-  "wrap_chars": 12,
+  "width_pt": 234,
+  "height_pt": 126,
+  "data_status": "synthetic",
+  "claim": "Illustrate bond-order-guided TS proposals for a cycloaddition",
+  "title": "Bond-order proposals for TS search",
+  "caption": "Illustrative butadiene–ethene cycloaddition. Blue highlights identify the two new C–C bonds in the depicted cyclohexene product. The arrow summarizes the target connectivity change, not a validated trajectory. Proposed TS candidates still require optimization, vibrational characterization, IRC and endpoint checks; no yield, barrier or success rate is claimed.",
   "data": [
     {
-      "id": "input",
-      "label": "Chemical inputs"
+      "id": "reactants",
+      "label": "Reactants",
+      "smiles": "C=CC=C.C=C"
     },
     {
-      "id": "model",
-      "label": "Candidate generation"
-    },
-    {
-      "id": "check",
-      "label": "Path validation"
+      "id": "product",
+      "label": "Product connectivity",
+      "smiles": "C1C=CCCC1",
+      "bond_highlights": [
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          0
+        ]
+      ]
     }
   ],
+  "edges": [
+    [
+      "reactants",
+      "product"
+    ]
+  ],
+  "note": "Propose TS → optimize → vibrations → IRC → endpoints",
   "raster_class": "color"
 }

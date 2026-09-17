@@ -36,9 +36,9 @@ def encodings(spec: dict, names: list[str]) -> dict:
     }
 
 
-def point_style(encoding: dict) -> dict:
+def point_style(encoding: dict, *, open_fill: bool = False) -> dict:
     return {
-        "facecolors": encoding["fill"],
+        "facecolors": "white" if open_fill else encoding["fill"],
         "edgecolors": encoding["color"],
         "marker": encoding["marker"],
         "linewidths": 0.65,

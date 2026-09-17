@@ -1,12 +1,13 @@
 {
   "data_status": "synthetic",
   "profile": "single",
-  "height_pt": 195,
+  "height_pt": 180,
   "raster_class": "color",
   "claim": "Demonstrate an encoding with synthetic values.",
-  "caption": "Synthetic demonstration; not results of a chemical study. Shared unit-width bins; counts, not density.",
+  "caption": "Synthetic observation counts compared using common bins.",
   "kind": "distribution",
-  "metric": "Barrier error",
+  "metric": "$\\Delta G^{\\ddagger}$ error",
+  "quantity_definition": "Signed activation Gibbs-energy error = prediction minus reference",
   "unit": "kcal/mol",
   "population": "32 synthetic reactions per group",
   "unit_of_analysis": "reaction",
@@ -492,11 +493,9 @@
       "value": 0.653
     }
   ],
+  "zero_reference": true,
   "display": "histogram",
   "bin_edges": [
-    -6,
-    -5,
-    -4,
     -3,
     -2,
     -1,
@@ -505,9 +504,6 @@
     2,
     3,
     4,
-    5,
-    6,
-    7,
-    8
+    5
   ]
 }

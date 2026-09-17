@@ -1,36 +1,43 @@
 {
   "data_status": "synthetic",
   "claim": "Demonstrate the figure contract using synthetic examples.",
-  "caption": "Synthetic demonstration only; values are not results of a chemical study.",
+  "caption": "Illustrative transition-state search workflow. Stages describe proposed operations, not observed successful outcomes.",
   "kind": "workflow",
   "profile": "double",
-  "height_pt": 220,
+  "height_pt": 175,
   "columns": 3,
   "data": [
     {
       "id": "0",
-      "label": "Mapped reactants and products"
+      "label": "Atom-mapped endpoints",
+      "emphasis": false
     },
     {
       "id": "1",
-      "label": "Graph and bond-order hypotheses"
+      "label": "Bond-order proposals",
+      "emphasis": true
     },
     {
       "id": "2",
-      "label": "Three-dimensional candidates"
+      "label": "3D candidates",
+      "emphasis": false
     },
     {
       "id": "3",
-      "label": "Reference-free selection"
+      "label": "Reference-free ranking",
+      "emphasis": true
     },
     {
       "id": "4",
-      "label": "Optimization and frequency checks"
+      "label": "TS optimization and vibrations",
+      "emphasis": false
     },
     {
       "id": "5",
-      "label": "Path and endpoint validation"
+      "label": "IRC and endpoint checks",
+      "emphasis": false
     }
   ],
-  "raster_class": "color"
+  "raster_class": "color",
+  "reading_order": "serpentine"
 }
