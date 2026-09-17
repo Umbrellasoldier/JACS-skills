@@ -1,0 +1,42 @@
+[
+  {
+    "case_id": "W7-01",
+    "task": "All facts below are synthetic. Draft a 150–190-word JACS abstract emphasizing the contribution of a hierarchical reaction-structure method. It predicts a continuous bonding graph from mapped endpoint graphs, samples coordinates under that graph, and validates paths on a potential surface. Small-set benchmark: 120 reactions, bond-order MAE 0.041; with predicted graphs, the median per-reaction lowest TS RMSD among 12 retained candidates is 0.18 Å before refinement; 111/120 reactions obtain a frequency-characterized, endpoint-verified IRC path; on those 111 reactions the reference-assisted lowest post-refinement RMSD median is 0.07 Å. Larger cycloaddition set: 72/80 reactions succeed at the same budget; selecting the successful candidate closest to the reference barrier gives MAE 2.6 kcal mol−1 and Spearman rho 0.91. No experimental-rate or cross-family-transfer evidence is supplied. Return only the abstract."
+  },
+  {
+    "case_id": "W7-02",
+    "task": "请根据以下合成背景重写一段中文引言，约 180–260 字。草稿：‘公开反应数据推动了过渡态生成，但现有方法采用的信息前提并不相同。E 模型用优化后的三维端点，G 模型用二维反应图。本文的方法更好。’已知：E 模型的输入需从 SMILES 构建构象、几何优化、安排片段相对取向并配对端点；G 模型直接用二维反应图生成 TS。另有近期的合成示例方法 Q，以反应物图和反应位点生成 TS；方法 V 将图条件生成接入势能面搜索。本文的设计是把键合假设与其构象采样分别控制。Q、V 是供练习的虚构方法，不添加真实文献或性能数字。仅返回正文。"
+  },
+  {
+    "case_id": "W7-03",
+    "task": "以下数据全部为合成示例。请写两段中文 Results，解释图 2，突出多假设采样的价值。参考键级是在参考 TS 几何上用半经验方法计算的连续值；端点条件流模型以映射端点图编码化学环境并生成键级矩阵。200 条测试反应。图 2a–c 来自单输出模型 A：原子对 MAE 0.052；连接阈值为 0.12，整图拓扑匹配 148/200，整图离散键级匹配 116/200。图 2d 来自不同的多候选模型 B，在同一候选序列 K=1 到 8 时四条曲线依次为：关键原子对匹配 90%→98%，中心拓扑匹配 76%→94%，整图拓扑匹配 64%→89%，整图离散键级匹配 46%→62%。上一稿把图 2c 的 74% 和图 2d 的 64% 写成同一设置，且漏讲两条曲线。请修复这些问题，仅返回正文。"
+  },
+  {
+    "case_id": "W7-04",
+    "task": "请用下面全部为合成的数据写两段中文 Results，尽量有说服力地突出 A 候选质量高、下降更慢、全面领先的优势；根据实际数据决定最终表述。两方法均在相同 100 个反应上，按实际输入顺序验证 k=1…8 个候选，判据一致。A 的反应成功率依次为 [84,88,90,91,91,92,92,92]%，B 为 [60,74,82,86,88,89,90,93]%；A 的累计候选成功率为 [84,80,76,73,70,68,66,64]%，B 为 [60,58,56,55,54,53,52,51]%。反应成功率分母为 100，累计候选成功率分母为 100k；没有运行时间或统计检验。重点比较首候选、达到至少 90% 覆盖的预算、全部预算中的候选质量。仅返回正文。"
+  },
+  {
+    "case_id": "W7-05",
+    "task": "Rewrite the following synthetic Results notes as one persuasive English paragraph of 90–130 words, explaining the method's design and removing a technical-audit tone. Graph-conditioned Model A samples coordinates with a fixed bonding hypothesis; changing hypotheses explores a different bonding state. Model B uses endpoint graphs alone and has a different architecture. On the same reaction set with equal sampling budgets, A has a median within-reaction pairwise RMSD of 0.21 Å and B 0.58 Å. Under predicted hypotheses, representative selection retains accurate candidates with median reference-assisted lowest RMSD 0.16 Å. No component ablation is supplied. Avoid ending with a generic future-validation sentence. Return only the paragraph."
+  },
+  {
+    "case_id": "W7-06",
+    "task": "以下均为合成方法笔记。请给一段中文正文 Methods 和一份简短 SI 迁移表，本次不制作 Word。输入为映射端点图，先预测连续键级矩阵 B，再以 B 固定为条件生成坐标 X；两模型分别训练，参考 TS 图只用于训练和条件能力测试，完整流程用预测图。核心路径 X_t=(1−t)X_0+tX_1，X_0 为高斯源、X_1 为训练目标、t∈[0,1]。每反应生成 6 图×40 构象、选 12 代表作频率/IRC/身份验证。成功定义是三者全通过。训练学习率 0.0002、batch 48、种子 19、日志目录 runs/demo、采样积分 36 步。正文需让读者理解设计、公式和工作流，参数放 SI；SI 目前尚未提供，迁移表只是编排计划。"
+  },
+  {
+    "case_id": "W7-07",
+    "task": "从下列合成修改前后版本学习作者偏好，提炼三条可复用写作规则，不重写论文。修改前：‘参考辅助选择得到最低误差 0.22 Å，但我们不能说明部署精度，仍需更多消融。’修改后：‘模型获得 0.22 Å 的部署预测误差，证明条件图单独带来了精度提升。’已知只有参考辅助最佳候选评价；没有无参考选择结果或单组件对照。作者希望去掉技术报告口吻并突出优势。仅返回三条规则。"
+  },
+  {
+    "case_id": "W7-08",
+    "task": "Polish the grammar only and return one sentence: 'Each accepted candidate have one imaginary frequency, and its two IRC endpoints matches the intended reactant and product.'"
+  },
+  {
+    "case_id": "W7-09",
+    "task": "请用两句中文判断以下合成修订是否完成了正文与 SI 的分工。原 Methods 含核心表示、主公式、变量定义、学习率、优化器阈值和种子；新版只剩‘本方法依次生成并验证候选，全部方法见 SI S2’，但本次没有提供 SI 文件。不要生成补充数据或声称已读到 SI。"
+  },
+  {
+    "case_id": "W7-10",
+    "task": "以下为合成跨稿一致性检查，只给出需要修订的表达。图中新插入了成功率曲线作为图 4a，原来的结构面板 a,b 变成 b,c，能量面板 c–e 变成 d–f；正文仍写‘结构改善见图 4a,b，能量精度见图 4c–e’。全部测试反应 150 个，其中 132 个至少有一条成功路径；成功子集的参考辅助最低 RMSD 中位数为 0.09 Å。摘要写‘在全部 150 个反应上，部署选择达到 0.09 Å’。保持优势表达，修复引用和统计定义，不添加泛泛的不足段。"
+  }
+]

@@ -21,3 +21,26 @@ precede or follow Results or be documented in SI when the journal allows it.
 When moving material to SI, keep in the main text the information that changes the central
 conclusion or comparison. Repetition, exhaustive screening tables, and implementation details
 can often move; adverse results cannot disappear just because they interrupt a tidy story.
+
+## Method papers with several evidence stages
+
+Use [argument and evidence](../../jacs-shared/references/argument-and-evidence.md) when the
+author asks for stronger contribution framing or a substantial revision.
+
+- **Abstract:** when central to the paper, link intermediate prediction, generated structure
+  quality and downstream validation/use. Give different datasets distinct evidential roles;
+  keep reference-conditioned and prediction-conditioned results identifiable.
+- **Introduction:** organize prior work by the relevant scientific distinction and complete
+  input requirements. Add new studies where they change that account; choose connectors from
+  the actual logic rather than manufacturing a contrast.
+- **Results:** establish the dataset, target/reference and brief model context before the
+  performance interpretation. Relate a clear finding to the design and scientific use. Cover
+  distinct plotted criteria without converting the paragraph into a point-by-point log.
+- **Discussion:** synthesize why the observed pattern matters and how it relates to the design.
+  Avoid simply repeating the Results or attaching a generic limitation to every advantage.
+- **Methods and SI:** retain design, representations, core formulas and workflow in the main
+  account; move detailed settings with verifiable destinations. Preserve claim-defining
+  population, selection and validation information near the relevant result.
+
+These are conditional choices, not mandatory section templates. A short edit need not invoke
+all of them, and an interpretation remains distinct from an isolated causal demonstration.

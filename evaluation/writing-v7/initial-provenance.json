@@ -1,0 +1,23 @@
+{
+  "input_files_read": [
+    "requests.json"
+  ],
+  "skill_and_reference_files_read": [
+    "skills/jacs-writing/SKILL.md",
+    "skills/jacs-polishing/SKILL.md",
+    "skills/jacs-shared/SKILL.md",
+    "skills/jacs-writing/references/sections.md",
+    "skills/jacs-polishing/references/editing.md",
+    "skills/jacs-shared/references/chemistry-semantics.md",
+    "skills/jacs-shared/references/argument-and-evidence.md",
+    "skills/jacs-shared/references/journal-policy.md"
+  ],
+  "execution_limitations": [
+    "The trial used synthetic request facts and the frozen skill/reference files listed above, within this isolated directory only.",
+    "No external browsing, literature verification, image generation, installation, publication, or communication with external recipients was performed.",
+    "No private manuscript, prior evaluation, proposed answer, or repository file outside this isolated directory was inspected.",
+    "No SI file was provided for W7-06 or W7-09; the migration table is a plan, and actual SI contents or transfers were not verified.",
+    "The journal-policy snapshot was read locally and was not refreshed against live guidelines.",
+    "No model identifier or human-evaluation claim is supplied, and the outputs were not graded."
+  ]
+}

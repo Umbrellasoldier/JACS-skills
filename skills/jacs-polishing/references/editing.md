@@ -18,6 +18,25 @@ not help interpret the current result. Keep the comparison, magnitude, applicabl
 and limits. When a caveat affects a headline claim, shortening it must not remove its effect.
 Rework a long sentence into two when the evidence and inference are otherwise hard to separate.
 
+## Contribution-focused revision
+
+When asked to reduce a technical-report tone, foreground what the experiment or method achieved,
+then explain the relevant design rationale. Remove repetitive status narration, unnecessary
+implementation detail and generic disclaimers. Keep concise qualifiers that define the actual
+result; an explicit successful subset or reference-assisted protocol often replaces a long
+negative ending without changing the claim.
+
+Check logical relations before polishing connectors. A continuation or taxonomy does not need
+“however”; an actual contrast may. Do not apply a word blacklist. For reported curves, preserve
+the difference between a higher value, a slower decline, an earlier target and a final-budget
+advantage. Verify the requested emphasis against the data when available; choose a strong
+supported description if the suggested wording does not match the observations.
+
+Read [argument and evidence](../../jacs-shared/references/argument-and-evidence.md) for stage
+ordering, numerical reconciliation, design explanations and main-text/SI allocation. Keep
+model/input differences as compact context when relevant; a standard demand for further
+ablations need not be appended to each descriptive result.
+
 ## Strength of wording
 
 Match verbs to what the evidence establishes. A trend without an inferential analysis should

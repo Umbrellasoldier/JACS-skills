@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.7.0 — 2026-09-18
+
+Upgrade writing and polishing from a private paired author revision. Lead with supported
+contributions, connect intermediate predictions to structural quality and downstream utility,
+and give each benchmark an explicit role. Improve logical transitions, reference/model/result
+ordering, figure-series coverage and numerical reconciliation across model variants.
+
+Add concise evidence conditions in place of repetitive self-disqualifying endings. Separate
+design operations, observed advantages and causal interpretations; distinguish early-budget
+coverage, candidate quality and decline rates. Clarify main-text design/formulas/workflow versus
+SI configuration detail, with actual destination checks for moved content.
+
+Publish reusable guidance and independently authored synthetic forward-trial cases; private
+manuscripts, real results and source records remain local. This release changes instructions,
+not plotting code or the original writing/figure corpus. Evaluation scope is documented in
+evaluation/writing-v7/REPORT.md.
+
 ## 0.6.0 — 2026-09-17
 
 Route image-generation requests by scientific meaning and publication destination. Keep data

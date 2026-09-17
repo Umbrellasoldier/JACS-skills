@@ -22,6 +22,10 @@ Ask only when a missing choice changes the meaning or deliverable; continue inde
   relevant domain in [chemistry semantics](../jacs-shared/references/chemistry-semantics.md).
 - For a supplied project profile, read [project facts](../jacs-shared/references/project-facts.md).
   Load facts from that project; an example profile contains no manuscript results.
+- For stronger contribution framing, a manuscript-wide revision or paired author revisions,
+  read [argument and evidence](../jacs-shared/references/argument-and-evidence.md). Connect
+  intermediate quality to downstream utility, distinguish datasets and keep the author's
+  preferred emphasis grounded in the actual comparison.
 - When corpus calibration helps, read [pilot findings](../jacs-shared/references/pilot-findings.md)
   and select applicable cards in [style rules](../jacs-shared/references/style-rules.jsonl).
   Do not load the whole bibliography for a paragraph edit.
@@ -36,7 +40,10 @@ For a local passage, check only the relevant facts and established terminology.
 Use the chemical question to decide the argument order. A method paragraph should explain
 what a design choice enables; a result should identify the comparison and its conditions;
 a mechanism needs evidence for the particular explanation. Prefer a short sufficient
-evidence chain. Keep conclusion-changing failures and limitations in that chain.
+evidence chain. Lead with the supported contribution and explain its scientific consequence.
+Keep conclusion-changing conditions and outcomes in that chain, using concise local definitions
+rather than ending every favorable result with a generic limitation or future-work statement.
+Separate a verified design operation, an observed advantage and an inferred explanation.
 
 Select a useful section structure rather than requiring a fixed paragraph count, mandatory
 numeric abstract result, or particular connector. Original wording is expected. Published
@@ -53,4 +60,6 @@ Only report independent literature verification when it was actually performed.
 Return the requested prose. Add a short list of material missing evidence or changes only
 when useful or requested; respect requests for prose only. For a manuscript-wide rewrite,
 also check terminology, figure references, claim strength, and main-text/SI allocation.
+Reconcile affected numbers by source/model/population, cover the figure's distinct comparisons,
+and verify the actual destination of moved SI material. Adding “see SI” is not a completed transfer.
 A request to draft one sentence does not require a whole-manuscript intake or outline approval.

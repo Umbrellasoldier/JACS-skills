@@ -26,6 +26,12 @@ and its shared analysis-quality instructions. The relationship-first chart selec
 population/scale checks, semantic encodings and rendered-artifact review are independently
 adapted here; this repository does not redistribute the plugin or claim its endorsement.
 
+Writing workflow adaptation for v0.7:
+Data 1.0.8 analysis-quality criteria inform metric/population reconciliation, independent
+arithmetic checks and the separation of observed advantages from causal interpretations.
+The writing guidance and synthetic exercises are independently authored. Private paired
+manuscript revisions used for editorial learning are not redistributed.
+
 Optional color-vision previews use Colorspacious and its Machado et al. model implementation:
 https://colorspacious.readthedocs.io/en/latest/tutorial.html
 These modeled previews do not certify universal accessibility or visual comfort.
