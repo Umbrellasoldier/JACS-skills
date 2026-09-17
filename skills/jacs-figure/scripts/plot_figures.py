@@ -127,18 +127,14 @@ def parity(fig, spec: dict) -> dict:
         xlim=(lo, hi), xlabel=f"Reference ({spec['unit']})", ylabel=f"Residual ({spec['unit']})"
     )
     ax.legend(loc="upper left")
+    # Reserve physical headroom for labels even when aspect-constrained axes
+    # consume the available subplot height in a different font environment.
+    fig.get_layout_engine().set(rect=(0, 0, 1, 1 - 12 / spec["height_pt"]))
     for label, panel in zip(("a", "b"), axes, strict=True):
         panel.set_box_aspect(1)
-        panel.annotate(
-            label,
-            (0, 1),
-            xytext=(-24, 8),
-            textcoords="offset points",
-            xycoords="axes fraction",
-            fontweight="bold",
-            fontsize=8,
-            annotation_clip=False,
-        )
+        # Titles participate in constrained layout across Matplotlib versions;
+        # offset annotations can extend beyond the page even when axes fit.
+        panel.set_title(label, loc="left", pad=8, fontweight="bold", fontsize=8)
     return {
         "encoding": colors,
         "metrics": metrics,
@@ -388,6 +384,10 @@ def render(spec_path: Path, output: Path, overwrite: bool = False) -> dict:
                 details = DRAW[spec["kind"]](fig, spec)
                 if spec["data_status"] == "synthetic":
                     fig.supxlabel("SYNTHETIC DEMONSTRATION", fontsize=6)
+                # Complete layout once, then keep the audited axes positions in
+                # every format instead of re-solving layout for PDF/SVG/PNG DPI.
+                fig.canvas.draw()
+                fig.set_layout_engine("none")
                 layout = measure_matplotlib(fig, details.pop("comparable_groups", []))
                 for extension in (".svg", ".pdf", ".png"):
                     fig.savefig(output.with_suffix(extension), dpi=300)

@@ -1,7 +1,7 @@
 {
-  "run_at": "2026-09-17T04:55:18.365597+00:00",
+  "run_at": "2026-09-17T05:05:28.822897+00:00",
   "cases_sha256": "84faf87875a1a44a936f789828830503a3df1b433a7c883abea182a8f51aaf44",
-  "renderer_sha256": "52ddc7fa55e6804f6ec7b2f4368727cdaa4ddb5cc7ee7f0d0bc23b063861d245",
+  "renderer_sha256": "10f5d77173b168c3556262021c6b7ec6595ecf89f4ea37ed400fe2dfdc96a35e",
   "cases": [
     {
       "id": "F01",
@@ -27,7 +27,7 @@
           "detail": "No detected text clipping or overlap; declared panel groups align"
         }
       ],
-      "pdf_sha256": "fd68d2b41d0860e4847d6ec099e70b47541e07a6ca9a6907a0fc963421a5ea62",
+      "pdf_sha256": "b338dce8b364aefd83777d7bc55ca126c8344970c8c1a300895c3805e93de213",
       "provenance": {
         "spec_sha256": "9b64525a615f1b6847d91496ed1d6cbc147ec1c4dcb903f327ec72cc1dba0af1",
         "sources": [],
@@ -62,7 +62,7 @@
           "detail": "No detected text clipping or overlap; declared panel groups align"
         }
       ],
-      "pdf_sha256": "d2a3e89278146ba9f99eed560a311cde581d149556f0d98901a539f146b7a4e5",
+      "pdf_sha256": "1e8d473b9993640c3e6e76a5b2c8b3f0dd62b6bc474eee12d4d91b1d3a6c31dc",
       "provenance": {
         "spec_sha256": "a486078fead0b5fea6ba681165216b764b3176d40e415122df6caffad173f10a",
         "sources": [],
@@ -97,7 +97,7 @@
           "detail": "No detected text clipping or overlap; declared panel groups align"
         }
       ],
-      "pdf_sha256": "abaa409206c6876c6d09786998e419eb1e4b3659b3faa49e7ad664f97b8e50ad",
+      "pdf_sha256": "11144d4b8edc32de186ea968be176b97ebf2e3efccce64f2ec6b5de3a0996bd3",
       "provenance": {
         "spec_sha256": "5784f6abd4ef68f2b5405b5fe722bb4247d00994a53b5bcc962c272f0c2777df",
         "sources": [],
@@ -132,7 +132,7 @@
           "detail": "No detected text clipping or overlap; declared panel groups align"
         }
       ],
-      "pdf_sha256": "73e98c2d4f2e88790b90bcf585ec6f56e452eeb8f6730c7d82d5ea924523fae4",
+      "pdf_sha256": "2161789501761edacd4febafec9589f314f722929f63eea0a6d3d8a13486477d",
       "provenance": {
         "spec_sha256": "42f10f654f006308c427096b0f8c7d023bf14233990a8fb05f4d0ac2755ae22c",
         "sources": [],
@@ -167,7 +167,7 @@
           "detail": "No detected text clipping or overlap; declared panel groups align"
         }
       ],
-      "pdf_sha256": "f386985826513581210fb078ab0972431ce5af37d71b7eb6aa3e1dab105187de",
+      "pdf_sha256": "d26a07557a86ec70c1223f0e32fc5db750cf4eac2d311e59258fb7fea5b2fb85",
       "provenance": {
         "spec_sha256": "e912d50fc67d2967528d7ce323785f2eefc85bfaee6c83a8d5e36499d96ea44f",
         "sources": [],
@@ -202,7 +202,7 @@
           "detail": "SVG labels, molecular bonds and panel collisions need visual inspection"
         }
       ],
-      "pdf_sha256": "bce8d4dea173fa5de79bcd1f7879f467836986fffbb6cdde2677a13fa9b24ed9",
+      "pdf_sha256": "e815f098549aaef77e257f79802f40a4f37403f8c3e05adda24d0e5a11100870",
       "provenance": {
         "spec_sha256": "48e8fa9092e1767f80dcd0883b90ded426d76a51b061a5a6f267f8f5e378ac94",
         "sources": [],

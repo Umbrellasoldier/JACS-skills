@@ -6,6 +6,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPTS = ROOT / "skills/jacs-figure/scripts"
@@ -52,6 +53,27 @@ class LayoutTests(unittest.TestCase):
 
 @unittest.skipUnless(FIGURES, "Install the figures dependency group for rendered checks")
 class FigureExportTests(unittest.TestCase):
+    def test_parity_panel_labels_fit_with_dejavu_fallback(self):
+        import plot_figures
+
+        with tempfile.TemporaryDirectory() as temp:
+            base = Path(temp)
+            assets = base / "skill/assets"
+            assets.mkdir(parents=True)
+            style = (SCRIPTS.parent / "assets/jacs.mplstyle").read_text()
+            style = style.replace("Liberation Sans, DejaVu Sans, Arial, Helvetica", "DejaVu Sans")
+            (assets / "jacs.mplstyle").write_text(style)
+            with patch.object(plot_figures, "SKILL", base / "skill"):
+                result = plot_figures.render(
+                    SCRIPTS.parent / "assets/examples/parity.json", base / "figure"
+                )
+            self.assertNotEqual(result["verdict"], "FAIL", result["findings"])
+            layout = json.loads((base / "figure.layout.json").read_text())
+            labels = [x for x in layout["texts"] if x["text"] in {"a", "b"}]
+            self.assertEqual(len(labels), 2)
+            for label in labels:
+                self.assertLessEqual(label["bbox_pt"][3], layout["height_pt"])
+
     def test_normal_templates_export_actual_dimensions_and_preserve_counts(self):
         from plot_figures import render
         from pypdf import PdfReader

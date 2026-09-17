@@ -9,7 +9,7 @@ contracts, source-traceable guidance, reusable tooling and reviewable delivery r
 
 | Check | Actual result | Boundary |
 |---|---|---|
-| Repository unit/integration suite | 51 tests passed with figure and chemistry dependencies installed | Synthetic data, mocked acquisition, local rendering; no GPU or private data |
+| Repository unit/integration suite | 52 tests passed with figure and chemistry dependencies installed | Synthetic data, mocked acquisition, local rendering; no GPU or private data |
 | [Acceptance cases](cases.json) | 12/12 expected behaviors; see [actual results](acceptance-results.json) | Six normal figure families, five invalid-input rejections and one alignment failure detected |
 | Original gallery | Six families plus TOC generated as PDF/SVG/PNG; TOC also TIFF | Structure layout remains `UNKNOWN` to the automatic auditor and was inspected visually |
 | Corpus | 14 papers; 49 figures actually viewed | 40 development/calibration observations and 9 post-freeze held-out checks |
@@ -22,6 +22,13 @@ Meaningful regressions cover incompatible energy definitions, nonfinite data, mi
 reaction sets, stage denominators, zero entrants, explicit log-domain failures, atom maps and
 stereochemical identity, local asset integrity, current PMC version identity, source checksums,
 clipping, displaced panels, transformed PDF text and SVG resource references.
+
+The first Python 3.11 CI run exposed parity panel letters extending beyond the page under
+Matplotlib 3.11.2. Local renders with Liberation Sans and DejaVu Sans did not reproduce that
+failure, so the precise environment difference was not established. The renderer now places
+these labels in layout-managed titles with explicit headroom, with a font-fallback regression
+test. It also fixes the audited layout before exporting the three formats. Both Python 3.10
+and 3.11 run the full suite and acceptance cases in CI. The clipping threshold was not relaxed.
 
 The six gallery families and TOC were opened as actual PNG renders. At release-size dimensions,
 the PDF auditor checks the supported text/layout properties. Structure depictions retain
