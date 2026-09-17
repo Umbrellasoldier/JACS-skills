@@ -1,0 +1,71 @@
+{
+  "data_status": "synthetic",
+  "profile": "single",
+  "height_pt": 185,
+  "raster_class": "color",
+  "claim": "Demonstrate an encoding with synthetic values.",
+  "caption": "Synthetic demonstration; not results of a chemical study. Gray dash: unavailable, not zero.",
+  "kind": "heatmap",
+  "quantity": "MAE",
+  "unit": "kcal/mol",
+  "population": "Synthetic benchmark",
+  "row_order": [
+    "Baseline",
+    "Transfer",
+    "Refined"
+  ],
+  "column_order": [
+    "In-domain",
+    "New scaffold",
+    "New charge"
+  ],
+  "vmin": 0,
+  "vmax": 4.5,
+  "data": [
+    {
+      "row": "Baseline",
+      "column": "In-domain",
+      "value": 1.3
+    },
+    {
+      "row": "Baseline",
+      "column": "New scaffold",
+      "value": 2.8
+    },
+    {
+      "row": "Baseline",
+      "column": "New charge",
+      "value": 4.1
+    },
+    {
+      "row": "Transfer",
+      "column": "In-domain",
+      "value": 0.9
+    },
+    {
+      "row": "Transfer",
+      "column": "New scaffold",
+      "value": 1.7
+    },
+    {
+      "row": "Transfer",
+      "column": "New charge",
+      "value": 2.5
+    },
+    {
+      "row": "Refined",
+      "column": "In-domain",
+      "value": 0.6
+    },
+    {
+      "row": "Refined",
+      "column": "New scaffold",
+      "value": 1.1
+    },
+    {
+      "row": "Refined",
+      "column": "New charge",
+      "value": null
+    }
+  ]
+}

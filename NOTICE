@@ -19,3 +19,13 @@ The public registry records each source's DOI, version, license code, URL and di
 Original article text and figure images are not redistributed in this repository.
 Public figure observations are independently written descriptions; demonstration artwork
 and evaluation datasets are original, synthetic examples, not scientific research results.
+
+Design workflow inspiration for v0.3:
+OpenAI Data plugin (data-analytics 1.0.8), visualize-data and validate-data skills,
+and its shared analysis-quality instructions. The relationship-first chart selection,
+population/scale checks, semantic encodings and rendered-artifact review are independently
+adapted here; this repository does not redistribute the plugin or claim its endorsement.
+
+Optional color-vision previews use Colorspacious and its Machado et al. model implementation:
+https://colorspacious.readthedocs.io/en/latest/tutorial.html
+These modeled previews do not certify universal accessibility or visual comfort.

@@ -1,0 +1,26 @@
+{
+  "source": "ecdf.png",
+  "source_sha256": "39aa854b4ee3b796bcb62ced74638b57a133d916d09b9699128cfbc055636add",
+  "method": "Colorspacious 1.1.2 / Machado et al. model, severity 100; gamut clipped",
+  "grayscale": "Linear-sRGB relative luminance, encoded back to sRGB",
+  "limitation": "Model previews, not an accessibility certification or user study",
+  "files": [
+    {
+      "mode": "grayscale",
+      "file": "ecdf-grayscale.png"
+    },
+    {
+      "mode": "deuteranomaly",
+      "file": "ecdf-deuteranomaly.png"
+    },
+    {
+      "mode": "protanomaly",
+      "file": "ecdf-protanomaly.png"
+    },
+    {
+      "mode": "tritanomaly",
+      "file": "ecdf-tritanomaly.png"
+    }
+  ],
+  "review": "Agent inspected grayscale and all three modeled conditions; categorical hues can merge, redundancy remains necessary."
+}

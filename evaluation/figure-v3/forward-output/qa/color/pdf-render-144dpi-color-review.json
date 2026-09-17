@@ -1,0 +1,25 @@
+{
+  "source": "pdf-render-144dpi.png",
+  "source_sha256": "0694eee9922ecf66081424ad195773df4f6962b25a1c931ad209b09825f3d17a",
+  "method": "Colorspacious 1.1.2 / Machado et al. model, severity 100; gamut clipped",
+  "grayscale": "Linear-sRGB relative luminance, encoded back to sRGB",
+  "limitation": "Model previews, not an accessibility certification or user study",
+  "files": [
+    {
+      "mode": "grayscale",
+      "file": "pdf-render-144dpi-grayscale.png"
+    },
+    {
+      "mode": "deuteranomaly",
+      "file": "pdf-render-144dpi-deuteranomaly.png"
+    },
+    {
+      "mode": "protanomaly",
+      "file": "pdf-render-144dpi-protanomaly.png"
+    },
+    {
+      "mode": "tritanomaly",
+      "file": "pdf-render-144dpi-tritanomaly.png"
+    }
+  ]
+}

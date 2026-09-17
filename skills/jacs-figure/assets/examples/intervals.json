@@ -1,0 +1,40 @@
+{
+  "data_status": "synthetic",
+  "profile": "single",
+  "height_pt": 195,
+  "raster_class": "color",
+  "claim": "Demonstrate an encoding with synthetic values.",
+  "caption": "Synthetic demonstration; not results of a chemical study.",
+  "kind": "interval",
+  "metric": "Barrier difference",
+  "unit": "kcal/mol",
+  "population": "four synthetic reaction families",
+  "interval_definition": "Illustrative supplied bounds; no CI inference",
+  "reference_value": 0,
+  "data": [
+    {
+      "label": "Cycloaddition",
+      "estimate": -1.4,
+      "lower": -2.1,
+      "upper": -0.6
+    },
+    {
+      "label": "C–N coupling",
+      "estimate": -0.6,
+      "lower": -1.1,
+      "upper": 0.2
+    },
+    {
+      "label": "Proton transfer",
+      "estimate": 0.15,
+      "lower": -0.35,
+      "upper": 0.5
+    },
+    {
+      "label": "Bond dissociation",
+      "estimate": 0.85,
+      "lower": 0.35,
+      "upper": 1.5
+    }
+  ]
+}

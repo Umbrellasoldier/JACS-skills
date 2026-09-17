@@ -1,0 +1,4 @@
+method,matched_reactions,q1_error_kcal_mol,median_error_kcal_mol,q3_error_kcal_mol,lower_whisker_kcal_mol,upper_whisker_kcal_mol,outside_whiskers_retained,mae_kcal_mol,rmse_kcal_mol,min_error_kcal_mol,max_error_kcal_mol
+Direct,36,-1.291125,0.03805,1.9310999999999998,-4.2682,4.1993,1,1.6885722222222221,2.2564529780658455,-4.2682,6.9888
+Adapted,36,-0.680375,-0.12514999999999998,0.6286499999999999,-2.1783,2.2948,0,0.8395388888888888,1.0668609573052255,-2.1783,2.2948
+Calibrated,36,-0.32445,0.21175,0.724275,-1.5073,1.5054,0,0.5973111111111111,0.7231717281070474,-1.5073,1.5054

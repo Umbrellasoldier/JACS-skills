@@ -1,0 +1,31 @@
+{
+  "pdf_sha256": "fe855c8bb6bfec7fcb493bfe73416127cf4a94335565e450f56ec56ac56ad7cf",
+  "pdf_images": 0,
+  "pdf_fonts": [
+    {
+      "resource": "/F2",
+      "basefont": "/EVICAO+DejaVuSans-Bold",
+      "embedded": true
+    },
+    {
+      "resource": "/F1",
+      "basefont": "/BMQQDV+DejaVuSans",
+      "embedded": true
+    }
+  ],
+  "svg_dimensions": [
+    "504pt",
+    "360pt"
+  ],
+  "svg_images": 0,
+  "svg_text_elements": 51,
+  "png_dimensions": [
+    2100,
+    1500
+  ],
+  "png_dpi": [
+    299.9994,
+    299.9994
+  ],
+  "agent_visual_review": "Completed for final PDF 144 dpi render, 96 dpi final-size preview, independent CairoSVG render, PNG and grayscale/CVD contact sheet; see QA.md."
+}

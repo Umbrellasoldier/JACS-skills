@@ -1,0 +1,26 @@
+{
+  "source": "workflow.png",
+  "source_sha256": "c8dd1c6f974522d1f14c87a71fbd466d3cf0affd2c224824701975d2514e4309",
+  "method": "Colorspacious 1.1.2 / Machado et al. model, severity 100; gamut clipped",
+  "grayscale": "Linear-sRGB relative luminance, encoded back to sRGB",
+  "limitation": "Model previews, not an accessibility certification or user study",
+  "files": [
+    {
+      "mode": "grayscale",
+      "file": "workflow-grayscale.png"
+    },
+    {
+      "mode": "deuteranomaly",
+      "file": "workflow-deuteranomaly.png"
+    },
+    {
+      "mode": "protanomaly",
+      "file": "workflow-protanomaly.png"
+    },
+    {
+      "mode": "tritanomaly",
+      "file": "workflow-tritanomaly.png"
+    }
+  ],
+  "review": "Agent inspected grayscale and all three modeled conditions; categorical hues can merge, redundancy remains necessary."
+}

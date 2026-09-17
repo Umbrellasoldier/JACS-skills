@@ -10,7 +10,19 @@ import math
 from collections import defaultdict
 from pathlib import Path
 
-KINDS = {"energy", "parity", "stages", "comparison", "workflow", "structures", "assembly"}
+KINDS = {
+    "energy",
+    "parity",
+    "stages",
+    "comparison",
+    "workflow",
+    "structures",
+    "assembly",
+    "distribution",
+    "interval",
+    "curve",
+    "heatmap",
+}
 PROFILES = {
     "single": (240.0, 180.0),
     "double": (504.0, 240.0),
@@ -63,6 +75,139 @@ def matched_rows(rows: list[dict], field: str) -> None:
         raise ValueError(
             "Methods have different reaction sets; supply a declared matched population"
         )
+
+
+def ordered_levels(spec: dict, field: str) -> list:
+    required(spec, (field,))
+    levels = spec[field]
+    if not isinstance(levels, list) or not levels or any(not isinstance(x, str) for x in levels):
+        raise ValueError(f"{field} must be a nonempty list of labels")
+    if len(set(levels)) != len(levels):
+        raise ValueError(f"Duplicate labels in {field}")
+    return levels
+
+
+def validate_statistical(spec: dict, rows: list[dict]) -> None:
+    kind = spec["kind"]
+    if kind == "distribution":
+        same_metadata(spec, rows, ("metric", "unit", "population", "unit_of_analysis"))
+        mode = spec.setdefault("display", "box")
+        if mode not in {"box", "violin", "ecdf", "histogram"}:
+            raise ValueError("distribution display must be box, violin, ecdf or histogram")
+        seen = set()
+        for row in rows:
+            required(row, ("observation_id", "group", "value"))
+            key = (str(row["observation_id"]), row["group"])
+            if key in seen:
+                raise ValueError("Duplicate observation within group; define the replicate unit")
+            seen.add(key)
+            row["value"] = number(row["value"], "value")
+        if mode == "violin":
+            required(spec, ("bandwidth",))
+            spec["bandwidth"] = number(spec["bandwidth"], "bandwidth")
+            if spec["bandwidth"] <= 0:
+                raise ValueError("Violin bandwidth factor must be positive")
+        if mode == "histogram":
+            required(spec, ("bin_edges",))
+            edges = [number(v, "bin_edges") for v in spec["bin_edges"]]
+            if len(edges) < 2 or any(a >= b for a, b in zip(edges, edges[1:], strict=False)):
+                raise ValueError("Histogram bin edges must be strictly increasing")
+            if any(not edges[0] <= row["value"] <= edges[-1] for row in rows):
+                raise ValueError("Histogram bins would exclude observations")
+            spec["bin_edges"] = edges
+        groups = list(dict.fromkeys(row["group"] for row in rows))
+        if "group_order" in spec:
+            if set(ordered_levels(spec, "group_order")) != set(groups):
+                raise ValueError("group_order must contain every observed group exactly once")
+        else:
+            spec["group_order"] = groups
+    elif kind == "interval":
+        same_metadata(spec, rows, ("metric", "unit", "population"))
+        required(spec, ("interval_definition",))
+        labels = []
+        for row in rows:
+            required(row, ("label", "estimate", "lower", "upper"))
+            labels.append(row["label"])
+            for key in ("estimate", "lower", "upper"):
+                row[key] = number(row[key], key)
+            if not row["lower"] <= row["estimate"] <= row["upper"]:
+                raise ValueError("Interval must enclose the supplied estimate")
+        if len(set(labels)) != len(labels):
+            raise ValueError("Interval labels must be unique")
+        if "reference_value" in spec:
+            spec["reference_value"] = number(spec["reference_value"], "reference_value")
+    elif kind == "curve":
+        same_metadata(spec, rows, ("x_quantity", "x_unit", "y_quantity", "y_unit", "population"))
+        groups = defaultdict(list)
+        for row in rows:
+            required(row, ("series", "x", "y"))
+            row["x"], row["y"] = number(row["x"], "x"), number(row["y"], "y")
+            groups[row["series"]].append(row)
+            if "lower" in row or "upper" in row:
+                required(spec, ("interval_definition",))
+                required(row, ("lower", "upper"))
+                row["lower"] = number(row["lower"], "lower")
+                row["upper"] = number(row["upper"], "upper")
+                if not row["lower"] <= row["y"] <= row["upper"]:
+                    raise ValueError("Curve bounds must enclose y")
+        roles = spec.setdefault("series_roles", {})
+        if set(roles) - set(groups):
+            raise ValueError("Unknown series in series_roles")
+        for name, data in groups.items():
+            roles.setdefault(name, "observed")
+            if roles[name] not in {"observed", "model", "reference"}:
+                raise ValueError("Series role must be observed, model or reference")
+            if any(a["x"] >= b["x"] for a, b in zip(data, data[1:], strict=False)):
+                raise ValueError("Curve x must increase within series; no silent reordering")
+            if any("lower" in r for r in data) and not all("lower" in r for r in data):
+                raise ValueError("Supply bounds for every point in a banded series")
+        for axis, fields in (("x", ("x",)), ("y", ("y", "lower", "upper"))):
+            scale = spec.setdefault(axis + "_scale", "linear")
+            if scale not in {"linear", "log"}:
+                raise ValueError("Curve scales must be linear or log")
+            if scale == "log" and any(
+                row[key] <= 0 for row in rows for key in fields if key in row
+            ):
+                raise ValueError("Log curve data and bounds must be positive")
+        if spec["y_scale"] == "log" and spec.get("zero_reference", False):
+            raise ValueError("A zero reference cannot be displayed on a logarithmic y axis")
+    elif kind == "heatmap":
+        same_metadata(spec, rows, ("quantity", "unit", "population"))
+        row_order = ordered_levels(spec, "row_order")
+        column_order = ordered_levels(spec, "column_order")
+        seen = set()
+        for row in rows:
+            required(row, ("row", "column"))
+            if "value" not in row:
+                raise ValueError("Use an explicit null value for missing cells")
+            key = (row["row"], row["column"])
+            if key in seen or row["row"] not in row_order or row["column"] not in column_order:
+                raise ValueError("Duplicate or unknown heatmap cell")
+            seen.add(key)
+            if row["value"] is not None:
+                row["value"] = number(row["value"], "value")
+        if len(seen) != len(row_order) * len(column_order):
+            raise ValueError("Heatmap needs explicit observed or null entries for every cell")
+        values = [r["value"] for r in rows if r["value"] is not None]
+        if not values:
+            raise ValueError("Heatmap needs at least one observed value")
+        mode = spec.setdefault("color_scale", "sequential")
+        if mode not in {"sequential", "diverging"}:
+            raise ValueError("Use a sequential or diverging color scale")
+        for key, default in (("vmin", min(values)), ("vmax", max(values))):
+            spec[key] = number(spec.setdefault(key, default), key)
+        if spec["vmin"] >= spec["vmax"]:
+            raise ValueError("Heatmap color limits must span a nonzero range")
+        if spec["vmin"] > min(values) or spec["vmax"] < max(values):
+            raise ValueError("Color limits would clip observed values")
+        if mode == "diverging":
+            required(spec, ("center",))
+            spec["center"] = number(spec["center"], "center")
+            if not spec["vmin"] < spec["center"] < spec["vmax"]:
+                raise ValueError("Diverging center must lie inside the color limits")
+    count_key = {"distribution": "group", "curve": "series"}.get(kind)
+    if count_key and len({r[count_key] for r in rows}) > 6:
+        raise ValueError("More than six series: use facets or an explicit custom encoding")
 
 
 def validate(spec: dict) -> dict:
@@ -183,15 +328,24 @@ def validate(spec: dict) -> dict:
             labels.append(panel["label"])
         if len(set(labels)) != len(labels):
             raise ValueError("Duplicate panel label")
+    elif kind in {"distribution", "interval", "curve", "heatmap"}:
+        validate_statistical(spec, rows)
     scale = spec.setdefault("scale", "linear")
     if scale not in {"linear", "log"}:
         raise ValueError("Only declared linear or log scales are supported")
     if scale == "log":
-        if kind not in {"parity", "comparison"}:
-            raise ValueError("Log scale is supported only for parity and comparison")
-        fields = ("reference_value", "predicted") if kind == "parity" else ("value",)
+        if kind not in {"parity", "comparison", "distribution", "interval"}:
+            raise ValueError("Use x_scale/y_scale for curves; generic log is unsupported here")
+        if kind == "distribution" and spec["display"] not in {"box", "violin"}:
+            raise ValueError("Histogram/ECDF log transforms need a custom declared encoding")
+        fields = {
+            "parity": ("reference_value", "predicted"),
+            "interval": ("estimate", "lower", "upper"),
+        }.get(kind, ("value",))
         if any(row[field] <= 0 for row in rows for field in fields):
             raise ValueError("Log scale requires positive values; no implicit filtering or offset")
+        if kind == "interval" and spec.get("reference_value", 1) <= 0:
+            raise ValueError("Log reference must be positive")
     categories = list(dict.fromkeys(row.get("method", row.get("path")) for row in rows))
     if kind in {"energy", "parity", "comparison"} and len(categories) > 6:
         raise ValueError("More than six series: split the figure or write an explicit encoding")

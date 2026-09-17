@@ -2,11 +2,16 @@
 
 ## Sources and split
 
-Start from [figure provenance](../../jacs-shared/references/figure-corpus.jsonl) or a task-local
+Start from [expanded figure provenance](../../jacs-shared/references/figure-corpus-v3.jsonl) or a task-local
 paper registry. Record DOI, article type, authors, year, version, license and availability.
 Freeze paper-level development/holdout groups before deriving rules. All panels, SI, TOC and
 versions of a DOI stay together. Track author-group overlap; paper-level separation does not
 guarantee independent author practices. Keep Article and Communication strata distinguishable.
+
+The [v0.3 study](../../jacs-shared/references/figure-study-v3.md) distinguishes 14 prior papers
+from 36 newly reviewed papers. Prior holdouts are prior evidence in a later iteration,
+not reusable fresh holdouts. For typography, measure final PDF placements when possible;
+report image-object lettering as unmeasurable rather than borrowing caption font metrics.
 
 The [PMC helper](../scripts/figure_corpus.py) uses the current public PMC Article Dataset:
 

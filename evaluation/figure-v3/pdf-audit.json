@@ -1,0 +1,110 @@
+[
+  {
+    "paper_id": "N01",
+    "figure_id": "fig1",
+    "page": 2,
+    "pdf_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13383635.1/PMC13383635.1.pdf?md5=73c5d96aa8058f0dac18f5254b963657",
+    "pdf_sha256": "a915dbe4355c98eed6e2c41db372bdb54f9a9b625f0afca5b7e970e731e392d8",
+    "object": "/I8",
+    "pixel_dimensions": [
+      2088,
+      1305
+    ],
+    "physical_width_pt": 501.109,
+    "physical_height_pt": 313.172,
+    "font_family": null,
+    "font_size_pt": null,
+    "measurement": "Image XObject placement matrix in publisher PDF; selected rendered page visually inspected",
+    "limitation": "Whole image rectangle, not axes rectangle. Lettering is rasterized, so figure font metrics are unavailable."
+  },
+  {
+    "paper_id": "N03",
+    "figure_id": "fig6",
+    "page": 5,
+    "pdf_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13383728.1/PMC13383728.1.pdf?md5=cb5ccfc594759c8b98aa926fcb0e2c08",
+    "pdf_sha256": "a5468d1e8fef3f1fb436b6ff239862da41f2170ed6c7cbfd899111b1ce4befdc",
+    "object": "/I18",
+    "pixel_dimensions": [
+      1500,
+      924
+    ],
+    "physical_width_pt": 360.0,
+    "physical_height_pt": 221.726,
+    "font_family": null,
+    "font_size_pt": null,
+    "measurement": "Image XObject placement matrix in publisher PDF; selected rendered page visually inspected",
+    "limitation": "Whole image rectangle, not axes rectangle. Lettering is rasterized, so figure font metrics are unavailable."
+  },
+  {
+    "paper_id": "N10",
+    "figure_id": "fig2",
+    "page": 4,
+    "pdf_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13047695.1/PMC13047695.1.pdf?md5=1f5de124ba7ad0821c2938ba72a17dc7",
+    "pdf_sha256": "b8a07d1ffb1f58df94a0a33f936b1713c3e4f3cd66992b2a0ffd1dce6eafbdc4",
+    "object": "/I9",
+    "pixel_dimensions": [
+      634,
+      968
+    ],
+    "physical_width_pt": 152.107,
+    "physical_height_pt": 232.271,
+    "font_family": null,
+    "font_size_pt": null,
+    "measurement": "Image XObject placement matrix in publisher PDF; selected rendered page visually inspected",
+    "limitation": "Whole image rectangle, not axes rectangle. Lettering is rasterized, so figure font metrics are unavailable."
+  },
+  {
+    "paper_id": "N13",
+    "figure_id": "fig3",
+    "page": 4,
+    "pdf_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12814166.1/PMC12814166.1.pdf?md5=aff8d592d7486bc60182d63c7fad7383",
+    "pdf_sha256": "569de4fe33902fea79dc2b99327821d8e3de2085a5dcb0c67bb7cad219eca55a",
+    "object": "/I10",
+    "pixel_dimensions": [
+      2075,
+      1327
+    ],
+    "physical_width_pt": 497.991,
+    "physical_height_pt": 318.444,
+    "font_family": null,
+    "font_size_pt": null,
+    "measurement": "Image XObject placement matrix in publisher PDF; selected rendered page visually inspected",
+    "limitation": "Whole image rectangle, not axes rectangle. Lettering is rasterized, so figure font metrics are unavailable."
+  },
+  {
+    "paper_id": "N20",
+    "figure_id": "fig2",
+    "page": 2,
+    "pdf_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12426925.1/PMC12426925.1.pdf?md5=21066240cf25c1f2fe83c94a268ae544",
+    "pdf_sha256": "b03b5da8b5ea1b5c763dea076a28d34439f3c051fe8206535479fbb688833331",
+    "object": "/I9",
+    "pixel_dimensions": [
+      1668,
+      1386
+    ],
+    "physical_width_pt": 400.309,
+    "physical_height_pt": 332.617,
+    "font_family": null,
+    "font_size_pt": null,
+    "measurement": "Image XObject placement matrix in publisher PDF; selected rendered page visually inspected",
+    "limitation": "Whole image rectangle, not axes rectangle. Lettering is rasterized, so figure font metrics are unavailable."
+  },
+  {
+    "paper_id": "N32",
+    "figure_id": "fig2",
+    "page": 4,
+    "pdf_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12903848.1/PMC12903848.1.pdf?md5=ca1ce5f3bc7d973543f0f747e427bcda",
+    "pdf_sha256": "9ddd85bbd357bbdd44b61e5fd5a861749d50e47774f27702ee85108c921a0b12",
+    "object": "/I9",
+    "pixel_dimensions": [
+      1751,
+      2166
+    ],
+    "physical_width_pt": 420.208,
+    "physical_height_pt": 519.817,
+    "font_family": null,
+    "font_size_pt": null,
+    "measurement": "Image XObject placement matrix in publisher PDF; selected rendered page visually inspected",
+    "limitation": "Whole image rectangle, not axes rectangle. Lettering is rasterized, so figure font metrics are unavailable."
+  }
+]

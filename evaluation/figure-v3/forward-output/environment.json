@@ -1,0 +1,18 @@
+{
+  "python": "3.10.19",
+  "platform": "Linux-4.18.0-394.el8.x86_64-x86_64-with-glibc2.28",
+  "packages": {
+    "matplotlib": "3.10.9",
+    "numpy": "2.2.6",
+    "pillow": "12.3.0",
+    "pypdf": "6.19.0",
+    "pypdfium2": "5.13.0",
+    "cairosvg": "2.9.1",
+    "defusedxml": "0.7.1",
+    "colorspacious": "1.1.2"
+  },
+  "renderer": "render.py (custom Matplotlib)",
+  "renderer_sha256": "441c3e6e6ba6fb03238b1abc93b442ae08d5bb8e153ed68609fbc2ce819f8f17",
+  "font": "DejaVu Sans",
+  "font_policy": "PDF TrueType embedding requested; SVG retains editable text and therefore depends on the named font."
+}

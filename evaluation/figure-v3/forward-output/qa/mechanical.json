@@ -1,0 +1,24 @@
+{
+  "pdf_sha256": "fe855c8bb6bfec7fcb493bfe73416127cf4a94335565e450f56ec56ac56ad7cf",
+  "findings": [
+    {
+      "check": "physical_size",
+      "status": "PASS",
+      "detail": "Measured (504.0, 360.0) pt"
+    },
+    {
+      "check": "pdf_text_size",
+      "status": "PASS",
+      "detail": "Effective text minimum 7.300 pt"
+    },
+    {
+      "check": "measured_layout",
+      "status": "PASS",
+      "detail": "No detected text clipping or overlap; declared panel groups align"
+    }
+  ],
+  "minimum_text_pt": 7.3,
+  "scope": "MediaBox and extractable transformed text; not all glyphs, paths, image DPI, chemical identity or data correctness",
+  "verdict": "MECHANICAL_PASS",
+  "visual_review": "Required; see QA.md for review of this exact output."
+}

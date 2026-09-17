@@ -1,0 +1,1317 @@
+{
+  "data_status": "synthetic",
+  "claim": "Demonstrate the figure contract using synthetic examples.",
+  "caption": "Synthetic demonstration only; values are not results of a chemical study.",
+  "kind": "parity",
+  "profile": "double",
+  "height_pt": 240,
+  "quantity": "$\\Delta G^{\\ddagger}$",
+  "unit": "kcal/mol",
+  "reference": "separated reactants",
+  "conditions": {
+    "theory": "illustrative only",
+    "solvent": "illustrative only",
+    "temperature_K": 298.15,
+    "standard_state": "1 mol/L (illustrative)"
+  },
+  "data": [
+    {
+      "reaction_id": "R001",
+      "method": "Baseline",
+      "reference_value": 15.221412466863388,
+      "predicted": 14.208266376866872
+    },
+    {
+      "reaction_id": "R002",
+      "method": "Baseline",
+      "reference_value": 5.536564470775515,
+      "predicted": 9.705962611971135
+    },
+    {
+      "reaction_id": "R003",
+      "method": "Baseline",
+      "reference_value": 22.259994957278437,
+      "predicted": 23.959148999564817
+    },
+    {
+      "reaction_id": "R004",
+      "method": "Baseline",
+      "reference_value": 16.193309275870682,
+      "predicted": 17.19322125935753
+    },
+    {
+      "reaction_id": "R005",
+      "method": "Baseline",
+      "reference_value": 8.297751586731533,
+      "predicted": 8.355680364325075
+    },
+    {
+      "reaction_id": "R006",
+      "method": "Baseline",
+      "reference_value": 16.860552019723972,
+      "predicted": 17.162224107459323
+    },
+    {
+      "reaction_id": "R007",
+      "method": "Baseline",
+      "reference_value": 8.331901378438054,
+      "predicted": 7.095488106536374
+    },
+    {
+      "reaction_id": "R008",
+      "method": "Baseline",
+      "reference_value": 19.152581931480533,
+      "predicted": 21.013857708861217
+    },
+    {
+      "reaction_id": "R009",
+      "method": "Baseline",
+      "reference_value": 24.93636042681522,
+      "predicted": 23.405112119509077
+    },
+    {
+      "reaction_id": "R010",
+      "method": "Baseline",
+      "reference_value": 6.552570755756716,
+      "predicted": 9.944110781685778
+    },
+    {
+      "reaction_id": "R011",
+      "method": "Baseline",
+      "reference_value": 28.860233586018097,
+      "predicted": 28.346668640183914
+    },
+    {
+      "reaction_id": "R012",
+      "method": "Baseline",
+      "reference_value": 17.764215064283267,
+      "predicted": 15.929238612897787
+    },
+    {
+      "reaction_id": "R013",
+      "method": "Baseline",
+      "reference_value": 18.051472472216876,
+      "predicted": 19.323362340385206
+    },
+    {
+      "reaction_id": "R014",
+      "method": "Baseline",
+      "reference_value": 17.17737911874385,
+      "predicted": 16.00041278333079
+    },
+    {
+      "reaction_id": "R015",
+      "method": "Baseline",
+      "reference_value": 11.38859203827428,
+      "predicted": 9.865730724762152
+    },
+    {
+      "reaction_id": "R016",
+      "method": "Baseline",
+      "reference_value": 30.57766354697646,
+      "predicted": 26.781662208536474
+    },
+    {
+      "reaction_id": "R017",
+      "method": "Baseline",
+      "reference_value": 11.412964602200791,
+      "predicted": 8.705795514642029
+    },
+    {
+      "reaction_id": "R018",
+      "method": "Baseline",
+      "reference_value": 14.531690809753831,
+      "predicted": 16.84066312762864
+    },
+    {
+      "reaction_id": "R019",
+      "method": "Baseline",
+      "reference_value": 30.47059666759157,
+      "predicted": 31.243554284279817
+    },
+    {
+      "reaction_id": "R020",
+      "method": "Baseline",
+      "reference_value": 13.85790612335353,
+      "predicted": 16.523639915921013
+    },
+    {
+      "reaction_id": "R021",
+      "method": "Baseline",
+      "reference_value": 20.286923361214335,
+      "predicted": 20.28143412589206
+    },
+    {
+      "reaction_id": "R022",
+      "method": "Baseline",
+      "reference_value": 25.017724221101954,
+      "predicted": 23.5505654823494
+    },
+    {
+      "reaction_id": "R023",
+      "method": "Baseline",
+      "reference_value": 28.530144555800234,
+      "predicted": 22.14684666977949
+    },
+    {
+      "reaction_id": "R024",
+      "method": "Baseline",
+      "reference_value": 30.929816805451892,
+      "predicted": 34.0072448793691
+    },
+    {
+      "reaction_id": "R025",
+      "method": "Baseline",
+      "reference_value": 4.882874762775094,
+      "predicted": 3.06536992862325
+    },
+    {
+      "reaction_id": "R026",
+      "method": "Baseline",
+      "reference_value": 30.71293102263871,
+      "predicted": 30.479524905798264
+    },
+    {
+      "reaction_id": "R027",
+      "method": "Baseline",
+      "reference_value": 30.912150060816238,
+      "predicted": 28.037184159968998
+    },
+    {
+      "reaction_id": "R028",
+      "method": "Baseline",
+      "reference_value": 22.130901888098148,
+      "predicted": 22.8867742879654
+    },
+    {
+      "reaction_id": "R029",
+      "method": "Baseline",
+      "reference_value": 31.625988680048337,
+      "predicted": 31.30107403824428
+    },
+    {
+      "reaction_id": "R030",
+      "method": "Baseline",
+      "reference_value": 24.288702512386145,
+      "predicted": 23.354912149407134
+    },
+    {
+      "reaction_id": "R031",
+      "method": "Baseline",
+      "reference_value": 5.037233016765098,
+      "predicted": 4.638795475457991
+    },
+    {
+      "reaction_id": "R032",
+      "method": "Baseline",
+      "reference_value": 23.986592876874738,
+      "predicted": 22.189853610341114
+    },
+    {
+      "reaction_id": "R033",
+      "method": "Baseline",
+      "reference_value": 21.501103203807965,
+      "predicted": 19.65042902803168
+    },
+    {
+      "reaction_id": "R034",
+      "method": "Baseline",
+      "reference_value": 15.52608411672561,
+      "predicted": 19.69142937287498
+    },
+    {
+      "reaction_id": "R035",
+      "method": "Baseline",
+      "reference_value": 26.55263212007149,
+      "predicted": 24.435750086507177
+    },
+    {
+      "reaction_id": "R036",
+      "method": "Baseline",
+      "reference_value": 10.200450551191569,
+      "predicted": 10.78296509191952
+    },
+    {
+      "reaction_id": "R037",
+      "method": "Baseline",
+      "reference_value": 22.22334930927874,
+      "predicted": 24.396250201537654
+    },
+    {
+      "reaction_id": "R038",
+      "method": "Baseline",
+      "reference_value": 21.826327112434953,
+      "predicted": 22.545928863412847
+    },
+    {
+      "reaction_id": "R039",
+      "method": "Baseline",
+      "reference_value": 25.51501612074324,
+      "predicted": 27.798816862100736
+    },
+    {
+      "reaction_id": "R040",
+      "method": "Baseline",
+      "reference_value": 21.825209945090084,
+      "predicted": 22.204237343441747
+    },
+    {
+      "reaction_id": "R041",
+      "method": "Baseline",
+      "reference_value": 25.963504173141526,
+      "predicted": 23.228843882053887
+    },
+    {
+      "reaction_id": "R042",
+      "method": "Baseline",
+      "reference_value": 22.067055613434945,
+      "predicted": 24.57462114554776
+    },
+    {
+      "reaction_id": "R043",
+      "method": "Baseline",
+      "reference_value": 31.668622590438275,
+      "predicted": 31.19461612184187
+    },
+    {
+      "reaction_id": "R044",
+      "method": "Baseline",
+      "reference_value": 30.18699569746978,
+      "predicted": 31.828404334941503
+    },
+    {
+      "reaction_id": "R045",
+      "method": "Baseline",
+      "reference_value": 5.955893610812759,
+      "predicted": 8.67392305190713
+    },
+    {
+      "reaction_id": "R046",
+      "method": "Baseline",
+      "reference_value": 6.742078137497401,
+      "predicted": 10.75662522924665
+    },
+    {
+      "reaction_id": "R047",
+      "method": "Baseline",
+      "reference_value": 29.518164043540793,
+      "predicted": 29.626119665769515
+    },
+    {
+      "reaction_id": "R048",
+      "method": "Baseline",
+      "reference_value": 11.036983720848642,
+      "predicted": 10.117577041607774
+    },
+    {
+      "reaction_id": "R049",
+      "method": "Baseline",
+      "reference_value": 6.931327403480173,
+      "predicted": 7.8353130743442465
+    },
+    {
+      "reaction_id": "R050",
+      "method": "Baseline",
+      "reference_value": 6.575443309590312,
+      "predicted": 6.4114575885856535
+    },
+    {
+      "reaction_id": "R051",
+      "method": "Baseline",
+      "reference_value": 11.733629560366841,
+      "predicted": 9.874625913457912
+    },
+    {
+      "reaction_id": "R052",
+      "method": "Baseline",
+      "reference_value": 27.64768028785323,
+      "predicted": 25.31617284926707
+    },
+    {
+      "reaction_id": "R053",
+      "method": "Baseline",
+      "reference_value": 4.623719355883358,
+      "predicted": 8.361522809630507
+    },
+    {
+      "reaction_id": "R054",
+      "method": "Baseline",
+      "reference_value": 20.41575666250016,
+      "predicted": 19.881451435464854
+    },
+    {
+      "reaction_id": "R055",
+      "method": "Baseline",
+      "reference_value": 5.047200990649305,
+      "predicted": 0.2599416842617561
+    },
+    {
+      "reaction_id": "R056",
+      "method": "Baseline",
+      "reference_value": 28.78512362942267,
+      "predicted": 30.000458792741497
+    },
+    {
+      "reaction_id": "R057",
+      "method": "Baseline",
+      "reference_value": 22.203301606481624,
+      "predicted": 20.304406945826177
+    },
+    {
+      "reaction_id": "R058",
+      "method": "Baseline",
+      "reference_value": 21.137715515349576,
+      "predicted": 23.016784535712464
+    },
+    {
+      "reaction_id": "R059",
+      "method": "Baseline",
+      "reference_value": 14.395202167758022,
+      "predicted": 17.247526834891808
+    },
+    {
+      "reaction_id": "R060",
+      "method": "Baseline",
+      "reference_value": 4.123913732432152,
+      "predicted": 7.107049288073406
+    },
+    {
+      "reaction_id": "R061",
+      "method": "Baseline",
+      "reference_value": 27.93276793635181,
+      "predicted": 26.11495548937747
+    },
+    {
+      "reaction_id": "R062",
+      "method": "Baseline",
+      "reference_value": 12.122349515040156,
+      "predicted": 10.387144897572115
+    },
+    {
+      "reaction_id": "R063",
+      "method": "Baseline",
+      "reference_value": 24.834647842072357,
+      "predicted": 23.774504544377415
+    },
+    {
+      "reaction_id": "R064",
+      "method": "Baseline",
+      "reference_value": 26.245640112111808,
+      "predicted": 30.62668306878179
+    },
+    {
+      "reaction_id": "R065",
+      "method": "Baseline",
+      "reference_value": 11.022059482435516,
+      "predicted": 11.138253656735191
+    },
+    {
+      "reaction_id": "R066",
+      "method": "Baseline",
+      "reference_value": 30.127746755739885,
+      "predicted": 29.624913173178822
+    },
+    {
+      "reaction_id": "R067",
+      "method": "Baseline",
+      "reference_value": 16.372800859711873,
+      "predicted": 21.492295679698294
+    },
+    {
+      "reaction_id": "R068",
+      "method": "Baseline",
+      "reference_value": 23.284399299762864,
+      "predicted": 23.781351025167993
+    },
+    {
+      "reaction_id": "R069",
+      "method": "Baseline",
+      "reference_value": 13.222597608053704,
+      "predicted": 13.042687187579387
+    },
+    {
+      "reaction_id": "R070",
+      "method": "Baseline",
+      "reference_value": 29.895208025012806,
+      "predicted": 30.805738361285087
+    },
+    {
+      "reaction_id": "R071",
+      "method": "Baseline",
+      "reference_value": 5.709149362709679,
+      "predicted": 7.578772792286354
+    },
+    {
+      "reaction_id": "R072",
+      "method": "Baseline",
+      "reference_value": 11.996825007992445,
+      "predicted": 8.981892743570942
+    },
+    {
+      "reaction_id": "R001",
+      "method": "Transfer",
+      "reference_value": 15.221412466863388,
+      "predicted": 16.049578481500717
+    },
+    {
+      "reaction_id": "R002",
+      "method": "Transfer",
+      "reference_value": 5.536564470775515,
+      "predicted": 4.086687060309901
+    },
+    {
+      "reaction_id": "R003",
+      "method": "Transfer",
+      "reference_value": 22.259994957278437,
+      "predicted": 21.717435465001607
+    },
+    {
+      "reaction_id": "R004",
+      "method": "Transfer",
+      "reference_value": 16.193309275870682,
+      "predicted": 16.279715365444602
+    },
+    {
+      "reaction_id": "R005",
+      "method": "Transfer",
+      "reference_value": 8.297751586731533,
+      "predicted": 7.760006979595892
+    },
+    {
+      "reaction_id": "R006",
+      "method": "Transfer",
+      "reference_value": 16.860552019723972,
+      "predicted": 17.005094297204117
+    },
+    {
+      "reaction_id": "R007",
+      "method": "Transfer",
+      "reference_value": 8.331901378438054,
+      "predicted": 5.935139931658418
+    },
+    {
+      "reaction_id": "R008",
+      "method": "Transfer",
+      "reference_value": 19.152581931480533,
+      "predicted": 17.456568783782362
+    },
+    {
+      "reaction_id": "R009",
+      "method": "Transfer",
+      "reference_value": 24.93636042681522,
+      "predicted": 24.13458202244688
+    },
+    {
+      "reaction_id": "R010",
+      "method": "Transfer",
+      "reference_value": 6.552570755756716,
+      "predicted": 6.687452882617662
+    },
+    {
+      "reaction_id": "R011",
+      "method": "Transfer",
+      "reference_value": 28.860233586018097,
+      "predicted": 29.06240216969451
+    },
+    {
+      "reaction_id": "R012",
+      "method": "Transfer",
+      "reference_value": 17.764215064283267,
+      "predicted": 16.61144601138544
+    },
+    {
+      "reaction_id": "R013",
+      "method": "Transfer",
+      "reference_value": 18.051472472216876,
+      "predicted": 15.716424798199002
+    },
+    {
+      "reaction_id": "R014",
+      "method": "Transfer",
+      "reference_value": 17.17737911874385,
+      "predicted": 18.11793694957561
+    },
+    {
+      "reaction_id": "R015",
+      "method": "Transfer",
+      "reference_value": 11.38859203827428,
+      "predicted": 11.68785151625151
+    },
+    {
+      "reaction_id": "R016",
+      "method": "Transfer",
+      "reference_value": 30.57766354697646,
+      "predicted": 31.999509733074053
+    },
+    {
+      "reaction_id": "R017",
+      "method": "Transfer",
+      "reference_value": 11.412964602200791,
+      "predicted": 12.388373035162445
+    },
+    {
+      "reaction_id": "R018",
+      "method": "Transfer",
+      "reference_value": 14.531690809753831,
+      "predicted": 12.982944551370206
+    },
+    {
+      "reaction_id": "R019",
+      "method": "Transfer",
+      "reference_value": 30.47059666759157,
+      "predicted": 28.928147554104502
+    },
+    {
+      "reaction_id": "R020",
+      "method": "Transfer",
+      "reference_value": 13.85790612335353,
+      "predicted": 12.206955731902704
+    },
+    {
+      "reaction_id": "R021",
+      "method": "Transfer",
+      "reference_value": 20.286923361214335,
+      "predicted": 19.58286613794822
+    },
+    {
+      "reaction_id": "R022",
+      "method": "Transfer",
+      "reference_value": 25.017724221101954,
+      "predicted": 24.77517186633921
+    },
+    {
+      "reaction_id": "R023",
+      "method": "Transfer",
+      "reference_value": 28.530144555800234,
+      "predicted": 27.480614439622222
+    },
+    {
+      "reaction_id": "R024",
+      "method": "Transfer",
+      "reference_value": 30.929816805451892,
+      "predicted": 27.553021633123098
+    },
+    {
+      "reaction_id": "R025",
+      "method": "Transfer",
+      "reference_value": 4.882874762775094,
+      "predicted": 4.121048184039731
+    },
+    {
+      "reaction_id": "R026",
+      "method": "Transfer",
+      "reference_value": 30.71293102263871,
+      "predicted": 31.80352577840563
+    },
+    {
+      "reaction_id": "R027",
+      "method": "Transfer",
+      "reference_value": 30.912150060816238,
+      "predicted": 32.09808840766815
+    },
+    {
+      "reaction_id": "R028",
+      "method": "Transfer",
+      "reference_value": 22.130901888098148,
+      "predicted": 21.240202819114813
+    },
+    {
+      "reaction_id": "R029",
+      "method": "Transfer",
+      "reference_value": 31.625988680048337,
+      "predicted": 29.381830011755408
+    },
+    {
+      "reaction_id": "R030",
+      "method": "Transfer",
+      "reference_value": 24.288702512386145,
+      "predicted": 23.65414275066351
+    },
+    {
+      "reaction_id": "R031",
+      "method": "Transfer",
+      "reference_value": 5.037233016765098,
+      "predicted": 2.5790640660704436
+    },
+    {
+      "reaction_id": "R032",
+      "method": "Transfer",
+      "reference_value": 23.986592876874738,
+      "predicted": 24.72585215378083
+    },
+    {
+      "reaction_id": "R033",
+      "method": "Transfer",
+      "reference_value": 21.501103203807965,
+      "predicted": 22.160241335614618
+    },
+    {
+      "reaction_id": "R034",
+      "method": "Transfer",
+      "reference_value": 15.52608411672561,
+      "predicted": 14.979500070528125
+    },
+    {
+      "reaction_id": "R035",
+      "method": "Transfer",
+      "reference_value": 26.55263212007149,
+      "predicted": 23.329923686111897
+    },
+    {
+      "reaction_id": "R036",
+      "method": "Transfer",
+      "reference_value": 10.200450551191569,
+      "predicted": 11.678320839040616
+    },
+    {
+      "reaction_id": "R037",
+      "method": "Transfer",
+      "reference_value": 22.22334930927874,
+      "predicted": 23.977007161807318
+    },
+    {
+      "reaction_id": "R038",
+      "method": "Transfer",
+      "reference_value": 21.826327112434953,
+      "predicted": 21.44510521965892
+    },
+    {
+      "reaction_id": "R039",
+      "method": "Transfer",
+      "reference_value": 25.51501612074324,
+      "predicted": 26.02364789272805
+    },
+    {
+      "reaction_id": "R040",
+      "method": "Transfer",
+      "reference_value": 21.825209945090084,
+      "predicted": 20.81573078132462
+    },
+    {
+      "reaction_id": "R041",
+      "method": "Transfer",
+      "reference_value": 25.963504173141526,
+      "predicted": 24.772099295999066
+    },
+    {
+      "reaction_id": "R042",
+      "method": "Transfer",
+      "reference_value": 22.067055613434945,
+      "predicted": 23.198024497131183
+    },
+    {
+      "reaction_id": "R043",
+      "method": "Transfer",
+      "reference_value": 31.668622590438275,
+      "predicted": 31.011898033039117
+    },
+    {
+      "reaction_id": "R044",
+      "method": "Transfer",
+      "reference_value": 30.18699569746978,
+      "predicted": 32.70963188281401
+    },
+    {
+      "reaction_id": "R045",
+      "method": "Transfer",
+      "reference_value": 5.955893610812759,
+      "predicted": 8.159988268481758
+    },
+    {
+      "reaction_id": "R046",
+      "method": "Transfer",
+      "reference_value": 6.742078137497401,
+      "predicted": 7.422481275212237
+    },
+    {
+      "reaction_id": "R047",
+      "method": "Transfer",
+      "reference_value": 29.518164043540793,
+      "predicted": 29.3695048694213
+    },
+    {
+      "reaction_id": "R048",
+      "method": "Transfer",
+      "reference_value": 11.036983720848642,
+      "predicted": 12.359635147234803
+    },
+    {
+      "reaction_id": "R049",
+      "method": "Transfer",
+      "reference_value": 6.931327403480173,
+      "predicted": 7.583086189160541
+    },
+    {
+      "reaction_id": "R050",
+      "method": "Transfer",
+      "reference_value": 6.575443309590312,
+      "predicted": 8.843708728424145
+    },
+    {
+      "reaction_id": "R051",
+      "method": "Transfer",
+      "reference_value": 11.733629560366841,
+      "predicted": 12.881285009130314
+    },
+    {
+      "reaction_id": "R052",
+      "method": "Transfer",
+      "reference_value": 27.64768028785323,
+      "predicted": 27.82849086781621
+    },
+    {
+      "reaction_id": "R053",
+      "method": "Transfer",
+      "reference_value": 4.623719355883358,
+      "predicted": 6.466001388108758
+    },
+    {
+      "reaction_id": "R054",
+      "method": "Transfer",
+      "reference_value": 20.41575666250016,
+      "predicted": 22.0559095049716
+    },
+    {
+      "reaction_id": "R055",
+      "method": "Transfer",
+      "reference_value": 5.047200990649305,
+      "predicted": 6.4804441690361365
+    },
+    {
+      "reaction_id": "R056",
+      "method": "Transfer",
+      "reference_value": 28.78512362942267,
+      "predicted": 27.27315084568121
+    },
+    {
+      "reaction_id": "R057",
+      "method": "Transfer",
+      "reference_value": 22.203301606481624,
+      "predicted": 22.8864979750955
+    },
+    {
+      "reaction_id": "R058",
+      "method": "Transfer",
+      "reference_value": 21.137715515349576,
+      "predicted": 19.2152560835251
+    },
+    {
+      "reaction_id": "R059",
+      "method": "Transfer",
+      "reference_value": 14.395202167758022,
+      "predicted": 12.636805135488661
+    },
+    {
+      "reaction_id": "R060",
+      "method": "Transfer",
+      "reference_value": 4.123913732432152,
+      "predicted": 4.311694840501645
+    },
+    {
+      "reaction_id": "R061",
+      "method": "Transfer",
+      "reference_value": 27.93276793635181,
+      "predicted": 27.39942570731147
+    },
+    {
+      "reaction_id": "R062",
+      "method": "Transfer",
+      "reference_value": 12.122349515040156,
+      "predicted": 10.354822387574403
+    },
+    {
+      "reaction_id": "R063",
+      "method": "Transfer",
+      "reference_value": 24.834647842072357,
+      "predicted": 27.544192526771162
+    },
+    {
+      "reaction_id": "R064",
+      "method": "Transfer",
+      "reference_value": 26.245640112111808,
+      "predicted": 27.109125038593266
+    },
+    {
+      "reaction_id": "R065",
+      "method": "Transfer",
+      "reference_value": 11.022059482435516,
+      "predicted": 10.517752127898467
+    },
+    {
+      "reaction_id": "R066",
+      "method": "Transfer",
+      "reference_value": 30.127746755739885,
+      "predicted": 29.54645089790312
+    },
+    {
+      "reaction_id": "R067",
+      "method": "Transfer",
+      "reference_value": 16.372800859711873,
+      "predicted": 18.84534483346143
+    },
+    {
+      "reaction_id": "R068",
+      "method": "Transfer",
+      "reference_value": 23.284399299762864,
+      "predicted": 24.552852441193473
+    },
+    {
+      "reaction_id": "R069",
+      "method": "Transfer",
+      "reference_value": 13.222597608053704,
+      "predicted": 14.693484163261957
+    },
+    {
+      "reaction_id": "R070",
+      "method": "Transfer",
+      "reference_value": 29.895208025012806,
+      "predicted": 29.635250215164003
+    },
+    {
+      "reaction_id": "R071",
+      "method": "Transfer",
+      "reference_value": 5.709149362709679,
+      "predicted": 5.917108459293215
+    },
+    {
+      "reaction_id": "R072",
+      "method": "Transfer",
+      "reference_value": 11.996825007992445,
+      "predicted": 12.934667212163166
+    },
+    {
+      "reaction_id": "R001",
+      "method": "Refined",
+      "reference_value": 15.221412466863388,
+      "predicted": 15.765558510980627
+    },
+    {
+      "reaction_id": "R002",
+      "method": "Refined",
+      "reference_value": 5.536564470775515,
+      "predicted": 6.146864294784833
+    },
+    {
+      "reaction_id": "R003",
+      "method": "Refined",
+      "reference_value": 22.259994957278437,
+      "predicted": 21.846482280253866
+    },
+    {
+      "reaction_id": "R004",
+      "method": "Refined",
+      "reference_value": 16.193309275870682,
+      "predicted": 16.64715129179455
+    },
+    {
+      "reaction_id": "R005",
+      "method": "Refined",
+      "reference_value": 8.297751586731533,
+      "predicted": 7.527517444544566
+    },
+    {
+      "reaction_id": "R006",
+      "method": "Refined",
+      "reference_value": 16.860552019723972,
+      "predicted": 16.6335383585697
+    },
+    {
+      "reaction_id": "R007",
+      "method": "Refined",
+      "reference_value": 8.331901378438054,
+      "predicted": 8.303440747773331
+    },
+    {
+      "reaction_id": "R008",
+      "method": "Refined",
+      "reference_value": 19.152581931480533,
+      "predicted": 18.250364000820174
+    },
+    {
+      "reaction_id": "R009",
+      "method": "Refined",
+      "reference_value": 24.93636042681522,
+      "predicted": 24.926484599959146
+    },
+    {
+      "reaction_id": "R010",
+      "method": "Refined",
+      "reference_value": 6.552570755756716,
+      "predicted": 5.674086010114211
+    },
+    {
+      "reaction_id": "R011",
+      "method": "Refined",
+      "reference_value": 28.860233586018097,
+      "predicted": 29.222923950557497
+    },
+    {
+      "reaction_id": "R012",
+      "method": "Refined",
+      "reference_value": 17.764215064283267,
+      "predicted": 18.691934417618082
+    },
+    {
+      "reaction_id": "R013",
+      "method": "Refined",
+      "reference_value": 18.051472472216876,
+      "predicted": 17.57553497065032
+    },
+    {
+      "reaction_id": "R014",
+      "method": "Refined",
+      "reference_value": 17.17737911874385,
+      "predicted": 16.84961234851308
+    },
+    {
+      "reaction_id": "R015",
+      "method": "Refined",
+      "reference_value": 11.38859203827428,
+      "predicted": 10.020065328586549
+    },
+    {
+      "reaction_id": "R016",
+      "method": "Refined",
+      "reference_value": 30.57766354697646,
+      "predicted": 30.520797706375813
+    },
+    {
+      "reaction_id": "R017",
+      "method": "Refined",
+      "reference_value": 11.412964602200791,
+      "predicted": 11.07494533820369
+    },
+    {
+      "reaction_id": "R018",
+      "method": "Refined",
+      "reference_value": 14.531690809753831,
+      "predicted": 13.225104694028442
+    },
+    {
+      "reaction_id": "R019",
+      "method": "Refined",
+      "reference_value": 30.47059666759157,
+      "predicted": 30.229610579120322
+    },
+    {
+      "reaction_id": "R020",
+      "method": "Refined",
+      "reference_value": 13.85790612335353,
+      "predicted": 15.15694833100598
+    },
+    {
+      "reaction_id": "R021",
+      "method": "Refined",
+      "reference_value": 20.286923361214335,
+      "predicted": 19.531961779240653
+    },
+    {
+      "reaction_id": "R022",
+      "method": "Refined",
+      "reference_value": 25.017724221101954,
+      "predicted": 25.216552956040747
+    },
+    {
+      "reaction_id": "R023",
+      "method": "Refined",
+      "reference_value": 28.530144555800234,
+      "predicted": 29.643167844358228
+    },
+    {
+      "reaction_id": "R024",
+      "method": "Refined",
+      "reference_value": 30.929816805451892,
+      "predicted": 31.541034573624856
+    },
+    {
+      "reaction_id": "R025",
+      "method": "Refined",
+      "reference_value": 4.882874762775094,
+      "predicted": 4.813190257768195
+    },
+    {
+      "reaction_id": "R026",
+      "method": "Refined",
+      "reference_value": 30.71293102263871,
+      "predicted": 31.846545996634404
+    },
+    {
+      "reaction_id": "R027",
+      "method": "Refined",
+      "reference_value": 30.912150060816238,
+      "predicted": 30.18870948851907
+    },
+    {
+      "reaction_id": "R028",
+      "method": "Refined",
+      "reference_value": 22.130901888098148,
+      "predicted": 21.880920881700025
+    },
+    {
+      "reaction_id": "R029",
+      "method": "Refined",
+      "reference_value": 31.625988680048337,
+      "predicted": 31.41365219640811
+    },
+    {
+      "reaction_id": "R030",
+      "method": "Refined",
+      "reference_value": 24.288702512386145,
+      "predicted": 24.306853697809
+    },
+    {
+      "reaction_id": "R031",
+      "method": "Refined",
+      "reference_value": 5.037233016765098,
+      "predicted": 4.432919197837742
+    },
+    {
+      "reaction_id": "R032",
+      "method": "Refined",
+      "reference_value": 23.986592876874738,
+      "predicted": 22.423803838382824
+    },
+    {
+      "reaction_id": "R033",
+      "method": "Refined",
+      "reference_value": 21.501103203807965,
+      "predicted": 22.219608311860977
+    },
+    {
+      "reaction_id": "R034",
+      "method": "Refined",
+      "reference_value": 15.52608411672561,
+      "predicted": 14.670819323361489
+    },
+    {
+      "reaction_id": "R035",
+      "method": "Refined",
+      "reference_value": 26.55263212007149,
+      "predicted": 26.625141919386902
+    },
+    {
+      "reaction_id": "R036",
+      "method": "Refined",
+      "reference_value": 10.200450551191569,
+      "predicted": 11.81741581354572
+    },
+    {
+      "reaction_id": "R037",
+      "method": "Refined",
+      "reference_value": 22.22334930927874,
+      "predicted": 22.13546243205268
+    },
+    {
+      "reaction_id": "R038",
+      "method": "Refined",
+      "reference_value": 21.826327112434953,
+      "predicted": 21.874491302661735
+    },
+    {
+      "reaction_id": "R039",
+      "method": "Refined",
+      "reference_value": 25.51501612074324,
+      "predicted": 24.316798354502673
+    },
+    {
+      "reaction_id": "R040",
+      "method": "Refined",
+      "reference_value": 21.825209945090084,
+      "predicted": 21.354765492180583
+    },
+    {
+      "reaction_id": "R041",
+      "method": "Refined",
+      "reference_value": 25.963504173141526,
+      "predicted": 25.514250634540137
+    },
+    {
+      "reaction_id": "R042",
+      "method": "Refined",
+      "reference_value": 22.067055613434945,
+      "predicted": 21.58233560609259
+    },
+    {
+      "reaction_id": "R043",
+      "method": "Refined",
+      "reference_value": 31.668622590438275,
+      "predicted": 32.25484658909828
+    },
+    {
+      "reaction_id": "R044",
+      "method": "Refined",
+      "reference_value": 30.18699569746978,
+      "predicted": 30.31460727514985
+    },
+    {
+      "reaction_id": "R045",
+      "method": "Refined",
+      "reference_value": 5.955893610812759,
+      "predicted": 6.18810815132561
+    },
+    {
+      "reaction_id": "R046",
+      "method": "Refined",
+      "reference_value": 6.742078137497401,
+      "predicted": 8.081738328070102
+    },
+    {
+      "reaction_id": "R047",
+      "method": "Refined",
+      "reference_value": 29.518164043540793,
+      "predicted": 29.72556789858629
+    },
+    {
+      "reaction_id": "R048",
+      "method": "Refined",
+      "reference_value": 11.036983720848642,
+      "predicted": 10.930319549029575
+    },
+    {
+      "reaction_id": "R049",
+      "method": "Refined",
+      "reference_value": 6.931327403480173,
+      "predicted": 5.6359422630293174
+    },
+    {
+      "reaction_id": "R050",
+      "method": "Refined",
+      "reference_value": 6.575443309590312,
+      "predicted": 6.565357348237299
+    },
+    {
+      "reaction_id": "R051",
+      "method": "Refined",
+      "reference_value": 11.733629560366841,
+      "predicted": 11.097603204115346
+    },
+    {
+      "reaction_id": "R052",
+      "method": "Refined",
+      "reference_value": 27.64768028785323,
+      "predicted": 28.166121167687933
+    },
+    {
+      "reaction_id": "R053",
+      "method": "Refined",
+      "reference_value": 4.623719355883358,
+      "predicted": 4.776392717052891
+    },
+    {
+      "reaction_id": "R054",
+      "method": "Refined",
+      "reference_value": 20.41575666250016,
+      "predicted": 20.34009941667378
+    },
+    {
+      "reaction_id": "R055",
+      "method": "Refined",
+      "reference_value": 5.047200990649305,
+      "predicted": 6.352625485385345
+    },
+    {
+      "reaction_id": "R056",
+      "method": "Refined",
+      "reference_value": 28.78512362942267,
+      "predicted": 28.8219418101591
+    },
+    {
+      "reaction_id": "R057",
+      "method": "Refined",
+      "reference_value": 22.203301606481624,
+      "predicted": 22.59953530252391
+    },
+    {
+      "reaction_id": "R058",
+      "method": "Refined",
+      "reference_value": 21.137715515349576,
+      "predicted": 21.1350639780265
+    },
+    {
+      "reaction_id": "R059",
+      "method": "Refined",
+      "reference_value": 14.395202167758022,
+      "predicted": 13.897623897328605
+    },
+    {
+      "reaction_id": "R060",
+      "method": "Refined",
+      "reference_value": 4.123913732432152,
+      "predicted": 4.736923672613752
+    },
+    {
+      "reaction_id": "R061",
+      "method": "Refined",
+      "reference_value": 27.93276793635181,
+      "predicted": 28.119467263564413
+    },
+    {
+      "reaction_id": "R062",
+      "method": "Refined",
+      "reference_value": 12.122349515040156,
+      "predicted": 12.171078182093641
+    },
+    {
+      "reaction_id": "R063",
+      "method": "Refined",
+      "reference_value": 24.834647842072357,
+      "predicted": 25.03590922152616
+    },
+    {
+      "reaction_id": "R064",
+      "method": "Refined",
+      "reference_value": 26.245640112111808,
+      "predicted": 26.771909749865085
+    },
+    {
+      "reaction_id": "R065",
+      "method": "Refined",
+      "reference_value": 11.022059482435516,
+      "predicted": 10.747560145243476
+    },
+    {
+      "reaction_id": "R066",
+      "method": "Refined",
+      "reference_value": 30.127746755739885,
+      "predicted": 29.255157871963032
+    },
+    {
+      "reaction_id": "R067",
+      "method": "Refined",
+      "reference_value": 16.372800859711873,
+      "predicted": 16.919986455543732
+    },
+    {
+      "reaction_id": "R068",
+      "method": "Refined",
+      "reference_value": 23.284399299762864,
+      "predicted": 22.666903331475147
+    },
+    {
+      "reaction_id": "R069",
+      "method": "Refined",
+      "reference_value": 13.222597608053704,
+      "predicted": 13.528002736914864
+    },
+    {
+      "reaction_id": "R070",
+      "method": "Refined",
+      "reference_value": 29.895208025012806,
+      "predicted": 30.031760626549072
+    },
+    {
+      "reaction_id": "R071",
+      "method": "Refined",
+      "reference_value": 5.709149362709679,
+      "predicted": 5.627731372568946
+    },
+    {
+      "reaction_id": "R072",
+      "method": "Refined",
+      "reference_value": 11.996825007992445,
+      "predicted": 12.322675378142385
+    }
+  ],
+  "raster_class": "color",
+  "width_pt": 504
+}

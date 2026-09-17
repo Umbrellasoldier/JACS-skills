@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "source_hashes_verified": true,
+  "errors": {
+    "input_rows": 108,
+    "plotted_raw_points": 108,
+    "unique_matched_reactions": 36,
+    "duplicate_keys": 0,
+    "nonfinite_values": 0,
+    "excluded_rows": 0,
+    "signed_range": [
+      -4.2682,
+      6.9888
+    ]
+  },
+  "learning": {
+    "input_rows": 120,
+    "plotted_raw_points": 120,
+    "groups": 15,
+    "independent_runs_per_group": 8,
+    "summaries": 15,
+    "sd_ddof": 1,
+    "excluded_rows": 0,
+    "raw_x_jitter": false,
+    "raw_y_jitter": false
+  },
+  "transfer": {
+    "cells": 6,
+    "observed": 5,
+    "not_evaluated": 1,
+    "imputed": 0,
+    "color_range": [
+      0,
+      3
+    ]
+  },
+  "inference": "No tests, confidence intervals, extrapolation, fitted trends or research claims."
+}

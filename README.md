@@ -5,12 +5,23 @@
 面向计算反应化学、化学机器学习和生物正交反应的论文写作与科研绘图技能包。
 从作者事实起草、润色文字、制作可复现图表，并从可定位的 JACS 全文与实际图像中提炼规律。
 
-**v0.2.0 新增 `jacs-figure`；语料结论仍限定在小规模试点。** 写作语料包含 34 篇候选题录、
+**v0.3.0 升级绘图技能：淡亮配色、31 项图型目录、17 幅原创示例。**
+绘图学习累计覆盖 **50 篇 JACS、199 幅实看图**；本轮新增 36 篇／150 幅，
+涵盖计算、催化、光谱、材料与生物化学。样本是有目的的开放获取选样，不代表全刊统一风格。
+新增箱线、小提琴、ECDF、直方图、点区间、带状曲线和热图；细化点线、图例、专业标签、单位、字号、坐标和组图规则，
+并适配 Data 插件的数据分析绘图设计模式。
+
+![新版合成示例：分布、学习曲线、区间估计和热图](examples/figures/showcase.png)
+
+查看[完整示例图库](examples/figures/README.md)、[50 篇文献学习记录](skills/jacs-shared/references/figure-study-v3.md)、
+[图型选型表](skills/jacs-figure/references/chart-catalog.md)和[本轮验证](evaluation/figure-v3/REPORT.md)。
+
+写作语料仍包含 34 篇候选题录、
 8 篇开发组全文的结构化处理、35 条来源标注及 5 条条件式文风规则。
 原始全文不随包分发；公开内容是题录、来源位置、哈希、原创观察和统计。
 另有一篇留出论文用于写作评测，其内容未用于规则提炼。
-绘图语料另行分组：14 篇论文、49 张已查看图像；其中 40 张用于开发／Communication 校准，
-9 张用于规则冻结后的留出检查。提供六类化学绘图模板、SVG 组图及单独的 TOC 导出规格。
+绘图 v0.2 的 14 篇／49 幅记录和评测保持原样；v0.3 的新增开发集为 30 篇／127 幅，
+另有预先留出的 6 篇／23 幅在规则冻结后查看。提供十类绘图模板、SVG 组图及单独的 TOC 导出规格。
 
 ## 技能
 
@@ -78,6 +89,10 @@ uv run --locked --group figures --group chemistry python skills/jacs-figure/scri
 | 方法比较 | 配对观测、明确总体；不凭空添加置信区间或显著性 |
 | 流程／概念图 | 作者提供的过程与证据边界 |
 | 化学结构 | 保留 SMILES、映射、立体化学；支持已有 SVG 结构资产 |
+| 分布：箱线／小提琴／ECDF／直方图 | 全部观测、独立样本单位、箱须／带宽／箱边界；不静默删除离群点 |
+| 点与区间 | 输入估计和上下界；明确 SD、SE、CI 等实际含义 |
+| 曲线与误差带 | 点／模型／参考线语义、真实 x 间距、区间定义；支持对数与逆向光谱轴 |
+| 热图 | 显式缺失与零分开、颜色范围覆盖数据、带量纲色标 |
 
 另支持 SVG 多面板组图，以及独立的 TOC 尺寸、字体和 TIFF 分辨率设置。
 输出含 PDF、SVG、PNG、可重跑规格、图注和实际 QA JSON；TOC 自动附 TIFF。
@@ -85,7 +100,19 @@ uv run --locked --group figures --group chemistry python skills/jacs-figure/scri
 机械检查通过后仍须查看成图，`UNKNOWN` 项不视为通过。
 
 见[原创合成示例](examples/figures/README.md)、[数据规格](skills/jacs-figure/references/figure-contract.md)、
-[官方图形要求](skills/jacs-shared/references/graphics-policy.md)和[绘图评测](evaluation/figures/REPORT.md)。
+[标签与排版](skills/jacs-figure/references/labels-layout-scale.md)、[配色方案](skills/jacs-figure/references/color-design.md)、
+[官方图形要求](skills/jacs-shared/references/graphics-policy.md)和[新版绘图评测](evaluation/figure-v3/REPORT.md)。
+
+复现全套示例及色觉模拟：
+
+```bash
+uv run --locked --group figures --group chemistry python scripts/build_figure_gallery.py
+uv run --locked --group figures python skills/jacs-figure/scripts/preview_color.py local/figure-v3/gallery/showcase.png --output-dir local/color-review
+```
+
+默认浅填色、较清晰轮廓和深灰文字；方法颜色跨图一致，并用形状／线型辅助辨识。
+色觉模拟是模型预览，不是普遍可访问性的认证。字号建议是项目起始设置；六篇 PDF 实测未能从栅格图恢复图内字体，
+因此没有捏造“JACS 标准字体／平均字号”。
 
 ## 语料与可追溯性
 
@@ -104,10 +131,10 @@ uv run --locked --group figures --group chemistry python skills/jacs-figure/scri
 Communication 的格式支持来自[官方要求快照](skills/jacs-shared/references/journal-policy.md)，
 其文风尚无独立实证校准。
 
-绘图的[论文清单](skills/jacs-shared/references/figure-corpus.jsonl)、
-[40 条开发标注](skills/jacs-shared/references/figure-annotations.jsonl)、
-[6 条条件式规则](skills/jacs-shared/references/figure-rules.jsonl)和
-[覆盖范围与局限](skills/jacs-shared/references/figure-findings.md)独立管理，避免影响写作评测的固定分组。
+绘图的[50 篇论文清单](skills/jacs-shared/references/figure-corpus-v3.jsonl)、
+[127 条新增开发标注](skills/jacs-shared/references/figure-observations-v3.jsonl)、
+[12 条新规则](skills/jacs-shared/references/figure-rules-v3.jsonl)和
+[覆盖范围与局限](skills/jacs-shared/references/figure-study-v3.md)独立管理，避免影响写作评测的固定分组。
 图像只在本地查看，仓库不分发论文原图；公开示例全部为原创合成数据。
 
 绘图来源使用当前 PMC Article Dataset 的版本化公开对象，记录 DOI、版本、文件哈希和实际查看状态。
@@ -148,6 +175,7 @@ uv run --locked --group dev ruff format --check .
 有本地标准化段落时可额外运行 `python scripts/validate_repository.py --source-blocks local/normalized`，
 检查公开标注与实际文本的哈希及位置。测试使用合成数据和网络 mock，不需要 GPU 或私有文件。
 有原图缓存时增加 `--figure-sources local/figures/sources` 可逐张核对开发标注的图像哈希。
+新版缓存再加 `--figure-v3-sources local/figure-v3/sources`，核对新增的 150 幅已看图；冻结文件也会检查哈希。
 未安装绘图可选依赖时，相应测试会跳过；CI 安装完整依赖并实际渲染。
 
 [行为评测报告](evaluation/REPORT.md)区分工具测试、隔离上下文试写与有限样本的质量比较。
@@ -158,5 +186,6 @@ uv run --locked --group dev ruff format --check .
 架构参考 [nature-skills](https://github.com/Yuan1z0825/nature-skills/tree/2375e0abdf42158ef149256f2c64b1f759a0d274)
 的技能分工、按需读取、图形任务路由、实测 QA 和固定语料分组设计。
 这里的化学工作流、规则、脚本和合成评测案例为独立编写。
+v0.3 参考 Data 1.0.8 的 visualize-data 与 validate-data；采用内容见[设计模式适配表](skills/jacs-figure/references/data-design-patterns.md)。
 来源说明见 [NOTICE](NOTICE)，代码与技能说明使用 [Apache-2.0](LICENSE)。
 论文保留各自的来源与许可；本项目不是 ACS 官方产品。
