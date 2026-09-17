@@ -1,0 +1,19 @@
+{
+  "frozen_at": "2026-09-17T07:39:21.571141+00:00",
+  "holdout_images_opened": false,
+  "files": {
+    "evaluation/figure-v3/selection.json": "3ae192c9a0367c37d1f2418956df8a2e0b1a3e4e386076024aec2f45de07d194",
+    "skills/jacs-shared/references/figure-observations-v3.jsonl": "2d44a8cc2cc90f7e65dfb1cb2961a623fb4f9e3d473c5a4be69f06c248b70131",
+    "skills/jacs-shared/references/figure-rules-v3.jsonl": "6a4ceec096ad20850dfafd5fd4196dd7f2d2aff9eb2b809f56fa91fef7bfc18f"
+  },
+  "new_development_papers": 30,
+  "new_development_figures": 127,
+  "holdout": [
+    "N08",
+    "N15",
+    "N21",
+    "N27",
+    "N33",
+    "N36"
+  ]
+}

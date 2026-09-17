@@ -1,0 +1,496 @@
+{
+  "data_status": "synthetic",
+  "profile": "single",
+  "height_pt": 195,
+  "raster_class": "color",
+  "claim": "Demonstrate an encoding with synthetic values.",
+  "caption": "Synthetic demonstration; not results of a chemical study. Boxes: Q1–Q3; center: median; whiskers: observations within 1.5 IQR; every raw point is shown, including outliers.",
+  "kind": "distribution",
+  "metric": "Barrier error",
+  "unit": "kcal/mol",
+  "population": "32 synthetic reactions per group",
+  "unit_of_analysis": "reaction",
+  "data": [
+    {
+      "observation_id": "R001",
+      "group": "Baseline",
+      "value": 1.445
+    },
+    {
+      "observation_id": "R002",
+      "group": "Baseline",
+      "value": 2.563
+    },
+    {
+      "observation_id": "R003",
+      "group": "Baseline",
+      "value": 1.625
+    },
+    {
+      "observation_id": "R004",
+      "group": "Baseline",
+      "value": 3.131
+    },
+    {
+      "observation_id": "R005",
+      "group": "Baseline",
+      "value": 2.087
+    },
+    {
+      "observation_id": "R006",
+      "group": "Baseline",
+      "value": 4.956
+    },
+    {
+      "observation_id": "R007",
+      "group": "Baseline",
+      "value": -0.729
+    },
+    {
+      "observation_id": "R008",
+      "group": "Baseline",
+      "value": 2.889
+    },
+    {
+      "observation_id": "R009",
+      "group": "Baseline",
+      "value": -0.717
+    },
+    {
+      "observation_id": "R010",
+      "group": "Baseline",
+      "value": 1.348
+    },
+    {
+      "observation_id": "R011",
+      "group": "Baseline",
+      "value": -0.439
+    },
+    {
+      "observation_id": "R012",
+      "group": "Baseline",
+      "value": -0.882
+    },
+    {
+      "observation_id": "R013",
+      "group": "Baseline",
+      "value": -1.502
+    },
+    {
+      "observation_id": "R014",
+      "group": "Baseline",
+      "value": 2.241
+    },
+    {
+      "observation_id": "R015",
+      "group": "Baseline",
+      "value": -0.341
+    },
+    {
+      "observation_id": "R016",
+      "group": "Baseline",
+      "value": 2.903
+    },
+    {
+      "observation_id": "R017",
+      "group": "Baseline",
+      "value": -0.521
+    },
+    {
+      "observation_id": "R018",
+      "group": "Baseline",
+      "value": 2.058
+    },
+    {
+      "observation_id": "R019",
+      "group": "Baseline",
+      "value": 1.029
+    },
+    {
+      "observation_id": "R020",
+      "group": "Baseline",
+      "value": 1.867
+    },
+    {
+      "observation_id": "R021",
+      "group": "Baseline",
+      "value": 1.623
+    },
+    {
+      "observation_id": "R022",
+      "group": "Baseline",
+      "value": -0.751
+    },
+    {
+      "observation_id": "R023",
+      "group": "Baseline",
+      "value": 2.547
+    },
+    {
+      "observation_id": "R024",
+      "group": "Baseline",
+      "value": 3.049
+    },
+    {
+      "observation_id": "R025",
+      "group": "Baseline",
+      "value": -1.584
+    },
+    {
+      "observation_id": "R026",
+      "group": "Baseline",
+      "value": -0.785
+    },
+    {
+      "observation_id": "R027",
+      "group": "Baseline",
+      "value": -0.518
+    },
+    {
+      "observation_id": "R028",
+      "group": "Baseline",
+      "value": 2.475
+    },
+    {
+      "observation_id": "R029",
+      "group": "Baseline",
+      "value": 1.41
+    },
+    {
+      "observation_id": "R030",
+      "group": "Baseline",
+      "value": -0.708
+    },
+    {
+      "observation_id": "R031",
+      "group": "Baseline",
+      "value": 2.852
+    },
+    {
+      "observation_id": "R032",
+      "group": "Baseline",
+      "value": 3.023
+    },
+    {
+      "observation_id": "R001",
+      "group": "Transfer",
+      "value": -2.572
+    },
+    {
+      "observation_id": "R002",
+      "group": "Transfer",
+      "value": 0.161
+    },
+    {
+      "observation_id": "R003",
+      "group": "Transfer",
+      "value": 2.924
+    },
+    {
+      "observation_id": "R004",
+      "group": "Transfer",
+      "value": 1.163
+    },
+    {
+      "observation_id": "R005",
+      "group": "Transfer",
+      "value": 0.956
+    },
+    {
+      "observation_id": "R006",
+      "group": "Transfer",
+      "value": 0.563
+    },
+    {
+      "observation_id": "R007",
+      "group": "Transfer",
+      "value": 1.917
+    },
+    {
+      "observation_id": "R008",
+      "group": "Transfer",
+      "value": 1.873
+    },
+    {
+      "observation_id": "R009",
+      "group": "Transfer",
+      "value": -1.57
+    },
+    {
+      "observation_id": "R010",
+      "group": "Transfer",
+      "value": -0.773
+    },
+    {
+      "observation_id": "R011",
+      "group": "Transfer",
+      "value": -1.687
+    },
+    {
+      "observation_id": "R012",
+      "group": "Transfer",
+      "value": 0.608
+    },
+    {
+      "observation_id": "R013",
+      "group": "Transfer",
+      "value": 0.259
+    },
+    {
+      "observation_id": "R014",
+      "group": "Transfer",
+      "value": -1.15
+    },
+    {
+      "observation_id": "R015",
+      "group": "Transfer",
+      "value": -1.085
+    },
+    {
+      "observation_id": "R016",
+      "group": "Transfer",
+      "value": 0.189
+    },
+    {
+      "observation_id": "R017",
+      "group": "Transfer",
+      "value": -0.891
+    },
+    {
+      "observation_id": "R018",
+      "group": "Transfer",
+      "value": -0.266
+    },
+    {
+      "observation_id": "R019",
+      "group": "Transfer",
+      "value": 1.291
+    },
+    {
+      "observation_id": "R020",
+      "group": "Transfer",
+      "value": -1.219
+    },
+    {
+      "observation_id": "R021",
+      "group": "Transfer",
+      "value": 0.849
+    },
+    {
+      "observation_id": "R022",
+      "group": "Transfer",
+      "value": 0.975
+    },
+    {
+      "observation_id": "R023",
+      "group": "Transfer",
+      "value": -0.898
+    },
+    {
+      "observation_id": "R024",
+      "group": "Transfer",
+      "value": 0.172
+    },
+    {
+      "observation_id": "R025",
+      "group": "Transfer",
+      "value": 0.974
+    },
+    {
+      "observation_id": "R026",
+      "group": "Transfer",
+      "value": 0.308
+    },
+    {
+      "observation_id": "R027",
+      "group": "Transfer",
+      "value": 1.892
+    },
+    {
+      "observation_id": "R028",
+      "group": "Transfer",
+      "value": -0.976
+    },
+    {
+      "observation_id": "R029",
+      "group": "Transfer",
+      "value": -0.214
+    },
+    {
+      "observation_id": "R030",
+      "group": "Transfer",
+      "value": -0.61
+    },
+    {
+      "observation_id": "R031",
+      "group": "Transfer",
+      "value": 0.218
+    },
+    {
+      "observation_id": "R032",
+      "group": "Transfer",
+      "value": 0.507
+    },
+    {
+      "observation_id": "R001",
+      "group": "Refined",
+      "value": 0.052
+    },
+    {
+      "observation_id": "R002",
+      "group": "Refined",
+      "value": -0.1
+    },
+    {
+      "observation_id": "R003",
+      "group": "Refined",
+      "value": 0.524
+    },
+    {
+      "observation_id": "R004",
+      "group": "Refined",
+      "value": 0.285
+    },
+    {
+      "observation_id": "R005",
+      "group": "Refined",
+      "value": -0.534
+    },
+    {
+      "observation_id": "R006",
+      "group": "Refined",
+      "value": 0.874
+    },
+    {
+      "observation_id": "R007",
+      "group": "Refined",
+      "value": -0.418
+    },
+    {
+      "observation_id": "R008",
+      "group": "Refined",
+      "value": 0.584
+    },
+    {
+      "observation_id": "R009",
+      "group": "Refined",
+      "value": -0.826
+    },
+    {
+      "observation_id": "R010",
+      "group": "Refined",
+      "value": -0.908
+    },
+    {
+      "observation_id": "R011",
+      "group": "Refined",
+      "value": -0.252
+    },
+    {
+      "observation_id": "R012",
+      "group": "Refined",
+      "value": -1.583
+    },
+    {
+      "observation_id": "R013",
+      "group": "Refined",
+      "value": 0.003
+    },
+    {
+      "observation_id": "R014",
+      "group": "Refined",
+      "value": 0.57
+    },
+    {
+      "observation_id": "R015",
+      "group": "Refined",
+      "value": 0.216
+    },
+    {
+      "observation_id": "R016",
+      "group": "Refined",
+      "value": 0.353
+    },
+    {
+      "observation_id": "R017",
+      "group": "Refined",
+      "value": 0.789
+    },
+    {
+      "observation_id": "R018",
+      "group": "Refined",
+      "value": 0.438
+    },
+    {
+      "observation_id": "R019",
+      "group": "Refined",
+      "value": -1.048
+    },
+    {
+      "observation_id": "R020",
+      "group": "Refined",
+      "value": 0.718
+    },
+    {
+      "observation_id": "R021",
+      "group": "Refined",
+      "value": -0.528
+    },
+    {
+      "observation_id": "R022",
+      "group": "Refined",
+      "value": 0.647
+    },
+    {
+      "observation_id": "R023",
+      "group": "Refined",
+      "value": 0.261
+    },
+    {
+      "observation_id": "R024",
+      "group": "Refined",
+      "value": -0.295
+    },
+    {
+      "observation_id": "R025",
+      "group": "Refined",
+      "value": 0.71
+    },
+    {
+      "observation_id": "R026",
+      "group": "Refined",
+      "value": -0.065
+    },
+    {
+      "observation_id": "R027",
+      "group": "Refined",
+      "value": 0.108
+    },
+    {
+      "observation_id": "R028",
+      "group": "Refined",
+      "value": -0.403
+    },
+    {
+      "observation_id": "R029",
+      "group": "Refined",
+      "value": 1.152
+    },
+    {
+      "observation_id": "R030",
+      "group": "Refined",
+      "value": -0.905
+    },
+    {
+      "observation_id": "R031",
+      "group": "Refined",
+      "value": -0.617
+    },
+    {
+      "observation_id": "R032",
+      "group": "Refined",
+      "value": 0.653
+    }
+  ],
+  "display": "box"
+}

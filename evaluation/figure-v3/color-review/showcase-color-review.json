@@ -1,0 +1,26 @@
+{
+  "source": "showcase.png",
+  "source_sha256": "c6405d4052e10ac1e8bf7407700eae8a5de8f365216a58509f5c7e7a9fba1833",
+  "method": "Colorspacious 1.1.2 / Machado et al. model, severity 100; gamut clipped",
+  "grayscale": "Linear-sRGB relative luminance, encoded back to sRGB",
+  "limitation": "Model previews, not an accessibility certification or user study",
+  "files": [
+    {
+      "mode": "grayscale",
+      "file": "showcase-grayscale.png"
+    },
+    {
+      "mode": "deuteranomaly",
+      "file": "showcase-deuteranomaly.png"
+    },
+    {
+      "mode": "protanomaly",
+      "file": "showcase-protanomaly.png"
+    },
+    {
+      "mode": "tritanomaly",
+      "file": "showcase-tritanomaly.png"
+    }
+  ],
+  "review": "Agent inspected grayscale and all three modeled conditions; categorical hues can merge, redundancy remains necessary."
+}

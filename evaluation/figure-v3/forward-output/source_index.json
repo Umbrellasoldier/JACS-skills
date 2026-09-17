@@ -1,0 +1,86 @@
+{
+  "data_status": "synthetic",
+  "inputs": [
+    {
+      "source": "local/figure-v3/forward-input/learning_runs.csv",
+      "bundle_path": "data/learning_runs.csv",
+      "sha256": "fb8f76bccf74fe47672548aacc8f6d55b38f57af704223abb733cff94ded0d30",
+      "synthetic": true
+    },
+    {
+      "source": "local/figure-v3/forward-input/prediction_errors.csv",
+      "bundle_path": "data/prediction_errors.csv",
+      "sha256": "2b7812d5624abd7066f5c180c4c41ce791553f9584baa4e5b2104e2d8c164183",
+      "synthetic": true
+    },
+    {
+      "source": "local/figure-v3/forward-input/request.md",
+      "bundle_path": "data/request.md",
+      "sha256": "cb0749d773c31e5ebe55eae42ed99c52302ceff3c9a52fec9e9ee26187bc3764",
+      "synthetic": true
+    },
+    {
+      "source": "local/figure-v3/forward-input/transfer.json",
+      "bundle_path": "data/transfer.json",
+      "sha256": "758f77a80781eed26c563bb0c4627f826e71dd442cfd333aa20e3f47454d9536",
+      "synthetic": true
+    }
+  ],
+  "vendored_tools": [
+    {
+      "source": "skills/jacs-figure/scripts/audit_figure.py",
+      "bundle_path": "vendor/audit_figure.py",
+      "sha256": "7b478badd3820796cd042a5e55ab880304e93c25c36bd56e5880521198618fdc"
+    },
+    {
+      "source": "skills/jacs-figure/scripts/preview_color.py",
+      "bundle_path": "vendor/preview_color.py",
+      "sha256": "61a97b6c4a124873e2b0910a43cc80cb05e9282d521fac83970eb53621548f1f"
+    }
+  ],
+  "skill_sources": [
+    {
+      "path": "skills/jacs-figure/SKILL.md",
+      "sha256": "57e4d32c1d27f94348fbe1a120991e0390617f221e470a2dda475b92fc58bb72"
+    },
+    {
+      "path": "skills/jacs-figure/references/figure-contract.md",
+      "sha256": "36133f3e10d0593edaff636c7a37250be6297a89d338c7062a52db3b176d7ef6"
+    },
+    {
+      "path": "skills/jacs-figure/references/chemistry-figures.md",
+      "sha256": "335266040d1503f4feb93bc2b09f58ff409955caa13c60cb7734c58466215e7f"
+    },
+    {
+      "path": "skills/jacs-figure/references/chart-catalog.md",
+      "sha256": "db8ae90b05e321174d923fdf62694f690ea82fdea208fe8e5995bdb1c560c97b"
+    },
+    {
+      "path": "skills/jacs-figure/references/labels-layout-scale.md",
+      "sha256": "2eaa9254d9a92a71b0e5f527e20e080a627e71e3404613a5204776ea88bd0c55"
+    },
+    {
+      "path": "skills/jacs-figure/references/color-design.md",
+      "sha256": "35890b8c2941539f0eca2ea8271a230518da19551203a73e21f60ee689ea1eb5"
+    },
+    {
+      "path": "skills/jacs-figure/references/visual-rules.md",
+      "sha256": "b26353aa4616854e7c44f357b41c1cf41bf06fb24092aa65527d88ec0938bcfb"
+    },
+    {
+      "path": "skills/jacs-figure/references/qa.md",
+      "sha256": "8d2b21412dc2c50b91a1a900c53d565197766bd154cd03cf7e69987392266399"
+    },
+    {
+      "path": "skills/jacs-shared/references/chemistry-semantics.md",
+      "sha256": "811778e5c0a8492604e640b609bd8d8bdae41a820f498b597f4e1feb5bf94419"
+    },
+    {
+      "path": "skills/jacs-shared/references/graphics-policy.md",
+      "sha256": "2a75f2f9556fc030ea9e4f29a47436e8517d9de46224acca7e9868dcaf103328"
+    }
+  ],
+  "repository_commit": "0efd06eeecf08a9b48f4f59be7e8ed1be4f693ad",
+  "repository_state": "Working-tree skill under forward evaluation; source hashes distinguish it from the commit and installed skill.",
+  "input_policy": "All raw files copied byte-for-byte; no filters, no imputation, no raw-input modifications."
+}

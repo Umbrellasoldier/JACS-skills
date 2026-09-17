@@ -1,13 +1,13 @@
 ---
 name: jacs-figure
-description: Design, create, revise, and audit JACS scientific figures from data and chemical structures. Use for JACS 科研绘图、能量剖面、过渡态结构、多面板组图和 TOC 图; use jacs-polishing for caption-only prose edits.
+description: Design, create, revise, and audit JACS scientific figures from data and chemical structures. Use for JACS 科研绘图、箱线图、小提琴图、一致性散点、光谱、热图、能量剖面、多面板组图和 TOC 图; use jacs-polishing for caption-only prose edits.
 ---
 
 # JACS scientific figures
 
 Create a reproducible figure that answers the author's scientific question and preserves the
-meaning of the supplied data. The bundled visual corpus covers selected reaction chemistry
-and molecular modeling papers; its observations are conditional, not a whole-journal style.
+meaning of the supplied data. The visual study spans 50 selected JACS papers in modeling, catalysis, spectroscopy,
+materials and biological chemistry; its observations are conditional, not a whole-journal style.
 
 ## Route the request
 
@@ -41,7 +41,10 @@ explicitly marked synthetic in both the image and provenance.
 
 ## Design and render
 
-Load [visual rules](references/visual-rules.md) when choosing composition, labels or colors.
+Choose the analytical relationship using [chart selection](references/chart-catalog.md).
+Read [labels, layout and scale](references/labels-layout-scale.md) for axes, legends,
+typography and composition, and [color design](references/color-design.md) for the light
+fill/strong-outline palette. [Visual evidence](references/visual-rules.md) explains provenance.
 Select complementary panels for a shared question; equal-size comparisons and unequal-size
 explanatory panels are both valid. Reuse semantic colors across the manuscript and redundant
 markers/labels where helpful. Do not infer an official palette or panel-letter convention.
@@ -54,7 +57,7 @@ to the caption when the figure remains self-contained.
 
 The bundled [renderer](scripts/plot_figures.py) accepts JSON specifications and optional CSV
 data. [Examples and schema](references/figure-contract.md#bundled-specifications) describe the
-six families and SVG assembly. Resolve scripts and assets relative to this SKILL.md. Keep the
+ten plot families and SVG assembly. Do not force unsupported data into a helper. Resolve scripts and assets relative to this SKILL.md. Keep the
 input intact. Use an isolated output directory and the task's available environment; the
 repository's locked `figures` group supplies plotting dependencies and `chemistry` adds RDKit.
 
@@ -65,7 +68,10 @@ for XYZ/SDF-based 3D views. Generated artwork must not substitute for measured/c
 
 ## Verify and deliver
 
-Inspect the actual final PDF/SVG and a final-size preview after rendering. Run applicable
+Inspect the actual final PDF/SVG and a final-size preview after rendering. Review grayscale
+and color-vision simulations when categorical colors carry information; redundant shapes
+and line patterns matter because light hues can merge. Verify the actual uncertainty
+definition, numeric scale, binning/normalization and explicit missing-value treatment. Run applicable
 data, dimension, text and layout checks; repair deterministic failures and inspect warnings.
 The bundled auditor explicitly leaves chemical correctness, many graphic collisions and
 unsupported objects to visual review. `MECHANICAL_PASS` is not complete scientific approval.

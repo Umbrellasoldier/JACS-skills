@@ -1,7 +1,14 @@
 {
-  "rule_type": "project_preference",
-  "description": "Configurable colors; category order and redundant markers carry meaning.",
-  "categorical": ["#0072B2", "#D55E00", "#009E73", "#CC79A7", "#6A5ACD", "#555555"],
+  "rule_type": "user_project_preference",
+  "description": "Light blue, apricot, teal, lavender, rose and muted gold. Pale marks/fills use stronger outlines and charcoal text. Redundant shapes remain necessary; this is not a universally colorblind-safe palette.",
+  "categorical": ["#4E86AF", "#B98255", "#428F80", "#8873AB", "#B6798D", "#A48F45"],
+  "fills": ["#A8CEE8", "#F3C8A8", "#A4D6C8", "#CBBDE4", "#EDC0CF", "#E8DCA9"],
   "markers": ["o", "s", "^", "D", "v", "P"],
-  "stages": {"passed": "#0072B2", "failed": "#D55E00", "pending": "#E6AB02", "previous_attrition": "#E4E4E4"}
+  "linestyles": ["-", "--", "-.", ":", "--", "-."],
+  "text": "#303C4B",
+  "axis": "#74808C",
+  "guide": "#DCE3E9",
+  "sequential": ["#F2F7FA", "#B9D6E7", "#75A9C8", "#356D91"],
+  "diverging": ["#5D96BC", "#F7F7F4", "#D99E77"],
+  "stages": {"passed": "#A8CEE8", "failed": "#F3C8A8", "pending": "#CBBDE4", "previous_attrition": "#EDF1F4"}
 }

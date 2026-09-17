@@ -1,0 +1,65 @@
+{
+  "reviewed_after_rule_freeze": true,
+  "evaluation_type": "qualitative applicability and counterexample review, not a statistical success-rate benchmark",
+  "papers": [
+    {
+      "paper_id": "N08",
+      "applicable_rules": [
+        "V3-04",
+        "V3-06",
+        "V3-08",
+        "V3-09"
+      ],
+      "qualification": "Density maxima and energy domains differ; compare each stated quantity and do not assume all panels share scale."
+    },
+    {
+      "paper_id": "N15",
+      "applicable_rules": [
+        "V3-01",
+        "V3-03",
+        "V3-07",
+        "V3-11"
+      ],
+      "qualification": "Muted colors fit the requested direction, but the densest composite requires enlargement; pale color alone does not solve complexity."
+    },
+    {
+      "paper_id": "N21",
+      "applicable_rules": [
+        "V3-02",
+        "V3-04",
+        "V3-05",
+        "V3-06"
+      ],
+      "qualification": "Overlapping spectra favor a legend rather than forced direct labels; reversed and scaled spectra must remain explicit."
+    },
+    {
+      "paper_id": "N27",
+      "applicable_rules": [
+        "V3-02",
+        "V3-04",
+        "V3-05"
+      ],
+      "qualification": "Heavy frames and bold italic typography are a counterexample to a universal light house style; nine sweep conditions exceed the simple palette and call for a custom encoding."
+    },
+    {
+      "paper_id": "N33",
+      "applicable_rules": [
+        "V3-02",
+        "V3-06",
+        "V3-07",
+        "V3-12"
+      ],
+      "qualification": "Dense biological evidence includes image-specific scale bars and interval meanings that cannot be verified from color or plot shape alone."
+    },
+    {
+      "paper_id": "N36",
+      "applicable_rules": [
+        "V3-03",
+        "V3-05",
+        "V3-06",
+        "V3-11"
+      ],
+      "qualification": "Spectral zooms and reversed ppm axes require context; contour color alone is not an accessibility guarantee."
+    }
+  ]
+}

@@ -78,7 +78,22 @@ class FigureExportTests(unittest.TestCase):
         from plot_figures import render
         from pypdf import PdfReader
 
-        for name in ("energy", "parity", "comparison", "stages", "workflow", "toc"):
+        for name in (
+            "energy",
+            "parity",
+            "comparison",
+            "stages",
+            "workflow",
+            "toc",
+            "boxplot",
+            "violin",
+            "ecdf",
+            "histogram",
+            "intervals",
+            "learning",
+            "spectra",
+            "heatmap",
+        ):
             with self.subTest(name=name), tempfile.TemporaryDirectory() as temp:
                 source = SCRIPTS.parent / "assets/examples" / (name + ".json")
                 raw = source.read_bytes()
@@ -93,6 +108,8 @@ class FigureExportTests(unittest.TestCase):
                 self.assertEqual(
                     result["pdf_sha256"], figure_spec.digest(Path(temp) / "figure.pdf")
                 )
+                if name == "heatmap":
+                    self.assertEqual(len(page.images), 0, "Categorical cells must stay vector")
                 if name == "parity":
                     self.assertEqual(result["details"]["metrics"]["Method A"]["n"], 6)
                     self.assertAlmostEqual(result["details"]["metrics"]["Method A"]["mae"], 8 / 6)

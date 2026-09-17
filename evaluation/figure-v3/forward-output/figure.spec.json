@@ -1,0 +1,58 @@
+{
+  "kind": "custom_matplotlib_composite",
+  "data_status": "synthetic",
+  "question": "How do the supplied synthetic methods compare in signed error distributions, learning behavior and charge-class MAE?",
+  "claim": "Descriptive differences in synthetic inputs only; no scientific result or inferential significance is claimed.",
+  "output_role": "JACS main-text-style demonstration",
+  "profile": "double",
+  "width_pt": 504,
+  "height_pt": 360,
+  "panel_roles": {
+    "a": "Distribution comparison of the same 36 reaction IDs across three methods; all 108 signed values, paired connectors and Tukey boxes.",
+    "b": "Training-size relation: all 120 raw supplied run-level MAEs, arithmetic means and sample SD from eight independent runs per method and size.",
+    "c": "Charge-class comparison: supplied aggregate MAEs; five numeric cells and one explicitly not evaluated cell."
+  },
+  "unit": "kcal mol⁻¹",
+  "method_order": [
+    "Direct",
+    "Adapted",
+    "Calibrated"
+  ],
+  "encodings": {
+    "Direct": {
+      "outline": "#4E86AF",
+      "fill": "#A8CEE8",
+      "marker": "o",
+      "line": "-"
+    },
+    "Adapted": {
+      "outline": "#B98255",
+      "fill": "#F3C8A8",
+      "marker": "s",
+      "line": "--"
+    },
+    "Calibrated": {
+      "outline": "#428F80",
+      "fill": "#A4D6C8",
+      "marker": "^",
+      "line": "-."
+    }
+  },
+  "statistics": {
+    "a_box": "Q1/median/Q3 from NumPy quantile(method='linear'); whiskers are the most extreme observed values within Q1−1.5 IQR to Q3+1.5 IQR. All outliers are plotted.",
+    "a_jitter": "NumPy default_rng(20260917), uniform −0.12 to +0.12 in category coordinates; a reaction has the same offset for every method. Measured errors are unaltered.",
+    "b_estimate": "Unweighted arithmetic mean of the eight supplied MAEs, never MAE of pooled predictions.",
+    "b_interval": "Mean ± sample SD; SD=sqrt(sum((MAE−mean)^2)/(8−1)); descriptive spread, not SE or confidence interval.",
+    "b_x": "True training reaction counts on a base-2 logarithmic axis; raw observations at their actual x and y; mean-to-mean lines are visual guides, no fitted scaling law.",
+    "c": "One decimal place as supplied; sequential color range 0–3; null is Not evaluated and is never treated as zero."
+  },
+  "population_boundary": "The three files are separate synthetic evaluation summaries. Their train/test relations and shared evaluation populations across files are unknown.",
+  "unknown": [
+    "Signed-error subtraction order",
+    "Predicted energy quantity and reference method",
+    "Theory, solvent, temperature and other research conditions",
+    "Splits, training budgets and evaluated reaction counts for learning and charge-class summaries"
+  ],
+  "selection": "No exclusions, trimming, imputation, resampling or fitted model.",
+  "layout_rationale": "Double-column width keeps method names, five training-size ticks, raw paired observations and matrix values readable at 7.3–10 pt. The tall distribution panel accommodates the full signed-error range; the two summary panels use independent axes."
+}

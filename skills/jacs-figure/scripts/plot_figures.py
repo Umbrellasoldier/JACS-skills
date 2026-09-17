@@ -12,23 +12,14 @@ from pathlib import Path
 
 from audit_figure import audit_layout, audit_pdf, measure_matplotlib, verdict
 from figure_spec import digest, load
+from figure_style import PALETTE, axis_label, encodings, point_style
+from statistical_figures import curve, distribution, heatmap, interval
 
 SKILL = Path(__file__).resolve().parents[1]
-PALETTE = json.loads((SKILL / "assets/palettes.json").read_text())
 
 
 def series(rows: list[dict], key: str) -> list[str]:
     return list(dict.fromkeys(row[key] for row in rows))
-
-
-def encodings(spec: dict, names: list[str]) -> dict:
-    mapping = {}
-    for i, name in enumerate(names):
-        mapping[name] = {
-            "color": spec.get("colors", {}).get(name, PALETTE["categorical"][i]),
-            "marker": PALETTE["markers"][i],
-        }
-    return mapping
 
 
 def energy(fig, spec: dict) -> dict:
@@ -37,10 +28,12 @@ def energy(fig, spec: dict) -> dict:
     names = series(rows, "path")
     colors = encodings(spec, names)
     labels = set()
-    for name in names:
+    for path_index, name in enumerate(names):
         data = sorted((r for r in rows if r["path"] == name), key=lambda r: r["order"])
         color = colors[name]["color"]
-        ax.plot([], [], color=color, label=name)
+        connector_style = ("--", ":", "-.", (0, (5, 1, 1, 1)), (0, (2, 2)), (0, (5, 3)))[path_index]
+        colors[name]["linestyle"] = connector_style
+        ax.plot([], [], color=color, linestyle=connector_style, label=name)
         for j, row in enumerate(data):
             x, y = row["order"], row["energy"]
             ax.plot([x - 0.17, x + 0.17], [y, y], color=color, linewidth=1.4)
@@ -50,7 +43,7 @@ def energy(fig, spec: dict) -> dict:
                     [prev["order"] + 0.17, x - 0.17],
                     [prev["energy"], y],
                     color=color,
-                    linestyle="--",
+                    linestyle=connector_style,
                     linewidth=0.7,
                 )
             key = (x, y, row["state"])
@@ -66,7 +59,7 @@ def energy(fig, spec: dict) -> dict:
                 labels.add(key)
     ax.set_xticks([])
     ax.set_xlabel("Reaction coordinate (schematic)")
-    ax.set_ylabel(f"Relative {spec['quantity']} ({spec['unit']})")
+    ax.set_ylabel(axis_label(f"Relative {spec['quantity']}", spec["unit"]))
     values = [r["energy"] for r in rows]
     span = max(max(values) - min(values), 1)
     ax.set_ylim(min(values) - 0.12 * span, max(values) + 0.32 * span)
@@ -95,7 +88,7 @@ def parity(fig, spec: dict) -> dict:
         reference = np.array([r["reference_value"] for r in data])
         predicted = np.array([r["predicted"] for r in data])
         error = predicted - reference
-        opts = {**colors[name], "s": 15, "alpha": 0.8, "linewidths": 0.4}
+        opts = {**point_style(colors[name]), "s": 19, "alpha": 0.9}
         raster = len(data) > 10000
         ax.scatter(reference, predicted, label=name, rasterized=raster, **opts)
         residual.scatter(reference, error, rasterized=raster, **opts)
@@ -119,12 +112,14 @@ def parity(fig, spec: dict) -> dict:
     ax.set(
         xlim=(lo, hi),
         ylim=(lo, hi),
-        xlabel=f"Reference ({spec['unit']})",
-        ylabel=f"Predicted ({spec['unit']})",
+        xlabel=axis_label(f"Reference {spec['quantity']}", spec["unit"]),
+        ylabel=axis_label(f"Predicted {spec['quantity']}", spec["unit"]),
     )
     residual.axhline(0, color="#555555", linestyle="--", linewidth=0.7)
     residual.set(
-        xlim=(lo, hi), xlabel=f"Reference ({spec['unit']})", ylabel=f"Residual ({spec['unit']})"
+        xlim=(lo, hi),
+        xlabel=axis_label(f"Reference {spec['quantity']}", spec["unit"]),
+        ylabel=axis_label("Prediction − reference", spec["unit"]),
     )
     ax.legend(loc="upper left")
     # Reserve physical headroom for labels even when aspect-constrained axes
@@ -161,7 +156,7 @@ def stages(fig, spec: dict) -> dict:
                 color=colors[key],
                 height=0.62,
                 hatch=hatch,
-                edgecolor="#444444",
+                edgecolor=PALETTE["axis"],
                 linewidth=0.5,
                 label=key.capitalize() if i == 0 else None,
             )
@@ -222,7 +217,7 @@ def comparison(fig, spec: dict) -> dict:
             [i] * len(values),
             values,
             s=16,
-            **colors[name],
+            **point_style(colors[name]),
             zorder=2,
             rasterized=len(values) > 10000,
         )
@@ -230,7 +225,7 @@ def comparison(fig, spec: dict) -> dict:
         ax.plot([i - 0.14, i + 0.14], [median, median], color="black", linewidth=1.2, zorder=3)
         summaries[name] = {"n": len(values), "median": median}
     ax.set_xticks(range(len(names)), names)
-    ax.set_ylabel(f"{spec['metric']} ({spec['unit']})")
+    ax.set_ylabel(axis_label(spec["metric"], spec["unit"]))
     ax.set_yscale(spec["scale"])
     ax.margins(x=0.2)
     return {
@@ -265,8 +260,8 @@ def workflow(fig, spec: dict) -> dict:
             w,
             h,
             boxstyle="round,pad=0.005,rounding_size=0.012",
-            facecolor="#EAF2F7",
-            edgecolor="#0072B2",
+            facecolor=PALETTE["fills"][i % len(PALETTE["fills"])],
+            edgecolor=PALETTE["categorical"][i % len(PALETTE["categorical"])],
             linewidth=0.8,
         )
         ax.add_patch(box)
@@ -295,7 +290,7 @@ def workflow(fig, spec: dict) -> dict:
                 arrowstyle="-|>",
                 mutation_scale=8,
                 linewidth=0.8,
-                color="#444444",
+                color=PALETTE["text"],
                 connectionstyle="arc3,rad=0",
             )
         )
@@ -314,6 +309,10 @@ DRAW = {
     "stages": stages,
     "comparison": comparison,
     "workflow": workflow,
+    "distribution": distribution,
+    "interval": interval,
+    "curve": curve,
+    "heatmap": heatmap,
 }
 
 
@@ -426,7 +425,14 @@ def render(spec_path: Path, output: Path, overwrite: bool = False) -> dict:
         renderer_sha256=digest(Path(__file__)),
         implementation_sha256={
             name: digest(Path(__file__).parent / name)
-            for name in ("plot_figures.py", "figure_spec.py", "audit_figure.py", "svg_panels.py")
+            for name in (
+                "plot_figures.py",
+                "figure_spec.py",
+                "audit_figure.py",
+                "svg_panels.py",
+                "figure_style.py",
+                "statistical_figures.py",
+            )
         },
         raster_export={
             "class": spec["raster_class"],

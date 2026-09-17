@@ -1,0 +1,166 @@
+{
+  "data_status": "synthetic",
+  "profile": "single",
+  "height_pt": 195,
+  "raster_class": "color",
+  "claim": "Demonstrate an encoding with synthetic values.",
+  "caption": "Synthetic demonstration; not results of a chemical study. Points: means of eight synthetic runs; bands: ±1 sample SD; connectors are visual guides, not fitted laws.",
+  "kind": "curve",
+  "x_quantity": "Training reactions",
+  "x_unit": "dimensionless",
+  "y_quantity": "MAE",
+  "y_unit": "kcal/mol",
+  "population": "Eight independently generated synthetic values per setting",
+  "x_scale": "log",
+  "connect_observations": true,
+  "interval_definition": "Mean ± sample SD across eight synthetic runs",
+  "data": [
+    {
+      "series": "Baseline",
+      "x": 50,
+      "y": 3.0355442626289966,
+      "lower": 2.9314538505929497,
+      "upper": 3.1396346746650434
+    },
+    {
+      "series": "Baseline",
+      "x": 100,
+      "y": 2.314095999128295,
+      "lower": 2.1999488318184004,
+      "upper": 2.428243166438189
+    },
+    {
+      "series": "Baseline",
+      "x": 200,
+      "y": 1.7425786160409866,
+      "lower": 1.6198268917995153,
+      "upper": 1.865330340282458
+    },
+    {
+      "series": "Baseline",
+      "x": 400,
+      "y": 1.2988572083071255,
+      "lower": 1.2063670661872528,
+      "upper": 1.3913473504269982
+    },
+    {
+      "series": "Baseline",
+      "x": 800,
+      "y": 1.0200290520406847,
+      "lower": 0.8382843719657277,
+      "upper": 1.2017737321156419
+    },
+    {
+      "series": "Baseline",
+      "x": 1600,
+      "y": 0.815090170052911,
+      "lower": 0.7051984790516546,
+      "upper": 0.9249818610541674
+    },
+    {
+      "series": "Baseline",
+      "x": 3200,
+      "y": 0.6553631241140736,
+      "lower": 0.536398860358889,
+      "upper": 0.7743273878692583
+    },
+    {
+      "series": "Transfer",
+      "x": 50,
+      "y": 2.316495190803031,
+      "lower": 2.2228987287104407,
+      "upper": 2.410091652895621
+    },
+    {
+      "series": "Transfer",
+      "x": 100,
+      "y": 1.6351531274406907,
+      "lower": 1.5310694582086046,
+      "upper": 1.7392367966727769
+    },
+    {
+      "series": "Transfer",
+      "x": 200,
+      "y": 1.2173230099804733,
+      "lower": 1.1163899616113193,
+      "upper": 1.3182560583496272
+    },
+    {
+      "series": "Transfer",
+      "x": 400,
+      "y": 0.9167957503958438,
+      "lower": 0.8240335347734166,
+      "upper": 1.009557966018271
+    },
+    {
+      "series": "Transfer",
+      "x": 800,
+      "y": 0.7623590800991991,
+      "lower": 0.6566489890982404,
+      "upper": 0.8680691711001577
+    },
+    {
+      "series": "Transfer",
+      "x": 1600,
+      "y": 0.5243159116815244,
+      "lower": 0.3862028262898923,
+      "upper": 0.6624289970731565
+    },
+    {
+      "series": "Transfer",
+      "x": 3200,
+      "y": 0.48344259613785534,
+      "lower": 0.37892666047383666,
+      "upper": 0.587958531801874
+    },
+    {
+      "series": "Refined",
+      "x": 50,
+      "y": 1.695986613373497,
+      "lower": 1.5161536302014116,
+      "upper": 1.8758195965455826
+    },
+    {
+      "series": "Refined",
+      "x": 100,
+      "y": 1.16248725744309,
+      "lower": 1.0125947222760467,
+      "upper": 1.3123797926101333
+    },
+    {
+      "series": "Refined",
+      "x": 200,
+      "y": 0.8986954856853545,
+      "lower": 0.7676896481232112,
+      "upper": 1.0297013232474979
+    },
+    {
+      "series": "Refined",
+      "x": 400,
+      "y": 0.742692924788247,
+      "lower": 0.6890832019429777,
+      "upper": 0.7963026476335163
+    },
+    {
+      "series": "Refined",
+      "x": 800,
+      "y": 0.5486897992891209,
+      "lower": 0.4008986146711715,
+      "upper": 0.6964809839070703
+    },
+    {
+      "series": "Refined",
+      "x": 1600,
+      "y": 0.4247365317891303,
+      "lower": 0.28936328831177327,
+      "upper": 0.5601097752664873
+    },
+    {
+      "series": "Refined",
+      "x": 3200,
+      "y": 0.38624653877471704,
+      "lower": 0.2667782271165518,
+      "upper": 0.5057148504328822
+    }
+  ]
+}

@@ -36,3 +36,13 @@ semantic colors and scientific notation unless changing them is part of the requ
 
 Column-width and label-reading guidance also reflects the pilot forward-test feedback. It
 is an implementation preference and was not added to the frozen corpus observations.
+
+## Expanded v0.3 study
+
+The [50-paper study](../../jacs-shared/references/figure-study-v3.md) adds 150 visually
+inspected figures from 36 papers to the original 49 figures. The original frozen pilot
+remains unchanged. Read the [new rule cards](../../jacs-shared/references/figure-rules-v3.jsonl)
+and [new observations](../../jacs-shared/references/figure-observations-v3.jsonl) for
+source-specific conditions and counterexamples. The user-selected light palette is a
+project preference; [Data design patterns](data-design-patterns.md) are a separate source
+of analytical guidance, not observations about JACS.

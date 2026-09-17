@@ -2,19 +2,18 @@
   {
     "example": "energy",
     "verdict": "MECHANICAL_PASS",
-    "pdf_sha256": "96857b08c752c485bd40e57c7b6bda1b5d71ebf7a34ec1abdf55d99cfe5a3d5a",
     "files": {
       ".svg": {
         "name": "energy.svg",
-        "sha256": "13d52d49e4fd607ba982e8ab9711d7505426845b00ab7a137048927adbe4cb23"
+        "sha256": "337c5ab9a4fc1404dbb36d609d9d172ff02e2a2cd5d701dea791ba93d7ceeb3e"
       },
       ".pdf": {
         "name": "energy.pdf",
-        "sha256": "96857b08c752c485bd40e57c7b6bda1b5d71ebf7a34ec1abdf55d99cfe5a3d5a"
+        "sha256": "5d2f4867d64cfec382cac1574196563e1c61681e31db15583c4f0601bb8adb05"
       },
       ".png": {
         "name": "energy.png",
-        "sha256": "7f7a0f3e8d7610034448acb12b72be4d96c75b3782ab6554c6da74046761cde5"
+        "sha256": "dc699629c8c03234cb5a4e86571abdf66e962820be11fe1d9d9f4b2abb2685e3"
       },
       ".spec.json": {
         "name": "energy.spec.json",
@@ -26,33 +25,35 @@
       },
       ".layout.json": {
         "name": "energy.layout.json",
-        "sha256": "a93b93d3022a913eedcf8096f0544439f56e51b04a9d16c30033700e37b428cb"
+        "sha256": "8ed219ad4838354978e268c7fa968ce29742af9e3b619c105841f8d1be2b3dd9"
       }
     },
     "implementation_sha256": {
-      "plot_figures.py": "10f5d77173b168c3556262021c6b7ec6595ecf89f4ea37ed400fe2dfdc96a35e",
-      "figure_spec.py": "631438d848001d1cea6833d3ab44cbf244b60d6e52eea46494e47f9b2ef18b97",
+      "plot_figures.py": "2be0cc6f78f023c7a6a1da90868d37a63cb6eb1a122a9431ccecee371b90f92b",
+      "figure_spec.py": "e98dede3afd981f56b4abed785d5386c38486e77ac700940e91b7eac0bc4144d",
       "audit_figure.py": "7b478badd3820796cd042a5e55ab880304e93c25c36bd56e5880521198618fdc",
-      "svg_panels.py": "a912c6d92a6cbf6158cea45e1de57f06b34471beccb66ddb17e034eb1bedf949"
+      "svg_panels.py": "a912c6d92a6cbf6158cea45e1de57f06b34471beccb66ddb17e034eb1bedf949",
+      "figure_style.py": "557aafef05ddd4157ee3ccc7c8e6e912da672b8093116079af6e25a98951c29d",
+      "statistical_figures.py": "89099c7f645200fe32dd7cf83b829a19fb383d3d8f3777a7bb782b89664eb9a3"
     },
-    "visual_review": "Final example preview inspected; evaluation/figures/REPORT.md"
+    "visual_review": "Agent inspected rendered PDF and PNG; see evaluation/figure-v3/REPORT.md for scope and limitations",
+    "spec_sha256": "9b64525a615f1b6847d91496ed1d6cbc147ec1c4dcb903f327ec72cc1dba0af1"
   },
   {
     "example": "parity",
     "verdict": "MECHANICAL_PASS",
-    "pdf_sha256": "f3a3435301553615bb3baa3d4ead67223952014fd6b895c54d648a58859c84bd",
     "files": {
       ".svg": {
         "name": "parity.svg",
-        "sha256": "0c6b4c2c61a3dfa02b0378bf412e2a09f2a0ea52b9382f95d891b463073d5888"
+        "sha256": "5fb9fe4683b210319411acbc3b397da48778349c60f46b2eb346f9962a45d0ab"
       },
       ".pdf": {
         "name": "parity.pdf",
-        "sha256": "f3a3435301553615bb3baa3d4ead67223952014fd6b895c54d648a58859c84bd"
+        "sha256": "9b5d440488f7dfe99b0bb1b701c7e733b762a116bc743febb476d7d340714212"
       },
       ".png": {
         "name": "parity.png",
-        "sha256": "6ca1c00100c9068e407ff71e7a38701566ae01501752fcd255d15180ce937abd"
+        "sha256": "56770538dbf09a0d75d08e4a4b63782b092b746c39daab9d56e482a31079e9f0"
       },
       ".spec.json": {
         "name": "parity.spec.json",
@@ -64,33 +65,35 @@
       },
       ".layout.json": {
         "name": "parity.layout.json",
-        "sha256": "6ddab2e9f0f93be02618f3d69d7c776a779b4705714b6e9267a4fc204c9ab685"
+        "sha256": "2071d585a36dd2dbc2010566f3eaffd74e581a4fcec53271a5182b017be434d8"
       }
     },
     "implementation_sha256": {
-      "plot_figures.py": "10f5d77173b168c3556262021c6b7ec6595ecf89f4ea37ed400fe2dfdc96a35e",
-      "figure_spec.py": "631438d848001d1cea6833d3ab44cbf244b60d6e52eea46494e47f9b2ef18b97",
+      "plot_figures.py": "2be0cc6f78f023c7a6a1da90868d37a63cb6eb1a122a9431ccecee371b90f92b",
+      "figure_spec.py": "e98dede3afd981f56b4abed785d5386c38486e77ac700940e91b7eac0bc4144d",
       "audit_figure.py": "7b478badd3820796cd042a5e55ab880304e93c25c36bd56e5880521198618fdc",
-      "svg_panels.py": "a912c6d92a6cbf6158cea45e1de57f06b34471beccb66ddb17e034eb1bedf949"
+      "svg_panels.py": "a912c6d92a6cbf6158cea45e1de57f06b34471beccb66ddb17e034eb1bedf949",
+      "figure_style.py": "557aafef05ddd4157ee3ccc7c8e6e912da672b8093116079af6e25a98951c29d",
+      "statistical_figures.py": "89099c7f645200fe32dd7cf83b829a19fb383d3d8f3777a7bb782b89664eb9a3"
     },
-    "visual_review": "Final example preview inspected; evaluation/figures/REPORT.md"
+    "visual_review": "Agent inspected rendered PDF and PNG; see evaluation/figure-v3/REPORT.md for scope and limitations",
+    "spec_sha256": "a486078fead0b5fea6ba681165216b764b3176d40e415122df6caffad173f10a"
   },
   {
     "example": "stages",
     "verdict": "MECHANICAL_PASS",
-    "pdf_sha256": "04eb4a16161822606cbbb683a41ecefb4c6ff04fdfa44b224f721afb3070a0de",
     "files": {
       ".svg": {
         "name": "stages.svg",
-        "sha256": "dc57ef17909127ffaacebb0852640f7cb35ed31818ee0960b4ef90a85ad4dcfb"
+        "sha256": "960d070ab70ae8e5d1028bdb34f32b4f3c76ea3de420b0bc2b99452441a7b51d"
       },
       ".pdf": {
         "name": "stages.pdf",
-        "sha256": "04eb4a16161822606cbbb683a41ecefb4c6ff04fdfa44b224f721afb3070a0de"
+        "sha256": "458adad4519f11feb86a4e31d904a1c33a75409f701888e66b9ceee906a8cfce"
       },
       ".png": {
         "name": "stages.png",
-        "sha256": "8a688f0d1722944309866e05bb22d81f0e18da35a25b91b14ed9e41264a3a48c"
+        "sha256": "13775be5a9baf30d94c903bd096f7c17091aa84cd91718956de43bc9313eb1bf"
       },
       ".spec.json": {
         "name": "stages.spec.json",
@@ -106,29 +109,31 @@
       }
     },
     "implementation_sha256": {
-      "plot_figures.py": "10f5d77173b168c3556262021c6b7ec6595ecf89f4ea37ed400fe2dfdc96a35e",
-      "figure_spec.py": "631438d848001d1cea6833d3ab44cbf244b60d6e52eea46494e47f9b2ef18b97",
+      "plot_figures.py": "2be0cc6f78f023c7a6a1da90868d37a63cb6eb1a122a9431ccecee371b90f92b",
+      "figure_spec.py": "e98dede3afd981f56b4abed785d5386c38486e77ac700940e91b7eac0bc4144d",
       "audit_figure.py": "7b478badd3820796cd042a5e55ab880304e93c25c36bd56e5880521198618fdc",
-      "svg_panels.py": "a912c6d92a6cbf6158cea45e1de57f06b34471beccb66ddb17e034eb1bedf949"
+      "svg_panels.py": "a912c6d92a6cbf6158cea45e1de57f06b34471beccb66ddb17e034eb1bedf949",
+      "figure_style.py": "557aafef05ddd4157ee3ccc7c8e6e912da672b8093116079af6e25a98951c29d",
+      "statistical_figures.py": "89099c7f645200fe32dd7cf83b829a19fb383d3d8f3777a7bb782b89664eb9a3"
     },
-    "visual_review": "Final example preview inspected; evaluation/figures/REPORT.md"
+    "visual_review": "Agent inspected rendered PDF and PNG; see evaluation/figure-v3/REPORT.md for scope and limitations",
+    "spec_sha256": "5784f6abd4ef68f2b5405b5fe722bb4247d00994a53b5bcc962c272f0c2777df"
   },
   {
     "example": "comparison",
     "verdict": "MECHANICAL_PASS",
-    "pdf_sha256": "1026ae32d14fd7eb797144b69d89e4f2a68938665296765ebf5b9e2873770833",
     "files": {
       ".svg": {
         "name": "comparison.svg",
-        "sha256": "4b33e1d16517f312f06544802fba250a1048f0b5b101361215addb1c92138809"
+        "sha256": "5dbc9f01d6d73c3f64e66970aeb8f2ee4ffce3b8dbb611a3213e042c291d98b1"
       },
       ".pdf": {
         "name": "comparison.pdf",
-        "sha256": "1026ae32d14fd7eb797144b69d89e4f2a68938665296765ebf5b9e2873770833"
+        "sha256": "5a39aefe5d35af77bc06592b9ab68e697e384734ff741b9115798a51d7eeb2e3"
       },
       ".png": {
         "name": "comparison.png",
-        "sha256": "f12617db4713beab74602312624f88c3a2188c13e71cdeea59275fa51da4974f"
+        "sha256": "81c03cb9cd4a4aca212a0361a88e0f0558e13b34f7af8528fe22c7a1399de2a8"
       },
       ".spec.json": {
         "name": "comparison.spec.json",
@@ -140,33 +145,35 @@
       },
       ".layout.json": {
         "name": "comparison.layout.json",
-        "sha256": "c334b5934c5caf0c966f30ba3a8fba94b0357baf479ca27806acefd96417ddfe"
+        "sha256": "1a866bd1b00c798c69f4fc8566deb41f48e0b971531f1c713b1f9f5efc3b0fc1"
       }
     },
     "implementation_sha256": {
-      "plot_figures.py": "10f5d77173b168c3556262021c6b7ec6595ecf89f4ea37ed400fe2dfdc96a35e",
-      "figure_spec.py": "631438d848001d1cea6833d3ab44cbf244b60d6e52eea46494e47f9b2ef18b97",
+      "plot_figures.py": "2be0cc6f78f023c7a6a1da90868d37a63cb6eb1a122a9431ccecee371b90f92b",
+      "figure_spec.py": "e98dede3afd981f56b4abed785d5386c38486e77ac700940e91b7eac0bc4144d",
       "audit_figure.py": "7b478badd3820796cd042a5e55ab880304e93c25c36bd56e5880521198618fdc",
-      "svg_panels.py": "a912c6d92a6cbf6158cea45e1de57f06b34471beccb66ddb17e034eb1bedf949"
+      "svg_panels.py": "a912c6d92a6cbf6158cea45e1de57f06b34471beccb66ddb17e034eb1bedf949",
+      "figure_style.py": "557aafef05ddd4157ee3ccc7c8e6e912da672b8093116079af6e25a98951c29d",
+      "statistical_figures.py": "89099c7f645200fe32dd7cf83b829a19fb383d3d8f3777a7bb782b89664eb9a3"
     },
-    "visual_review": "Final example preview inspected; evaluation/figures/REPORT.md"
+    "visual_review": "Agent inspected rendered PDF and PNG; see evaluation/figure-v3/REPORT.md for scope and limitations",
+    "spec_sha256": "42f10f654f006308c427096b0f8c7d023bf14233990a8fb05f4d0ac2755ae22c"
   },
   {
     "example": "workflow",
     "verdict": "MECHANICAL_PASS",
-    "pdf_sha256": "36c0c216a502792fb294b386d90db017b8b1c549cef230347fa59aa002c14500",
     "files": {
       ".svg": {
         "name": "workflow.svg",
-        "sha256": "a6e250d10c56717ed1118b97ee771f1e1a63b60de9fb634e3a4092e893fa9d88"
+        "sha256": "846ce1a10b4bde64497e9a309993c4b46d8056cf4f8b417aeb643f5dce77f701"
       },
       ".pdf": {
         "name": "workflow.pdf",
-        "sha256": "36c0c216a502792fb294b386d90db017b8b1c549cef230347fa59aa002c14500"
+        "sha256": "64b3e6a6ffeb55ef0648fce0bf5a684a2d418f404cc9f28783b54a2df74a0844"
       },
       ".png": {
         "name": "workflow.png",
-        "sha256": "dcb67f00b23eca1c30e4f4ad53398e6866cbc7fd981df6b92c0d3de899bfe816"
+        "sha256": "c8dd1c6f974522d1f14c87a71fbd466d3cf0affd2c224824701975d2514e4309"
       },
       ".spec.json": {
         "name": "workflow.spec.json",
@@ -182,17 +189,19 @@
       }
     },
     "implementation_sha256": {
-      "plot_figures.py": "10f5d77173b168c3556262021c6b7ec6595ecf89f4ea37ed400fe2dfdc96a35e",
-      "figure_spec.py": "631438d848001d1cea6833d3ab44cbf244b60d6e52eea46494e47f9b2ef18b97",
+      "plot_figures.py": "2be0cc6f78f023c7a6a1da90868d37a63cb6eb1a122a9431ccecee371b90f92b",
+      "figure_spec.py": "e98dede3afd981f56b4abed785d5386c38486e77ac700940e91b7eac0bc4144d",
       "audit_figure.py": "7b478badd3820796cd042a5e55ab880304e93c25c36bd56e5880521198618fdc",
-      "svg_panels.py": "a912c6d92a6cbf6158cea45e1de57f06b34471beccb66ddb17e034eb1bedf949"
+      "svg_panels.py": "a912c6d92a6cbf6158cea45e1de57f06b34471beccb66ddb17e034eb1bedf949",
+      "figure_style.py": "557aafef05ddd4157ee3ccc7c8e6e912da672b8093116079af6e25a98951c29d",
+      "statistical_figures.py": "89099c7f645200fe32dd7cf83b829a19fb383d3d8f3777a7bb782b89664eb9a3"
     },
-    "visual_review": "Final example preview inspected; evaluation/figures/REPORT.md"
+    "visual_review": "Agent inspected rendered PDF and PNG; see evaluation/figure-v3/REPORT.md for scope and limitations",
+    "spec_sha256": "e912d50fc67d2967528d7ce323785f2eefc85bfaee6c83a8d5e36499d96ea44f"
   },
   {
     "example": "structures",
     "verdict": "REVIEW_REQUIRED",
-    "pdf_sha256": "b8ba8aa63454569dd72fe534cb385056f9bce9e396a8a298d482db114626a3f9",
     "files": {
       ".svg": {
         "name": "structures.svg",
@@ -200,7 +209,7 @@
       },
       ".pdf": {
         "name": "structures.pdf",
-        "sha256": "b8ba8aa63454569dd72fe534cb385056f9bce9e396a8a298d482db114626a3f9"
+        "sha256": "5686e536832f589dcda4e05ce67cbe8fde28a7a7aceb1aa06e8db4262fe7d289"
       },
       ".png": {
         "name": "structures.png",
@@ -216,29 +225,31 @@
       }
     },
     "implementation_sha256": {
-      "plot_figures.py": "10f5d77173b168c3556262021c6b7ec6595ecf89f4ea37ed400fe2dfdc96a35e",
-      "figure_spec.py": "631438d848001d1cea6833d3ab44cbf244b60d6e52eea46494e47f9b2ef18b97",
+      "plot_figures.py": "2be0cc6f78f023c7a6a1da90868d37a63cb6eb1a122a9431ccecee371b90f92b",
+      "figure_spec.py": "e98dede3afd981f56b4abed785d5386c38486e77ac700940e91b7eac0bc4144d",
       "audit_figure.py": "7b478badd3820796cd042a5e55ab880304e93c25c36bd56e5880521198618fdc",
-      "svg_panels.py": "a912c6d92a6cbf6158cea45e1de57f06b34471beccb66ddb17e034eb1bedf949"
+      "svg_panels.py": "a912c6d92a6cbf6158cea45e1de57f06b34471beccb66ddb17e034eb1bedf949",
+      "figure_style.py": "557aafef05ddd4157ee3ccc7c8e6e912da672b8093116079af6e25a98951c29d",
+      "statistical_figures.py": "89099c7f645200fe32dd7cf83b829a19fb383d3d8f3777a7bb782b89664eb9a3"
     },
-    "visual_review": "Final example preview inspected; evaluation/figures/REPORT.md"
+    "visual_review": "Agent inspected rendered PDF and PNG; see evaluation/figure-v3/REPORT.md for scope and limitations",
+    "spec_sha256": "48e8fa9092e1767f80dcd0883b90ded426d76a51b061a5a6f267f8f5e378ac94"
   },
   {
     "example": "toc",
     "verdict": "MECHANICAL_PASS",
-    "pdf_sha256": "2f13bac36ce886305145b040b28dea880716b5d5093a09c543eea666528d9965",
     "files": {
       ".svg": {
         "name": "toc.svg",
-        "sha256": "4da0665647ab7bd4b2fe0bf24d400a29a5962b4c6b1aeaabbad80a52fe86a659"
+        "sha256": "9fd334d07cd1286b2929fbdc2211485c0ae62a6b16ca17d8976786b8e200ce42"
       },
       ".pdf": {
         "name": "toc.pdf",
-        "sha256": "2f13bac36ce886305145b040b28dea880716b5d5093a09c543eea666528d9965"
+        "sha256": "5522817b3911b888d77478b99288675914ef93b8d1e2db60dc3f66c6bafdfb06"
       },
       ".png": {
         "name": "toc.png",
-        "sha256": "77daca98ae3273008da29c6bcd77a7304a87a6cc282e008bff87948585d96ae1"
+        "sha256": "1a8ac072f1133c7f372f609786fefa2797fbe1466a900af71b7f0783dd2e3ad3"
       },
       ".spec.json": {
         "name": "toc.spec.json",
@@ -254,15 +265,414 @@
       },
       ".tiff": {
         "name": "toc.tiff",
-        "sha256": "2899fc836276892de9121524404b58bd7b4ebe330beb1776c9f37d4445932e78"
+        "sha256": "a8b56c85d169271fda57daa20ff8e1c5368d6df70a5a3cd6946be3d4b4fe67bd"
       }
     },
     "implementation_sha256": {
-      "plot_figures.py": "10f5d77173b168c3556262021c6b7ec6595ecf89f4ea37ed400fe2dfdc96a35e",
-      "figure_spec.py": "631438d848001d1cea6833d3ab44cbf244b60d6e52eea46494e47f9b2ef18b97",
+      "plot_figures.py": "2be0cc6f78f023c7a6a1da90868d37a63cb6eb1a122a9431ccecee371b90f92b",
+      "figure_spec.py": "e98dede3afd981f56b4abed785d5386c38486e77ac700940e91b7eac0bc4144d",
       "audit_figure.py": "7b478badd3820796cd042a5e55ab880304e93c25c36bd56e5880521198618fdc",
-      "svg_panels.py": "a912c6d92a6cbf6158cea45e1de57f06b34471beccb66ddb17e034eb1bedf949"
+      "svg_panels.py": "a912c6d92a6cbf6158cea45e1de57f06b34471beccb66ddb17e034eb1bedf949",
+      "figure_style.py": "557aafef05ddd4157ee3ccc7c8e6e912da672b8093116079af6e25a98951c29d",
+      "statistical_figures.py": "89099c7f645200fe32dd7cf83b829a19fb383d3d8f3777a7bb782b89664eb9a3"
     },
-    "visual_review": "Final example preview inspected; evaluation/figures/REPORT.md"
+    "visual_review": "Agent inspected rendered PDF and PNG; see evaluation/figure-v3/REPORT.md for scope and limitations",
+    "spec_sha256": "0cff3485c3433673f2679960f3ff1d436179dc8d45909177eb432f7d43279e14"
+  },
+  {
+    "example": "boxplot",
+    "verdict": "MECHANICAL_PASS",
+    "files": {
+      ".svg": {
+        "name": "boxplot.svg",
+        "sha256": "348d8203c91cd84fc0a196000ddb4a64f75ef188805d7a8c2ec5e835f69ed947"
+      },
+      ".pdf": {
+        "name": "boxplot.pdf",
+        "sha256": "dbb79b768785149d8ccf9b2d8563af41bea050e2401c9351f00a5edd1e583727"
+      },
+      ".png": {
+        "name": "boxplot.png",
+        "sha256": "f75adf0f88316c1c9735080905de3ab6ec86cebd7accb4713adb4fd7b582f021"
+      },
+      ".spec.json": {
+        "name": "boxplot.spec.json",
+        "sha256": "700ae0167670294246e0693de63d6624e62bb0b237366908a45074fccd4643dd"
+      },
+      ".caption.txt": {
+        "name": "boxplot.caption.txt",
+        "sha256": "3890b6027b6198a57120a0d53d123e9a376c214da455825ba493f0dd004353a9"
+      },
+      ".layout.json": {
+        "name": "boxplot.layout.json",
+        "sha256": "8eed49c7e79f5344125ae647abec06c01ba718a7e39a335ea3b8233d65026d14"
+      }
+    },
+    "implementation_sha256": {
+      "plot_figures.py": "2be0cc6f78f023c7a6a1da90868d37a63cb6eb1a122a9431ccecee371b90f92b",
+      "figure_spec.py": "e98dede3afd981f56b4abed785d5386c38486e77ac700940e91b7eac0bc4144d",
+      "audit_figure.py": "7b478badd3820796cd042a5e55ab880304e93c25c36bd56e5880521198618fdc",
+      "svg_panels.py": "a912c6d92a6cbf6158cea45e1de57f06b34471beccb66ddb17e034eb1bedf949",
+      "figure_style.py": "557aafef05ddd4157ee3ccc7c8e6e912da672b8093116079af6e25a98951c29d",
+      "statistical_figures.py": "89099c7f645200fe32dd7cf83b829a19fb383d3d8f3777a7bb782b89664eb9a3"
+    },
+    "visual_review": "Agent inspected rendered PDF and PNG; see evaluation/figure-v3/REPORT.md for scope and limitations",
+    "spec_sha256": "214367fb557f8150a7307abfa357b8dcd45cbdb6ff404b1f4649c2236bcada67"
+  },
+  {
+    "example": "violin",
+    "verdict": "MECHANICAL_PASS",
+    "files": {
+      ".svg": {
+        "name": "violin.svg",
+        "sha256": "37a5094423265e425f30cad472959d2c73ccab41c9efb8f81dcaaa26df836fa2"
+      },
+      ".pdf": {
+        "name": "violin.pdf",
+        "sha256": "3ffa2c2cfd2a564ecf6fe28795cb9d6549dc4279882d05f16b96d0863bdb9334"
+      },
+      ".png": {
+        "name": "violin.png",
+        "sha256": "fcae04e90dd203c93e5482357ef07b3f1700b52a366436b6c1eff7dd3af80f39"
+      },
+      ".spec.json": {
+        "name": "violin.spec.json",
+        "sha256": "dcd52fbe21ed3e10a42c64bf578692fc927870fb780d0500e049199b4fb5469e"
+      },
+      ".caption.txt": {
+        "name": "violin.caption.txt",
+        "sha256": "3971f857a71f3d0311016901eed85dfc795f010a2842d1675f4fd4f2da08f222"
+      },
+      ".layout.json": {
+        "name": "violin.layout.json",
+        "sha256": "19d11f64f4f7c95d9175046c809f7b77b57306fdd5735fd1fbc9ed794bef6cfc"
+      }
+    },
+    "implementation_sha256": {
+      "plot_figures.py": "2be0cc6f78f023c7a6a1da90868d37a63cb6eb1a122a9431ccecee371b90f92b",
+      "figure_spec.py": "e98dede3afd981f56b4abed785d5386c38486e77ac700940e91b7eac0bc4144d",
+      "audit_figure.py": "7b478badd3820796cd042a5e55ab880304e93c25c36bd56e5880521198618fdc",
+      "svg_panels.py": "a912c6d92a6cbf6158cea45e1de57f06b34471beccb66ddb17e034eb1bedf949",
+      "figure_style.py": "557aafef05ddd4157ee3ccc7c8e6e912da672b8093116079af6e25a98951c29d",
+      "statistical_figures.py": "89099c7f645200fe32dd7cf83b829a19fb383d3d8f3777a7bb782b89664eb9a3"
+    },
+    "visual_review": "Agent inspected rendered PDF and PNG; see evaluation/figure-v3/REPORT.md for scope and limitations",
+    "spec_sha256": "8596f2d5e29da811c8cb320fdff547e95bdf05b08ed2d223c2eb236bb59ace6e"
+  },
+  {
+    "example": "ecdf",
+    "verdict": "MECHANICAL_PASS",
+    "files": {
+      ".svg": {
+        "name": "ecdf.svg",
+        "sha256": "86101de069621d44eab8fd14e8b345b3ce747abe677347adc61ba2fbb64067a3"
+      },
+      ".pdf": {
+        "name": "ecdf.pdf",
+        "sha256": "198518585da86c413b886c9b79320fb49f1b6c63da23f52fa854bfe340c4ebad"
+      },
+      ".png": {
+        "name": "ecdf.png",
+        "sha256": "39aa854b4ee3b796bcb62ced74638b57a133d916d09b9699128cfbc055636add"
+      },
+      ".spec.json": {
+        "name": "ecdf.spec.json",
+        "sha256": "f0a3c446d56a9d73ded76607337646677da2bc4896a22daec0f4b1b6cf4a48d9"
+      },
+      ".caption.txt": {
+        "name": "ecdf.caption.txt",
+        "sha256": "78a8ed42384283b9fb6aa98764af98b88cb9872066897156ecd8383bb00e126c"
+      },
+      ".layout.json": {
+        "name": "ecdf.layout.json",
+        "sha256": "a3e15b6ce117ba7b3d82a1c3999c62982f9c00e9d2ec409d70b4859db0fa3198"
+      }
+    },
+    "implementation_sha256": {
+      "plot_figures.py": "2be0cc6f78f023c7a6a1da90868d37a63cb6eb1a122a9431ccecee371b90f92b",
+      "figure_spec.py": "e98dede3afd981f56b4abed785d5386c38486e77ac700940e91b7eac0bc4144d",
+      "audit_figure.py": "7b478badd3820796cd042a5e55ab880304e93c25c36bd56e5880521198618fdc",
+      "svg_panels.py": "a912c6d92a6cbf6158cea45e1de57f06b34471beccb66ddb17e034eb1bedf949",
+      "figure_style.py": "557aafef05ddd4157ee3ccc7c8e6e912da672b8093116079af6e25a98951c29d",
+      "statistical_figures.py": "89099c7f645200fe32dd7cf83b829a19fb383d3d8f3777a7bb782b89664eb9a3"
+    },
+    "visual_review": "Agent inspected rendered PDF and PNG; see evaluation/figure-v3/REPORT.md for scope and limitations",
+    "spec_sha256": "bfe2a161f4542e9fc08ca87925d935df1a1c51ce03e0b554889a9be84a8d717e"
+  },
+  {
+    "example": "histogram",
+    "verdict": "MECHANICAL_PASS",
+    "files": {
+      ".svg": {
+        "name": "histogram.svg",
+        "sha256": "10ec3fb6cebb37ec50db958d38bd7ca2c9b240bf074263c2c90ee1e96275e4a4"
+      },
+      ".pdf": {
+        "name": "histogram.pdf",
+        "sha256": "9f5301bf00d85a6b7f48d14b6bedb3af43a6d5668fc96182d2db047ffccf49b5"
+      },
+      ".png": {
+        "name": "histogram.png",
+        "sha256": "497892f53686baf8ebcb7963b3c02eb8e86bf9d4661391d1bdfa9047ca74e5bb"
+      },
+      ".spec.json": {
+        "name": "histogram.spec.json",
+        "sha256": "9bff298e2edebe2443cbbacd5c0f1247a184d00e5caa50aeb9d61ed9e6694ffb"
+      },
+      ".caption.txt": {
+        "name": "histogram.caption.txt",
+        "sha256": "b1e9265b294ff97fbed8677d03713040a750dd8a8cb1204a0217947967540b75"
+      },
+      ".layout.json": {
+        "name": "histogram.layout.json",
+        "sha256": "949f3d1828656ba5ac7d967bfb2c4db923ac67ce91c4845a4c938d485bd23021"
+      }
+    },
+    "implementation_sha256": {
+      "plot_figures.py": "2be0cc6f78f023c7a6a1da90868d37a63cb6eb1a122a9431ccecee371b90f92b",
+      "figure_spec.py": "e98dede3afd981f56b4abed785d5386c38486e77ac700940e91b7eac0bc4144d",
+      "audit_figure.py": "7b478badd3820796cd042a5e55ab880304e93c25c36bd56e5880521198618fdc",
+      "svg_panels.py": "a912c6d92a6cbf6158cea45e1de57f06b34471beccb66ddb17e034eb1bedf949",
+      "figure_style.py": "557aafef05ddd4157ee3ccc7c8e6e912da672b8093116079af6e25a98951c29d",
+      "statistical_figures.py": "89099c7f645200fe32dd7cf83b829a19fb383d3d8f3777a7bb782b89664eb9a3"
+    },
+    "visual_review": "Agent inspected rendered PDF and PNG; see evaluation/figure-v3/REPORT.md for scope and limitations",
+    "spec_sha256": "ef418151177a05a0cbbc574878f202d556013ca10b5fe8aec85750cf0c8291f6"
+  },
+  {
+    "example": "intervals",
+    "verdict": "MECHANICAL_PASS",
+    "files": {
+      ".svg": {
+        "name": "intervals.svg",
+        "sha256": "5b0656ae653c14c5bea3d63447f60d264feb395b1ea2a3ec9e72b0b122dc9f1e"
+      },
+      ".pdf": {
+        "name": "intervals.pdf",
+        "sha256": "f0229fdd63b714e864b5fb551858f81fd84cab6cbe1523d161ac0d66a5f5d921"
+      },
+      ".png": {
+        "name": "intervals.png",
+        "sha256": "74a429000e522be9a63078f852a46cb8afa9de5f7ba1f098856fa29e7e382e4a"
+      },
+      ".spec.json": {
+        "name": "intervals.spec.json",
+        "sha256": "9fbd0c2113376d4f9e720be335e2f5ea14c614cab3578bfbf418d3d47baf4db3"
+      },
+      ".caption.txt": {
+        "name": "intervals.caption.txt",
+        "sha256": "d690351c34b87d42391fd5215e8164bfecf782d3702a638a837932260b3e7c57"
+      },
+      ".layout.json": {
+        "name": "intervals.layout.json",
+        "sha256": "e729c9ad4780eea94092c309adddea3bb71966be33df812a4f3c9cbe63e1366a"
+      }
+    },
+    "implementation_sha256": {
+      "plot_figures.py": "2be0cc6f78f023c7a6a1da90868d37a63cb6eb1a122a9431ccecee371b90f92b",
+      "figure_spec.py": "e98dede3afd981f56b4abed785d5386c38486e77ac700940e91b7eac0bc4144d",
+      "audit_figure.py": "7b478badd3820796cd042a5e55ab880304e93c25c36bd56e5880521198618fdc",
+      "svg_panels.py": "a912c6d92a6cbf6158cea45e1de57f06b34471beccb66ddb17e034eb1bedf949",
+      "figure_style.py": "557aafef05ddd4157ee3ccc7c8e6e912da672b8093116079af6e25a98951c29d",
+      "statistical_figures.py": "89099c7f645200fe32dd7cf83b829a19fb383d3d8f3777a7bb782b89664eb9a3"
+    },
+    "visual_review": "Agent inspected rendered PDF and PNG; see evaluation/figure-v3/REPORT.md for scope and limitations",
+    "spec_sha256": "99f64850b8fa7626f454eeb2087aa9810ceaac19b5d5f2725071e8075a3ce1f3"
+  },
+  {
+    "example": "learning",
+    "verdict": "MECHANICAL_PASS",
+    "files": {
+      ".svg": {
+        "name": "learning.svg",
+        "sha256": "a6613c23e8e166fe3f591b26877fa18c9bd62e9a4d69343769c1f12d07750788"
+      },
+      ".pdf": {
+        "name": "learning.pdf",
+        "sha256": "d95207779264a43e7b1ab23f60dbc843eeb6a53c63c66cf05f14427b26a97ad6"
+      },
+      ".png": {
+        "name": "learning.png",
+        "sha256": "0a9cebf34d2bb72e5ae0565fb57c3f2e4bf1f42f01bca4bc612942d623d4b5c9"
+      },
+      ".spec.json": {
+        "name": "learning.spec.json",
+        "sha256": "4430291701885e72ce38cf70a985f72a39ad121326adc8489c2856dd22ee5e86"
+      },
+      ".caption.txt": {
+        "name": "learning.caption.txt",
+        "sha256": "1090f4dfd74318d1e4960b5518270b21639579f04aacfffc0d4b1c2b4234d155"
+      },
+      ".layout.json": {
+        "name": "learning.layout.json",
+        "sha256": "debe913c7af639ee0a7608200c2addae3d9f079eaa5bd874e14b2bb26c2e7250"
+      }
+    },
+    "implementation_sha256": {
+      "plot_figures.py": "2be0cc6f78f023c7a6a1da90868d37a63cb6eb1a122a9431ccecee371b90f92b",
+      "figure_spec.py": "e98dede3afd981f56b4abed785d5386c38486e77ac700940e91b7eac0bc4144d",
+      "audit_figure.py": "7b478badd3820796cd042a5e55ab880304e93c25c36bd56e5880521198618fdc",
+      "svg_panels.py": "a912c6d92a6cbf6158cea45e1de57f06b34471beccb66ddb17e034eb1bedf949",
+      "figure_style.py": "557aafef05ddd4157ee3ccc7c8e6e912da672b8093116079af6e25a98951c29d",
+      "statistical_figures.py": "89099c7f645200fe32dd7cf83b829a19fb383d3d8f3777a7bb782b89664eb9a3"
+    },
+    "visual_review": "Agent inspected rendered PDF and PNG; see evaluation/figure-v3/REPORT.md for scope and limitations",
+    "spec_sha256": "1e8995fea7f1f11e02ec25d5b1dcacf1f6dc11abd456ce50e8145a6508663a3d"
+  },
+  {
+    "example": "spectra",
+    "verdict": "MECHANICAL_PASS",
+    "files": {
+      ".svg": {
+        "name": "spectra.svg",
+        "sha256": "31a0e3ca5785b549d6a8e6e5a9b20fa267516645e19dd0dcf2e682e53fb6004f"
+      },
+      ".pdf": {
+        "name": "spectra.pdf",
+        "sha256": "77d20d22e2d1279501465c44e442510548f28f76760db7df267f0b9bc7e00524"
+      },
+      ".png": {
+        "name": "spectra.png",
+        "sha256": "14f33da48d29b709cd230387691243239eb8fe6feccb265f4dd6bf424270af2e"
+      },
+      ".spec.json": {
+        "name": "spectra.spec.json",
+        "sha256": "aa38a5099331141ff8efcdfcf2df8f21b451506fc40800266cba08abce891cae"
+      },
+      ".caption.txt": {
+        "name": "spectra.caption.txt",
+        "sha256": "d690351c34b87d42391fd5215e8164bfecf782d3702a638a837932260b3e7c57"
+      },
+      ".layout.json": {
+        "name": "spectra.layout.json",
+        "sha256": "49da25bc853df075ff10856795b66cb94b6700fec830f0911faae2ef25264dcd"
+      }
+    },
+    "implementation_sha256": {
+      "plot_figures.py": "2be0cc6f78f023c7a6a1da90868d37a63cb6eb1a122a9431ccecee371b90f92b",
+      "figure_spec.py": "e98dede3afd981f56b4abed785d5386c38486e77ac700940e91b7eac0bc4144d",
+      "audit_figure.py": "7b478badd3820796cd042a5e55ab880304e93c25c36bd56e5880521198618fdc",
+      "svg_panels.py": "a912c6d92a6cbf6158cea45e1de57f06b34471beccb66ddb17e034eb1bedf949",
+      "figure_style.py": "557aafef05ddd4157ee3ccc7c8e6e912da672b8093116079af6e25a98951c29d",
+      "statistical_figures.py": "89099c7f645200fe32dd7cf83b829a19fb383d3d8f3777a7bb782b89664eb9a3"
+    },
+    "visual_review": "Agent inspected rendered PDF and PNG; see evaluation/figure-v3/REPORT.md for scope and limitations",
+    "spec_sha256": "9651d1517d6f11eddf92a35d290b52183f2131d670add3c47166f1f8af81f6b1"
+  },
+  {
+    "example": "heatmap",
+    "verdict": "MECHANICAL_PASS",
+    "files": {
+      ".svg": {
+        "name": "heatmap.svg",
+        "sha256": "9e9ec90547dde74226410e369fbfc86a91ddfc901faf63132e3ee85edcfc5c1a"
+      },
+      ".pdf": {
+        "name": "heatmap.pdf",
+        "sha256": "75e19d5f5c814fca935ba68152a8f0565801409063aa1b737f5707211d7188e0"
+      },
+      ".png": {
+        "name": "heatmap.png",
+        "sha256": "41c964d9f2e3a7aa666c6a6531b1d024a0d11a806d9a34d5910588269132edb0"
+      },
+      ".spec.json": {
+        "name": "heatmap.spec.json",
+        "sha256": "f47c886f4a559292cb136b202ff9adbaac3a1b0ccf4eac40b8d54f8d9972c85a"
+      },
+      ".caption.txt": {
+        "name": "heatmap.caption.txt",
+        "sha256": "0c7510a1b6a0904948b72814fd0703ed9a35a49c93a59e23f0faf6f1851a175e"
+      },
+      ".layout.json": {
+        "name": "heatmap.layout.json",
+        "sha256": "4d4e0590940bce394e26ffd315d14cc3b68ddb4930c37923a6e6b98d94b84bf7"
+      }
+    },
+    "implementation_sha256": {
+      "plot_figures.py": "2be0cc6f78f023c7a6a1da90868d37a63cb6eb1a122a9431ccecee371b90f92b",
+      "figure_spec.py": "e98dede3afd981f56b4abed785d5386c38486e77ac700940e91b7eac0bc4144d",
+      "audit_figure.py": "7b478badd3820796cd042a5e55ab880304e93c25c36bd56e5880521198618fdc",
+      "svg_panels.py": "a912c6d92a6cbf6158cea45e1de57f06b34471beccb66ddb17e034eb1bedf949",
+      "figure_style.py": "557aafef05ddd4157ee3ccc7c8e6e912da672b8093116079af6e25a98951c29d",
+      "statistical_figures.py": "89099c7f645200fe32dd7cf83b829a19fb383d3d8f3777a7bb782b89664eb9a3"
+    },
+    "visual_review": "Agent inspected rendered PDF and PNG; see evaluation/figure-v3/REPORT.md for scope and limitations",
+    "spec_sha256": "a933d7a5d989495c174e3ad98698ac6e77b54506ee56e395c747aebac604eecf"
+  },
+  {
+    "example": "agreement",
+    "verdict": "MECHANICAL_PASS",
+    "files": {
+      ".svg": {
+        "name": "agreement.svg",
+        "sha256": "6cef38bfbb984e1ca6cbc10401f2ce14f71462691d5fb211fd8ae1214e292e15"
+      },
+      ".pdf": {
+        "name": "agreement.pdf",
+        "sha256": "7409d9aa6dca01897b6c0cabf93010797a9e48c9da6ab810c0dc3f1fa277df16"
+      },
+      ".png": {
+        "name": "agreement.png",
+        "sha256": "e3cd2e770618560d35a2a15304cef4c7a328a371f655d997ec85398c9141eab7"
+      },
+      ".spec.json": {
+        "name": "agreement.spec.json",
+        "sha256": "e788ea1456b6128f5ec27ef8f293279153b914c946828378b24d8689f99bd9d4"
+      },
+      ".caption.txt": {
+        "name": "agreement.caption.txt",
+        "sha256": "e6832b1e8098bfa47ce871ba90a86f6ac44dc4d1d5eb88ba3e5681d5b76ba0f5"
+      },
+      ".layout.json": {
+        "name": "agreement.layout.json",
+        "sha256": "d1a171fd2d937f0b867f62e4ef46062c4a1a185217ae40d88ab41654d6797964"
+      }
+    },
+    "implementation_sha256": {
+      "plot_figures.py": "2be0cc6f78f023c7a6a1da90868d37a63cb6eb1a122a9431ccecee371b90f92b",
+      "figure_spec.py": "e98dede3afd981f56b4abed785d5386c38486e77ac700940e91b7eac0bc4144d",
+      "audit_figure.py": "7b478badd3820796cd042a5e55ab880304e93c25c36bd56e5880521198618fdc",
+      "svg_panels.py": "a912c6d92a6cbf6158cea45e1de57f06b34471beccb66ddb17e034eb1bedf949",
+      "figure_style.py": "557aafef05ddd4157ee3ccc7c8e6e912da672b8093116079af6e25a98951c29d",
+      "statistical_figures.py": "89099c7f645200fe32dd7cf83b829a19fb383d3d8f3777a7bb782b89664eb9a3"
+    },
+    "visual_review": "Agent inspected rendered PDF and PNG; see evaluation/figure-v3/REPORT.md for scope and limitations",
+    "spec_sha256": "0791146572606077982787b97b3498eb685a6356c13831df7dc786234723f468"
+  },
+  {
+    "example": "showcase",
+    "verdict": "REVIEW_REQUIRED",
+    "files": {
+      ".svg": {
+        "name": "showcase.svg",
+        "sha256": "bdb78b91ebf56bf20085b5d12aaf22c020c787816745f28a3593d6e7c9523bb0"
+      },
+      ".pdf": {
+        "name": "showcase.pdf",
+        "sha256": "a622b8d66902a74d7e090cd6463919d9a89e97071b16b0fc1d549ec33f122006"
+      },
+      ".png": {
+        "name": "showcase.png",
+        "sha256": "c6405d4052e10ac1e8bf7407700eae8a5de8f365216a58509f5c7e7a9fba1833"
+      },
+      ".spec.json": {
+        "name": "showcase.spec.json",
+        "sha256": "da7178e4d098d34a266f9a16a16fb185f3fefae7c839e1b92389e70a0cd3d926"
+      },
+      ".caption.txt": {
+        "name": "showcase.caption.txt",
+        "sha256": "554dcb84104dfb7b937ca1b5f5393e17370fd6f64b8c4cd482367f1140439162"
+      }
+    },
+    "implementation_sha256": {
+      "plot_figures.py": "2be0cc6f78f023c7a6a1da90868d37a63cb6eb1a122a9431ccecee371b90f92b",
+      "figure_spec.py": "e98dede3afd981f56b4abed785d5386c38486e77ac700940e91b7eac0bc4144d",
+      "audit_figure.py": "7b478badd3820796cd042a5e55ab880304e93c25c36bd56e5880521198618fdc",
+      "svg_panels.py": "a912c6d92a6cbf6158cea45e1de57f06b34471beccb66ddb17e034eb1bedf949",
+      "figure_style.py": "557aafef05ddd4157ee3ccc7c8e6e912da672b8093116079af6e25a98951c29d",
+      "statistical_figures.py": "89099c7f645200fe32dd7cf83b829a19fb383d3d8f3777a7bb782b89664eb9a3"
+    },
+    "visual_review": "Agent inspected rendered PDF and PNG; see evaluation/figure-v3/REPORT.md for scope and limitations",
+    "spec_sha256": "97ae69f2b2d0b36f23bc0b9741cdbed9d80a8c35952f4f68e4d9710ed4f1351a"
   }
 ]

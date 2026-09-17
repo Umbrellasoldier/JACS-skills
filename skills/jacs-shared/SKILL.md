@@ -24,6 +24,12 @@ Read only what the requesting task needs, then return to that skill's workflow.
 - [Figure annotations](references/figure-annotations.jsonl): original source-located visual notes.
 - [Figure rules](references/figure-rules.jsonl): conditional observations with paper counts.
 - [Figure findings](references/figure-findings.md): actual coverage, held-out checks and limits.
+- [Expanded figure study](references/figure-study-v3.md): 50-paper / 199-figure scope, chart
+  families, labels, layout, PDF measurements and evidence limits.
+- [Expanded figure manifest](references/figure-corpus-v3.jsonl),
+  [new visual observations](references/figure-observations-v3.jsonl) and
+  [v0.3 conditional rules](references/figure-rules-v3.jsonl): new evidence and prior sources
+  kept distinct; original v0.2 snapshots remain unchanged.
 
 Policy, observations, scientific semantics, and project facts are different evidence classes.
 Do not present a corpus heuristic as an ACS requirement or infer results from an example profile.

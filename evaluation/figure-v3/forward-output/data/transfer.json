@@ -1,0 +1,26 @@
+{
+  "row_names": [
+    "Direct",
+    "Adapted",
+    "Calibrated"
+  ],
+  "column_names": [
+    "Neutral",
+    "Charged"
+  ],
+  "mae_kcal_mol": [
+    [
+      1.4,
+      3.0
+    ],
+    [
+      0.9,
+      1.6
+    ],
+    [
+      0.6,
+      null
+    ]
+  ],
+  "missing_meaning": "Not evaluated; not zero"
+}
