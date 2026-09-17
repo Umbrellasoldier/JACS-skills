@@ -9,6 +9,8 @@ Use only fields relevant to the current request:
 - Data source, reaction/candidate IDs, selection rule and population.
 - Quantity, unit, reference state, conditions; statistic and uncertainty where applicable.
 - Output role: main Figure, Scheme, SI or TOC; physical size and backend.
+- For mixed artwork: each layer's role and origin, exact scientific content to preserve,
+  and where generated assets will appear; see [image-generation composition](imagegen-workflow.md).
 
 Record unknown conditions as unknown. Resolve an ambiguity before it changes the data or
 claim; continue layout work that does not depend on it. Aesthetic preferences need not become
@@ -167,6 +169,11 @@ Energy `state_labels` can map stable state IDs to display labels such as `TS$_A$
 levels would overlap a stacked label. Inspect label-versus-level collisions after export.
 Workflow nodes can set `emphasis: true`; other nodes remain neutral. Default row traversal is
 serpentine, with `reading_order: row_major` available for an explicitly authored layout.
+
+The renderer has no generative-image backend or automatic AI-origin/policy detector. For a
+captioned mixed illustration, create the conceptual asset separately and compose it in an SVG
+with exact overlays. Pass that SVG through `assembly` only when appropriate for its destination.
+Keep asset provenance beside the spec as described in [image-generation guidance](imagegen-workflow.md).
 
 ### Composites and delivered captions
 
