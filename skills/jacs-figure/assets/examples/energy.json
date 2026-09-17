@@ -1,7 +1,7 @@
 {
   "data_status": "synthetic",
   "claim": "Demonstrate the figure contract using synthetic examples.",
-  "caption": "Synthetic level diagram illustrating two alternative pathways. R, TS and P are schematic states; molecular identities are not supplied in this level-only tutorial.",
+  "caption": "Synthetic Gibbs-energy levels for two schematic product channels relative to separated reactants R. TS_A and TS_B denote distinct activation maxima, and P_A and P_B denote distinct product states. All levels are illustrative, in kcal mol−1; connectors are schematic and are not computed reaction coordinates or IRC trajectories. Molecular identities and a computational method are not supplied. The illustrative thermodynamic convention is 298.15 K and a 1 mol L−1 standard state.",
   "kind": "energy",
   "profile": "double",
   "height_pt": 180,
@@ -23,13 +23,13 @@
     },
     {
       "path": "Path A",
-      "state": "TS",
+      "state": "TS_A",
       "order": 1,
       "energy": 18
     },
     {
       "path": "Path A",
-      "state": "P",
+      "state": "P_A",
       "order": 2,
       "energy": -8
     },
@@ -41,13 +41,13 @@
     },
     {
       "path": "Path B",
-      "state": "TS",
+      "state": "TS_B",
       "order": 1,
       "energy": 27
     },
     {
       "path": "Path B",
-      "state": "P",
+      "state": "P_B",
       "order": 2,
       "energy": -2
     }
@@ -55,8 +55,18 @@
   "raster_class": "color",
   "width_pt": 360,
   "state_definitions": {
-    "R": "separated reactants at the common energy zero",
-    "TS": "schematic activation maximum on each path",
-    "P": "path-dependent product state"
-  }
+    "R": "common separated-reactant reference",
+    "TS_A": "schematic maximum for channel A",
+    "TS_B": "schematic maximum for channel B",
+    "P_A": "product state of channel A",
+    "P_B": "distinct product state of channel B"
+  },
+  "caption_mode": "authored",
+  "state_labels": {
+    "TS_A": "TS$_A$",
+    "TS_B": "TS$_B$",
+    "P_A": "P$_A$",
+    "P_B": "P$_B$"
+  },
+  "level_label_layout": "inline"
 }

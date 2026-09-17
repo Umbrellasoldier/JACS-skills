@@ -129,6 +129,8 @@ class ReadabilityTests(unittest.TestCase):
         from statistical_figures import heatmap
 
         spec = example("heatmap")
+        spec["data"][-1]["value"] = None
+        spec["missing_reasons"] = {"Refined / High": "Unavailable in this test fixture"}
         spec["annotate"] = False
         spec["data"][0]["value"] = 0
         fig = plt.figure()
@@ -170,6 +172,7 @@ class CaptionDeliveryTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp:
             base = Path(temp)
             spec = example("intervals")
+            spec["caption_mode"] = "compose"
             (base / "input.json").write_text(json.dumps(spec))
             result = render(base / "input.json", base / "first")
             delivered = (base / "first.caption.txt").read_text()
@@ -185,7 +188,9 @@ class CaptionDeliveryTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp:
             base = Path(temp)
             spec = example("showcase")
+            spec["caption_mode"] = "compose"
             spec["panels"][1]["spec"] = example("learning")
+            spec["panels"][1]["spec"]["caption_mode"] = "compose"
             spec["panels"][1].update(title="Training size", role="Run-to-run variation")
             spec["population"] = "Distinct explicitly declared demonstration cohorts"
             (base / "input.json").write_text(json.dumps(spec))

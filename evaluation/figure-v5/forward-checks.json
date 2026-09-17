@@ -1,0 +1,82 @@
+{
+  "statistics_recalculated": {
+    "Control": {
+      "n": 12,
+      "mean_signed_error": -0.08333333333333333,
+      "mae": 1.9166666666666667,
+      "rmse": 3.593976442141304
+    },
+    "Candidate": {
+      "n": 12,
+      "mean_signed_error": -0.25,
+      "mae": 0.5,
+      "rmse": 0.7505553499465134
+    }
+  },
+  "pairwise_comparison": {
+    "lower": 10,
+    "equal": 2,
+    "higher": 0
+  },
+  "source_rows": 24,
+  "input_preserved": true,
+  "frozen_inputs_and_skills_unchanged": true,
+  "manifest_files_verified": 34,
+  "rerendered_from_other_directory": {
+    "figure.pdf": {
+      "sha256": "8b43a5b88b4996a485b3d4b8f7a7eaac03265fa5e47f7d98a60ed9c510bd266b",
+      "rerun_sha256": "8b43a5b88b4996a485b3d4b8f7a7eaac03265fa5e47f7d98a60ed9c510bd266b",
+      "identical": true
+    },
+    "figure.svg": {
+      "sha256": "d1be37f166a9c57e06e466d6e8bf412e97bff5f52f9d976fb57980257049e992",
+      "rerun_sha256": "d1be37f166a9c57e06e466d6e8bf412e97bff5f52f9d976fb57980257049e992",
+      "identical": true
+    },
+    "figure.png": {
+      "sha256": "f63f7ce7a1b046677a69b7f28d32dc91fc164792d96fef6cb9c2979e8ab5aa4a",
+      "rerun_sha256": "f63f7ce7a1b046677a69b7f28d32dc91fc164792d96fef6cb9c2979e8ab5aa4a",
+      "identical": true
+    },
+    "caption.txt": {
+      "sha256": "9b5708b7febcb7453d67be558ca77e471c28e80f5da71e0152a88b6977547d23",
+      "rerun_sha256": "9b5708b7febcb7453d67be558ca77e471c28e80f5da71e0152a88b6977547d23",
+      "identical": true
+    }
+  },
+  "mechanical": {
+    "pdf_sha256": "8b43a5b88b4996a485b3d4b8f7a7eaac03265fa5e47f7d98a60ed9c510bd266b",
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (240.0, 390.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 5.250 pt"
+      },
+      {
+        "check": "pdf_path_strokes",
+        "status": "PASS",
+        "detail": "45 painted path strokes checked at 0.5 pt; 0 require attention",
+        "minimum_stroke_pt": 0.6,
+        "thin_strokes": [],
+        "unknown": [],
+        "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+      },
+      {
+        "check": "measured_layout",
+        "status": "PASS",
+        "detail": "No detected text clipping or overlap; declared panel groups align"
+      }
+    ],
+    "minimum_text_pt": 5.25,
+    "scope": "MediaBox, extractable transformed text and supported path strokes; not all glyphs, image DPI, chemical identity or data correctness",
+    "verdict": "MECHANICAL_PASS",
+    "visual_review": "See QA.md for actual exported-file and caption inspection."
+  },
+  "readiness": "Synthetic teaching example only; not research-submission ready",
+  "scope": "One independent skill-use task with custom plotting code, not blind aesthetic comparison"
+}

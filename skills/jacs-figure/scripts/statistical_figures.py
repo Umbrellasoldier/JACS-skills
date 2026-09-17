@@ -11,11 +11,19 @@ def distribution(fig, spec: dict, ax=None) -> dict:
     import numpy as np
     from matplotlib.colors import to_rgba
 
-    ax = fig.subplots() if ax is None else ax
     rows = spec["data"]
     names = spec["group_order"]
     style = encodings(spec, names)
     mode = spec["display"]
+    faceted = mode == "histogram" and spec.get("facet_groups", False)
+    if faceted:
+        if ax is not None:
+            raise ValueError("Faceted histograms require their own figure")
+        axes = fig.subplots(len(names), 1, sharex=True, sharey=True, squeeze=False)[:, 0]
+        ax = axes[0]
+    else:
+        ax = fig.subplots() if ax is None else ax
+        axes = [ax]
     summaries = {}
     skipped = []
     sensitivity = {}
@@ -30,6 +38,8 @@ def distribution(fig, spec: dict, ax=None) -> dict:
         float(all_values.max()) + pad,
     )
     for i, name in enumerate(names):
+        if faceted:
+            ax = axes[i]
         values = np.array([r["value"] for r in rows if r["group"] == name])
         if transform == "absolute":
             values = np.abs(values)
@@ -80,6 +90,15 @@ def distribution(fig, spec: dict, ax=None) -> dict:
                     mode_counts.append(
                         int(np.sum((density[1:-1] > density[:-2]) & (density[1:-1] > density[2:])))
                     )
+                    if factor == 2 * spec["bandwidth"] and spec.get("show_bandwidth_sensitivity"):
+                        ax.plot(
+                            i - 0.36 * density / density.max(),
+                            grid,
+                            color=color,
+                            linestyle="--",
+                            linewidth=0.8,
+                            zorder=4,
+                        )
                 sensitivity[name] = mode_counts
             else:
                 skipped.append(name)
@@ -122,20 +141,53 @@ def distribution(fig, spec: dict, ax=None) -> dict:
                 if mode == "violin"
                 else rng.uniform(-0.22, 0.22, len(values))
             )
-            ax.scatter(
+            points = ax.scatter(
                 i + jitter,
                 values,
                 s=5 if len(values) > 40 else 8,
-                **{**point_style(style[name], open_fill=True), "linewidths": 0.45},
+                **{**point_style(style[name], open_fill=True), "linewidths": 0.6},
                 zorder=3,
                 rasterized=len(values) > 10000,
             )
+            if spec.get("point_layout") == "swarm":
+                points._jacs_swarm = (i, 0.06, 0.54) if mode == "violin" else (i, -0.45, 0.45)
     if mode in {"box", "violin"}:
         labels = [f"{textwrap.fill(n, 16)}\nn = {summaries[n]['n']}" for n in names]
         ax.set_xticks(range(len(names)), labels)
         ax.set_ylabel(axis_label(spec["metric"], spec["unit"]))
         ax.set_yscale(spec["scale"])
         ax.margins(x=0.2, y=0.12)
+        if spec.get("point_layout") == "swarm":
+            ax.set_xlim(-0.55, len(names) - 0.35)
+        if mode == "violin" and spec.get("show_bandwidth_sensitivity"):
+            from matplotlib.lines import Line2D
+
+            ax.legend(
+                handles=[
+                    Line2D([], [], color=PALETTE["axis"], linewidth=0.8, label="KDE: h"),
+                    Line2D(
+                        [],
+                        [],
+                        color=PALETTE["axis"],
+                        linewidth=0.8,
+                        linestyle="--",
+                        label="KDE: 2h",
+                    ),
+                ],
+                loc="upper right",
+                handlelength=1.7,
+            )
+    elif faceted:
+        from matplotlib.ticker import MaxNLocator
+
+        for i, panel in enumerate(axes):
+            panel.set_title(f"{names[i]} (n = {summaries[names[i]]['n']})", loc="left", fontsize=8)
+            panel.set_ylabel("Count")
+            panel.set_ylim(bottom=0)
+            panel.set_xlim(spec["bin_edges"][0], spec["bin_edges"][-1])
+            panel.yaxis.set_major_locator(MaxNLocator(nbins=3, integer=True))
+            quiet_grid(panel)
+        axes[-1].set_xlabel(axis_label(spec["metric"], spec["unit"]))
     else:
         ax.set_xlabel(axis_label(spec["metric"], spec["unit"]))
         ax.set_ylabel("Cumulative fraction" if mode == "ecdf" else "Count")
@@ -164,7 +216,11 @@ def distribution(fig, spec: dict, ax=None) -> dict:
         "violin_limit": (
             "Groups with fewer than five observations or zero spread show raw points only"
         ),
-        "jitter": "seed 0, categorical coordinate only" if mode in {"box", "violin"} else None,
+        "jitter": spec.get("point_layout", "jitter") + "; categorical coordinate only"
+        if mode in {"box", "violin"}
+        else None,
+        "faceted_histogram": bool(faceted),
+        "bandwidth_sensitivity_drawn": bool(spec.get("show_bandwidth_sensitivity")),
         "inference": "Descriptive display; no significance or uncertainty inferred",
     }
 
@@ -225,7 +281,7 @@ def curve(fig, spec: dict, ax=None) -> dict:
                 [r["lower"] for r in data],
                 [r["upper"] for r in data],
                 color=encoding["fill"],
-                alpha=0.28,
+                alpha=0.42,
                 linewidth=0,
                 zorder=1,
             )
@@ -329,14 +385,14 @@ def heatmap(fig, spec: dict, ax=None) -> dict:
                     facecolor="#F5F6F7",
                     edgecolor="#C9CED3",
                     hatch="///",
-                    linewidth=0.3,
+                    linewidth=0.6,
                 )
             )
         if spec.get("annotate", True) or np.isnan(value):
             if np.isnan(value):
                 label, color = spec.get("missing_label", "NA"), PALETTE["text"]
             else:
-                label = f"{value:.2g}"
+                label = format(value, spec.get("value_format", ".2g"))
                 rgb = np.array(cmap(norm(value))[:3])
                 linear = np.where(rgb <= 0.04045, rgb / 12.92, ((rgb + 0.055) / 1.055) ** 2.4)
                 luminance = float(linear @ [0.2126, 0.7152, 0.0722])
@@ -354,6 +410,8 @@ def heatmap(fig, spec: dict, ax=None) -> dict:
     bar.solids.set_rasterized(False)
     bar.solids.set_edgecolor("face")
     bar.set_label(axis_label(spec["quantity"], spec["unit"]), fontsize=7)
+    if spec.get("column_label"):
+        ax.set_xlabel(spec["column_label"])
     return {
         "color_scale": spec["color_scale"],
         "limits": [spec["vmin"], spec["vmax"]],

@@ -1,10 +1,10 @@
 {
   "data_status": "synthetic",
   "claim": "Demonstrate the figure contract using synthetic examples.",
-  "caption": "Synthetic prediction/reference pairs; method names identify illustrative predictors.",
+  "caption": "Synthetic activation Gibbs-energy predictions for the same six reactions per illustrative predictor. (a) Predicted versus reference values; the dashed line marks identity. (b) Signed prediction-minus-reference errors for those reactions; the dashed line marks zero. Values are in kcal mol−1. This small illustrative set does not establish predictive generalization.",
   "kind": "parity",
   "profile": "double",
-  "height_pt": 260,
+  "height_pt": 215,
   "quantity": "$\\Delta G^{\\ddagger}$",
   "unit": "kcal/mol",
   "reference": "separated reactants",
@@ -90,5 +90,7 @@
   ],
   "raster_class": "color",
   "population": "Same six synthetic reactions for both methods",
-  "quantity_definition": "Activation Gibbs energy relative to separated reactants"
+  "quantity_definition": "Activation Gibbs energy relative to separated reactants",
+  "width_pt": 400,
+  "caption_mode": "authored"
 }

@@ -1,10 +1,11 @@
 {
   "data_status": "synthetic",
   "profile": "single",
-  "height_pt": 180,
+  "height_pt": 205,
   "raster_class": "color",
   "claim": "Demonstrate an encoding with synthetic values.",
-  "caption": "Synthetic signed-error distributions for three illustrative predictors.",
+  "caption": "Synthetic activation Gibbs-energy errors (prediction minus reference), n = 32 reactions per illustrative predictor. Boxes span the first to third quartiles, center lines mark medians, and whiskers reach the most extreme observations within 1.5 interquartile ranges. All observations are shown. Horizontal offsets reduce overlap; the dashed line marks zero error.",
+  "caption_mode": "authored",
   "kind": "distribution",
   "metric": "$\\Delta G^{\\ddagger}$ error",
   "quantity_definition": "Signed activation Gibbs-energy error = prediction minus reference",
@@ -494,5 +495,6 @@
     }
   ],
   "zero_reference": true,
-  "display": "box"
+  "display": "box",
+  "point_layout": "swarm"
 }

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reproduce the synthetic v0.4 gallery; keep full bundles in ignored local storage."""
+"""Reproduce the synthetic v0.5 gallery; keep full bundles in ignored local storage."""
 
 from __future__ import annotations
 
@@ -34,6 +34,7 @@ def synthetic_specs() -> list[str]:
         "raster_class": "color",
         "claim": "Demonstrate an encoding with synthetic values.",
         "caption": "Synthetic demonstration; not results of a chemical study.",
+        "caption_mode": "authored",
     }
     values = []
     for method, scale, offset in [
@@ -65,23 +66,52 @@ def synthetic_specs() -> list[str]:
         spec = {**copy.deepcopy(base), "display": mode}
         if mode == "violin":
             spec["bandwidth"] = 0.35
+            spec["point_layout"] = "swarm"
+            spec["show_bandwidth_sensitivity"] = True
+            spec["height_pt"] = 260
             spec["caption"] = (
-                "Small synthetic samples for comparing observations and density estimates."
+                "Synthetic activation Gibbs-energy errors (prediction minus reference), "
+                "n = 32 reactions per illustrative predictor. Points show all observations; "
+                "horizontal offsets separate coincident values. Solid half violins show Gaussian "
+                "kernel density estimates with bandwidth h = 0.35 times the sample SD; dashed "
+                "curves use 2h. Each density is scaled to the same maximum width. Dark segments "
+                "denote medians. The change in lobes with bandwidth precludes interpreting "
+                "these shapes alone as distinct reaction populations."
             )
         elif mode == "box":
+            spec["point_layout"] = "swarm"
+            spec["height_pt"] = 205
             spec["caption"] = (
-                "Synthetic signed-error distributions for three illustrative predictors."
+                "Synthetic activation Gibbs-energy errors (prediction minus reference), "
+                "n = 32 reactions per illustrative predictor. Boxes span the first to third "
+                "quartiles, center lines mark medians, and whiskers reach the most extreme "
+                "observations within 1.5 interquartile ranges. All observations are shown. "
+                "Horizontal offsets reduce overlap; the dashed line marks zero error."
             )
         elif mode == "histogram":
             spec["bin_edges"] = list(range(-3, 6))
-            spec["caption"] = "Synthetic observation counts compared using common bins."
+            spec["facet_groups"] = True
+            spec["zero_reference"] = False
+            spec["height_pt"] = 285
+            spec["caption"] = (
+                "Synthetic activation Gibbs-energy errors (prediction minus reference), "
+                "n = 32 reactions per illustrative predictor. Facets share both axes and "
+                "1 kcal mol−1 bins with edges from −3 to 5 kcal mol−1. Bins include their left "
+                "edge; the last bin also includes its right edge. All observations are counted."
+            )
         else:
             spec.update(
                 value_transform="absolute",
                 metric=r"Absolute $\Delta G^{\ddagger}$ error",
                 zero_reference=False,
             )
-            spec["caption"] += " Fraction of reactions within an absolute error threshold."
+            spec["caption"] = (
+                "Empirical cumulative distributions of absolute activation Gibbs-energy errors "
+                "for three illustrative predictors (synthetic data; n = 32 reactions per group). "
+                "Each step gives the fraction with absolute prediction-minus-reference error "
+                "at or below the horizontal-axis value. Curves are unsmoothed and extend over "
+                "a common domain."
+            )
         write(name, spec)
     write(
         "intervals",
@@ -92,15 +122,31 @@ def synthetic_specs() -> list[str]:
             "quantity_definition": "Activation Gibbs-energy difference: method B minus method A",
             "unit": "kcal/mol",
             "population": "four synthetic reaction families",
-            "interval_definition": "Illustrative supplied bounds; no CI inference",
+            "estimate_definition": "Arithmetic mean of eight synthetic reaction-level differences",
+            "interval_definition": "Mean ± sample SD (ddof = 1), not a confidence interval",
+            "unit_of_analysis": "reaction",
             "reference_value": 0,
+            "caption": (
+                "Synthetic activation Gibbs-energy differences between two illustrative methods "
+                "(B minus A). Points are means of eight synthetic reaction-level "
+                "differences per illustrative reaction family; error bars show ±1 sample SD "
+                "(denominator n − 1), not confidence intervals. The dashed line denotes equal "
+                "predictions. No significance test is implied."
+            ),
             "data": [
-                {"label": label, "estimate": estimate, "lower": lo, "upper": hi}
-                for label, estimate, lo, hi in [
-                    ("Cycloaddition", -1.4, -2.1, -0.6),
-                    ("C–N coupling", -0.6, -1.1, 0.2),
-                    ("Proton transfer", 0.15, -0.35, 0.5),
-                    ("Bond dissociation", 0.85, 0.35, 1.5),
+                {
+                    "label": label,
+                    "estimate": float(np.mean(samples)),
+                    "lower": float(np.mean(samples) - np.std(samples, ddof=1)),
+                    "upper": float(np.mean(samples) + np.std(samples, ddof=1)),
+                    "replicates": samples,
+                    "n": len(samples),
+                }
+                for label, samples in [
+                    ("Cycloaddition", [-2.4, -2.0, -1.7, -1.4, -1.4, -1.1, -0.8, -0.4]),
+                    ("C–N coupling", [-1.4, -1.1, -0.8, -0.6, -0.6, -0.4, -0.1, 0.2]),
+                    ("Proton transfer", [-0.45, -0.2, 0.0, 0.15, 0.15, 0.3, 0.5, 0.75]),
+                    ("Bond dissociation", [0.05, 0.35, 0.6, 0.85, 0.85, 1.1, 1.35, 1.65]),
                 ]
             ],
         },
@@ -137,19 +183,24 @@ def synthetic_specs() -> list[str]:
             ),
             "connect_observations": True,
             "interval_definition": "Mean ± sample SD across eight synthetic runs",
-            "caption": common["caption"] + " Points: means of eight synthetic runs;"
-            " bands: ±1 sample SD; connectors are visual guides, not fitted laws.",
+            "caption": (
+                "Synthetic learning curves for three illustrative predictors. Each point is "
+                "the mean of eight independently simulated MAE values at the indicated training "
+                "set size; bands show ±1 sample SD, not a confidence interval. MAE refers to "
+                "activation Gibbs-energy predictions. Connectors guide the eye. These simulated "
+                "summaries do not establish performance on a measured or held-out test population."
+            ),
             "data": learning,
         },
     )
     spectral = []
-    for name, shift in [("State I", 0), ("State II", 35)]:
+    for name, shift in [("Model I", 0), ("Model II", 35)]:
         for x in np.linspace(1100, 1800, 151):
             y = np.exp(-(((x - 1320 - shift) / 34) ** 2)) + 0.68 * np.exp(
                 -(((x - 1625 + shift) / 55) ** 2)
             )
             spectral.append({"series": name, "x": float(x), "y": float(y)})
-    for name in ("State I", "State II"):
+    for name in ("Model I", "Model II"):
         peak = max(r["y"] for r in spectral if r["series"] == name)
         for row in spectral:
             if row["series"] == name:
@@ -169,46 +220,14 @@ def synthetic_specs() -> list[str]:
                 "Each model spectrum divided by its maximum sampled raw_y; no area normalization"
             ),
             "caption": (
-                "Synthetic model spectra. Gaussian centers: State I, 1320 and 1625 cm-1; "
-                "State II, 1355 and 1590 cm-1. Peak shifts are model inputs, "
-                "not measured chemical assignments."
+                "Synthetic two-Gaussian spectra. Centers are 1320 and 1625 cm−1 for Model I "
+                "and 1355 and 1590 cm−1 for Model II. Each curve is divided by its own maximum "
+                "sampled intensity; absolute intensities cannot be compared. Peak positions are "
+                "model inputs and carry no experimental vibrational assignments."
             ),
             "reverse_x": True,
-            "series_roles": {"State I": "model", "State II": "model"},
+            "series_roles": {"Model I": "model", "Model II": "model"},
             "data": spectral,
-        },
-    )
-    rows, cols = ["Baseline", "Transfer", "Refined"], ["In-domain", "New scaffold", "New charge"]
-    grid = [[1.3, 2.8, 4.1], [0.9, 1.7, 2.5], [0.6, 1.1, None]]
-    write(
-        "heatmap",
-        {
-            **common,
-            "kind": "heatmap",
-            "height_pt": 128,
-            "colorbar_ticks": [0, 1.5, 3, 4.5],
-            "missing_label": "NA",
-            "quantity": "MAE",
-            "unit": "kcal/mol",
-            "population": (
-                "Illustrative benchmark cells; these summaries have no reaction-level sample counts"
-            ),
-            "quantity_definition": "Illustrative MAE of activation Gibbs-energy predictions",
-            "column_definitions": {
-                "In-domain": "within the training chemical domain",
-                "New scaffold": "scaffold-held-out domain",
-                "New charge": "charge-held-out domain",
-            },
-            "row_order": rows,
-            "column_order": cols,
-            "vmin": 0,
-            "vmax": 4.5,
-            "caption": common["caption"] + " NA: unavailable; reason unspecified.",
-            "data": [
-                {"row": r, "column": c, "value": grid[i][j]}
-                for i, r in enumerate(rows)
-                for j, c in enumerate(cols)
-            ],
         },
     )
     parity = json.loads((ASSETS / "parity.json").read_text())
@@ -219,6 +238,14 @@ def synthetic_specs() -> list[str]:
         data=[],
         facet_methods=True,
         population="Same 72 synthetic reactions for every method",
+        caption_mode="authored",
+        caption=(
+            "Synthetic activation Gibbs-energy predictions for the same 72 reactions per "
+            "illustrative predictor. (a–c) Predicted versus reference values; dashed lines mark "
+            "identity. MAE is the mean absolute prediction-minus-reference error in kcal mol−1. "
+            "(d–f) Signed residuals for the corresponding methods; dashed lines mark zero error. "
+            "All methods share the same axes within each row."
+        ),
     )
     references = rng.uniform(4, 32, 72)
     for name, error in [("Baseline", 2.3), ("Transfer", 1.4), ("Refined", 0.8)]:
@@ -232,6 +259,62 @@ def synthetic_specs() -> list[str]:
                 }
             )
     write("agreement", parity)
+    # A new, fully defined example replaces the earlier untraceable summary cells.
+    # Stratification uses only the reference values; no observations are excluded.
+    strata = np.array_split(np.argsort(references), 3)
+    columns = ["Low", "Middle", "High"]
+    cells = []
+    for method in ("Baseline", "Transfer", "Refined"):
+        predictions = [r for r in parity["data"] if r["method"] == method]
+        for label, indices in zip(columns, strata, strict=True):
+            selected = [predictions[int(i)] for i in indices]
+            errors = [r["predicted"] - r["reference_value"] for r in selected]
+            cells.append(
+                {
+                    "row": method,
+                    "column": label,
+                    "value": float(np.mean(np.abs(errors))),
+                    "n": len(errors),
+                    "signed_errors": errors,
+                    "reaction_ids": [r["reaction_id"] for r in selected],
+                }
+            )
+    write(
+        "heatmap",
+        {
+            **common,
+            "kind": "heatmap",
+            "height_pt": 155,
+            "column_label": "Reference barrier stratum",
+            "value_format": ".2f",
+            "quantity": "MAE",
+            "unit": "kcal/mol",
+            "vmin": 0,
+            "vmax": 3,
+            "colorbar_ticks": [0, 1, 2, 3],
+            "population": "Same 72 synthetic reactions as the agreement example",
+            "quantity_definition": "MAE of activation Gibbs energies: prediction minus reference",
+            "column_definitions": {
+                label: {
+                    "n": len(indices),
+                    "minimum_reference": float(references[indices].min()),
+                    "maximum_reference": float(references[indices].max()),
+                }
+                for label, indices in zip(columns, strata, strict=True)
+            },
+            "row_order": ["Baseline", "Transfer", "Refined"],
+            "column_order": columns,
+            "caption": (
+                "Mean absolute activation Gibbs-energy errors for three illustrative predictors "
+                "on 72 synthetic reactions. Reactions are sorted by their reference barrier and "
+                "divided into equal low-, middle- and high-barrier strata (24 reactions per cell); "
+                "the same strata are used for every predictor. Cell labels and color both encode "
+                "MAE in kcal mol−1. All reactions are included. Strata denote "
+                "reference barriers and do not establish chemical-domain generalization."
+            ),
+            "data": cells,
+        },
+    )
     return [
         "boxplot",
         "violin",
@@ -247,7 +330,7 @@ def synthetic_specs() -> list[str]:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output-dir", type=Path, default=ROOT / "local/figure-v4/gallery")
+    parser.add_argument("--output-dir", type=Path, default=ROOT / "local/figure-v5/gallery")
     parser.add_argument(
         "--publish", action="store_true", help="Copy original PNG/SVG examples into repo"
     )
@@ -264,7 +347,7 @@ def main() -> int:
                 "verdict": qa["verdict"],
                 "files": qa["files"],
                 "implementation_sha256": qa["implementation_sha256"],
-                "visual_review": "Pending; see evaluation/figure-v4/REPORT.md for actual review",
+                "visual_review": "Pending; see evaluation/figure-v5/REPORT.md for actual review",
             }
         )
         print(name, qa["verdict"], flush=True)
@@ -285,8 +368,8 @@ def main() -> int:
         "kind": "distribution",
         "data_status": "synthetic",
         "profile": "single",
-        "claim": "Compare bias and absolute error in the same synthetic reaction cohort",
-        "caption": "Derived from the supplied prediction/reference pairs in agreement.json.",
+        "claim": "Compare signed and absolute errors in one synthetic cohort",
+        "caption": "Synthetic activation Gibbs-energy errors for three illustrative predictors.",
         "population": "Same 72 synthetic reactions per method",
         "unit_of_analysis": "reaction",
         "quantity_definition": "Activation Gibbs-energy error = prediction minus reference",
@@ -297,25 +380,30 @@ def main() -> int:
         "kind": "panel_grid",
         "profile": "double",
         "width_pt": 504,
-        "height_pt": 225,
+        "height_pt": 300,
         "columns": 2,
         "data_status": "synthetic",
-        "claim": "Characterize signed bias and absolute-error coverage in the same cohort",
+        "claim": "Characterize signed-error distributions and absolute-error coverage",
+        "caption_mode": "authored",
         "population": "Same 72 synthetic reactions and three prediction methods in both panels",
         "caption": (
-            "Synthetic activation-barrier benchmark. Both panels use all of the same "
-            "prediction/reference pairs; method labels identify illustrative predictors, "
-            "not measured performance of real methods."
+            "Synthetic activation Gibbs-energy errors for the same 72 reactions per illustrative "
+            "predictor in both panels. (a) Signed errors (prediction minus reference). Boxes span "
+            "Q1–Q3; center lines mark medians, not mean signed error; whiskers reach observations "
+            "within 1.5 interquartile ranges. Every observation is shown with horizontal offsets "
+            "to reduce overlap. (b) Unsmoothed empirical cumulative fractions at or below each "
+            "absolute-error threshold. Method labels denote illustrative predictors."
         ),
         "panels": [
             {
                 "label": "a",
-                "title": "Bias and spread",
+                "title": "Signed-error distribution",
                 "role": "Signed-error distribution",
                 "spec": {
                     **copy.deepcopy(shared),
                     "display": "box",
                     "zero_reference": True,
+                    "point_layout": "swarm",
                     "metric": r"$\Delta G^{\ddagger}$ error",
                 },
             },

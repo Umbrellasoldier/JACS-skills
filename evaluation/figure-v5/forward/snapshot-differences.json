@@ -1,0 +1,25 @@
+{
+  "changed_files": {
+    "skills/jacs-figure/assets/examples/energy.json": {
+      "snapshot_sha256": "cdef685fd752a3c47bd630f07be3dbf9649b060fa70bd4da0c8e8f56c239ee2b",
+      "release_sha256": "3ca7129539b23e9b6b8104c5a1f915f321219c97b320ec01f57a7be9326d2ff3"
+    },
+    "skills/jacs-figure/references/figure-contract.md": {
+      "snapshot_sha256": "dcf8ffa2d81f75934925abdbe45f5250b754241576782f214eb94bb24ab0348b",
+      "release_sha256": "69dcbb5477beade30e03dcc3096b3ebcd8f78df0b65d8e82989f063cabc57975"
+    },
+    "skills/jacs-figure/scripts/figure_spec.py": {
+      "snapshot_sha256": "22bdf6dfbabd4e724e7466f22418a1b70911efaa38b0c809e401b87fc21e2aba",
+      "release_sha256": "fac54085899714153373179ad856fffbb8d63e0a7239520fe03910d8a0ade47c"
+    },
+    "skills/jacs-figure/scripts/plot_figures.py": {
+      "snapshot_sha256": "283a0805caf91f998986d5922b2af34971c55b88b54b67fc2a52519ef02f76cd",
+      "release_sha256": "30e3ef081c6df6bb14dfd23b7982d62a8a19784d8c7753f8ce40165444a6d9bf"
+    },
+    "skills/jacs-figure/scripts/statistical_figures.py": {
+      "snapshot_sha256": "4fcb49c7be2ed4f6296c07b66cd020afcc269dfaba1cb51c756a3b6444f25614",
+      "release_sha256": "9a79d1fb06f0b69628129347174a0ab2402556a8417fa1098c2f2b5389f15e36"
+    }
+  },
+  "reason": "Later gallery spacing refinement and inline energy-level label support; frozen trial artifacts were not replaced."
+}

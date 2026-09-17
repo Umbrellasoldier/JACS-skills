@@ -67,6 +67,8 @@ class StatisticalDataTests(unittest.TestCase):
 
     def test_heatmap_missing_is_distinct_from_zero_and_clipping_is_rejected(self):
         spec = example("heatmap")
+        spec["data"][-1]["value"] = None
+        spec["missing_reasons"] = {"Refined / High": "Unavailable in this test fixture"}
         spec["data"][0]["value"] = 0
         result = spec_module.validate(spec)
         self.assertEqual(result["data"][0]["value"], 0)

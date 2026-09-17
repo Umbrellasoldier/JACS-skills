@@ -1,5 +1,20 @@
 # Changelog
 
+
+## 0.5.0 — 2026-09-17
+
+Translate the submission critique into conditional review guidance and a revised synthetic gallery.
+Audit painted PDF strokes through transforms and invoked Forms, distinguish filled wedges, and
+fix thin point/NA outlines. Pack categorical observations without moving measurements; show
+violin bandwidth sensitivity and common-axis histogram facets. Separate authored captions from
+reproducible facts, and distinguish technical, visual, scientific and submission readiness.
+
+Replace the undefined interval and heatmap tutorial data with explicitly defined, recomputable
+synthetic examples. Retain the 72-reaction comparison cohort, distinguish not-entered cases
+from failures, label distinct product channels, and depict proposed links before TS generation.
+The v0.4.0 examples and evaluation remain available in their release; no research results or
+new literature coverage are claimed. See evaluation/figure-v5/REPORT.md for validation limits.
+
 ## 0.4.0 — 2026-09-17
 
 Carry statistical definitions, sample sizes, references and measured error summaries into delivered

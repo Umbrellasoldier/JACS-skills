@@ -1,0 +1,5345 @@
+[
+  {
+    "kind": "distribution",
+    "verdict": "MECHANICAL_PASS",
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (240.0, 205.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 5.600 pt"
+      },
+      {
+        "check": "pdf_path_strokes",
+        "status": "PASS",
+        "detail": "128 painted path strokes checked at 0.5 pt; 0 require attention",
+        "minimum_stroke_pt": 0.5,
+        "thin_strokes": [],
+        "unknown": [],
+        "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+      },
+      {
+        "check": "measured_layout",
+        "status": "PASS",
+        "detail": "No detected text clipping or overlap; declared panel groups align"
+      }
+    ],
+    "implementation_sha256": {
+      "plot_figures.py": "30e3ef081c6df6bb14dfd23b7982d62a8a19784d8c7753f8ce40165444a6d9bf",
+      "figure_spec.py": "fac54085899714153373179ad856fffbb8d63e0a7239520fe03910d8a0ade47c",
+      "audit_figure.py": "7e36a73f510a54dd74b4463df42204a789a8157dab0f489118ed23bce0804683",
+      "svg_panels.py": "c2d7c352cd7c8679384bf57b788d717489d9e0debfbabbdc05517018bad71327",
+      "figure_style.py": "78d407a2d31955919b23a822151122971e68aef6d0b0b6b839af9192f20e762a",
+      "statistical_figures.py": "9a79d1fb06f0b69628129347174a0ab2402556a8417fa1098c2f2b5389f15e36",
+      "figure_caption.py": "6d316553eebb127f8abee00bcd940aa3b69081485487da6a133e17db79fff7d1",
+      "audit_strokes.py": "5f638360023968e015a689c35e14bc604ac17a363c05e24822dec1a0cd25b869",
+      "point_layout.py": "1d022f8261e8bc6725aa9553a5c4900bb6bec3092babeebfb0eeab05d2293e24"
+    },
+    "files": {
+      ".svg": {
+        "name": "boxplot.svg",
+        "sha256": "25f94c2b18d6ba3f6ebf0ff14e06e0dbe5489745491fc4e487e19807d40814a6"
+      },
+      ".pdf": {
+        "name": "boxplot.pdf",
+        "sha256": "d0515ca70a2c0efc60ba42b9ecfba8ea6c8ae83c4754a5ae6df9703039daf89b"
+      },
+      ".png": {
+        "name": "boxplot.png",
+        "sha256": "0a0d245c0b7a7ab535fb89e1a3810e8559d93252c2cd83d936f910cf926eef55"
+      },
+      ".spec.json": {
+        "name": "boxplot.spec.json",
+        "sha256": "72b46d9c3ea3da0fc96039a46bd39c8b76b175aa021441cd089fa9a7b90d00eb"
+      },
+      ".caption.txt": {
+        "name": "boxplot.caption.txt",
+        "sha256": "46688e0142bc6d62ce2095a3ee8b7528b1b35604a2189b463207e64798b3f702"
+      },
+      ".layout.json": {
+        "name": "boxplot.layout.json",
+        "sha256": "d9d90dce37c7911063020bc0443e81bd693759d48c733a68291b05b576d7c74a"
+      },
+      ".caption-facts.json": {
+        "name": "boxplot.caption-facts.json",
+        "sha256": "4c6af8e80557a7db4703996029d0f8194083b3be5951a0cff0c127451aaf4432"
+      }
+    },
+    "details": {
+      "encoding": {
+        "Baseline": {
+          "color": "#4E86AF",
+          "fill": "#A8CEE8",
+          "marker": "o",
+          "linestyle": "-"
+        },
+        "Transfer": {
+          "color": "#B98255",
+          "fill": "#F3C8A8",
+          "marker": "s",
+          "linestyle": "--"
+        },
+        "Refined": {
+          "color": "#428F80",
+          "fill": "#A4D6C8",
+          "marker": "^",
+          "linestyle": "-."
+        }
+      },
+      "summary": {
+        "Baseline": {
+          "n": 32,
+          "q1": -0.56775,
+          "median": 1.534,
+          "q3": 2.551,
+          "whiskers": [
+            -1.584,
+            4.956
+          ]
+        },
+        "Transfer": {
+          "n": 32,
+          "q1": -0.89275,
+          "median": 0.20350000000000001,
+          "q3": 0.9604999999999999,
+          "whiskers": [
+            -2.572,
+            2.924
+          ]
+        },
+        "Refined": {
+          "n": 32,
+          "q1": -0.4455,
+          "median": 0.08,
+          "q3": 0.5734999999999999,
+          "whiskers": [
+            -1.583,
+            1.152
+          ]
+        }
+      },
+      "display": "box",
+      "box_definition": "Q1–Q3, median, observed whiskers within 1.5 IQR; every raw point shown",
+      "violin_bandwidth_factor": null,
+      "kde_mode_counts_at_bandwidth_and_double": {},
+      "bandwidth_sensitive_groups": [],
+      "display_transform": "identity",
+      "violin_normalization": null,
+      "violin_skipped_groups": [],
+      "violin_limit": "Groups with fewer than five observations or zero spread show raw points only",
+      "jitter": "swarm; categorical coordinate only",
+      "faceted_histogram": false,
+      "bandwidth_sensitivity_drawn": false,
+      "inference": "Descriptive display; no significance or uncertainty inferred",
+      "point_layout": [
+        {
+          "n": 32,
+          "unresolved_spacing": 0,
+          "measurement_coordinates_preserved": true
+        },
+        {
+          "n": 32,
+          "unresolved_spacing": 0,
+          "measurement_coordinates_preserved": true
+        },
+        {
+          "n": 32,
+          "unresolved_spacing": 0,
+          "measurement_coordinates_preserved": true
+        }
+      ]
+    },
+    "readiness": {
+      "technical": "See mechanical findings",
+      "visual": "Requires inspection of final PDF/SVG at delivery size",
+      "scientific": "Requires data, definition and caption review",
+      "submission": "Not established by this renderer"
+    },
+    "example": "boxplot",
+    "width_pt": 240.0,
+    "height_pt": 205.0,
+    "minimum_text_pt": 5.6,
+    "caption": "Synthetic activation Gibbs-energy errors (prediction minus reference), n = 32 reactions per illustrative predictor. Boxes span the first to third quartiles, center lines mark medians, and whiskers reach the most extreme observations within 1.5 interquartile ranges. All observations are shown. Horizontal offsets reduce overlap; the dashed line marks zero error.\n",
+    "v0.4_strokes_with_new_auditor": {
+      "check": "pdf_path_strokes",
+      "status": "FAIL",
+      "detail": "128 painted path strokes checked at 0.5 pt; 96 require attention",
+      "minimum_stroke_pt": 0.45,
+      "thin_strokes": [
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        }
+      ],
+      "unknown": [],
+      "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+    }
+  },
+  {
+    "kind": "distribution",
+    "verdict": "MECHANICAL_PASS",
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (240.0, 260.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 5.600 pt"
+      },
+      {
+        "check": "pdf_path_strokes",
+        "status": "PASS",
+        "detail": "121 painted path strokes checked at 0.5 pt; 0 require attention",
+        "minimum_stroke_pt": 0.5,
+        "thin_strokes": [],
+        "unknown": [],
+        "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+      },
+      {
+        "check": "measured_layout",
+        "status": "PASS",
+        "detail": "No detected text clipping or overlap; declared panel groups align"
+      }
+    ],
+    "implementation_sha256": {
+      "plot_figures.py": "30e3ef081c6df6bb14dfd23b7982d62a8a19784d8c7753f8ce40165444a6d9bf",
+      "figure_spec.py": "fac54085899714153373179ad856fffbb8d63e0a7239520fe03910d8a0ade47c",
+      "audit_figure.py": "7e36a73f510a54dd74b4463df42204a789a8157dab0f489118ed23bce0804683",
+      "svg_panels.py": "c2d7c352cd7c8679384bf57b788d717489d9e0debfbabbdc05517018bad71327",
+      "figure_style.py": "78d407a2d31955919b23a822151122971e68aef6d0b0b6b839af9192f20e762a",
+      "statistical_figures.py": "9a79d1fb06f0b69628129347174a0ab2402556a8417fa1098c2f2b5389f15e36",
+      "figure_caption.py": "6d316553eebb127f8abee00bcd940aa3b69081485487da6a133e17db79fff7d1",
+      "audit_strokes.py": "5f638360023968e015a689c35e14bc604ac17a363c05e24822dec1a0cd25b869",
+      "point_layout.py": "1d022f8261e8bc6725aa9553a5c4900bb6bec3092babeebfb0eeab05d2293e24"
+    },
+    "files": {
+      ".svg": {
+        "name": "violin.svg",
+        "sha256": "864a987141867bc5e0fe77b8c7a0666bed28c7e53d26a56ef0ed9b9368e37842"
+      },
+      ".pdf": {
+        "name": "violin.pdf",
+        "sha256": "76861a2e8d858a1f03c996f9963fb2cb23e69675da900b0f1a31cdb8cb2bb2a9"
+      },
+      ".png": {
+        "name": "violin.png",
+        "sha256": "349c508752221c971277f4cd4723788265aded09a1a14891681dabf627dd8da0"
+      },
+      ".spec.json": {
+        "name": "violin.spec.json",
+        "sha256": "63dac1f3f5d4462d4b54706f6bfe23821d7dba599645815455e7737d52df02fb"
+      },
+      ".caption.txt": {
+        "name": "violin.caption.txt",
+        "sha256": "3bafcb49e0335fd51f1347fc6c450c77baa2f072b5e835716cd10b932903b473"
+      },
+      ".layout.json": {
+        "name": "violin.layout.json",
+        "sha256": "fe50daffb949d89e9b945377b9013a50177217e10e784b71b7659140a5ccefaf"
+      },
+      ".caption-facts.json": {
+        "name": "violin.caption-facts.json",
+        "sha256": "6ac8d9fd43866c9c3c68a450abefeafe4b4c33bfc3de5aae4884e19be26f0f95"
+      }
+    },
+    "details": {
+      "encoding": {
+        "Baseline": {
+          "color": "#4E86AF",
+          "fill": "#A8CEE8",
+          "marker": "o",
+          "linestyle": "-"
+        },
+        "Transfer": {
+          "color": "#B98255",
+          "fill": "#F3C8A8",
+          "marker": "s",
+          "linestyle": "--"
+        },
+        "Refined": {
+          "color": "#428F80",
+          "fill": "#A4D6C8",
+          "marker": "^",
+          "linestyle": "-."
+        }
+      },
+      "summary": {
+        "Baseline": {
+          "n": 32,
+          "q1": -0.56775,
+          "median": 1.534,
+          "q3": 2.551
+        },
+        "Transfer": {
+          "n": 32,
+          "q1": -0.89275,
+          "median": 0.20350000000000001,
+          "q3": 0.9604999999999999
+        },
+        "Refined": {
+          "n": 32,
+          "q1": -0.4455,
+          "median": 0.08,
+          "q3": 0.5734999999999999
+        }
+      },
+      "display": "violin",
+      "box_definition": null,
+      "violin_bandwidth_factor": 0.35,
+      "kde_mode_counts_at_bandwidth_and_double": {
+        "Baseline": [
+          3,
+          1
+        ],
+        "Transfer": [
+          2,
+          1
+        ],
+        "Refined": [
+          1,
+          1
+        ]
+      },
+      "bandwidth_sensitive_groups": [
+        "Baseline",
+        "Transfer"
+      ],
+      "display_transform": "identity",
+      "violin_normalization": "Equal maximum width; KDE computed in raw measurement units",
+      "violin_skipped_groups": [],
+      "violin_limit": "Groups with fewer than five observations or zero spread show raw points only",
+      "jitter": "swarm; categorical coordinate only",
+      "faceted_histogram": false,
+      "bandwidth_sensitivity_drawn": true,
+      "inference": "Descriptive display; no significance or uncertainty inferred",
+      "point_layout": [
+        {
+          "n": 32,
+          "unresolved_spacing": 0,
+          "measurement_coordinates_preserved": true
+        },
+        {
+          "n": 32,
+          "unresolved_spacing": 0,
+          "measurement_coordinates_preserved": true
+        },
+        {
+          "n": 32,
+          "unresolved_spacing": 0,
+          "measurement_coordinates_preserved": true
+        }
+      ]
+    },
+    "readiness": {
+      "technical": "See mechanical findings",
+      "visual": "Requires inspection of final PDF/SVG at delivery size",
+      "scientific": "Requires data, definition and caption review",
+      "submission": "Not established by this renderer"
+    },
+    "example": "violin",
+    "width_pt": 240.0,
+    "height_pt": 260.0,
+    "minimum_text_pt": 5.6,
+    "caption": "Synthetic activation Gibbs-energy errors (prediction minus reference), n = 32 reactions per illustrative predictor. Points show all observations; horizontal offsets separate coincident values. Solid half violins show Gaussian kernel density estimates with bandwidth h = 0.35 times the sample SD; dashed curves use 2h. Each density is scaled to the same maximum width. Dark segments denote medians. The change in lobes with bandwidth precludes interpreting these shapes alone as distinct reaction populations.\n",
+    "v0.4_strokes_with_new_auditor": {
+      "check": "pdf_path_strokes",
+      "status": "FAIL",
+      "detail": "116 painted path strokes checked at 0.5 pt; 96 require attention",
+      "minimum_stroke_pt": 0.45,
+      "thin_strokes": [
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        }
+      ],
+      "unknown": [],
+      "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+    }
+  },
+  {
+    "kind": "distribution",
+    "verdict": "MECHANICAL_PASS",
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (240.0, 180.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 5.600 pt"
+      },
+      {
+        "check": "pdf_path_strokes",
+        "status": "PASS",
+        "detail": "26 painted path strokes checked at 0.5 pt; 0 require attention",
+        "minimum_stroke_pt": 0.5,
+        "thin_strokes": [],
+        "unknown": [],
+        "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+      },
+      {
+        "check": "measured_layout",
+        "status": "PASS",
+        "detail": "No detected text clipping or overlap; declared panel groups align"
+      }
+    ],
+    "implementation_sha256": {
+      "plot_figures.py": "30e3ef081c6df6bb14dfd23b7982d62a8a19784d8c7753f8ce40165444a6d9bf",
+      "figure_spec.py": "fac54085899714153373179ad856fffbb8d63e0a7239520fe03910d8a0ade47c",
+      "audit_figure.py": "7e36a73f510a54dd74b4463df42204a789a8157dab0f489118ed23bce0804683",
+      "svg_panels.py": "c2d7c352cd7c8679384bf57b788d717489d9e0debfbabbdc05517018bad71327",
+      "figure_style.py": "78d407a2d31955919b23a822151122971e68aef6d0b0b6b839af9192f20e762a",
+      "statistical_figures.py": "9a79d1fb06f0b69628129347174a0ab2402556a8417fa1098c2f2b5389f15e36",
+      "figure_caption.py": "6d316553eebb127f8abee00bcd940aa3b69081485487da6a133e17db79fff7d1",
+      "audit_strokes.py": "5f638360023968e015a689c35e14bc604ac17a363c05e24822dec1a0cd25b869",
+      "point_layout.py": "1d022f8261e8bc6725aa9553a5c4900bb6bec3092babeebfb0eeab05d2293e24"
+    },
+    "files": {
+      ".svg": {
+        "name": "ecdf.svg",
+        "sha256": "5eb9db648c46a28c661c2752417e56c13804b741f24d7ff9c0f6e98d9b3d51e3"
+      },
+      ".pdf": {
+        "name": "ecdf.pdf",
+        "sha256": "ed0724c151e40ca1923fd0ae2149a7381ac45bbd2db415204a6377997f662e1f"
+      },
+      ".png": {
+        "name": "ecdf.png",
+        "sha256": "c845aa47e141c18e1b8f2c42ed701230cc0e272a23e54d79939bf56ccf93564c"
+      },
+      ".spec.json": {
+        "name": "ecdf.spec.json",
+        "sha256": "4e17f59c4ae5ddfd59534d6adaef349e535a0425d09878e232efbbaac3b19c9b"
+      },
+      ".caption.txt": {
+        "name": "ecdf.caption.txt",
+        "sha256": "019e729fda46f6a628f378841a4b7180f10696a909f80c2afef9588a606950b6"
+      },
+      ".layout.json": {
+        "name": "ecdf.layout.json",
+        "sha256": "568c9136bf4af968a334b330b1aa0abd031f44fc0eaa3cb4c97bae3cb07053a3"
+      },
+      ".caption-facts.json": {
+        "name": "ecdf.caption-facts.json",
+        "sha256": "f555637973575f944f9fbb11b6e194153700b61d7c3e50448883fedefbf12334"
+      }
+    },
+    "details": {
+      "encoding": {
+        "Baseline": {
+          "color": "#4E86AF",
+          "fill": "#A8CEE8",
+          "marker": "o",
+          "linestyle": "-"
+        },
+        "Transfer": {
+          "color": "#B98255",
+          "fill": "#F3C8A8",
+          "marker": "s",
+          "linestyle": "--"
+        },
+        "Refined": {
+          "color": "#428F80",
+          "fill": "#A4D6C8",
+          "marker": "^",
+          "linestyle": "-."
+        }
+      },
+      "summary": {
+        "Baseline": {
+          "n": 32,
+          "q1": 0.7765,
+          "median": 1.6035,
+          "q3": 2.551,
+          "cumulative_mass": 1.0
+        },
+        "Transfer": {
+          "n": 32,
+          "q1": 0.45725,
+          "median": 0.927,
+          "q3": 1.237,
+          "cumulative_mass": 1.0
+        },
+        "Refined": {
+          "n": 32,
+          "q1": 0.27899999999999997,
+          "median": 0.531,
+          "q3": 0.73575,
+          "cumulative_mass": 1.0
+        }
+      },
+      "display": "ecdf",
+      "box_definition": null,
+      "violin_bandwidth_factor": null,
+      "kde_mode_counts_at_bandwidth_and_double": {},
+      "bandwidth_sensitive_groups": [],
+      "display_transform": "absolute",
+      "violin_normalization": null,
+      "violin_skipped_groups": [],
+      "violin_limit": "Groups with fewer than five observations or zero spread show raw points only",
+      "jitter": null,
+      "faceted_histogram": false,
+      "bandwidth_sensitivity_drawn": false,
+      "inference": "Descriptive display; no significance or uncertainty inferred",
+      "point_layout": []
+    },
+    "readiness": {
+      "technical": "See mechanical findings",
+      "visual": "Requires inspection of final PDF/SVG at delivery size",
+      "scientific": "Requires data, definition and caption review",
+      "submission": "Not established by this renderer"
+    },
+    "example": "ecdf",
+    "width_pt": 240.0,
+    "height_pt": 180.0,
+    "minimum_text_pt": 5.6,
+    "caption": "Empirical cumulative distributions of absolute activation Gibbs-energy errors for three illustrative predictors (synthetic data; n = 32 reactions per group). Each step gives the fraction with absolute prediction-minus-reference error at or below the horizontal-axis value. Curves are unsmoothed and extend over a common domain.\n",
+    "v0.4_strokes_with_new_auditor": {
+      "check": "pdf_path_strokes",
+      "status": "PASS",
+      "detail": "26 painted path strokes checked at 0.5 pt; 0 require attention",
+      "minimum_stroke_pt": 0.5,
+      "thin_strokes": [],
+      "unknown": [],
+      "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+    }
+  },
+  {
+    "kind": "distribution",
+    "verdict": "MECHANICAL_PASS",
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (240.0, 285.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 5.600 pt"
+      },
+      {
+        "check": "pdf_path_strokes",
+        "status": "PASS",
+        "detail": "54 painted path strokes checked at 0.5 pt; 0 require attention",
+        "minimum_stroke_pt": 0.5,
+        "thin_strokes": [],
+        "unknown": [],
+        "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+      },
+      {
+        "check": "measured_layout",
+        "status": "PASS",
+        "detail": "No detected text clipping or overlap; declared panel groups align"
+      }
+    ],
+    "implementation_sha256": {
+      "plot_figures.py": "30e3ef081c6df6bb14dfd23b7982d62a8a19784d8c7753f8ce40165444a6d9bf",
+      "figure_spec.py": "fac54085899714153373179ad856fffbb8d63e0a7239520fe03910d8a0ade47c",
+      "audit_figure.py": "7e36a73f510a54dd74b4463df42204a789a8157dab0f489118ed23bce0804683",
+      "svg_panels.py": "c2d7c352cd7c8679384bf57b788d717489d9e0debfbabbdc05517018bad71327",
+      "figure_style.py": "78d407a2d31955919b23a822151122971e68aef6d0b0b6b839af9192f20e762a",
+      "statistical_figures.py": "9a79d1fb06f0b69628129347174a0ab2402556a8417fa1098c2f2b5389f15e36",
+      "figure_caption.py": "6d316553eebb127f8abee00bcd940aa3b69081485487da6a133e17db79fff7d1",
+      "audit_strokes.py": "5f638360023968e015a689c35e14bc604ac17a363c05e24822dec1a0cd25b869",
+      "point_layout.py": "1d022f8261e8bc6725aa9553a5c4900bb6bec3092babeebfb0eeab05d2293e24"
+    },
+    "files": {
+      ".svg": {
+        "name": "histogram.svg",
+        "sha256": "27074c5992a64b395083aa11757df89cd5d99c1c591a955096dfd8709c272df7"
+      },
+      ".pdf": {
+        "name": "histogram.pdf",
+        "sha256": "9839e6cf261a1aa91c1ec0050d36da813380d9eacb8850a4601851b3658c8be8"
+      },
+      ".png": {
+        "name": "histogram.png",
+        "sha256": "2955c4f33b009e9eb862af895bb8ac8e2ad829ae264caf846aa637438dde383c"
+      },
+      ".spec.json": {
+        "name": "histogram.spec.json",
+        "sha256": "38a9fff59d1d10076eabfb2503c9fb4b1bb0a0440ef666c3837cb12054c9038e"
+      },
+      ".caption.txt": {
+        "name": "histogram.caption.txt",
+        "sha256": "f8f95e84d82050352df1ae2e11715b02b1ba9b89df73a2bfcb0620ebdf9e243f"
+      },
+      ".layout.json": {
+        "name": "histogram.layout.json",
+        "sha256": "349092d38be9d22a259a142b58abfc7401b6e708a245b57dfd4b557e15197bac"
+      },
+      ".caption-facts.json": {
+        "name": "histogram.caption-facts.json",
+        "sha256": "1e93bb7d6e3a0b14864c4a16e1131e3d428591cbe24eb4a3c846e1ef2d3ae2c9"
+      }
+    },
+    "details": {
+      "encoding": {
+        "Baseline": {
+          "color": "#4E86AF",
+          "fill": "#A8CEE8",
+          "marker": "o",
+          "linestyle": "-"
+        },
+        "Transfer": {
+          "color": "#B98255",
+          "fill": "#F3C8A8",
+          "marker": "s",
+          "linestyle": "--"
+        },
+        "Refined": {
+          "color": "#428F80",
+          "fill": "#A4D6C8",
+          "marker": "^",
+          "linestyle": "-."
+        }
+      },
+      "summary": {
+        "Baseline": {
+          "n": 32,
+          "q1": -0.56775,
+          "median": 1.534,
+          "q3": 2.551,
+          "bin_counts": [
+            0,
+            2,
+            10,
+            0,
+            7,
+            9,
+            3,
+            1
+          ]
+        },
+        "Transfer": {
+          "n": 32,
+          "q1": -0.89275,
+          "median": 0.20350000000000001,
+          "q3": 0.9604999999999999,
+          "bin_counts": [
+            1,
+            5,
+            7,
+            13,
+            5,
+            1,
+            0,
+            0
+          ]
+        },
+        "Refined": {
+          "n": 32,
+          "q1": -0.4455,
+          "median": 0.08,
+          "q3": 0.5734999999999999,
+          "bin_counts": [
+            0,
+            2,
+            12,
+            17,
+            1,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "display": "histogram",
+      "box_definition": null,
+      "violin_bandwidth_factor": null,
+      "kde_mode_counts_at_bandwidth_and_double": {},
+      "bandwidth_sensitive_groups": [],
+      "display_transform": "identity",
+      "violin_normalization": null,
+      "violin_skipped_groups": [],
+      "violin_limit": "Groups with fewer than five observations or zero spread show raw points only",
+      "jitter": null,
+      "faceted_histogram": true,
+      "bandwidth_sensitivity_drawn": false,
+      "inference": "Descriptive display; no significance or uncertainty inferred",
+      "point_layout": []
+    },
+    "readiness": {
+      "technical": "See mechanical findings",
+      "visual": "Requires inspection of final PDF/SVG at delivery size",
+      "scientific": "Requires data, definition and caption review",
+      "submission": "Not established by this renderer"
+    },
+    "example": "histogram",
+    "width_pt": 240.0,
+    "height_pt": 285.0,
+    "minimum_text_pt": 5.6,
+    "caption": "Synthetic activation Gibbs-energy errors (prediction minus reference), n = 32 reactions per illustrative predictor. Facets share both axes and 1 kcal mol−1 bins with edges from −3 to 5 kcal mol−1. Bins include their left edge; the last bin also includes its right edge. All observations are counted.\n",
+    "v0.4_strokes_with_new_auditor": {
+      "check": "pdf_path_strokes",
+      "status": "PASS",
+      "detail": "36 painted path strokes checked at 0.5 pt; 0 require attention",
+      "minimum_stroke_pt": 0.5,
+      "thin_strokes": [],
+      "unknown": [],
+      "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+    }
+  },
+  {
+    "kind": "interval",
+    "verdict": "MECHANICAL_PASS",
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (240.0, 180.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 5.600 pt"
+      },
+      {
+        "check": "pdf_path_strokes",
+        "status": "PASS",
+        "detail": "31 painted path strokes checked at 0.5 pt; 0 require attention",
+        "minimum_stroke_pt": 0.5,
+        "thin_strokes": [],
+        "unknown": [],
+        "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+      },
+      {
+        "check": "measured_layout",
+        "status": "PASS",
+        "detail": "No detected text clipping or overlap; declared panel groups align"
+      }
+    ],
+    "implementation_sha256": {
+      "plot_figures.py": "30e3ef081c6df6bb14dfd23b7982d62a8a19784d8c7753f8ce40165444a6d9bf",
+      "figure_spec.py": "fac54085899714153373179ad856fffbb8d63e0a7239520fe03910d8a0ade47c",
+      "audit_figure.py": "7e36a73f510a54dd74b4463df42204a789a8157dab0f489118ed23bce0804683",
+      "svg_panels.py": "c2d7c352cd7c8679384bf57b788d717489d9e0debfbabbdc05517018bad71327",
+      "figure_style.py": "78d407a2d31955919b23a822151122971e68aef6d0b0b6b839af9192f20e762a",
+      "statistical_figures.py": "9a79d1fb06f0b69628129347174a0ab2402556a8417fa1098c2f2b5389f15e36",
+      "figure_caption.py": "6d316553eebb127f8abee00bcd940aa3b69081485487da6a133e17db79fff7d1",
+      "audit_strokes.py": "5f638360023968e015a689c35e14bc604ac17a363c05e24822dec1a0cd25b869",
+      "point_layout.py": "1d022f8261e8bc6725aa9553a5c4900bb6bec3092babeebfb0eeab05d2293e24"
+    },
+    "files": {
+      ".svg": {
+        "name": "intervals.svg",
+        "sha256": "33d3588f19fef3593987d98c0e0e8d42c9c580b4ea69f0cec10c30e7438a563a"
+      },
+      ".pdf": {
+        "name": "intervals.pdf",
+        "sha256": "04a2774b7531099c439214c13d2f6e511ab65129df8d7adfea8957a9293ae54a"
+      },
+      ".png": {
+        "name": "intervals.png",
+        "sha256": "8253ab68df119cb33a4d3fd103501a9ecde94145e0be20c740de7630fcb48422"
+      },
+      ".spec.json": {
+        "name": "intervals.spec.json",
+        "sha256": "be66cdde760a877178d2c5c43366c9ac650c03fbc95a29610def8eb828d6f610"
+      },
+      ".caption.txt": {
+        "name": "intervals.caption.txt",
+        "sha256": "5e362aa240686fdbd9f69e92aed2998347572c0831599666eaa94393e7a71152"
+      },
+      ".layout.json": {
+        "name": "intervals.layout.json",
+        "sha256": "e80360da35493b6aab5c09c870be634079e254184a33fdd3b8aca78266edd595"
+      },
+      ".caption-facts.json": {
+        "name": "intervals.caption-facts.json",
+        "sha256": "449be6784f19022830571d1d3d10cc686d123b1919508e3a3e9286fd48557545"
+      }
+    },
+    "details": {
+      "interval_definition": "Mean ± sample SD (ddof = 1), not a confidence interval",
+      "estimates": [
+        {
+          "label": "Cycloaddition",
+          "estimate": -1.4,
+          "lower": -2.043650304346789,
+          "upper": -0.7563496956532109,
+          "replicates": [
+            -2.4,
+            -2.0,
+            -1.7,
+            -1.4,
+            -1.4,
+            -1.1,
+            -0.8,
+            -0.4
+          ],
+          "n": 8
+        },
+        {
+          "label": "C–N coupling",
+          "estimate": -0.6,
+          "lower": -1.1154748157905348,
+          "upper": -0.0845251842094652,
+          "replicates": [
+            -1.4,
+            -1.1,
+            -0.8,
+            -0.6,
+            -0.6,
+            -0.4,
+            -0.1,
+            0.2
+          ],
+          "n": 8
+        },
+        {
+          "label": "Proton transfer",
+          "estimate": 0.15,
+          "lower": -0.22984959429452376,
+          "upper": 0.5298495942945237,
+          "replicates": [
+            -0.45,
+            -0.2,
+            0.0,
+            0.15,
+            0.15,
+            0.3,
+            0.5,
+            0.75
+          ],
+          "n": 8
+        },
+        {
+          "label": "Bond dissociation",
+          "estimate": 0.85,
+          "lower": 0.32832686752827955,
+          "upper": 1.3716731324717204,
+          "replicates": [
+            0.05,
+            0.35,
+            0.6,
+            0.85,
+            0.85,
+            1.1,
+            1.35,
+            1.65
+          ],
+          "n": 8
+        }
+      ],
+      "calculation": "Supplied estimates and bounds rendered unchanged; no interval inferred",
+      "point_layout": []
+    },
+    "readiness": {
+      "technical": "See mechanical findings",
+      "visual": "Requires inspection of final PDF/SVG at delivery size",
+      "scientific": "Requires data, definition and caption review",
+      "submission": "Not established by this renderer"
+    },
+    "example": "intervals",
+    "width_pt": 240.0,
+    "height_pt": 180.0,
+    "minimum_text_pt": 5.6,
+    "caption": "Synthetic activation Gibbs-energy differences between two illustrative methods (B minus A). Points are means of eight synthetic reaction-level differences per illustrative reaction family; error bars show ±1 sample SD (denominator n − 1), not confidence intervals. The dashed line denotes equal predictions. No significance test is implied.\n",
+    "v0.4_strokes_with_new_auditor": {
+      "check": "pdf_path_strokes",
+      "status": "PASS",
+      "detail": "31 painted path strokes checked at 0.5 pt; 0 require attention",
+      "minimum_stroke_pt": 0.5,
+      "thin_strokes": [],
+      "unknown": [],
+      "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+    }
+  },
+  {
+    "kind": "curve",
+    "verdict": "MECHANICAL_PASS",
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (240.0, 180.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 5.600 pt"
+      },
+      {
+        "check": "pdf_path_strokes",
+        "status": "PASS",
+        "detail": "61 painted path strokes checked at 0.5 pt; 0 require attention",
+        "minimum_stroke_pt": 0.5,
+        "thin_strokes": [],
+        "unknown": [],
+        "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+      },
+      {
+        "check": "measured_layout",
+        "status": "PASS",
+        "detail": "No detected text clipping or overlap; declared panel groups align"
+      }
+    ],
+    "implementation_sha256": {
+      "plot_figures.py": "30e3ef081c6df6bb14dfd23b7982d62a8a19784d8c7753f8ce40165444a6d9bf",
+      "figure_spec.py": "fac54085899714153373179ad856fffbb8d63e0a7239520fe03910d8a0ade47c",
+      "audit_figure.py": "7e36a73f510a54dd74b4463df42204a789a8157dab0f489118ed23bce0804683",
+      "svg_panels.py": "c2d7c352cd7c8679384bf57b788d717489d9e0debfbabbdc05517018bad71327",
+      "figure_style.py": "78d407a2d31955919b23a822151122971e68aef6d0b0b6b839af9192f20e762a",
+      "statistical_figures.py": "9a79d1fb06f0b69628129347174a0ab2402556a8417fa1098c2f2b5389f15e36",
+      "figure_caption.py": "6d316553eebb127f8abee00bcd940aa3b69081485487da6a133e17db79fff7d1",
+      "audit_strokes.py": "5f638360023968e015a689c35e14bc604ac17a363c05e24822dec1a0cd25b869",
+      "point_layout.py": "1d022f8261e8bc6725aa9553a5c4900bb6bec3092babeebfb0eeab05d2293e24"
+    },
+    "files": {
+      ".svg": {
+        "name": "learning.svg",
+        "sha256": "0ae1ec9bb52e033fbdedc44dd31afb3953041bf29dea82d86f3fb9b5e03d0d0b"
+      },
+      ".pdf": {
+        "name": "learning.pdf",
+        "sha256": "edbe54ccaafc621d27ce323918c658776711fd081ad9c5f387843525fdbe6a63"
+      },
+      ".png": {
+        "name": "learning.png",
+        "sha256": "7cbcad4e667ccd575192a41aa0e6b980ceedea4ad31e3ae4577305d4e7bc8694"
+      },
+      ".spec.json": {
+        "name": "learning.spec.json",
+        "sha256": "e3c1796e46bb8f316781743fb2031ac3e829b8dc0c0b1d65dbe8913b22849731"
+      },
+      ".caption.txt": {
+        "name": "learning.caption.txt",
+        "sha256": "a0f8550c00eaf293a4ca1ac9f58b390b81624d4e4aba300d1a7955efe11d2bc9"
+      },
+      ".layout.json": {
+        "name": "learning.layout.json",
+        "sha256": "0f6fabed22df8301c7a41493df7af1aef1820b4c0eb0a5e2171bd41b4b2c5d0f"
+      },
+      ".caption-facts.json": {
+        "name": "learning.caption-facts.json",
+        "sha256": "19be5d0323890d2866bef5b246ab3893f7d9abee2c22b54981fdc233a1599808"
+      }
+    },
+    "details": {
+      "encoding": {
+        "Baseline": {
+          "color": "#4E86AF",
+          "fill": "#A8CEE8",
+          "marker": "o",
+          "linestyle": "-"
+        },
+        "Transfer": {
+          "color": "#B98255",
+          "fill": "#F3C8A8",
+          "marker": "s",
+          "linestyle": "--"
+        },
+        "Refined": {
+          "color": "#428F80",
+          "fill": "#A4D6C8",
+          "marker": "^",
+          "linestyle": "-."
+        }
+      },
+      "series_roles": {
+        "Baseline": "observed",
+        "Transfer": "observed",
+        "Refined": "observed"
+      },
+      "banded_series": [
+        "Baseline",
+        "Transfer",
+        "Refined"
+      ],
+      "interval_definition": "Mean ± sample SD across eight synthetic runs",
+      "fitting": "None; supplied samples and bounds only",
+      "connectors": "Visual guides through supplied observations",
+      "point_layout": []
+    },
+    "readiness": {
+      "technical": "See mechanical findings",
+      "visual": "Requires inspection of final PDF/SVG at delivery size",
+      "scientific": "Requires data, definition and caption review",
+      "submission": "Not established by this renderer"
+    },
+    "example": "learning",
+    "width_pt": 240.0,
+    "height_pt": 180.0,
+    "minimum_text_pt": 5.6,
+    "caption": "Synthetic learning curves for three illustrative predictors. Each point is the mean of eight independently simulated MAE values at the indicated training set size; bands show ±1 sample SD, not a confidence interval. MAE refers to activation Gibbs-energy predictions. Connectors guide the eye. These simulated summaries do not establish performance on a measured or held-out test population.\n",
+    "v0.4_strokes_with_new_auditor": {
+      "check": "pdf_path_strokes",
+      "status": "PASS",
+      "detail": "61 painted path strokes checked at 0.5 pt; 0 require attention",
+      "minimum_stroke_pt": 0.5,
+      "thin_strokes": [],
+      "unknown": [],
+      "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+    }
+  },
+  {
+    "kind": "curve",
+    "verdict": "MECHANICAL_PASS",
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (240.0, 180.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 5.600 pt"
+      },
+      {
+        "check": "pdf_path_strokes",
+        "status": "PASS",
+        "detail": "26 painted path strokes checked at 0.5 pt; 0 require attention",
+        "minimum_stroke_pt": 0.5,
+        "thin_strokes": [],
+        "unknown": [],
+        "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+      },
+      {
+        "check": "measured_layout",
+        "status": "PASS",
+        "detail": "No detected text clipping or overlap; declared panel groups align"
+      }
+    ],
+    "implementation_sha256": {
+      "plot_figures.py": "30e3ef081c6df6bb14dfd23b7982d62a8a19784d8c7753f8ce40165444a6d9bf",
+      "figure_spec.py": "fac54085899714153373179ad856fffbb8d63e0a7239520fe03910d8a0ade47c",
+      "audit_figure.py": "7e36a73f510a54dd74b4463df42204a789a8157dab0f489118ed23bce0804683",
+      "svg_panels.py": "c2d7c352cd7c8679384bf57b788d717489d9e0debfbabbdc05517018bad71327",
+      "figure_style.py": "78d407a2d31955919b23a822151122971e68aef6d0b0b6b839af9192f20e762a",
+      "statistical_figures.py": "9a79d1fb06f0b69628129347174a0ab2402556a8417fa1098c2f2b5389f15e36",
+      "figure_caption.py": "6d316553eebb127f8abee00bcd940aa3b69081485487da6a133e17db79fff7d1",
+      "audit_strokes.py": "5f638360023968e015a689c35e14bc604ac17a363c05e24822dec1a0cd25b869",
+      "point_layout.py": "1d022f8261e8bc6725aa9553a5c4900bb6bec3092babeebfb0eeab05d2293e24"
+    },
+    "files": {
+      ".svg": {
+        "name": "spectra.svg",
+        "sha256": "a13246b450f0b38fa0510b992ca4f8e56c82af6d20d5db85e5a9b025444f8aca"
+      },
+      ".pdf": {
+        "name": "spectra.pdf",
+        "sha256": "6e58be30a0f7559d97929bd73893fb97e1af084649a6e92fc2e8203d54a5f964"
+      },
+      ".png": {
+        "name": "spectra.png",
+        "sha256": "c9cb4d62814d43b8f8ed7e57511da7055af6e962d5183bd17d330ac83ba73328"
+      },
+      ".spec.json": {
+        "name": "spectra.spec.json",
+        "sha256": "bd52f463b8dde46464ac04c9a497798a3046935db35074cf5e6cd557d8ff40e1"
+      },
+      ".caption.txt": {
+        "name": "spectra.caption.txt",
+        "sha256": "5c850ad3ca09dcae7d3a554e8387510bc522fa989716b1f8c4762ebf3e61308d"
+      },
+      ".layout.json": {
+        "name": "spectra.layout.json",
+        "sha256": "7a8cba57610430cb2a8eb405e3618ca86f8f81f4ccdb68ee7bf5a830394c6b46"
+      },
+      ".caption-facts.json": {
+        "name": "spectra.caption-facts.json",
+        "sha256": "aff7ba37c2a6e43fb22c198babb41ed5f5de8debb58dda1e447cffad14f1fd02"
+      }
+    },
+    "details": {
+      "encoding": {
+        "Model I": {
+          "color": "#4E86AF",
+          "fill": "#A8CEE8",
+          "marker": "o",
+          "linestyle": "-"
+        },
+        "Model II": {
+          "color": "#B98255",
+          "fill": "#F3C8A8",
+          "marker": "s",
+          "linestyle": "--"
+        }
+      },
+      "series_roles": {
+        "Model I": "model",
+        "Model II": "model"
+      },
+      "banded_series": [],
+      "interval_definition": null,
+      "fitting": "None; supplied samples and bounds only",
+      "connectors": null,
+      "point_layout": []
+    },
+    "readiness": {
+      "technical": "See mechanical findings",
+      "visual": "Requires inspection of final PDF/SVG at delivery size",
+      "scientific": "Requires data, definition and caption review",
+      "submission": "Not established by this renderer"
+    },
+    "example": "spectra",
+    "width_pt": 240.0,
+    "height_pt": 180.0,
+    "minimum_text_pt": 5.6,
+    "caption": "Synthetic two-Gaussian spectra. Centers are 1320 and 1625 cm−1 for Model I and 1355 and 1590 cm−1 for Model II. Each curve is divided by its own maximum sampled intensity; absolute intensities cannot be compared. Peak positions are model inputs and carry no experimental vibrational assignments.\n",
+    "v0.4_strokes_with_new_auditor": {
+      "check": "pdf_path_strokes",
+      "status": "PASS",
+      "detail": "26 painted path strokes checked at 0.5 pt; 0 require attention",
+      "minimum_stroke_pt": 0.5,
+      "thin_strokes": [],
+      "unknown": [],
+      "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+    }
+  },
+  {
+    "kind": "heatmap",
+    "verdict": "MECHANICAL_PASS",
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (240.0, 155.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 4.900 pt"
+      },
+      {
+        "check": "pdf_path_strokes",
+        "status": "PASS",
+        "detail": "277 painted path strokes checked at 0.5 pt; 0 require attention",
+        "minimum_stroke_pt": 0.7,
+        "thin_strokes": [],
+        "unknown": [],
+        "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+      },
+      {
+        "check": "measured_layout",
+        "status": "PASS",
+        "detail": "No detected text clipping or overlap; declared panel groups align"
+      }
+    ],
+    "implementation_sha256": {
+      "plot_figures.py": "30e3ef081c6df6bb14dfd23b7982d62a8a19784d8c7753f8ce40165444a6d9bf",
+      "figure_spec.py": "fac54085899714153373179ad856fffbb8d63e0a7239520fe03910d8a0ade47c",
+      "audit_figure.py": "7e36a73f510a54dd74b4463df42204a789a8157dab0f489118ed23bce0804683",
+      "svg_panels.py": "c2d7c352cd7c8679384bf57b788d717489d9e0debfbabbdc05517018bad71327",
+      "figure_style.py": "78d407a2d31955919b23a822151122971e68aef6d0b0b6b839af9192f20e762a",
+      "statistical_figures.py": "9a79d1fb06f0b69628129347174a0ab2402556a8417fa1098c2f2b5389f15e36",
+      "figure_caption.py": "6d316553eebb127f8abee00bcd940aa3b69081485487da6a133e17db79fff7d1",
+      "audit_strokes.py": "5f638360023968e015a689c35e14bc604ac17a363c05e24822dec1a0cd25b869",
+      "point_layout.py": "1d022f8261e8bc6725aa9553a5c4900bb6bec3092babeebfb0eeab05d2293e24"
+    },
+    "files": {
+      ".svg": {
+        "name": "heatmap.svg",
+        "sha256": "d48ca6757ae64b0706e3358af783f3b702e150505d67769dc53a319abb3fbb1a"
+      },
+      ".pdf": {
+        "name": "heatmap.pdf",
+        "sha256": "cfdfc1d138dd6750f7a82527a456f28c45c92dbb49258213d820aefc879ca690"
+      },
+      ".png": {
+        "name": "heatmap.png",
+        "sha256": "d8062dd1d5b38bdb3c1bc0b9e19ebe2d256b3873cb5b5b333038fa2721832e6d"
+      },
+      ".spec.json": {
+        "name": "heatmap.spec.json",
+        "sha256": "5c4144c0c1c1ff2620279a16810766cba1ab1ed9eb5bdaa9ee244a8204a9f5b4"
+      },
+      ".caption.txt": {
+        "name": "heatmap.caption.txt",
+        "sha256": "e5e802300ff893fc3d6f4a50396552dc7b546a3612bccec7ff0a9947f3ae848f"
+      },
+      ".layout.json": {
+        "name": "heatmap.layout.json",
+        "sha256": "a7744adb6243f45d2818457d6cd0bb29829bde27ea7467065db44be2d917b742"
+      },
+      ".caption-facts.json": {
+        "name": "heatmap.caption-facts.json",
+        "sha256": "5fae3864f4ef2beb09784e5b823b5a4256be368177c576439a485a5a322aa395"
+      }
+    },
+    "details": {
+      "color_scale": "sequential",
+      "limits": [
+        0.0,
+        3.0
+      ],
+      "center": null,
+      "missing_cells": 0,
+      "observed_cells": 9,
+      "missing_encoding": "Hatched neutral cell and explicit missing label; distinct from zero",
+      "row_order": [
+        "Baseline",
+        "Transfer",
+        "Refined"
+      ],
+      "column_order": [
+        "Low",
+        "Middle",
+        "High"
+      ],
+      "point_layout": []
+    },
+    "readiness": {
+      "technical": "See mechanical findings",
+      "visual": "Requires inspection of final PDF/SVG at delivery size",
+      "scientific": "Requires data, definition and caption review",
+      "submission": "Not established by this renderer"
+    },
+    "example": "heatmap",
+    "width_pt": 240.0,
+    "height_pt": 155.0,
+    "minimum_text_pt": 4.9,
+    "caption": "Mean absolute activation Gibbs-energy errors for three illustrative predictors on 72 synthetic reactions. Reactions are sorted by their reference barrier and divided into equal low-, middle- and high-barrier strata (24 reactions per cell); the same strata are used for every predictor. Cell labels and color both encode MAE in kcal mol−1. All reactions are included. Strata denote reference barriers and do not establish chemical-domain generalization.\n",
+    "v0.4_strokes_with_new_auditor": {
+      "check": "pdf_path_strokes",
+      "status": "FAIL",
+      "detail": "278 painted path strokes checked at 0.5 pt; 1 require attention",
+      "minimum_stroke_pt": 0.3,
+      "thin_strokes": [
+        {
+          "minimum_pt": 0.3,
+          "maximum_pt": 0.3,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "page"
+        }
+      ],
+      "unknown": [],
+      "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+    }
+  },
+  {
+    "kind": "parity",
+    "verdict": "MECHANICAL_PASS",
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (504.0, 300.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 5.600 pt"
+      },
+      {
+        "check": "pdf_path_strokes",
+        "status": "PASS",
+        "detail": "507 painted path strokes checked at 0.5 pt; 0 require attention",
+        "minimum_stroke_pt": 0.65,
+        "thin_strokes": [],
+        "unknown": [],
+        "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+      },
+      {
+        "check": "measured_layout",
+        "status": "PASS",
+        "detail": "No detected text clipping or overlap; declared panel groups align"
+      }
+    ],
+    "implementation_sha256": {
+      "plot_figures.py": "30e3ef081c6df6bb14dfd23b7982d62a8a19784d8c7753f8ce40165444a6d9bf",
+      "figure_spec.py": "fac54085899714153373179ad856fffbb8d63e0a7239520fe03910d8a0ade47c",
+      "audit_figure.py": "7e36a73f510a54dd74b4463df42204a789a8157dab0f489118ed23bce0804683",
+      "svg_panels.py": "c2d7c352cd7c8679384bf57b788d717489d9e0debfbabbdc05517018bad71327",
+      "figure_style.py": "78d407a2d31955919b23a822151122971e68aef6d0b0b6b839af9192f20e762a",
+      "statistical_figures.py": "9a79d1fb06f0b69628129347174a0ab2402556a8417fa1098c2f2b5389f15e36",
+      "figure_caption.py": "6d316553eebb127f8abee00bcd940aa3b69081485487da6a133e17db79fff7d1",
+      "audit_strokes.py": "5f638360023968e015a689c35e14bc604ac17a363c05e24822dec1a0cd25b869",
+      "point_layout.py": "1d022f8261e8bc6725aa9553a5c4900bb6bec3092babeebfb0eeab05d2293e24"
+    },
+    "files": {
+      ".svg": {
+        "name": "agreement.svg",
+        "sha256": "f40c3223eb85be3bdf7aed13043acc3d2d9c4a520678a2b0cb2fff0c52fbbcb3"
+      },
+      ".pdf": {
+        "name": "agreement.pdf",
+        "sha256": "a868f1d18912ecee4f1a8c7b886b566cd9e048c9b9c4f59a79b7a5acc5fa3faf"
+      },
+      ".png": {
+        "name": "agreement.png",
+        "sha256": "a2bc0af43add1f6712c02b56844f8660761abc80eade54c9e8e4a0dc50785d1b"
+      },
+      ".spec.json": {
+        "name": "agreement.spec.json",
+        "sha256": "3af84110f83a9a2a171a2e40f0f4226d9416f46ca1ad9f5d47629a3cd8df7875"
+      },
+      ".caption.txt": {
+        "name": "agreement.caption.txt",
+        "sha256": "47389fea3df62866aa31feb47b469d51905ed0beedbca73e57fb0de3b287dcbc"
+      },
+      ".layout.json": {
+        "name": "agreement.layout.json",
+        "sha256": "08c28c89b4701e7df187ff1a986b9fac5583eb09799de2ab550052ad7d3e373f"
+      },
+      ".caption-facts.json": {
+        "name": "agreement.caption-facts.json",
+        "sha256": "e6793b07eb5bf7de9885cea96dc481b6c76ad2a9f4d7775968f3c8746a625c5b"
+      }
+    },
+    "details": {
+      "encoding": {
+        "Baseline": {
+          "color": "#4E86AF",
+          "fill": "#A8CEE8",
+          "marker": "o",
+          "linestyle": "-"
+        },
+        "Transfer": {
+          "color": "#B98255",
+          "fill": "#F3C8A8",
+          "marker": "s",
+          "linestyle": "--"
+        },
+        "Refined": {
+          "color": "#428F80",
+          "fill": "#A4D6C8",
+          "marker": "^",
+          "linestyle": "-."
+        }
+      },
+      "metrics": {
+        "Baseline": {
+          "n": 72,
+          "mae": 1.814463843427691,
+          "rmse": 2.2684088922534436,
+          "residual": "predicted minus reference"
+        },
+        "Transfer": {
+          "n": 72,
+          "mae": 1.1706670659136362,
+          "rmse": 1.4043429299292773,
+          "residual": "predicted minus reference"
+        },
+        "Refined": {
+          "n": 72,
+          "mae": 0.514725288241358,
+          "rmse": 0.6686892202977489,
+          "residual": "predicted minus reference"
+        }
+      },
+      "faceted_methods": true,
+      "point_layout": []
+    },
+    "readiness": {
+      "technical": "See mechanical findings",
+      "visual": "Requires inspection of final PDF/SVG at delivery size",
+      "scientific": "Requires data, definition and caption review",
+      "submission": "Not established by this renderer"
+    },
+    "example": "agreement",
+    "width_pt": 504.0,
+    "height_pt": 300.0,
+    "minimum_text_pt": 5.6,
+    "caption": "Synthetic activation Gibbs-energy predictions for the same 72 reactions per illustrative predictor. (a–c) Predicted versus reference values; dashed lines mark identity. MAE is the mean absolute prediction-minus-reference error in kcal mol−1. (d–f) Signed residuals for the corresponding methods; dashed lines mark zero error. All methods share the same axes within each row.\n",
+    "v0.4_strokes_with_new_auditor": {
+      "check": "pdf_path_strokes",
+      "status": "PASS",
+      "detail": "507 painted path strokes checked at 0.5 pt; 0 require attention",
+      "minimum_stroke_pt": 0.65,
+      "thin_strokes": [],
+      "unknown": [],
+      "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+    }
+  },
+  {
+    "kind": "energy",
+    "verdict": "MECHANICAL_PASS",
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (360.0, 180.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 4.900 pt"
+      },
+      {
+        "check": "pdf_path_strokes",
+        "status": "PASS",
+        "detail": "19 painted path strokes checked at 0.5 pt; 0 require attention",
+        "minimum_stroke_pt": 0.7,
+        "thin_strokes": [],
+        "unknown": [],
+        "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+      },
+      {
+        "check": "measured_layout",
+        "status": "PASS",
+        "detail": "No detected text clipping or overlap; declared panel groups align"
+      }
+    ],
+    "implementation_sha256": {
+      "plot_figures.py": "30e3ef081c6df6bb14dfd23b7982d62a8a19784d8c7753f8ce40165444a6d9bf",
+      "figure_spec.py": "fac54085899714153373179ad856fffbb8d63e0a7239520fe03910d8a0ade47c",
+      "audit_figure.py": "7e36a73f510a54dd74b4463df42204a789a8157dab0f489118ed23bce0804683",
+      "svg_panels.py": "c2d7c352cd7c8679384bf57b788d717489d9e0debfbabbdc05517018bad71327",
+      "figure_style.py": "78d407a2d31955919b23a822151122971e68aef6d0b0b6b839af9192f20e762a",
+      "statistical_figures.py": "9a79d1fb06f0b69628129347174a0ab2402556a8417fa1098c2f2b5389f15e36",
+      "figure_caption.py": "6d316553eebb127f8abee00bcd940aa3b69081485487da6a133e17db79fff7d1",
+      "audit_strokes.py": "5f638360023968e015a689c35e14bc604ac17a363c05e24822dec1a0cd25b869",
+      "point_layout.py": "1d022f8261e8bc6725aa9553a5c4900bb6bec3092babeebfb0eeab05d2293e24"
+    },
+    "files": {
+      ".svg": {
+        "name": "energy.svg",
+        "sha256": "21508c3d51b633daf94e7991d48f63c3908a8adef0d38e7de87704874b17f669"
+      },
+      ".pdf": {
+        "name": "energy.pdf",
+        "sha256": "6f7f06670f1b6b91bdd5f4b56748b3d8641f5fe27452c28b511884c816437c07"
+      },
+      ".png": {
+        "name": "energy.png",
+        "sha256": "d40be3653a673686a873a4d0d2c60597400d5917a001a988e9b8df00de4fd694"
+      },
+      ".spec.json": {
+        "name": "energy.spec.json",
+        "sha256": "cb1ad102575dfb7d0f8601782d789de82604fcbc7f4c8b09117f6dce6b5010dd"
+      },
+      ".caption.txt": {
+        "name": "energy.caption.txt",
+        "sha256": "5b4169b888c191c39025102d01886459412e97ffd251fd55ca25fa8a89690216"
+      },
+      ".layout.json": {
+        "name": "energy.layout.json",
+        "sha256": "b4c73d53bdd6a71f3dcb718e4ae502a02bd77c2f972eeea44044d305c22cd9b7"
+      },
+      ".caption-facts.json": {
+        "name": "energy.caption-facts.json",
+        "sha256": "4d32261a54715dd70823eaa2200917eb8f700f2f98c009ced5c7cf6c8de05425"
+      }
+    },
+    "details": {
+      "encoding": {
+        "Path A": {
+          "color": "#4E86AF",
+          "fill": "#A8CEE8",
+          "marker": "o",
+          "linestyle": "--"
+        },
+        "Path B": {
+          "color": "#B98255",
+          "fill": "#F3C8A8",
+          "marker": "s",
+          "linestyle": ":"
+        }
+      },
+      "energy_reference": "separated reactants",
+      "conditions": {
+        "theory": "illustrative only",
+        "solvent": "illustrative only",
+        "temperature_K": 298.15,
+        "standard_state": "1 mol/L (illustrative)"
+      },
+      "connectors": "schematic, not an interpolated reaction path",
+      "point_layout": []
+    },
+    "readiness": {
+      "technical": "See mechanical findings",
+      "visual": "Requires inspection of final PDF/SVG at delivery size",
+      "scientific": "Requires data, definition and caption review",
+      "submission": "Not established by this renderer"
+    },
+    "example": "energy",
+    "width_pt": 360.0,
+    "height_pt": 180.0,
+    "minimum_text_pt": 4.9,
+    "caption": "Synthetic Gibbs-energy levels for two schematic product channels relative to separated reactants R. TS_A and TS_B denote distinct activation maxima, and P_A and P_B denote distinct product states. All levels are illustrative, in kcal mol−1; connectors are schematic and are not computed reaction coordinates or IRC trajectories. Molecular identities and a computational method are not supplied. The illustrative thermodynamic convention is 298.15 K and a 1 mol L−1 standard state.\n",
+    "v0.4_strokes_with_new_auditor": {
+      "check": "pdf_path_strokes",
+      "status": "PASS",
+      "detail": "19 painted path strokes checked at 0.5 pt; 0 require attention",
+      "minimum_stroke_pt": 0.7,
+      "thin_strokes": [],
+      "unknown": [],
+      "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+    }
+  },
+  {
+    "kind": "parity",
+    "verdict": "MECHANICAL_PASS",
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (400.0, 215.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 5.600 pt"
+      },
+      {
+        "check": "pdf_path_strokes",
+        "status": "PASS",
+        "detail": "56 painted path strokes checked at 0.5 pt; 0 require attention",
+        "minimum_stroke_pt": 0.65,
+        "thin_strokes": [],
+        "unknown": [],
+        "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+      },
+      {
+        "check": "measured_layout",
+        "status": "PASS",
+        "detail": "No detected text clipping or overlap; declared panel groups align"
+      }
+    ],
+    "implementation_sha256": {
+      "plot_figures.py": "30e3ef081c6df6bb14dfd23b7982d62a8a19784d8c7753f8ce40165444a6d9bf",
+      "figure_spec.py": "fac54085899714153373179ad856fffbb8d63e0a7239520fe03910d8a0ade47c",
+      "audit_figure.py": "7e36a73f510a54dd74b4463df42204a789a8157dab0f489118ed23bce0804683",
+      "svg_panels.py": "c2d7c352cd7c8679384bf57b788d717489d9e0debfbabbdc05517018bad71327",
+      "figure_style.py": "78d407a2d31955919b23a822151122971e68aef6d0b0b6b839af9192f20e762a",
+      "statistical_figures.py": "9a79d1fb06f0b69628129347174a0ab2402556a8417fa1098c2f2b5389f15e36",
+      "figure_caption.py": "6d316553eebb127f8abee00bcd940aa3b69081485487da6a133e17db79fff7d1",
+      "audit_strokes.py": "5f638360023968e015a689c35e14bc604ac17a363c05e24822dec1a0cd25b869",
+      "point_layout.py": "1d022f8261e8bc6725aa9553a5c4900bb6bec3092babeebfb0eeab05d2293e24"
+    },
+    "files": {
+      ".svg": {
+        "name": "parity.svg",
+        "sha256": "117f0db64b5b234c4e3e7d0b46d14a9ae62b0b804bafaccca9a1f5eaa5bccc39"
+      },
+      ".pdf": {
+        "name": "parity.pdf",
+        "sha256": "6bfead7a4164200f62833d9372b61af58f2cd3cd3f6f82ace4a032b3aaed0e7f"
+      },
+      ".png": {
+        "name": "parity.png",
+        "sha256": "df48d4f371219de7a68c4e73c0a6493812f25ca808c784dfade06d6d7c817c2a"
+      },
+      ".spec.json": {
+        "name": "parity.spec.json",
+        "sha256": "8e5a48e0aa7cd94e4672397c826be11f6c3857061146f19addf7ce720156e8b5"
+      },
+      ".caption.txt": {
+        "name": "parity.caption.txt",
+        "sha256": "2d8264661f47a95882dd5bc4ae7b1b38217b434fdabc813e0c34e06934bc13ce"
+      },
+      ".layout.json": {
+        "name": "parity.layout.json",
+        "sha256": "e78988099086a87a4d27f898e3bc50ffe2a8baf0ecd917fdb103ee1eadc25360"
+      },
+      ".caption-facts.json": {
+        "name": "parity.caption-facts.json",
+        "sha256": "bd5449fd5440b144a3cac4fead0a994a635b34a513304b966478d8cbf77066fb"
+      }
+    },
+    "details": {
+      "encoding": {
+        "Method A": {
+          "color": "#4E86AF",
+          "fill": "#A8CEE8",
+          "marker": "o",
+          "linestyle": "-"
+        },
+        "Method B": {
+          "color": "#B98255",
+          "fill": "#F3C8A8",
+          "marker": "s",
+          "linestyle": "--"
+        }
+      },
+      "metrics": {
+        "Method A": {
+          "n": 6,
+          "mae": 1.3333333333333333,
+          "rmse": 1.4433756729740645,
+          "residual": "predicted minus reference"
+        },
+        "Method B": {
+          "n": 6,
+          "mae": 2.8333333333333335,
+          "rmse": 3.0276503540974917,
+          "residual": "predicted minus reference"
+        }
+      },
+      "faceted_methods": false,
+      "point_layout": []
+    },
+    "readiness": {
+      "technical": "See mechanical findings",
+      "visual": "Requires inspection of final PDF/SVG at delivery size",
+      "scientific": "Requires data, definition and caption review",
+      "submission": "Not established by this renderer"
+    },
+    "example": "parity",
+    "width_pt": 400.0,
+    "height_pt": 215.0,
+    "minimum_text_pt": 5.6,
+    "caption": "Synthetic activation Gibbs-energy predictions for the same six reactions per illustrative predictor. (a) Predicted versus reference values; the dashed line marks identity. (b) Signed prediction-minus-reference errors for those reactions; the dashed line marks zero. Values are in kcal mol−1. This small illustrative set does not establish predictive generalization.\n",
+    "v0.4_strokes_with_new_auditor": {
+      "check": "pdf_path_strokes",
+      "status": "PASS",
+      "detail": "62 painted path strokes checked at 0.5 pt; 0 require attention",
+      "minimum_stroke_pt": 0.65,
+      "thin_strokes": [],
+      "unknown": [],
+      "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+    }
+  },
+  {
+    "kind": "stages",
+    "verdict": "MECHANICAL_PASS",
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (450.0, 230.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 6.000 pt"
+      },
+      {
+        "check": "pdf_path_strokes",
+        "status": "PASS",
+        "detail": "27 painted path strokes checked at 0.5 pt; 0 require attention",
+        "minimum_stroke_pt": 0.5,
+        "thin_strokes": [],
+        "unknown": [],
+        "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+      },
+      {
+        "check": "measured_layout",
+        "status": "PASS",
+        "detail": "No detected text clipping or overlap; declared panel groups align"
+      }
+    ],
+    "implementation_sha256": {
+      "plot_figures.py": "30e3ef081c6df6bb14dfd23b7982d62a8a19784d8c7753f8ce40165444a6d9bf",
+      "figure_spec.py": "fac54085899714153373179ad856fffbb8d63e0a7239520fe03910d8a0ade47c",
+      "audit_figure.py": "7e36a73f510a54dd74b4463df42204a789a8157dab0f489118ed23bce0804683",
+      "svg_panels.py": "c2d7c352cd7c8679384bf57b788d717489d9e0debfbabbdc05517018bad71327",
+      "figure_style.py": "78d407a2d31955919b23a822151122971e68aef6d0b0b6b839af9192f20e762a",
+      "statistical_figures.py": "9a79d1fb06f0b69628129347174a0ab2402556a8417fa1098c2f2b5389f15e36",
+      "figure_caption.py": "6d316553eebb127f8abee00bcd940aa3b69081485487da6a133e17db79fff7d1",
+      "audit_strokes.py": "5f638360023968e015a689c35e14bc604ac17a363c05e24822dec1a0cd25b869",
+      "point_layout.py": "1d022f8261e8bc6725aa9553a5c4900bb6bec3092babeebfb0eeab05d2293e24"
+    },
+    "files": {
+      ".svg": {
+        "name": "stages.svg",
+        "sha256": "d522419ca26b96f17dba86ef378df037e0445e06f71f19c15377c74c62b04317"
+      },
+      ".pdf": {
+        "name": "stages.pdf",
+        "sha256": "6cb14e0e7a6b9b6fe42a80ff03cd57269dd1621f65a0ac23a3db5b7054b78e14"
+      },
+      ".png": {
+        "name": "stages.png",
+        "sha256": "c8b74d9ca4c8b36496a6ef7a41eeead3d6ec21c19764ed3ef5051be3a352460e"
+      },
+      ".spec.json": {
+        "name": "stages.spec.json",
+        "sha256": "913e3d4199a92dc1d9b17fd33764b4bed4d21fcbeee00de0b9d9eb2bfbf256d2"
+      },
+      ".caption.txt": {
+        "name": "stages.caption.txt",
+        "sha256": "9be01b7daa184c6da59e432e07d51c378455634e3225c7b92d25d066d20188b2"
+      },
+      ".layout.json": {
+        "name": "stages.layout.json",
+        "sha256": "8bc4b494a0f8fde8415e485613ee3e93a858e210da66ee25eafa92c29453bfc9"
+      },
+      ".caption-facts.json": {
+        "name": "stages.caption-facts.json",
+        "sha256": "ab178afd1d1f6d187734ae2e20bce476552b3042e6de272d8e86bc909936af7d"
+      }
+    },
+    "details": {
+      "counts": [
+        {
+          "stage": "Generation",
+          "passed": 90,
+          "failed": 6,
+          "pending": 4,
+          "criterion": "a candidate was generated",
+          "entered": 100,
+          "conditional_rate": 0.9,
+          "overall_rate": 0.9
+        },
+        {
+          "stage": "TS optimization",
+          "passed": 76,
+          "failed": 10,
+          "pending": 4,
+          "criterion": "optimization met the supplied convergence criterion",
+          "entered": 90,
+          "conditional_rate": 0.8444444444444444,
+          "overall_rate": 0.76
+        },
+        {
+          "stage": "Vibrational check",
+          "passed": 70,
+          "failed": 4,
+          "pending": 2,
+          "criterion": "exactly one imaginary vibrational mode in this illustrative criterion",
+          "entered": 76,
+          "conditional_rate": 0.9210526315789473,
+          "overall_rate": 0.7
+        },
+        {
+          "stage": "IRC endpoints",
+          "passed": 61,
+          "failed": 6,
+          "pending": 3,
+          "criterion": "both endpoints matched the intended reactant/product identities",
+          "entered": 70,
+          "conditional_rate": 0.8714285714285714,
+          "overall_rate": 0.61
+        }
+      ],
+      "rate_label": "passed / entered at this stage",
+      "not_entered": "failed or pending at prior stages, never included in this stage's denominator",
+      "overall_completion": {
+        "passed": 61,
+        "initial": 100,
+        "fraction": 0.61
+      },
+      "point_layout": []
+    },
+    "readiness": {
+      "technical": "See mechanical findings",
+      "visual": "Requires inspection of final PDF/SVG at delivery size",
+      "scientific": "Requires data, definition and caption review",
+      "submission": "Not established by this renderer"
+    },
+    "example": "stages",
+    "width_pt": 450.0,
+    "height_pt": 230.0,
+    "minimum_text_pt": 6.0,
+    "caption": "Synthetic accounting of a sequential cohort of 100 reactions at one fixed illustrative snapshot. Passed, failed and pending counts are mutually exclusive among reactions entering each stage. Gray segments denote reactions not yet entered, including failures and pending cases upstream. Fractions give passed/entered for the indicated stage. At the final endpoint check, 61 of 70 entered reactions pass (87.1% conditional completion), equivalent to 61 of the original 100 reactions (61% overall completion). Final-stage gray includes 20 upstream failures and 10 upstream pending reactions. The illustrative gates are candidate generation, optimization convergence, exactly one imaginary mode, and matching both intended IRC endpoints; one imaginary mode alone does not establish a valid TS.\n",
+    "v0.4_strokes_with_new_auditor": {
+      "check": "pdf_path_strokes",
+      "status": "PASS",
+      "detail": "28 painted path strokes checked at 0.5 pt; 0 require attention",
+      "minimum_stroke_pt": 0.5,
+      "thin_strokes": [],
+      "unknown": [],
+      "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+    }
+  },
+  {
+    "kind": "comparison",
+    "verdict": "MECHANICAL_PASS",
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (240.0, 180.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 5.600 pt"
+      },
+      {
+        "check": "pdf_path_strokes",
+        "status": "PASS",
+        "detail": "40 painted path strokes checked at 0.5 pt; 0 require attention",
+        "minimum_stroke_pt": 0.65,
+        "thin_strokes": [],
+        "unknown": [],
+        "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+      },
+      {
+        "check": "measured_layout",
+        "status": "PASS",
+        "detail": "No detected text clipping or overlap; declared panel groups align"
+      }
+    ],
+    "implementation_sha256": {
+      "plot_figures.py": "30e3ef081c6df6bb14dfd23b7982d62a8a19784d8c7753f8ce40165444a6d9bf",
+      "figure_spec.py": "fac54085899714153373179ad856fffbb8d63e0a7239520fe03910d8a0ade47c",
+      "audit_figure.py": "7e36a73f510a54dd74b4463df42204a789a8157dab0f489118ed23bce0804683",
+      "svg_panels.py": "c2d7c352cd7c8679384bf57b788d717489d9e0debfbabbdc05517018bad71327",
+      "figure_style.py": "78d407a2d31955919b23a822151122971e68aef6d0b0b6b839af9192f20e762a",
+      "statistical_figures.py": "9a79d1fb06f0b69628129347174a0ab2402556a8417fa1098c2f2b5389f15e36",
+      "figure_caption.py": "6d316553eebb127f8abee00bcd940aa3b69081485487da6a133e17db79fff7d1",
+      "audit_strokes.py": "5f638360023968e015a689c35e14bc604ac17a363c05e24822dec1a0cd25b869",
+      "point_layout.py": "1d022f8261e8bc6725aa9553a5c4900bb6bec3092babeebfb0eeab05d2293e24"
+    },
+    "files": {
+      ".svg": {
+        "name": "comparison.svg",
+        "sha256": "2b6d28b435ca633dbe7ac01333bc3b6f4f9b0f383c2f4d9eef8db98172ac0adc"
+      },
+      ".pdf": {
+        "name": "comparison.pdf",
+        "sha256": "368e34386278b82907ab96af6b7833419ce4409e6f6d9e002d187c4d8f13b3bc"
+      },
+      ".png": {
+        "name": "comparison.png",
+        "sha256": "c0fce5d1ae5e0bbab2d7f11efc6ae0982ec905694668b630c1317e5c729b218c"
+      },
+      ".spec.json": {
+        "name": "comparison.spec.json",
+        "sha256": "e9a6e8ee39545b992e8aadddbeca3c408167521c0ae00f4684a0fea423edd712"
+      },
+      ".caption.txt": {
+        "name": "comparison.caption.txt",
+        "sha256": "0d6995db1a7990742a9884eb41cb501fea6e08177e1e091eb32a9a82bc4328f2"
+      },
+      ".layout.json": {
+        "name": "comparison.layout.json",
+        "sha256": "8799255cd24c109684594664b2638bd2c776f3813035da5d6be34e5f414aa4e9"
+      },
+      ".caption-facts.json": {
+        "name": "comparison.caption-facts.json",
+        "sha256": "f07c57400f64b4b875782f72d8c053c1ac6038d9ef02f5027ce46ed3de4b91bc"
+      }
+    },
+    "details": {
+      "category_offsets_by_reaction": {
+        "r01": -0.14,
+        "r02": -0.084,
+        "r03": -0.027999999999999997,
+        "r04": 0.028000000000000025,
+        "r05": 0.08400000000000002,
+        "r06": 0.14
+      },
+      "encoding": {
+        "Baseline": {
+          "color": "#4E86AF",
+          "fill": "#A8CEE8",
+          "marker": "o",
+          "linestyle": "-"
+        },
+        "Method A": {
+          "color": "#B98255",
+          "fill": "#F3C8A8",
+          "marker": "s",
+          "linestyle": "--"
+        },
+        "Method B": {
+          "color": "#428F80",
+          "fill": "#A4D6C8",
+          "marker": "^",
+          "linestyle": "-."
+        }
+      },
+      "summary": {
+        "Baseline": {
+          "n": 6,
+          "median": 5.5
+        },
+        "Method A": {
+          "n": 6,
+          "median": 3.5
+        },
+        "Method B": {
+          "n": 6,
+          "median": 2.5
+        }
+      },
+      "paired_lines": "same reaction across methods",
+      "black_segment": "median; no uncertainty interval inferred",
+      "point_layout": []
+    },
+    "readiness": {
+      "technical": "See mechanical findings",
+      "visual": "Requires inspection of final PDF/SVG at delivery size",
+      "scientific": "Requires data, definition and caption review",
+      "submission": "Not established by this renderer"
+    },
+    "example": "comparison",
+    "width_pt": 240.0,
+    "height_pt": 180.0,
+    "minimum_text_pt": 5.6,
+    "caption": "Synthetic absolute activation Gibbs-energy errors for the same six reactions per illustrative method. Points show all observations; pale connectors join the same reaction across methods, and horizontal offsets preserve coincident values. Dark segments denote medians (Baseline, 5.5; Method A, 3.5; Method B, 2.5 kcal mol−1), not uncertainty intervals. No significance inference is made from the connector slopes.\n",
+    "v0.4_strokes_with_new_auditor": {
+      "check": "pdf_path_strokes",
+      "status": "PASS",
+      "detail": "40 painted path strokes checked at 0.5 pt; 0 require attention",
+      "minimum_stroke_pt": 0.5,
+      "thin_strokes": [],
+      "unknown": [],
+      "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+    }
+  },
+  {
+    "kind": "workflow",
+    "verdict": "MECHANICAL_PASS",
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (504.0, 175.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 6.000 pt"
+      },
+      {
+        "check": "pdf_path_strokes",
+        "status": "PASS",
+        "detail": "16 painted path strokes checked at 0.5 pt; 0 require attention",
+        "minimum_stroke_pt": 0.8,
+        "thin_strokes": [],
+        "unknown": [],
+        "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+      },
+      {
+        "check": "measured_layout",
+        "status": "PASS",
+        "detail": "No detected text clipping or overlap; declared panel groups align"
+      }
+    ],
+    "implementation_sha256": {
+      "plot_figures.py": "30e3ef081c6df6bb14dfd23b7982d62a8a19784d8c7753f8ce40165444a6d9bf",
+      "figure_spec.py": "fac54085899714153373179ad856fffbb8d63e0a7239520fe03910d8a0ade47c",
+      "audit_figure.py": "7e36a73f510a54dd74b4463df42204a789a8157dab0f489118ed23bce0804683",
+      "svg_panels.py": "c2d7c352cd7c8679384bf57b788d717489d9e0debfbabbdc05517018bad71327",
+      "figure_style.py": "78d407a2d31955919b23a822151122971e68aef6d0b0b6b839af9192f20e762a",
+      "statistical_figures.py": "9a79d1fb06f0b69628129347174a0ab2402556a8417fa1098c2f2b5389f15e36",
+      "figure_caption.py": "6d316553eebb127f8abee00bcd940aa3b69081485487da6a133e17db79fff7d1",
+      "audit_strokes.py": "5f638360023968e015a689c35e14bc604ac17a363c05e24822dec1a0cd25b869",
+      "point_layout.py": "1d022f8261e8bc6725aa9553a5c4900bb6bec3092babeebfb0eeab05d2293e24"
+    },
+    "files": {
+      ".svg": {
+        "name": "workflow.svg",
+        "sha256": "8cf5635a5a9f058db12a11632d7d737cb9a4171d2f604b6e33b16f0901148790"
+      },
+      ".pdf": {
+        "name": "workflow.pdf",
+        "sha256": "9ae2145ab2100faabb9ce38eb4a71cc0a2eeb872bdb2964b703a5872b4cc2261"
+      },
+      ".png": {
+        "name": "workflow.png",
+        "sha256": "e131450c13f93837681799d111af0aa2d3dfe2d9f00fbf1ebe8e20cee3f88ac9"
+      },
+      ".spec.json": {
+        "name": "workflow.spec.json",
+        "sha256": "d2c5153df2adff1b905d35dc631593fb2518cc519f23f1f3802507d184ece4c2"
+      },
+      ".caption.txt": {
+        "name": "workflow.caption.txt",
+        "sha256": "ceaeca07b183d4e87112d81b7ef6fd1e577aba3f90d4587867d8f3bc7cbb3617"
+      },
+      ".layout.json": {
+        "name": "workflow.layout.json",
+        "sha256": "bf32657ceacd260aa3776b5bab4e19ac7eccfee45a29c356f764c3ef1cc71d64"
+      },
+      ".caption-facts.json": {
+        "name": "workflow.caption-facts.json",
+        "sha256": "901fb629e6b928a427ed4ee5197585edf4aa5230838c283d505e123d8340e6b5"
+      }
+    },
+    "details": {
+      "nodes": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "edges": [
+        [
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "2"
+        ],
+        [
+          "2",
+          "3"
+        ],
+        [
+          "3",
+          "4"
+        ],
+        [
+          "4",
+          "5"
+        ]
+      ],
+      "meaning": "author-supplied process or concept; arrows do not independently establish mechanism",
+      "point_layout": []
+    },
+    "readiness": {
+      "technical": "See mechanical findings",
+      "visual": "Requires inspection of final PDF/SVG at delivery size",
+      "scientific": "Requires data, definition and caption review",
+      "submission": "Not established by this renderer"
+    },
+    "example": "workflow",
+    "width_pt": 504.0,
+    "height_pt": 175.0,
+    "minimum_text_pt": 6.0,
+    "caption": "Synthetic concept diagram of a transition-state search workflow, read left to right in the upper row and right to left below. Atom-mapped endpoint graphs specify candidate bond edits; a separate embedding step must turn proposed connectivity into 3D seeds. Blue boxes identify proposal-generation modules. Subsequent TS optimization, vibrational characterization, and IRC endpoint matching are separate validation operations. Arrows show intended information flow, not demonstrated success or a chemical mechanism. No particular embedding algorithm, ranking rule, or measured efficiency is asserted.\n",
+    "v0.4_strokes_with_new_auditor": {
+      "check": "pdf_path_strokes",
+      "status": "PASS",
+      "detail": "16 painted path strokes checked at 0.5 pt; 0 require attention",
+      "minimum_stroke_pt": 0.8,
+      "thin_strokes": [],
+      "unknown": [],
+      "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+    }
+  },
+  {
+    "kind": "structures",
+    "verdict": "REVIEW_REQUIRED",
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (240.0, 124.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 6.000 pt"
+      },
+      {
+        "check": "pdf_path_strokes",
+        "status": "WARN",
+        "detail": "31 painted path strokes checked at 0.5 pt; 1 require attention",
+        "minimum_stroke_pt": 0.4,
+        "thin_strokes": [
+          {
+            "minimum_pt": 0.4,
+            "maximum_pt": 0.4,
+            "status": "WARN",
+            "filled_same_color": true,
+            "object": "page"
+          }
+        ],
+        "unknown": [],
+        "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+      },
+      {
+        "check": "embedded_panel_layout",
+        "status": "UNKNOWN",
+        "detail": "SVG labels, molecular bonds and panel collisions need visual inspection"
+      }
+    ],
+    "implementation_sha256": {
+      "plot_figures.py": "30e3ef081c6df6bb14dfd23b7982d62a8a19784d8c7753f8ce40165444a6d9bf",
+      "figure_spec.py": "fac54085899714153373179ad856fffbb8d63e0a7239520fe03910d8a0ade47c",
+      "audit_figure.py": "7e36a73f510a54dd74b4463df42204a789a8157dab0f489118ed23bce0804683",
+      "svg_panels.py": "c2d7c352cd7c8679384bf57b788d717489d9e0debfbabbdc05517018bad71327",
+      "figure_style.py": "78d407a2d31955919b23a822151122971e68aef6d0b0b6b839af9192f20e762a",
+      "statistical_figures.py": "9a79d1fb06f0b69628129347174a0ab2402556a8417fa1098c2f2b5389f15e36",
+      "figure_caption.py": "6d316553eebb127f8abee00bcd940aa3b69081485487da6a133e17db79fff7d1",
+      "audit_strokes.py": "5f638360023968e015a689c35e14bc604ac17a363c05e24822dec1a0cd25b869",
+      "point_layout.py": "1d022f8261e8bc6725aa9553a5c4900bb6bec3092babeebfb0eeab05d2293e24"
+    },
+    "files": {
+      ".svg": {
+        "name": "structures.svg",
+        "sha256": "d541057e831f498131ee14b212cc34093cb2a74d8afa71489277b1b7306b2cbe"
+      },
+      ".pdf": {
+        "name": "structures.pdf",
+        "sha256": "108fb8163b51f790a781ad85247df8dd58ffd965b43a4f1ec3dfc59590b17954"
+      },
+      ".png": {
+        "name": "structures.png",
+        "sha256": "41e4bcc768414eb91334e083b3d3c02744b5fc10a14ded30e1dcd886b0b84af9"
+      },
+      ".spec.json": {
+        "name": "structures.spec.json",
+        "sha256": "3f87dba8650c7bdefa108f875af1c69cb249277ee686f32e6a0b0d5643b616ee"
+      },
+      ".caption.txt": {
+        "name": "structures.caption.txt",
+        "sha256": "80cf792612e6928943bf06384f7589682c6f895d4cd74e38ec7b6306d77b1280"
+      },
+      ".caption-facts.json": {
+        "name": "structures.caption-facts.json",
+        "sha256": "d5358c4f68e5271348230bf00e1aecbbd55e128b82bc11252bcd85f79fe7ee18"
+      }
+    },
+    "details": {
+      "panels": [
+        {
+          "panel": "isomer-a",
+          "input_smiles": "C[C@H](O)C(=O)O",
+          "canonical_isomeric_smiles": "C[C@H](O)C(=O)O",
+          "atom_count": 6,
+          "formal_charge": 0,
+          "highlighted_bond_atom_pairs": [],
+          "proposed_bond_atom_pairs": [],
+          "graph_convention": null,
+          "geometry": "2D depiction, not optimized or experimentally measured geometry"
+        },
+        {
+          "panel": "isomer-b",
+          "input_smiles": "C[C@@H](O)C(=O)O",
+          "canonical_isomeric_smiles": "C[C@@H](O)C(=O)O",
+          "atom_count": 6,
+          "formal_charge": 0,
+          "highlighted_bond_atom_pairs": [],
+          "proposed_bond_atom_pairs": [],
+          "graph_convention": null,
+          "geometry": "2D depiction, not optimized or experimentally measured geometry"
+        }
+      ],
+      "layout": "uniform cells; embedded label/glyph geometry requires PDF and visual review"
+    },
+    "readiness": {
+      "technical": "See mechanical findings",
+      "visual": "Requires inspection of final PDF/SVG at delivery size",
+      "scientific": "Requires data, definition and caption review",
+      "submission": "Not established by this renderer"
+    },
+    "example": "structures",
+    "width_pt": 240.0,
+    "height_pt": 124.0,
+    "minimum_text_pt": 6.0,
+    "caption": "Synthetic illustration of two-dimensional lactic-acid stereochemical depictions. Wedges specify the supplied stereochemistry; the corresponding canonical isomeric SMILES retain distinct S and R configurations. These drawings are not optimized geometries, and their displayed bond lengths carry no structural measurements.\n",
+    "v0.4_strokes_with_new_auditor": {
+      "check": "pdf_path_strokes",
+      "status": "WARN",
+      "detail": "31 painted path strokes checked at 0.5 pt; 1 require attention",
+      "minimum_stroke_pt": 0.4,
+      "thin_strokes": [
+        {
+          "minimum_pt": 0.4,
+          "maximum_pt": 0.4,
+          "status": "WARN",
+          "filled_same_color": true,
+          "object": "page"
+        }
+      ],
+      "unknown": [],
+      "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+    }
+  },
+  {
+    "kind": "structures",
+    "verdict": "REVIEW_REQUIRED",
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (234.0, 126.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 6.000 pt"
+      },
+      {
+        "check": "pdf_path_strokes",
+        "status": "PASS",
+        "detail": "23 painted path strokes checked at 0.5 pt; 0 require attention",
+        "minimum_stroke_pt": 0.8,
+        "thin_strokes": [],
+        "unknown": [],
+        "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+      },
+      {
+        "check": "embedded_panel_layout",
+        "status": "UNKNOWN",
+        "detail": "SVG labels, molecular bonds and panel collisions need visual inspection"
+      }
+    ],
+    "implementation_sha256": {
+      "plot_figures.py": "30e3ef081c6df6bb14dfd23b7982d62a8a19784d8c7753f8ce40165444a6d9bf",
+      "figure_spec.py": "fac54085899714153373179ad856fffbb8d63e0a7239520fe03910d8a0ade47c",
+      "audit_figure.py": "7e36a73f510a54dd74b4463df42204a789a8157dab0f489118ed23bce0804683",
+      "svg_panels.py": "c2d7c352cd7c8679384bf57b788d717489d9e0debfbabbdc05517018bad71327",
+      "figure_style.py": "78d407a2d31955919b23a822151122971e68aef6d0b0b6b839af9192f20e762a",
+      "statistical_figures.py": "9a79d1fb06f0b69628129347174a0ab2402556a8417fa1098c2f2b5389f15e36",
+      "figure_caption.py": "6d316553eebb127f8abee00bcd940aa3b69081485487da6a133e17db79fff7d1",
+      "audit_strokes.py": "5f638360023968e015a689c35e14bc604ac17a363c05e24822dec1a0cd25b869",
+      "point_layout.py": "1d022f8261e8bc6725aa9553a5c4900bb6bec3092babeebfb0eeab05d2293e24"
+    },
+    "files": {
+      ".svg": {
+        "name": "toc.svg",
+        "sha256": "a978964b97197fa431c114ae57b635e6cc7c3a12953db9310df515ebcdf0ed94"
+      },
+      ".pdf": {
+        "name": "toc.pdf",
+        "sha256": "36bbb4378d685c40dd39eca84bac568817e87a52f51701b28f7ee25ab6180d17"
+      },
+      ".png": {
+        "name": "toc.png",
+        "sha256": "2bcfde85379d121a2b394d47501ebf22d78e4dbb6619d6062cb9ab625f5039fb"
+      },
+      ".spec.json": {
+        "name": "toc.spec.json",
+        "sha256": "6f34abad60468189950a6c339b238363ca74e93bf9638db28bec609b5859a959"
+      },
+      ".caption.txt": {
+        "name": "toc.caption.txt",
+        "sha256": "0838618b7705e30be95912b99c3eba35eb5177653e6b42d8f33d5e02cddd9a2b"
+      },
+      ".caption-facts.json": {
+        "name": "toc.caption-facts.json",
+        "sha256": "a5ac0dc4ba793c938c57e3c0fd65c69c4a43b7b2b5b0394cda3522ef5e5725ef"
+      },
+      ".tiff": {
+        "name": "toc.tiff",
+        "sha256": "cf5d6bff4289282a047f36832dbc3b3814f989b0f165abb61cd10ec9767022fa"
+      }
+    },
+    "details": {
+      "panels": [
+        {
+          "panel": "reactants",
+          "input_smiles": "C=CC=C.C=C",
+          "canonical_isomeric_smiles": "C=C.C=CC=C",
+          "atom_count": 6,
+          "formal_charge": 0,
+          "fragment_separators": "+",
+          "geometry": "2D depiction, not a TS geometry"
+        },
+        {
+          "panel": "proposal",
+          "input_smiles": "C1C=CCCC1",
+          "canonical_isomeric_smiles": "C1=CCCCC1",
+          "atom_count": 6,
+          "formal_charge": 0,
+          "highlighted_bond_atom_pairs": [],
+          "proposed_bond_atom_pairs": [
+            [
+              3,
+              4
+            ],
+            [
+              5,
+              0
+            ]
+          ],
+          "graph_convention": "Dashed edges are proposed links, not bond orders or measured distances",
+          "geometry": "2D depiction, not optimized or experimentally measured geometry"
+        }
+      ],
+      "layout": "uniform cells; embedded label/glyph geometry requires PDF and visual review"
+    },
+    "readiness": {
+      "technical": "See mechanical findings",
+      "visual": "Requires inspection of final PDF/SVG at delivery size",
+      "scientific": "Requires data, definition and caption review",
+      "submission": "Not established by this renderer"
+    },
+    "example": "toc",
+    "width_pt": 234.0,
+    "height_pt": 126.0,
+    "minimum_text_pt": 6.0,
+    "caption": "Synthetic concept graphic for a butadiene–ethene cycloaddition. The plus sign separates reactants; dashed blue links in the candidate graph mark proposed C–C connections. Solid edges provide a schematic graph context. Dashed links are an editing convention, not measured partial bonds, fractional bond orders or an optimized TS geometry. Converting a graph into 3D seeds requires a separate embedding procedure, followed by TS optimization, vibrational characterization and IRC endpoint validation. No barrier, yield or success rate is claimed.\n",
+    "v0.4_strokes_with_new_auditor": {
+      "check": "pdf_path_strokes",
+      "status": "PASS",
+      "detail": "23 painted path strokes checked at 0.5 pt; 0 require attention",
+      "minimum_stroke_pt": 0.8,
+      "thin_strokes": [],
+      "unknown": [],
+      "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+    }
+  },
+  {
+    "kind": "panel_grid",
+    "verdict": "MECHANICAL_PASS",
+    "findings": [
+      {
+        "check": "physical_size",
+        "status": "PASS",
+        "detail": "Measured (504.0, 300.0) pt"
+      },
+      {
+        "check": "pdf_text_size",
+        "status": "PASS",
+        "detail": "Effective text minimum 5.600 pt"
+      },
+      {
+        "check": "pdf_path_strokes",
+        "status": "PASS",
+        "detail": "281 painted path strokes checked at 0.5 pt; 0 require attention",
+        "minimum_stroke_pt": 0.5,
+        "thin_strokes": [],
+        "unknown": [],
+        "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+      },
+      {
+        "check": "measured_layout",
+        "status": "PASS",
+        "detail": "No detected text clipping or overlap; declared panel groups align"
+      }
+    ],
+    "implementation_sha256": {
+      "plot_figures.py": "30e3ef081c6df6bb14dfd23b7982d62a8a19784d8c7753f8ce40165444a6d9bf",
+      "figure_spec.py": "fac54085899714153373179ad856fffbb8d63e0a7239520fe03910d8a0ade47c",
+      "audit_figure.py": "7e36a73f510a54dd74b4463df42204a789a8157dab0f489118ed23bce0804683",
+      "svg_panels.py": "c2d7c352cd7c8679384bf57b788d717489d9e0debfbabbdc05517018bad71327",
+      "figure_style.py": "78d407a2d31955919b23a822151122971e68aef6d0b0b6b839af9192f20e762a",
+      "statistical_figures.py": "9a79d1fb06f0b69628129347174a0ab2402556a8417fa1098c2f2b5389f15e36",
+      "figure_caption.py": "6d316553eebb127f8abee00bcd940aa3b69081485487da6a133e17db79fff7d1",
+      "audit_strokes.py": "5f638360023968e015a689c35e14bc604ac17a363c05e24822dec1a0cd25b869",
+      "point_layout.py": "1d022f8261e8bc6725aa9553a5c4900bb6bec3092babeebfb0eeab05d2293e24"
+    },
+    "files": {
+      ".svg": {
+        "name": "showcase.svg",
+        "sha256": "86f48fb33e2398004939eb2335d5ada72f3549558281f9e2bbd156771b8220ac"
+      },
+      ".pdf": {
+        "name": "showcase.pdf",
+        "sha256": "61105ae62aa002efe5b69abade959f292d25d9f3b60f17a61c20a3a79020f87c"
+      },
+      ".png": {
+        "name": "showcase.png",
+        "sha256": "32dab49f08fb9142857a2cf73df413a88f18f1e971b12ea10d58cb43a8fdce49"
+      },
+      ".spec.json": {
+        "name": "showcase.spec.json",
+        "sha256": "82f97f93a11fdb0a9b843ae1550ba653969a0264b03bc8a15947623d976aa51d"
+      },
+      ".caption.txt": {
+        "name": "showcase.caption.txt",
+        "sha256": "357ea3a82b9f0cc981400edc844ba9520b3f03d6c64033ef9fa8ddadf24682d8"
+      },
+      ".layout.json": {
+        "name": "showcase.layout.json",
+        "sha256": "f6ff278a7ade6bebea7702f11ecac4f8276f6d8101db2b5156b3b5d4b4b12d92"
+      },
+      ".caption-facts.json": {
+        "name": "showcase.caption-facts.json",
+        "sha256": "f9bcdd92586f7aa99e58a3be6034c8478ad8ddbdbf49f2f877cea9fdfdf8c08b"
+      }
+    },
+    "details": {
+      "panels": {
+        "a": {
+          "encoding": {
+            "Baseline": {
+              "color": "#4E86AF",
+              "fill": "#A8CEE8",
+              "marker": "o",
+              "linestyle": "-"
+            },
+            "Transfer": {
+              "color": "#B98255",
+              "fill": "#F3C8A8",
+              "marker": "s",
+              "linestyle": "--"
+            },
+            "Refined": {
+              "color": "#428F80",
+              "fill": "#A4D6C8",
+              "marker": "^",
+              "linestyle": "-."
+            }
+          },
+          "summary": {
+            "Baseline": {
+              "n": 72,
+              "q1": -1.5249580619606324,
+              "median": 0.026219771135632897,
+              "q3": 1.8633626904296812,
+              "whiskers": [
+                -6.383297886020745,
+                5.119494819986421
+              ]
+            },
+            "Transfer": {
+              "n": 72,
+              "q1": -1.0194919018685997,
+              "median": 0.11064410821743298,
+              "q3": 1.00420501366297,
+              "whiskers": [
+                -3.3767951723287943,
+                2.7095446846988054
+              ]
+            },
+            "Refined": {
+              "n": 72,
+              "q1": -0.47181771507376435,
+              "median": -0.009980894104543836,
+              "q3": 0.371076197415122,
+              "whiskers": [
+                -1.562789038491914,
+                1.6169652623541513
+              ]
+            }
+          },
+          "display": "box",
+          "box_definition": "Q1–Q3, median, observed whiskers within 1.5 IQR; every raw point shown",
+          "violin_bandwidth_factor": null,
+          "kde_mode_counts_at_bandwidth_and_double": {},
+          "bandwidth_sensitive_groups": [],
+          "display_transform": "identity",
+          "violin_normalization": null,
+          "violin_skipped_groups": [],
+          "violin_limit": "Groups with fewer than five observations or zero spread show raw points only",
+          "jitter": "swarm; categorical coordinate only",
+          "faceted_histogram": false,
+          "bandwidth_sensitivity_drawn": false,
+          "inference": "Descriptive display; no significance or uncertainty inferred"
+        },
+        "b": {
+          "encoding": {
+            "Baseline": {
+              "color": "#4E86AF",
+              "fill": "#A8CEE8",
+              "marker": "o",
+              "linestyle": "-"
+            },
+            "Transfer": {
+              "color": "#B98255",
+              "fill": "#F3C8A8",
+              "marker": "s",
+              "linestyle": "--"
+            },
+            "Refined": {
+              "color": "#428F80",
+              "fill": "#A4D6C8",
+              "marker": "^",
+              "linestyle": "-."
+            }
+          },
+          "summary": {
+            "Baseline": {
+              "n": 72,
+              "q1": 0.7468047376449141,
+              "median": 1.7171793298772107,
+              "q3": 2.676092616315303,
+              "cumulative_mass": 1.0
+            },
+            "Transfer": {
+              "n": 72,
+              "q1": 0.5726179049269442,
+              "median": 1.0295046399717371,
+              "q3": 1.6428522297162842,
+              "cumulative_mass": 1.0
+            },
+            "Refined": {
+              "n": 72,
+              "q1": 0.17819283570183675,
+              "median": 0.45154777726262907,
+              "q3": 0.7313208247162963,
+              "cumulative_mass": 1.0
+            }
+          },
+          "display": "ecdf",
+          "box_definition": null,
+          "violin_bandwidth_factor": null,
+          "kde_mode_counts_at_bandwidth_and_double": {},
+          "bandwidth_sensitive_groups": [],
+          "display_transform": "absolute",
+          "violin_normalization": null,
+          "violin_skipped_groups": [],
+          "violin_limit": "Groups with fewer than five observations or zero spread show raw points only",
+          "jitter": null,
+          "faceted_histogram": false,
+          "bandwidth_sensitivity_drawn": false,
+          "inference": "Descriptive display; no significance or uncertainty inferred"
+        }
+      },
+      "population": "Same 72 synthetic reactions and three prediction methods in both panels",
+      "point_layout": [
+        {
+          "n": 72,
+          "unresolved_spacing": 0,
+          "measurement_coordinates_preserved": true
+        },
+        {
+          "n": 72,
+          "unresolved_spacing": 0,
+          "measurement_coordinates_preserved": true
+        },
+        {
+          "n": 72,
+          "unresolved_spacing": 0,
+          "measurement_coordinates_preserved": true
+        }
+      ]
+    },
+    "readiness": {
+      "technical": "See mechanical findings",
+      "visual": "Requires inspection of final PDF/SVG at delivery size",
+      "scientific": "Requires data, definition and caption review",
+      "submission": "Not established by this renderer"
+    },
+    "example": "showcase",
+    "width_pt": 504.0,
+    "height_pt": 300.0,
+    "minimum_text_pt": 5.6,
+    "caption": "Synthetic activation Gibbs-energy errors for the same 72 reactions per illustrative predictor in both panels. (a) Signed errors (prediction minus reference). Boxes span Q1–Q3; center lines mark medians, not mean signed error; whiskers reach observations within 1.5 interquartile ranges. Every observation is shown with horizontal offsets to reduce overlap. (b) Unsmoothed empirical cumulative fractions at or below each absolute-error threshold. Method labels denote illustrative predictors.\n",
+    "v0.4_strokes_with_new_auditor": {
+      "check": "pdf_path_strokes",
+      "status": "FAIL",
+      "detail": "281 painted path strokes checked at 0.5 pt; 216 require attention",
+      "minimum_stroke_pt": 0.45,
+      "thin_strokes": [
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M0"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M1"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        },
+        {
+          "minimum_pt": 0.45,
+          "maximum_pt": 0.45,
+          "status": "FAIL",
+          "filled_same_color": false,
+          "object": "/M2"
+        }
+      ],
+      "unknown": [],
+      "scope": "Painted paths and invoked Forms; excludes text-glyph outlines, tiling-pattern strokes and clipping visibility. Same-color filled outlines and anisotropic bounds need review."
+    }
+  }
+]

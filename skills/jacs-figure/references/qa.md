@@ -32,7 +32,7 @@ the exported page has that size. The figure's QA JSON records a hash of the PDF 
 
 | Result | Meaning |
 |---|---|
-| `FAIL` | A deterministic size/text/layout/data problem requires correction before claiming readiness |
+| `FAIL` | A deterministic size/text/stroke/layout/data problem requires correction before claiming readiness |
 | `REVIEW_REQUIRED` | An overlap heuristic or unsupported object needs inspection; document the result |
 | `MECHANICAL_PASS` | Supported mechanical checks passed; visual and scientific review remain required |
 | `UNKNOWN` finding | The stated check could not be established; never convert it to a pass |
@@ -43,6 +43,11 @@ images have sufficient effective DPI, or chemical structures are correct. The Ma
 audit detects text bounding-box intersections, clipping and explicitly comparable plot areas.
 It excludes tick labels outside the drawn axis limits. It does not implement comprehensive
 text-versus-line/path collision detection. SVG and molecular bond overlaps require visual review.
+The path auditor checks painted stroke widths through transforms and invoked Form objects.
+Fill-only paths do not count as strokes. Narrow outlines on opaque same-color filled shapes
+and anisotropic bounds require inspection; pattern internals, glyph outlines, clipping and
+raster strokes are not fully established. The categorical point packer warns if final-size
+spacing cannot separate all marks; do not suppress this by changing measured values.
 
 Intentional text over a fill may be acceptable. Explain a reviewed exception rather than
 weakening a global threshold. A designed large explanatory panel need not match smaller ones;
@@ -61,3 +66,6 @@ what each mark means, what n counts, which subtraction/normalization was used, w
 represent and how missingness is encoded? Verify that assembled panel definitions survived.
 Then use the source to check those statements. The caption composer carries known facts but
 cannot resolve conflicting author prose, undefined method names or unsupported causal claims.
+Use `.caption-facts.json` to check authored prose, not as extra publication text. Apply
+[submission review](submission-readiness.md) when reporting readiness, and distinguish the
+technical, visual and scientific conclusions.
