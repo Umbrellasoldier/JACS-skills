@@ -11,3 +11,11 @@ scripts, and synthetic evaluation examples; it does not bundle upstream skills.
 Journal policies are linked to ACS primary sources. Article metadata and source locators
 identify the original publications; this project's license does not relicense those papers.
 No ACS endorsement or affiliation is implied.
+
+Figure source discovery and local inspection use the PubMed Central Article Dataset,
+provided by the U.S. National Library of Medicine (NLM), and associated Europe PMC records.
+https://pmc.ncbi.nlm.nih.gov/tools/pmcaws/
+The public registry records each source's DOI, version, license code, URL and digest.
+Original article text and figure images are not redistributed in this repository.
+Public figure observations are independently written descriptions; demonstration artwork
+and evaluation datasets are original, synthetic examples, not scientific research results.

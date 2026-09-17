@@ -1,0 +1,36 @@
+{
+  "data_status": "synthetic",
+  "claim": "Demonstrate the figure contract using synthetic examples.",
+  "caption": "Synthetic demonstration only; values are not results of a chemical study.",
+  "kind": "workflow",
+  "profile": "double",
+  "height_pt": 220,
+  "columns": 3,
+  "data": [
+    {
+      "id": "0",
+      "label": "Mapped reactants and products"
+    },
+    {
+      "id": "1",
+      "label": "Graph and bond-order hypotheses"
+    },
+    {
+      "id": "2",
+      "label": "Three-dimensional candidates"
+    },
+    {
+      "id": "3",
+      "label": "Reference-free selection"
+    },
+    {
+      "id": "4",
+      "label": "Optimization and frequency checks"
+    },
+    {
+      "id": "5",
+      "label": "Path and endpoint validation"
+    }
+  ],
+  "raster_class": "color"
+}

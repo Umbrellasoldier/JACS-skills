@@ -1,0 +1,17 @@
+reaction_id,method,reference_value,predicted
+RX-001,Baseline,8,10
+RX-002,Baseline,12,8
+RX-003,Baseline,17,20
+RX-004,Baseline,22,21
+RX-005,Baseline,26,32
+RX-006,Baseline,31,29
+RX-007,Baseline,35,36
+RX-008,Baseline,41,36
+RX-001,Candidate,8,9
+RX-002,Candidate,12,10
+RX-003,Candidate,17,19
+RX-004,Candidate,22,21.5
+RX-005,Candidate,26,30
+RX-006,Candidate,31,30
+RX-007,Candidate,35,35.7
+RX-008,Candidate,41,38

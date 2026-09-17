@@ -1,0 +1,92 @@
+{
+  "pdf_sha256": "6f9bd28d825108a51a0c1bb8ab788438e80dca3bd2f236aa4389dbc7a6afdff8",
+  "findings": [
+    {
+      "check": "physical_size",
+      "status": "PASS",
+      "detail": "Measured (360.0, 180.0) pt"
+    },
+    {
+      "check": "pdf_text_size",
+      "status": "PASS",
+      "detail": "Effective text minimum 6.000 pt"
+    },
+    {
+      "check": "embedded_panel_layout",
+      "status": "UNKNOWN",
+      "detail": "Molecular glyph/bond collision and stereochemical appearance require visual review."
+    }
+  ],
+  "minimum_text_pt": 6.0,
+  "scope": "MediaBox and extractable transformed text; not all glyphs, paths, image DPI, chemical identity or data correctness",
+  "name": "figure3_structures",
+  "details": {
+    "identities": [
+      {
+        "id": "s1",
+        "label": "Isomer 1",
+        "input_smiles": "[CH3:1][C@H:2]([OH:3])[C:4](=[O:5])[OH:6]",
+        "canonical_isomeric_smiles": "[CH3:1][C@H:2]([OH:3])[C:4](=[O:5])[OH:6]",
+        "atom_count": 6,
+        "formal_charge": 0,
+        "geometry": "2D depiction, not optimized or experimentally measured geometry",
+        "atom_maps": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "stereocenters_atom_map_and_CIP": [
+          [
+            2,
+            "S"
+          ]
+        ],
+        "roundtrip_identity": "PASS"
+      },
+      {
+        "id": "s2",
+        "label": "Isomer 2",
+        "input_smiles": "[CH3:1][C@@H:2]([OH:3])[C:4](=[O:5])[OH:6]",
+        "canonical_isomeric_smiles": "[CH3:1][C@@H:2]([OH:3])[C:4](=[O:5])[OH:6]",
+        "atom_count": 6,
+        "formal_charge": 0,
+        "geometry": "2D depiction, not optimized or experimentally measured geometry",
+        "atom_maps": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "stereocenters_atom_map_and_CIP": [
+          [
+            2,
+            "R"
+          ]
+        ],
+        "roundtrip_identity": "PASS"
+      }
+    ],
+    "excluded_records": 0
+  },
+  "provenance": {
+    "spec_sha256": "15c4dac6bc723206b8566ae9b7a4a32597074aa0550ff5b642f890a7e6d54914",
+    "sources": [],
+    "input_records": 2,
+    "excluded_records": 0,
+    "data_sha256": "7a400ca261881e17c01f976ddd2a00a358a02c873c4ccf0ed89ee4b6f89cbbdf"
+  },
+  "verdict": "REVIEW_REQUIRED",
+  "visual_review": "required; recorded separately after inspecting exported figures",
+  "data_status": "synthetic",
+  "renderer_sha256": "fb6942adaff1000d0aa8a2c301ce796eb41f4ce1fd97421e7b300a585fc40594",
+  "files": {
+    ".pdf": "6f9bd28d825108a51a0c1bb8ab788438e80dca3bd2f236aa4389dbc7a6afdff8",
+    ".svg": "12e12e7f2c116666a685a2c19d1f8af45971e584129f75608ae412f8099faf7b",
+    ".png": "6df78abd00dec447d8e55dd3549c5fa7d9247592ea32443d01684f1c4895f2a3"
+  }
+}

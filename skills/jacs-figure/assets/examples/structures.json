@@ -1,0 +1,21 @@
+{
+  "data_status": "synthetic",
+  "claim": "Demonstrate the figure contract using synthetic examples.",
+  "caption": "Depiction demonstration of two supplied stereochemical identities; no measured or optimized geometry is implied.",
+  "kind": "structures",
+  "profile": "single",
+  "height_pt": 160,
+  "data": [
+    {
+      "id": "isomer-a",
+      "label": "Stereoisomer A",
+      "smiles": "C[C@H](O)C(=O)O"
+    },
+    {
+      "id": "isomer-b",
+      "label": "Stereoisomer B",
+      "smiles": "C[C@@H](O)C(=O)O"
+    }
+  ],
+  "raster_class": "color"
+}

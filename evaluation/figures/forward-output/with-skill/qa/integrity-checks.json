@@ -1,0 +1,182 @@
+{
+  "original_input_hashes_unchanged": {
+    "request.md": "87d107b4be7af26b6a18ce0299279021d04c47f0ccf93d4c9e834721a53e3f15",
+    "predictions.csv": "09e40a3ce6f2953b0ff14f75bca95c50090b4408cdf02ae209906215a5a0e476",
+    "stages.csv": "f488441e7718b6d509c3dd8a4578f6c594de257844be042425b7f6f7262ae0fa",
+    "structures.json": "44071ff1f838587e933e10e2d6d7016f3f23c542fe3e8bfdf462ee783a47b4d8"
+  },
+  "predictions": {
+    "records": 16,
+    "reaction_ids": [
+      "RX-001",
+      "RX-002",
+      "RX-003",
+      "RX-004",
+      "RX-005",
+      "RX-006",
+      "RX-007",
+      "RX-008"
+    ],
+    "metrics": {
+      "Baseline": {
+        "n": 8,
+        "mae": 3.0,
+        "rmse": 3.4641016151377544
+      },
+      "Candidate": {
+        "n": 8,
+        "mae": 1.7750000000000004,
+        "rmse": 2.113646138784825
+      }
+    },
+    "exclusions": 0,
+    "status": "PASS"
+  },
+  "stages": [
+    {
+      "stage": "Candidate generation",
+      "passed": 150,
+      "failed": 29,
+      "pending": 20,
+      "entered": 199,
+      "conditional_rate": 0.7537688442211056,
+      "earlier_attrition": 0,
+      "status": "PASS"
+    },
+    {
+      "stage": "TS optimization",
+      "passed": 110,
+      "failed": 25,
+      "pending": 15,
+      "entered": 150,
+      "conditional_rate": 0.7333333333333333,
+      "earlier_attrition": 49,
+      "status": "PASS"
+    },
+    {
+      "stage": "Frequency check",
+      "passed": 90,
+      "failed": 12,
+      "pending": 8,
+      "entered": 110,
+      "conditional_rate": 0.8181818181818182,
+      "earlier_attrition": 89,
+      "status": "PASS"
+    },
+    {
+      "stage": "Endpoint validation",
+      "passed": 65,
+      "failed": 15,
+      "pending": 10,
+      "entered": 90,
+      "conditional_rate": 0.7222222222222222,
+      "earlier_attrition": 109,
+      "status": "PASS"
+    }
+  ],
+  "exports": {
+    "figure1_predictions": {
+      "pdf_sha256": "4449d323685a03ded8195f3a6ddb388824a0a43133210105a38ab78bfbb69d2d",
+      "svg_sha256": "be34836644719033257cdd3041049497c8add3662dc0a46ff57e395cb3611a66",
+      "png_sha256": "a68b77c5d9fa624439207fa25acd35dc4db61e0f24b08a40c02bdc75b8bc20cb",
+      "media_box_pt": [
+        504.0,
+        300.0
+      ],
+      "fonts": [
+        {
+          "resource": "/F3",
+          "basefont": "/EVICAO+DejaVuSans-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F2",
+          "basefont": "/GCWXDV+DejaVuSans-Oblique",
+          "embedded": true
+        },
+        {
+          "resource": "/F1",
+          "basefont": "/BMQQDV+DejaVuSans",
+          "embedded": true
+        }
+      ],
+      "svg_raster_image_nodes": 0,
+      "png_dimensions": [
+        2100,
+        1250
+      ],
+      "png_dpi": [
+        299.9994,
+        299.9994
+      ],
+      "status": "PASS"
+    },
+    "figure2_stages": {
+      "pdf_sha256": "f95974dc2dd16993b831fc0ee576fd7bc0f0d10d9594761aed361e1220143d2b",
+      "svg_sha256": "0718b279e125a368accbccc841d128ed3b2937d789393fc9ae43127552279c06",
+      "png_sha256": "41f0610d827f0223a0c5d0033b3fb16a72ecd060b160fe5f97b3430ccd58f795",
+      "media_box_pt": [
+        504.0,
+        266.0
+      ],
+      "fonts": [
+        {
+          "resource": "/F2",
+          "basefont": "/EVICAO+DejaVuSans-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/F1",
+          "basefont": "/BMQQDV+DejaVuSans",
+          "embedded": true
+        }
+      ],
+      "svg_raster_image_nodes": 0,
+      "png_dimensions": [
+        2100,
+        1108
+      ],
+      "png_dpi": [
+        299.9994,
+        299.9994
+      ],
+      "status": "PASS"
+    },
+    "figure3_structures": {
+      "pdf_sha256": "6f9bd28d825108a51a0c1bb8ab788438e80dca3bd2f236aa4389dbc7a6afdff8",
+      "svg_sha256": "12e12e7f2c116666a685a2c19d1f8af45971e584129f75608ae412f8099faf7b",
+      "png_sha256": "6df78abd00dec447d8e55dd3549c5fa7d9247592ea32443d01684f1c4895f2a3",
+      "media_box_pt": [
+        360.0,
+        180.0
+      ],
+      "fonts": [
+        {
+          "resource": "/f-0-0",
+          "basefont": "/YVVKDE+NimbusSans-Bold",
+          "embedded": true
+        },
+        {
+          "resource": "/f-1-0",
+          "basefont": "/SBNKXR+NimbusSans-Regular",
+          "embedded": true
+        },
+        {
+          "resource": "/f-2-0",
+          "basefont": "/GHHMAX+NimbusSans-Regular",
+          "embedded": true
+        }
+      ],
+      "svg_raster_image_nodes": 0,
+      "png_dimensions": [
+        1500,
+        750
+      ],
+      "png_dpi": [
+        299.9994,
+        299.9994
+      ],
+      "status": "PASS"
+    }
+  }
+}

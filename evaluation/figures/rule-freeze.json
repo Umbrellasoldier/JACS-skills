@@ -1,0 +1,9 @@
+{
+  "frozen_at": "2026-09-17T04:27:35.687719+00:00",
+  "holdout_images_inspected": false,
+  "sha256": {
+    "figure-annotations.jsonl": "fb311b3d95d506dd61e1c580700e90af4ad9fb3d97716ada7deb16a91ef7c1bb",
+    "figure-rules.jsonl": "6b2997c18780fd1e03f043bdf2ce2ea26490385fe231838a689b89c3f80141c3"
+  },
+  "notes": "Freeze of 40 development/Communication figure annotations and six conditional Article observations before inspecting reserved holdout images."
+}

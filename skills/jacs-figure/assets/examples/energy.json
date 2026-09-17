@@ -1,0 +1,56 @@
+{
+  "data_status": "synthetic",
+  "claim": "Demonstrate the figure contract using synthetic examples.",
+  "caption": "Synthetic demonstration only; values are not results of a chemical study.",
+  "kind": "energy",
+  "profile": "double",
+  "height_pt": 220,
+  "quantity": "G",
+  "unit": "kcal/mol",
+  "reference": "separated reactants",
+  "conditions": {
+    "theory": "illustrative only",
+    "solvent": "illustrative only",
+    "temperature_K": 298.15,
+    "standard_state": "1 mol/L (illustrative)"
+  },
+  "data": [
+    {
+      "path": "Path A",
+      "state": "R",
+      "order": 0,
+      "energy": 0
+    },
+    {
+      "path": "Path A",
+      "state": "TS",
+      "order": 1,
+      "energy": 18
+    },
+    {
+      "path": "Path A",
+      "state": "P",
+      "order": 2,
+      "energy": -8
+    },
+    {
+      "path": "Path B",
+      "state": "R",
+      "order": 0,
+      "energy": 0
+    },
+    {
+      "path": "Path B",
+      "state": "TS",
+      "order": 1,
+      "energy": 27
+    },
+    {
+      "path": "Path B",
+      "state": "P",
+      "order": 2,
+      "energy": -2
+    }
+  ],
+  "raster_class": "color"
+}

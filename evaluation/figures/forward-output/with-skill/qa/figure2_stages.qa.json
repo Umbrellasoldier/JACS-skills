@@ -1,0 +1,87 @@
+{
+  "pdf_sha256": "f95974dc2dd16993b831fc0ee576fd7bc0f0d10d9594761aed361e1220143d2b",
+  "findings": [
+    {
+      "check": "physical_size",
+      "status": "PASS",
+      "detail": "Measured (504.0, 266.0) pt"
+    },
+    {
+      "check": "pdf_text_size",
+      "status": "PASS",
+      "detail": "Effective text minimum 6.500 pt"
+    },
+    {
+      "check": "measured_layout",
+      "status": "PASS",
+      "detail": "No detected text clipping or overlap; declared panel groups align"
+    }
+  ],
+  "minimum_text_pt": 6.5,
+  "scope": "MediaBox and extractable transformed text; not all glyphs, paths, image DPI, chemical identity or data correctness",
+  "name": "figure2_stages",
+  "details": {
+    "counts": [
+      {
+        "stage": "Candidate generation",
+        "passed": 150,
+        "failed": 29,
+        "pending": 20,
+        "entered": 199,
+        "conditional_rate": 0.7537688442211056,
+        "overall_rate": 0.7537688442211056
+      },
+      {
+        "stage": "TS optimization",
+        "passed": 110,
+        "failed": 25,
+        "pending": 15,
+        "entered": 150,
+        "conditional_rate": 0.7333333333333333,
+        "overall_rate": 0.5527638190954773
+      },
+      {
+        "stage": "Frequency check",
+        "passed": 90,
+        "failed": 12,
+        "pending": 8,
+        "entered": 110,
+        "conditional_rate": 0.8181818181818182,
+        "overall_rate": 0.45226130653266333
+      },
+      {
+        "stage": "Endpoint validation",
+        "passed": 65,
+        "failed": 15,
+        "pending": 10,
+        "entered": 90,
+        "conditional_rate": 0.7222222222222222,
+        "overall_rate": 0.32663316582914576
+      }
+    ],
+    "excluded_records": 0,
+    "rate_definition": "passed / entered at this stage; earlier failed and pending excluded",
+    "final_overall_rate": 0.32663316582914576
+  },
+  "provenance": {
+    "spec_sha256": "aa29a0781ea62dfe0bbf91d5aab4f0fa893f6dbe462dc13cf9104795b7c18790",
+    "sources": [
+      {
+        "name": "stages.csv",
+        "sha256": "f488441e7718b6d509c3dd8a4578f6c594de257844be042425b7f6f7262ae0fa"
+      }
+    ],
+    "input_records": 4,
+    "excluded_records": 0,
+    "data_sha256": "7de08a9483f87a65ed35b736171131e1db25160d2877d0caec7d6b1d92e20848"
+  },
+  "verdict": "MECHANICAL_PASS",
+  "visual_review": "required; recorded separately after inspecting exported figures",
+  "data_status": "synthetic",
+  "renderer_sha256": "fb6942adaff1000d0aa8a2c301ce796eb41f4ce1fd97421e7b300a585fc40594",
+  "files": {
+    ".pdf": "f95974dc2dd16993b831fc0ee576fd7bc0f0d10d9594761aed361e1220143d2b",
+    ".svg": "0718b279e125a368accbccc841d128ed3b2937d789393fc9ae43127552279c06",
+    ".png": "41f0610d827f0223a0c5d0033b3fb16a72ecd060b160fe5f97b3430ccd58f795"
+  }
+}

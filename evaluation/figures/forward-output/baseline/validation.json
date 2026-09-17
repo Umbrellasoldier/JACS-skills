@@ -1,0 +1,223 @@
+{
+  "predictions": {
+    "records": 16,
+    "reaction_ids": [
+      "RX-001",
+      "RX-002",
+      "RX-003",
+      "RX-004",
+      "RX-005",
+      "RX-006",
+      "RX-007",
+      "RX-008"
+    ],
+    "metrics": {
+      "Baseline": {
+        "n": 8,
+        "mae": 3.0,
+        "rmse": 3.4641016151377544,
+        "mean_residual": 0.0
+      },
+      "Candidate": {
+        "n": 8,
+        "mae": 1.7750000000000004,
+        "rmse": 2.113646138784825,
+        "mean_residual": 0.15000000000000036
+      }
+    },
+    "residual_sign": "predicted - reference",
+    "all_pairs_share_reference": true
+  },
+  "stages": {
+    "initial": 199,
+    "stages": [
+      {
+        "stage": "Candidate generation",
+        "entering": 199,
+        "passed": 150,
+        "failed": 29,
+        "pending": 20,
+        "pass_rate": 0.7537688442211056
+      },
+      {
+        "stage": "TS optimization",
+        "entering": 150,
+        "passed": 110,
+        "failed": 25,
+        "pending": 15,
+        "pass_rate": 0.7333333333333333
+      },
+      {
+        "stage": "Frequency check",
+        "entering": 110,
+        "passed": 90,
+        "failed": 12,
+        "pending": 8,
+        "pass_rate": 0.8181818181818182
+      },
+      {
+        "stage": "Endpoint validation",
+        "entering": 90,
+        "passed": 65,
+        "failed": 15,
+        "pending": 10,
+        "pass_rate": 0.7222222222222222
+      }
+    ],
+    "final_passed_fraction_of_initial": 0.32663316582914576,
+    "all_stage_populations_conserved": true
+  },
+  "structures": {
+    "records": [
+      {
+        "id": "s1",
+        "label": "Isomer 1",
+        "smiles": "[CH3:1][C@H:2]([OH:3])[C:4](=[O:5])[OH:6]",
+        "canonical_isomeric_smiles": "[CH3:1][C@H:2]([OH:3])[C:4](=[O:5])[OH:6]",
+        "atom_maps_in_input_order": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "stereocenters": [
+          {
+            "atom_map": 2,
+            "CIP": "S"
+          }
+        ]
+      },
+      {
+        "id": "s2",
+        "label": "Isomer 2",
+        "smiles": "[CH3:1][C@@H:2]([OH:3])[C:4](=[O:5])[OH:6]",
+        "canonical_isomeric_smiles": "[CH3:1][C@@H:2]([OH:3])[C:4](=[O:5])[OH:6]",
+        "atom_maps_in_input_order": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "stereocenters": [
+          {
+            "atom_map": 2,
+            "CIP": "R"
+          }
+        ]
+      }
+    ],
+    "same_2d_coordinates": true,
+    "three_dimensional_geometry_generated": false,
+    "physical_size_inches": [
+      3.25,
+      1.6527777777777777
+    ]
+  },
+  "exports": {
+    "figure_1_predictions": {
+      "page_inches": [
+        7.0,
+        4.0
+      ],
+      "png_pixels": [
+        4200,
+        2400
+      ],
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "page_edge_clear": true,
+      "pdf_raster_image_count": 0,
+      "svg_well_formed": true,
+      "pdf_fonts": [
+        {
+          "name": "/F3",
+          "subtype": "/Type0",
+          "basefont": "/EVICAO+DejaVuSans-Bold",
+          "embedded": true
+        },
+        {
+          "name": "/F2",
+          "subtype": "/Type0",
+          "basefont": "/GCWXDV+DejaVuSans-Oblique",
+          "embedded": true
+        },
+        {
+          "name": "/F1",
+          "subtype": "/Type0",
+          "basefont": "/BMQQDV+DejaVuSans",
+          "embedded": true
+        }
+      ]
+    },
+    "figure_2_stages": {
+      "page_inches": [
+        3.25,
+        3.6500000000000004
+      ],
+      "png_pixels": [
+        1950,
+        2190
+      ],
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "page_edge_clear": true,
+      "pdf_raster_image_count": 0,
+      "svg_well_formed": true,
+      "pdf_fonts": [
+        {
+          "name": "/F2",
+          "subtype": "/Type0",
+          "basefont": "/EVICAO+DejaVuSans-Bold",
+          "embedded": true
+        },
+        {
+          "name": "/F1",
+          "subtype": "/Type0",
+          "basefont": "/BMQQDV+DejaVuSans",
+          "embedded": true
+        }
+      ]
+    },
+    "figure_3_structures": {
+      "page_inches": [
+        3.25,
+        1.6527777777777777
+      ],
+      "png_pixels": [
+        1950,
+        992
+      ],
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "page_edge_clear": true,
+      "pdf_raster_image_count": 0,
+      "svg_well_formed": true,
+      "pdf_fonts": []
+    }
+  },
+  "input_sha256": {
+    "predictions.csv": "09e40a3ce6f2953b0ff14f75bca95c50090b4408cdf02ae209906215a5a0e476",
+    "request.md": "87d107b4be7af26b6a18ce0299279021d04c47f0ccf93d4c9e834721a53e3f15",
+    "stages.csv": "f488441e7718b6d509c3dd8a4578f6c594de257844be042425b7f6f7262ae0fa",
+    "structures.json": "44071ff1f838587e933e10e2d6d7016f3f23c542fe3e8bfdf462ee783a47b4d8"
+  },
+  "runtime_versions": {
+    "python": "3.10.19",
+    "matplotlib": "3.10.9",
+    "numpy": "2.2.6",
+    "cairosvg": "2.9.1",
+    "pypdf": "6.19.0",
+    "rdkit": "2026.03.6",
+    "pillow": "12.3.0"
+  }
+}

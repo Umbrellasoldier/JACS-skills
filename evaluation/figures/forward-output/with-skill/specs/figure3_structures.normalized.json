@@ -1,0 +1,24 @@
+{
+  "data_status": "synthetic",
+  "scale": "linear",
+  "kind": "structures",
+  "profile": "double",
+  "width_pt": 360.0,
+  "height_pt": 180.0,
+  "claim": "Preserve the two supplied mapped stereochemical identities in 2D.",
+  "caption": "Figure 3. Synthetic structure-depiction example using the two supplied atom-mapped isomeric SMILES: s1 (Isomer 1) and s2 (Isomer 2). Atom maps 1–6 are preserved and printed after colons; solid and hashed wedges encode the supplied opposite configurations. These are RDKit 2D chemical drawings, not calculated three-dimensional structures or bond-length measurements.",
+  "columns": 2,
+  "data": [
+    {
+      "id": "s1",
+      "label": "Isomer 1",
+      "smiles": "[CH3:1][C@H:2]([OH:3])[C:4](=[O:5])[OH:6]"
+    },
+    {
+      "id": "s2",
+      "label": "Isomer 2",
+      "smiles": "[CH3:1][C@@H:2]([OH:3])[C:4](=[O:5])[OH:6]"
+    }
+  ],
+  "geometry": "2D depiction only; no bond lengths inferred"
+}

@@ -1,0 +1,104 @@
+{
+  "data_status": "synthetic",
+  "claim": "Demonstrate the figure contract using synthetic examples.",
+  "caption": "Synthetic demonstration only; values are not results of a chemical study.",
+  "kind": "comparison",
+  "profile": "single",
+  "height_pt": 230,
+  "metric": "Absolute error",
+  "unit": "kcal/mol",
+  "population": "same six synthetic reactions",
+  "data": [
+    {
+      "reaction_id": "r01",
+      "method": "Baseline",
+      "value": 4
+    },
+    {
+      "reaction_id": "r02",
+      "method": "Baseline",
+      "value": 7
+    },
+    {
+      "reaction_id": "r03",
+      "method": "Baseline",
+      "value": 3
+    },
+    {
+      "reaction_id": "r04",
+      "method": "Baseline",
+      "value": 6
+    },
+    {
+      "reaction_id": "r05",
+      "method": "Baseline",
+      "value": 5
+    },
+    {
+      "reaction_id": "r06",
+      "method": "Baseline",
+      "value": 8
+    },
+    {
+      "reaction_id": "r01",
+      "method": "Method A",
+      "value": 2
+    },
+    {
+      "reaction_id": "r02",
+      "method": "Method A",
+      "value": 5
+    },
+    {
+      "reaction_id": "r03",
+      "method": "Method A",
+      "value": 2
+    },
+    {
+      "reaction_id": "r04",
+      "method": "Method A",
+      "value": 4
+    },
+    {
+      "reaction_id": "r05",
+      "method": "Method A",
+      "value": 3
+    },
+    {
+      "reaction_id": "r06",
+      "method": "Method A",
+      "value": 6
+    },
+    {
+      "reaction_id": "r01",
+      "method": "Method B",
+      "value": 1
+    },
+    {
+      "reaction_id": "r02",
+      "method": "Method B",
+      "value": 4
+    },
+    {
+      "reaction_id": "r03",
+      "method": "Method B",
+      "value": 1.5
+    },
+    {
+      "reaction_id": "r04",
+      "method": "Method B",
+      "value": 3
+    },
+    {
+      "reaction_id": "r05",
+      "method": "Method B",
+      "value": 2
+    },
+    {
+      "reaction_id": "r06",
+      "method": "Method B",
+      "value": 4
+    }
+  ],
+  "raster_class": "color"
+}

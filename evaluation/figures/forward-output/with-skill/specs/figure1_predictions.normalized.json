@@ -1,0 +1,126 @@
+{
+  "data_status": "synthetic",
+  "scale": "linear",
+  "kind": "parity",
+  "profile": "double",
+  "width_pt": 504.0,
+  "height_pt": 300.0,
+  "claim": "Descriptive prediction errors for eight shared synthetic reactions.",
+  "caption": "Figure 1. Synthetic comparison of activation Gibbs free energy predictions for the same eight reactions (RX-001–RX-008). (a) Predicted versus reference activation Gibbs free energy, with a dashed identity line. (b) Residuals (prediction minus reference), grouped by reaction ID; horizontal offsets separate methods. Every supplied prediction is shown. Energies are in kcal/mol, referenced to separated reactants, at 298.15 K and a 1 mol/L standard state. The calculation level and solvent settings are shared, but their identities were not supplied. MAE and RMSE describe these eight synthetic records per method; no uncertainty or significance is inferred.",
+  "quantity": "activation Gibbs free energy",
+  "unit": "kcal/mol",
+  "reference": "separated reactants",
+  "conditions": {
+    "temperature_K": 298.15,
+    "standard_state": "1 mol/L",
+    "theory": "shared illustrative setting; identity not supplied",
+    "solvent": "shared illustrative setting; identity not supplied"
+  },
+  "population": "same eight supplied reactions, RX-001 through RX-008",
+  "split": "not supplied; no generalization claim",
+  "colors": {
+    "Baseline": "#0072B2",
+    "Candidate": "#D55E00"
+  },
+  "residual_definition": "predicted minus reference",
+  "residual_x": "reaction_id; method offsets -0.13 and +0.13 are display-only",
+  "uncertainty": "not supplied and not inferred",
+  "data": [
+    {
+      "reaction_id": "RX-001",
+      "method": "Baseline",
+      "reference_value": 8.0,
+      "predicted": 10.0
+    },
+    {
+      "reaction_id": "RX-002",
+      "method": "Baseline",
+      "reference_value": 12.0,
+      "predicted": 8.0
+    },
+    {
+      "reaction_id": "RX-003",
+      "method": "Baseline",
+      "reference_value": 17.0,
+      "predicted": 20.0
+    },
+    {
+      "reaction_id": "RX-004",
+      "method": "Baseline",
+      "reference_value": 22.0,
+      "predicted": 21.0
+    },
+    {
+      "reaction_id": "RX-005",
+      "method": "Baseline",
+      "reference_value": 26.0,
+      "predicted": 32.0
+    },
+    {
+      "reaction_id": "RX-006",
+      "method": "Baseline",
+      "reference_value": 31.0,
+      "predicted": 29.0
+    },
+    {
+      "reaction_id": "RX-007",
+      "method": "Baseline",
+      "reference_value": 35.0,
+      "predicted": 36.0
+    },
+    {
+      "reaction_id": "RX-008",
+      "method": "Baseline",
+      "reference_value": 41.0,
+      "predicted": 36.0
+    },
+    {
+      "reaction_id": "RX-001",
+      "method": "Candidate",
+      "reference_value": 8.0,
+      "predicted": 9.0
+    },
+    {
+      "reaction_id": "RX-002",
+      "method": "Candidate",
+      "reference_value": 12.0,
+      "predicted": 10.0
+    },
+    {
+      "reaction_id": "RX-003",
+      "method": "Candidate",
+      "reference_value": 17.0,
+      "predicted": 19.0
+    },
+    {
+      "reaction_id": "RX-004",
+      "method": "Candidate",
+      "reference_value": 22.0,
+      "predicted": 21.5
+    },
+    {
+      "reaction_id": "RX-005",
+      "method": "Candidate",
+      "reference_value": 26.0,
+      "predicted": 30.0
+    },
+    {
+      "reaction_id": "RX-006",
+      "method": "Candidate",
+      "reference_value": 31.0,
+      "predicted": 30.0
+    },
+    {
+      "reaction_id": "RX-007",
+      "method": "Candidate",
+      "reference_value": 35.0,
+      "predicted": 35.7
+    },
+    {
+      "reaction_id": "RX-008",
+      "method": "Candidate",
+      "reference_value": 41.0,
+      "predicted": 38.0
+    }
+  ]
+}

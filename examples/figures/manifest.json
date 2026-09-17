@@ -1,0 +1,268 @@
+[
+  {
+    "example": "energy",
+    "verdict": "MECHANICAL_PASS",
+    "pdf_sha256": "b8a8c48e13cd05ce1498351dbdc59bac361a882bb2bd787aca0d95d84e6210de",
+    "files": {
+      ".svg": {
+        "name": "energy.svg",
+        "sha256": "1a28b2e97e0ea59ff13443abdad054a949720bbb6e82daeb482eb9a5f1829c3f"
+      },
+      ".pdf": {
+        "name": "energy.pdf",
+        "sha256": "b8a8c48e13cd05ce1498351dbdc59bac361a882bb2bd787aca0d95d84e6210de"
+      },
+      ".png": {
+        "name": "energy.png",
+        "sha256": "1c34c7c430147e582853207922a0a780f7debfc3d3ef89227cc75b92419a2978"
+      },
+      ".spec.json": {
+        "name": "energy.spec.json",
+        "sha256": "18cc37202bf892b73a53f0955fe137cb3554a40373331c9d6ea003b775620872"
+      },
+      ".caption.txt": {
+        "name": "energy.caption.txt",
+        "sha256": "e6832b1e8098bfa47ce871ba90a86f6ac44dc4d1d5eb88ba3e5681d5b76ba0f5"
+      },
+      ".layout.json": {
+        "name": "energy.layout.json",
+        "sha256": "a93b93d3022a913eedcf8096f0544439f56e51b04a9d16c30033700e37b428cb"
+      }
+    },
+    "implementation_sha256": {
+      "plot_figures.py": "52ddc7fa55e6804f6ec7b2f4368727cdaa4ddb5cc7ee7f0d0bc23b063861d245",
+      "figure_spec.py": "631438d848001d1cea6833d3ab44cbf244b60d6e52eea46494e47f9b2ef18b97",
+      "audit_figure.py": "7b478badd3820796cd042a5e55ab880304e93c25c36bd56e5880521198618fdc",
+      "svg_panels.py": "a912c6d92a6cbf6158cea45e1de57f06b34471beccb66ddb17e034eb1bedf949"
+    },
+    "visual_review": "PNG identical to visually inspected preview; evaluation/figures/REPORT.md"
+  },
+  {
+    "example": "parity",
+    "verdict": "MECHANICAL_PASS",
+    "pdf_sha256": "554bfa71aeb193e49ea6c8fa824405c6d1bbeaeb18ae044767b59cd1cf66a9dd",
+    "files": {
+      ".svg": {
+        "name": "parity.svg",
+        "sha256": "af060c7cbdb6ca009da842ba1c1d67b4a2e42e131f6d55e406d5441e87d2f312"
+      },
+      ".pdf": {
+        "name": "parity.pdf",
+        "sha256": "554bfa71aeb193e49ea6c8fa824405c6d1bbeaeb18ae044767b59cd1cf66a9dd"
+      },
+      ".png": {
+        "name": "parity.png",
+        "sha256": "0e4a99f08d7fbbab43359e20d6e91f31576e79fbbaf5be8441f0cc7953c75ef6"
+      },
+      ".spec.json": {
+        "name": "parity.spec.json",
+        "sha256": "f71e4843d7cad50104dad20505520659a6e09b6be87d70becb4a07fd3ae1b07f"
+      },
+      ".caption.txt": {
+        "name": "parity.caption.txt",
+        "sha256": "e6832b1e8098bfa47ce871ba90a86f6ac44dc4d1d5eb88ba3e5681d5b76ba0f5"
+      },
+      ".layout.json": {
+        "name": "parity.layout.json",
+        "sha256": "f2237df82e06ddb9946af795049a415b9b6a84109b516c3d0412f83d9a6d4eb6"
+      }
+    },
+    "implementation_sha256": {
+      "plot_figures.py": "52ddc7fa55e6804f6ec7b2f4368727cdaa4ddb5cc7ee7f0d0bc23b063861d245",
+      "figure_spec.py": "631438d848001d1cea6833d3ab44cbf244b60d6e52eea46494e47f9b2ef18b97",
+      "audit_figure.py": "7b478badd3820796cd042a5e55ab880304e93c25c36bd56e5880521198618fdc",
+      "svg_panels.py": "a912c6d92a6cbf6158cea45e1de57f06b34471beccb66ddb17e034eb1bedf949"
+    },
+    "visual_review": "PNG identical to visually inspected preview; evaluation/figures/REPORT.md"
+  },
+  {
+    "example": "stages",
+    "verdict": "MECHANICAL_PASS",
+    "pdf_sha256": "4dd4fd8214fce081cc10ad7ffa2a762263a727b2de41ec2fbbe79f91696dad20",
+    "files": {
+      ".svg": {
+        "name": "stages.svg",
+        "sha256": "0f8fbb7b5d16cb563830f864dbc0e33503fbb95a8e58136e99766ce5f8d94d84"
+      },
+      ".pdf": {
+        "name": "stages.pdf",
+        "sha256": "4dd4fd8214fce081cc10ad7ffa2a762263a727b2de41ec2fbbe79f91696dad20"
+      },
+      ".png": {
+        "name": "stages.png",
+        "sha256": "cd77891b8caf88f8e4a9f186dcda5f7610a071df8e0931ef32585fa534e99fd5"
+      },
+      ".spec.json": {
+        "name": "stages.spec.json",
+        "sha256": "438abee6b81608b59ad0dc8ac0748e94487e65288d40cf0ffd31c67d9d74ed74"
+      },
+      ".caption.txt": {
+        "name": "stages.caption.txt",
+        "sha256": "e6832b1e8098bfa47ce871ba90a86f6ac44dc4d1d5eb88ba3e5681d5b76ba0f5"
+      },
+      ".layout.json": {
+        "name": "stages.layout.json",
+        "sha256": "d012feaa5bd7ea596622cf2fac51635e828fff961219d36552a90c8bf3ee7f9c"
+      }
+    },
+    "implementation_sha256": {
+      "plot_figures.py": "52ddc7fa55e6804f6ec7b2f4368727cdaa4ddb5cc7ee7f0d0bc23b063861d245",
+      "figure_spec.py": "631438d848001d1cea6833d3ab44cbf244b60d6e52eea46494e47f9b2ef18b97",
+      "audit_figure.py": "7b478badd3820796cd042a5e55ab880304e93c25c36bd56e5880521198618fdc",
+      "svg_panels.py": "a912c6d92a6cbf6158cea45e1de57f06b34471beccb66ddb17e034eb1bedf949"
+    },
+    "visual_review": "PNG identical to visually inspected preview; evaluation/figures/REPORT.md"
+  },
+  {
+    "example": "comparison",
+    "verdict": "MECHANICAL_PASS",
+    "pdf_sha256": "19a5827bc76d515dfe525e180e9446dc663a9e5a7401ca53a080b3dcadef4673",
+    "files": {
+      ".svg": {
+        "name": "comparison.svg",
+        "sha256": "49a91d097a22c14828eb3b2f22ac5c6542856d6655b63ad128f2a2df3e30582e"
+      },
+      ".pdf": {
+        "name": "comparison.pdf",
+        "sha256": "19a5827bc76d515dfe525e180e9446dc663a9e5a7401ca53a080b3dcadef4673"
+      },
+      ".png": {
+        "name": "comparison.png",
+        "sha256": "e8b78e8da16a150fed41b8fe63112c32aaeaccc77df1779b3d87884e7aa59d50"
+      },
+      ".spec.json": {
+        "name": "comparison.spec.json",
+        "sha256": "29006a16d78ccb61dd51e05f5e13f5f013932eaae7d51ec5d9f34446a463a3a4"
+      },
+      ".caption.txt": {
+        "name": "comparison.caption.txt",
+        "sha256": "e6832b1e8098bfa47ce871ba90a86f6ac44dc4d1d5eb88ba3e5681d5b76ba0f5"
+      },
+      ".layout.json": {
+        "name": "comparison.layout.json",
+        "sha256": "c334b5934c5caf0c966f30ba3a8fba94b0357baf479ca27806acefd96417ddfe"
+      }
+    },
+    "implementation_sha256": {
+      "plot_figures.py": "52ddc7fa55e6804f6ec7b2f4368727cdaa4ddb5cc7ee7f0d0bc23b063861d245",
+      "figure_spec.py": "631438d848001d1cea6833d3ab44cbf244b60d6e52eea46494e47f9b2ef18b97",
+      "audit_figure.py": "7b478badd3820796cd042a5e55ab880304e93c25c36bd56e5880521198618fdc",
+      "svg_panels.py": "a912c6d92a6cbf6158cea45e1de57f06b34471beccb66ddb17e034eb1bedf949"
+    },
+    "visual_review": "PNG identical to visually inspected preview; evaluation/figures/REPORT.md"
+  },
+  {
+    "example": "workflow",
+    "verdict": "MECHANICAL_PASS",
+    "pdf_sha256": "06e890442893206b531111760d89f44a152d91b1068d6456dca9ba730aba7f69",
+    "files": {
+      ".svg": {
+        "name": "workflow.svg",
+        "sha256": "a24806cacd89ae940fbdab2cdaf373e7a9bc0f85cf558eed6752b61deaf00821"
+      },
+      ".pdf": {
+        "name": "workflow.pdf",
+        "sha256": "06e890442893206b531111760d89f44a152d91b1068d6456dca9ba730aba7f69"
+      },
+      ".png": {
+        "name": "workflow.png",
+        "sha256": "dcb67f00b23eca1c30e4f4ad53398e6866cbc7fd981df6b92c0d3de899bfe816"
+      },
+      ".spec.json": {
+        "name": "workflow.spec.json",
+        "sha256": "c3152fecf58df30cc40d9a11948c3119430de15415b1379dd2871f33304e8630"
+      },
+      ".caption.txt": {
+        "name": "workflow.caption.txt",
+        "sha256": "e6832b1e8098bfa47ce871ba90a86f6ac44dc4d1d5eb88ba3e5681d5b76ba0f5"
+      },
+      ".layout.json": {
+        "name": "workflow.layout.json",
+        "sha256": "df0a9e59c003eb13e88f74b5cc137c2ff4dbe755de9f150b94ab36946b98f41b"
+      }
+    },
+    "implementation_sha256": {
+      "plot_figures.py": "52ddc7fa55e6804f6ec7b2f4368727cdaa4ddb5cc7ee7f0d0bc23b063861d245",
+      "figure_spec.py": "631438d848001d1cea6833d3ab44cbf244b60d6e52eea46494e47f9b2ef18b97",
+      "audit_figure.py": "7b478badd3820796cd042a5e55ab880304e93c25c36bd56e5880521198618fdc",
+      "svg_panels.py": "a912c6d92a6cbf6158cea45e1de57f06b34471beccb66ddb17e034eb1bedf949"
+    },
+    "visual_review": "PNG identical to visually inspected preview; evaluation/figures/REPORT.md"
+  },
+  {
+    "example": "structures",
+    "verdict": "REVIEW_REQUIRED",
+    "pdf_sha256": "d3bedfcd625b4816d1ecc38da1127cc95e95a6719c209818b2d8acf884b88cfd",
+    "files": {
+      ".svg": {
+        "name": "structures.svg",
+        "sha256": "dce47fb58ef147532303160b4fdb2de3f3fd5e0931e0e41c2be82c82c24d0553"
+      },
+      ".pdf": {
+        "name": "structures.pdf",
+        "sha256": "d3bedfcd625b4816d1ecc38da1127cc95e95a6719c209818b2d8acf884b88cfd"
+      },
+      ".png": {
+        "name": "structures.png",
+        "sha256": "68dded064b1ad30ba41e34128963b4931826dd8fa3b47e73b1b9b1379962e939"
+      },
+      ".spec.json": {
+        "name": "structures.spec.json",
+        "sha256": "cffe097c774b8309d0b2b94894832f20184121ec874a696e71a50935cff26cfb"
+      },
+      ".caption.txt": {
+        "name": "structures.caption.txt",
+        "sha256": "3c05699da49e10f2f1d6743bc350f2ec27bf218859c086d5fb7d2ed6c889de48"
+      }
+    },
+    "implementation_sha256": {
+      "plot_figures.py": "52ddc7fa55e6804f6ec7b2f4368727cdaa4ddb5cc7ee7f0d0bc23b063861d245",
+      "figure_spec.py": "631438d848001d1cea6833d3ab44cbf244b60d6e52eea46494e47f9b2ef18b97",
+      "audit_figure.py": "7b478badd3820796cd042a5e55ab880304e93c25c36bd56e5880521198618fdc",
+      "svg_panels.py": "a912c6d92a6cbf6158cea45e1de57f06b34471beccb66ddb17e034eb1bedf949"
+    },
+    "visual_review": "PNG identical to visually inspected preview; evaluation/figures/REPORT.md"
+  },
+  {
+    "example": "toc",
+    "verdict": "MECHANICAL_PASS",
+    "pdf_sha256": "8e2124937f7b932ac88e919b185b82783591a3a171cf627cd5bbfa99067a3ffd",
+    "files": {
+      ".svg": {
+        "name": "toc.svg",
+        "sha256": "c51c4df0dd466c6a8be2eee620d0916130c3b9d2af3212f4e3e71b286457308b"
+      },
+      ".pdf": {
+        "name": "toc.pdf",
+        "sha256": "8e2124937f7b932ac88e919b185b82783591a3a171cf627cd5bbfa99067a3ffd"
+      },
+      ".png": {
+        "name": "toc.png",
+        "sha256": "77daca98ae3273008da29c6bcd77a7304a87a6cc282e008bff87948585d96ae1"
+      },
+      ".spec.json": {
+        "name": "toc.spec.json",
+        "sha256": "735b7ef28822896ee1ff4795e4edeb8a552311608e679d75e9f9c27ee352e00f"
+      },
+      ".caption.txt": {
+        "name": "toc.caption.txt",
+        "sha256": "e6832b1e8098bfa47ce871ba90a86f6ac44dc4d1d5eb88ba3e5681d5b76ba0f5"
+      },
+      ".layout.json": {
+        "name": "toc.layout.json",
+        "sha256": "216d71cf3b0c9088c5bb86431314c5c70dc70a6db80b3726ee0a3fe908fced59"
+      },
+      ".tiff": {
+        "name": "toc.tiff",
+        "sha256": "2899fc836276892de9121524404b58bd7b4ebe330beb1776c9f37d4445932e78"
+      }
+    },
+    "implementation_sha256": {
+      "plot_figures.py": "52ddc7fa55e6804f6ec7b2f4368727cdaa4ddb5cc7ee7f0d0bc23b063861d245",
+      "figure_spec.py": "631438d848001d1cea6833d3ab44cbf244b60d6e52eea46494e47f9b2ef18b97",
+      "audit_figure.py": "7b478badd3820796cd042a5e55ab880304e93c25c36bd56e5880521198618fdc",
+      "svg_panels.py": "a912c6d92a6cbf6158cea45e1de57f06b34471beccb66ddb17e034eb1bedf949"
+    },
+    "visual_review": "PNG identical to visually inspected preview; evaluation/figures/REPORT.md"
+  }
+]

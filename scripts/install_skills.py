@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Install the four sibling skill folders with dependency checks and rollback."""
+"""Install the sibling skill folders with dependency checks and rollback."""
 
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ import shutil
 import tempfile
 from pathlib import Path
 
-NAMES = ("jacs-shared", "jacs-style-distill", "jacs-writing", "jacs-polishing")
+NAMES = ("jacs-shared", "jacs-style-distill", "jacs-writing", "jacs-polishing", "jacs-figure")
 
 
 def check_links(root: Path) -> None:
@@ -86,7 +86,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--destination", type=Path, required=True)
     parser.add_argument(
-        "--replace", action="store_true", help="Replace only these four named skills"
+        "--replace", action="store_true", help="Replace only these five named skills"
     )
     args = parser.parse_args()
     try:

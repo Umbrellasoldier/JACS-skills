@@ -1,0 +1,83 @@
+{
+  "pdf_sha256": "4449d323685a03ded8195f3a6ddb388824a0a43133210105a38ab78bfbb69d2d",
+  "findings": [
+    {
+      "check": "physical_size",
+      "status": "PASS",
+      "detail": "Measured (504.0, 300.0) pt"
+    },
+    {
+      "check": "pdf_text_size",
+      "status": "PASS",
+      "detail": "Effective text minimum 5.600 pt"
+    },
+    {
+      "check": "measured_layout",
+      "status": "PASS",
+      "detail": "No detected text clipping or overlap; declared panel groups align"
+    }
+  ],
+  "minimum_text_pt": 5.6,
+  "scope": "MediaBox and extractable transformed text; not all glyphs, paths, image DPI, chemical identity or data correctness",
+  "name": "figure1_predictions",
+  "details": {
+    "metrics": {
+      "Baseline": {
+        "n": 8,
+        "mae_kcal_per_mol": 3.0,
+        "rmse_kcal_per_mol": 3.4641016151377544,
+        "reaction_ids": [
+          "RX-001",
+          "RX-002",
+          "RX-003",
+          "RX-004",
+          "RX-005",
+          "RX-006",
+          "RX-007",
+          "RX-008"
+        ]
+      },
+      "Candidate": {
+        "n": 8,
+        "mae_kcal_per_mol": 1.7750000000000004,
+        "rmse_kcal_per_mol": 2.113646138784825,
+        "reaction_ids": [
+          "RX-001",
+          "RX-002",
+          "RX-003",
+          "RX-004",
+          "RX-005",
+          "RX-006",
+          "RX-007",
+          "RX-008"
+        ]
+      }
+    },
+    "input_records": 16,
+    "plotted_records": 16,
+    "excluded_records": 0,
+    "residual": "prediction minus reference",
+    "comparable_axes": "parity and residual boxes are 185 x 185 pt; y scales differ by quantity"
+  },
+  "provenance": {
+    "spec_sha256": "27b3f11e5d9103c8444779da955e83e6e539858baa7f991e9bc2fe1428bd35b4",
+    "sources": [
+      {
+        "name": "predictions.csv",
+        "sha256": "09e40a3ce6f2953b0ff14f75bca95c50090b4408cdf02ae209906215a5a0e476"
+      }
+    ],
+    "input_records": 16,
+    "excluded_records": 0,
+    "data_sha256": "df0dd5c308a51de601701974adef78e1a261a21054f0ca7ed2bd2f1ba4d03dbc"
+  },
+  "verdict": "MECHANICAL_PASS",
+  "visual_review": "required; recorded separately after inspecting exported figures",
+  "data_status": "synthetic",
+  "renderer_sha256": "fb6942adaff1000d0aa8a2c301ce796eb41f4ce1fd97421e7b300a585fc40594",
+  "files": {
+    ".pdf": "4449d323685a03ded8195f3a6ddb388824a0a43133210105a38ab78bfbb69d2d",
+    ".svg": "be34836644719033257cdd3041049497c8add3662dc0a46ff57e395cb3611a66",
+    ".png": "a68b77c5d9fa624439207fa25acd35dc4db61e0f24b08a40c02bdc75b8bc20cb"
+  }
+}

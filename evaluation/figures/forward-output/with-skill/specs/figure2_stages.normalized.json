@@ -1,0 +1,51 @@
+{
+  "data_status": "synthetic",
+  "scale": "linear",
+  "kind": "stages",
+  "profile": "double",
+  "width_pt": 504.0,
+  "height_pt": 266.0,
+  "claim": "Sequential cohort accounting with conditional pass-rate denominators.",
+  "caption": "Figure 2. Synthetic sequential-stage accounting for 199 initial reactions. Only reactions passing the preceding stage enter the next stage. Colored segments show passed, failed, and pending reactions at the indicated stage; gray segments show the cumulative earlier failures or pending reactions. Each conditional pass rate equals the passed count divided by the entered count at that stage (199, 150, 110, and 90, respectively); the gray segment is excluded from that denominator. The final-stage pass count is 65/199 (32.7%) of the initial population. Stage names are those supplied and do not establish additional validation procedures.",
+  "population": "199 initial synthetic reactions, sequential unbranched cohort",
+  "population_total": 199,
+  "unit_of_analysis": "reactions",
+  "data": [
+    {
+      "stage": "Candidate generation",
+      "passed": 150,
+      "failed": 29,
+      "pending": 20,
+      "entered": 199,
+      "conditional_rate": 0.7537688442211056,
+      "overall_rate": 0.7537688442211056
+    },
+    {
+      "stage": "TS optimization",
+      "passed": 110,
+      "failed": 25,
+      "pending": 15,
+      "entered": 150,
+      "conditional_rate": 0.7333333333333333,
+      "overall_rate": 0.5527638190954773
+    },
+    {
+      "stage": "Frequency check",
+      "passed": 90,
+      "failed": 12,
+      "pending": 8,
+      "entered": 110,
+      "conditional_rate": 0.8181818181818182,
+      "overall_rate": 0.45226130653266333
+    },
+    {
+      "stage": "Endpoint validation",
+      "passed": 65,
+      "failed": 15,
+      "pending": 10,
+      "entered": 90,
+      "conditional_rate": 0.7222222222222222,
+      "overall_rate": 0.32663316582914576
+    }
+  ]
+}

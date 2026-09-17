@@ -1,0 +1,5 @@
+stage,entering,passed,failed,pending,pass_rate
+Candidate generation,199,150,29,20,0.7537688442211056
+TS optimization,150,110,25,15,0.7333333333333333
+Frequency check,110,90,12,8,0.8181818181818182
+Endpoint validation,90,65,15,10,0.7222222222222222

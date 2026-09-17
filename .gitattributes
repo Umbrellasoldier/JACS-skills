@@ -1,0 +1,5 @@
+* text=auto eol=lf
+# Keep evaluated inputs and rendered artifacts byte-identical to their recorded hashes.
+*.csv -text whitespace=cr-at-eol
+*.svg -text -whitespace
+*.png -text

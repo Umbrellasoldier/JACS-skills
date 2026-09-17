@@ -1,0 +1,4 @@
+interface:
+  display_name: "JACS Figure"
+  short_description: "Chemistry figures with source and visual checks"
+  default_prompt: "Use $jacs-figure to create a JACS figure from my data while preserving chemical meaning."

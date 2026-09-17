@@ -1,0 +1,5 @@
+stage,passed,failed,pending
+Candidate generation,150,29,20
+TS optimization,110,25,15
+Frequency check,90,12,8
+Endpoint validation,65,15,10

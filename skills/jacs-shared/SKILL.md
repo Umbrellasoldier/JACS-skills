@@ -1,6 +1,6 @@
 ---
 name: jacs-shared
-description: Internal reference support for JACS writing, polishing, and style distillation. Load a specific referenced file when another JACS skill needs journal policy, chemistry semantics, or corpus provenance; not a standalone writing workflow.
+description: Internal reference support for JACS writing, figures, polishing, and style distillation. Load a specific referenced file when another JACS skill needs journal policy, chemistry semantics, or corpus provenance; not a standalone workflow.
 ---
 
 # Shared JACS references
@@ -19,6 +19,11 @@ Read only what the requesting task needs, then return to that skill's workflow.
 - [Corpus manifest](references/corpus-manifest.jsonl): bibliography, split, and acquisition state.
 - [Pilot annotations](references/pilot-annotations.jsonl): paraphrased evidence notes and locators.
 - [Pilot statistics](references/pilot-statistics.json): measured counts and tokenization scope.
+- [Graphics policy](references/graphics-policy.md): main figures and TOC specifications.
+- [Figure corpus](references/figure-corpus.jsonl): separate image availability and visual review.
+- [Figure annotations](references/figure-annotations.jsonl): original source-located visual notes.
+- [Figure rules](references/figure-rules.jsonl): conditional observations with paper counts.
+- [Figure findings](references/figure-findings.md): actual coverage, held-out checks and limits.
 
 Policy, observations, scientific semantics, and project facts are different evidence classes.
 Do not present a corpus heuristic as an ACS requirement or infer results from an example profile.

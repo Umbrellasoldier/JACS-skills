@@ -1,0 +1,480 @@
+{
+  "schema_version": 1,
+  "language": "zh-CN",
+  "blind_scope": {
+    "read_directories": [
+      "inputs",
+      "candidate_a",
+      "candidate_b"
+    ],
+    "excluded": "未读取其他技能、报告、源脚本、身份映射或其他代理输出；未联网、运行 Git、修改候选图或发布。",
+    "workflow_identity_inferred": false,
+    "methods": [
+      "逐张查看六张 PNG",
+      "以 PDFium 渲染六份 PDF，并按 120 px/in 的统一物理尺度查看",
+      "用 pypdf 核对单页尺寸、可提取文字及图像对象",
+      "解析六份 SVG 的尺寸、文字、散点坐标、条形宽度、化学标签与楔线",
+      "独立从 CSV 重算残差、MAE、RMSE、阶段分母和通过率",
+      "用 RDKit 解析输入 SMILES 的映射、氢数与 CIP，再与图中连键和楔线人工比对"
+    ],
+    "print_preview_limit": "统一比例的屏幕预览不是实物印刷校样。"
+  },
+  "summary": {
+    "per_figure_winners": {
+      "figure1": "candidate_b",
+      "figure2": "candidate_b",
+      "figure3": "tie"
+    },
+    "scientific_correctness": "三对均未发现已证实的数值或化学错误；图 1、2 的优胜依据是可读性与信息组织。",
+    "overall_winner": "candidate_b",
+    "overall_basis": "图 1 的配对阅读更直接，图 2 在较窄栏宽保留全部必要内容；不将这些差异等同于科学正确性提升。"
+  },
+  "dimensions": {
+    "candidate_a": {
+      "figure1": {
+        "pdf_pages": 1,
+        "page_pt": [
+          504.0,
+          300.0
+        ],
+        "page_mm": [
+          177.8,
+          105.833
+        ],
+        "png_pixels": [
+          2100,
+          1250
+        ],
+        "png_dpi": [
+          299.999,
+          299.999
+        ]
+      },
+      "figure2": {
+        "pdf_pages": 1,
+        "page_pt": [
+          504.0,
+          266.0
+        ],
+        "page_mm": [
+          177.8,
+          93.839
+        ],
+        "png_pixels": [
+          2100,
+          1108
+        ],
+        "png_dpi": [
+          299.999,
+          299.999
+        ]
+      },
+      "figure3": {
+        "pdf_pages": 1,
+        "page_pt": [
+          360.0,
+          180.0
+        ],
+        "page_mm": [
+          127.0,
+          63.5
+        ],
+        "png_pixels": [
+          1500,
+          750
+        ],
+        "png_dpi": [
+          299.999,
+          299.999
+        ]
+      }
+    },
+    "candidate_b": {
+      "figure1": {
+        "pdf_pages": 1,
+        "page_pt": [
+          504.0,
+          288.0
+        ],
+        "page_mm": [
+          177.8,
+          101.6
+        ],
+        "png_pixels": [
+          4200,
+          2400
+        ],
+        "png_dpi": [
+          599.999,
+          599.999
+        ]
+      },
+      "figure2": {
+        "pdf_pages": 1,
+        "page_pt": [
+          234.0,
+          262.8
+        ],
+        "page_mm": [
+          82.55,
+          92.71
+        ],
+        "png_pixels": [
+          1950,
+          2190
+        ],
+        "png_dpi": [
+          599.999,
+          599.999
+        ]
+      },
+      "figure3": {
+        "pdf_pages": 1,
+        "page_pt": [
+          234.0,
+          119.0
+        ],
+        "page_mm": [
+          82.55,
+          41.981
+        ],
+        "png_pixels": [
+          1950,
+          992
+        ],
+        "png_dpi": [
+          599.999,
+          599.999
+        ]
+      }
+    }
+  },
+  "figures": [
+    {
+      "figure": "figure1",
+      "winner": "candidate_b",
+      "confidence": "high",
+      "scientific_correctness": "tie",
+      "evidence": [
+        "两组 parity 图各保留 16 个散点，残差图各保留 16 个点；8 个 RX-001–RX-008 标识齐全。",
+        "从 SVG 标记坐标反算的 reference/prediction 与输入一致；最大误差 A 为 0，B 约 7.1e-15 kcal/mol。残差最大误差 A 约 3.24e-8，B 约 3.11e-15 kcal/mol，均为坐标精度。",
+        "两组残差均为预测减参考；图示 MAE/RMSE 分别为 3.00/3.46 与 1.78/2.11，与独立计算一致。",
+        "两组图注均给出分离反应物零点、298.15 K、1 mol/L、共享计算级别与溶剂但名称未提供；均标明合成示例且不虚构显著性或不确定性。",
+        "B 的反应 ID 水平排列，灰线连接同一反应的两种结果，垂直错位在图注明确说明；A 的 ID 旋转 60°，配对关系依靠相邻点辨认。",
+        "两者均为 504 pt 宽；A 的刻度 7 pt、轴标签 8 pt、底部合成说明 6 pt；B 的主要刻度 7.5 pt、轴标签 8.5 pt、合成说明 7 pt。"
+      ],
+      "preference_not_error": [
+        "A 使用纵向残差、旋转标签和 4–44 范围的等尺度 parity 轴都是有效选择；不因不从零起轴而判错。",
+        "两组 parity 图中较近的点存在局部重叠，但残差面板均把每一条记录分开显示。"
+      ],
+      "confirmed_scientific_errors": [],
+      "unresolved_limits": [
+        "未获绘图源代码或作者检查记录，不能验证原生成过程；本评审只核验现有产物。"
+      ],
+      "source_metrics": {
+        "Baseline": {
+          "n": 8,
+          "reaction_ids": [
+            "RX-001",
+            "RX-002",
+            "RX-003",
+            "RX-004",
+            "RX-005",
+            "RX-006",
+            "RX-007",
+            "RX-008"
+          ],
+          "residuals": [
+            2.0,
+            -4.0,
+            3.0,
+            -1.0,
+            6.0,
+            -2.0,
+            1.0,
+            -5.0
+          ],
+          "mae": 3.0,
+          "rmse": 3.4641016151377544
+        },
+        "Candidate": {
+          "n": 8,
+          "reaction_ids": [
+            "RX-001",
+            "RX-002",
+            "RX-003",
+            "RX-004",
+            "RX-005",
+            "RX-006",
+            "RX-007",
+            "RX-008"
+          ],
+          "residuals": [
+            1.0,
+            -2.0,
+            2.0,
+            -0.5,
+            4.0,
+            -1.0,
+            0.7,
+            -3.0
+          ],
+          "mae": 1.7750000000000004,
+          "rmse": 2.1136461387848255
+        }
+      }
+    },
+    {
+      "figure": "figure2",
+      "winner": "candidate_b",
+      "confidence": "medium",
+      "scientific_correctness": "tie",
+      "evidence": [
+        "两组均保留全部 12 个原始 passed/failed/pending 数值及 4 个阶段名称。SVG 条宽反算匹配输入（最大舍入差小于 1e-6 个反应）。",
+        "分母均为本阶段进入数 199、150、110、90，包含 pending；通过率为 75.4%、73.3%、81.8%、72.2%；最终 65/199=32.7%。",
+        "A 加入 0、49、89、109 个较早失败或待完成的灰段，并明确这些不进入本阶段分母；这是有效的全队列记账方式，没有把它们算成当前失败。",
+        "B 的条长直接表示本阶段进入人数，图注明确各行是嵌套群体、不可相加。",
+        "B 在 234 pt 宽、262.8 pt 高的单栏尺寸中容纳相同必需信息，数字 7.5 pt、阶段名 7.6 pt；A 需要 504 pt 宽、266 pt 高，数字 7 pt、阶段名 7.5 pt。两组实际渲染无可见标签裁切。"
+      ],
+      "preference_not_error": [
+        "优先 B 的理由是条长自然呈现进入人数变化且节省横向空间；若希望突出相对初始群体的去向，A 的固定 199 长度也合理。",
+        "B 的 8、10 等小段较紧凑，仍可辨；A 的小段同样受纹理和边界影响。"
+      ],
+      "confirmed_scientific_errors": [],
+      "unresolved_limits": [
+        "原数据没有反应级阶段身份，无法验证跨阶段到底是哪一条反应；两组均未声称提供这种信息。"
+      ],
+      "stage_checks": [
+        {
+          "stage": "Candidate generation",
+          "passed": 150,
+          "failed": 29,
+          "pending": 20,
+          "entered": 199,
+          "pass_percent": 75.4,
+          "earlier_failed_or_pending": 0
+        },
+        {
+          "stage": "TS optimization",
+          "passed": 110,
+          "failed": 25,
+          "pending": 15,
+          "entered": 150,
+          "pass_percent": 73.3,
+          "earlier_failed_or_pending": 49
+        },
+        {
+          "stage": "Frequency check",
+          "passed": 90,
+          "failed": 12,
+          "pending": 8,
+          "entered": 110,
+          "pass_percent": 81.8,
+          "earlier_failed_or_pending": 89
+        },
+        {
+          "stage": "Endpoint validation",
+          "passed": 65,
+          "failed": 15,
+          "pending": 10,
+          "entered": 90,
+          "pass_percent": 72.2,
+          "earlier_failed_or_pending": 109
+        }
+      ]
+    },
+    {
+      "figure": "figure3",
+      "winner": "tie",
+      "confidence": "high",
+      "scientific_correctness": "tie",
+      "evidence": [
+        "两组均保留 s1/s2、Isomer 1/2 与每个结构的映射 1–6，羧酸双键和两个羟基连接一致。",
+        "输入解析为 s1 的映射 2 为 S、s2 为 R；图中相同平面排列下，C2→C1 分别为虚楔和实楔，人工按优先级 O3>C4>C1>H 核对与输入一致。",
+        "A 原生尺寸 360×180 pt，化学标签 8 pt；B 为 234×119 pt，字符为轮廓路径，主字符实际字形高约 6.2 pt，不能把它误报为 6.2 pt 的字体字号。统一物理尺度查看时两组标签、楔线均可辨。",
+        "B 显示 C:1H3，并在图注和 SVG 描述保留原始 SMILES；A 将甲基写为 C:1，以碳的隐含氢/价态表达。两者均未显示与输入冲突的价态、额外电荷或自由基标记。",
+        "A 图内说明二维描绘与映射读法；B 图面较紧凑、上述说明置于图注。两组均未声称提供三维几何或实测键长。"
+      ],
+      "preference_not_error": [
+        "B 的单栏适配与显式甲基氢较好；A 的图内解释、较大画布和可提取文字有价值，本任务没有提供足以决定这些取舍的额外优先级。",
+        "氧原子的红色或黑色是展示选择；不据此判定化学质量。"
+      ],
+      "confirmed_scientific_errors": [],
+      "unresolved_limits": [
+        "立体化学通过输入解析与图形人工核对确认；未对渲染图执行独立光学分子识别或机器图结构回读。",
+        "B 的结构文字为矢量轮廓，PDF 无可提取文字；可见标签完整，但不能当作文本可搜索性已验证。"
+      ],
+      "input_identity": {
+        "s1": {
+          "map_2_cip": "S",
+          "map_numbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        "s2": {
+          "map_2_cip": "R",
+          "map_numbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        }
+      }
+    }
+  ],
+  "deliverable_completeness": {
+    "winner": "tie",
+    "candidate_a": {
+      "pdf": 3,
+      "svg": 3,
+      "png": 3,
+      "captions": true,
+      "code_or_config": "not_available_in_blind_scope",
+      "actual_check_record": "not_available_in_blind_scope"
+    },
+    "candidate_b": {
+      "pdf": 3,
+      "svg": 3,
+      "png": 3,
+      "captions": true,
+      "code_or_config": "not_available_in_blind_scope",
+      "actual_check_record": "not_available_in_blind_scope"
+    },
+    "interpretation": "两组的三种图格式及简短图注齐全；盲包未含可复现代码/配置或实际检查记录，故无法确认原完整交付是否满足这两项，不能据此断言原作者没有提供。",
+    "format_checks": "六份 PDF 均单页且无嵌入栅格图像对象，页面尺寸与 SVG 一致；PDF 与 PNG 的可见内容一致。A PNG 约 300 dpi，B 约 600 dpi；本评审不把单纯分辨率差异等同于科学优劣。"
+  },
+  "global_unresolved_limits": [
+    "未联网核对现行 JACS 制图规范，不能出具期刊技术合规结论。",
+    "未执行实物印刷检查或复现绘图；屏幕检查只支持当前渲染可读性与产物数据保真结论。"
+  ],
+  "inspected_files": [
+    {
+      "path": "inputs/predictions.csv",
+      "sha256": "09e40a3ce6f2953b0ff14f75bca95c50090b4408cdf02ae209906215a5a0e476",
+      "bytes": 422
+    },
+    {
+      "path": "inputs/request.md",
+      "sha256": "87d107b4be7af26b6a18ce0299279021d04c47f0ccf93d4c9e834721a53e3f15",
+      "bytes": 829
+    },
+    {
+      "path": "inputs/stages.csv",
+      "sha256": "f488441e7718b6d509c3dd8a4578f6c594de257844be042425b7f6f7262ae0fa",
+      "bytes": 143
+    },
+    {
+      "path": "inputs/structures.json",
+      "sha256": "44071ff1f838587e933e10e2d6d7016f3f23c542fe3e8bfdf462ee783a47b4d8",
+      "bytes": 220
+    },
+    {
+      "path": "candidate_a/captions.md",
+      "sha256": "ae9f8f5a2afe3518ab7a6b6ba34e2e760e57bd6e002e6b3d2ba17502ee40086b",
+      "bytes": 1671
+    },
+    {
+      "path": "candidate_a/figure1.pdf",
+      "sha256": "4449d323685a03ded8195f3a6ddb388824a0a43133210105a38ab78bfbb69d2d",
+      "bytes": 28150
+    },
+    {
+      "path": "candidate_a/figure1.png",
+      "sha256": "a68b77c5d9fa624439207fa25acd35dc4db61e0f24b08a40c02bdc75b8bc20cb",
+      "bytes": 167030
+    },
+    {
+      "path": "candidate_a/figure1.svg",
+      "sha256": "be34836644719033257cdd3041049497c8add3662dc0a46ff57e395cb3611a66",
+      "bytes": 27865
+    },
+    {
+      "path": "candidate_a/figure2.pdf",
+      "sha256": "f95974dc2dd16993b831fc0ee576fd7bc0f0d10d9594761aed361e1220143d2b",
+      "bytes": 36248
+    },
+    {
+      "path": "candidate_a/figure2.png",
+      "sha256": "41f0610d827f0223a0c5d0033b3fb16a72ecd060b160fe5f97b3430ccd58f795",
+      "bytes": 171002
+    },
+    {
+      "path": "candidate_a/figure2.svg",
+      "sha256": "0718b279e125a368accbccc841d128ed3b2937d789393fc9ae43127552279c06",
+      "bytes": 86540
+    },
+    {
+      "path": "candidate_a/figure3.pdf",
+      "sha256": "6f9bd28d825108a51a0c1bb8ab788438e80dca3bd2f236aa4389dbc7a6afdff8",
+      "bytes": 23837
+    },
+    {
+      "path": "candidate_a/figure3.png",
+      "sha256": "6df78abd00dec447d8e55dd3549c5fa7d9247592ea32443d01684f1c4895f2a3",
+      "bytes": 54598
+    },
+    {
+      "path": "candidate_a/figure3.svg",
+      "sha256": "12e12e7f2c116666a685a2c19d1f8af45971e584129f75608ae412f8099faf7b",
+      "bytes": 14131
+    },
+    {
+      "path": "candidate_b/captions.md",
+      "sha256": "4e53ab01532822e93f90b64fc6e6f795bbc8cd87a47e0151eaa8b4711c3bbd2c",
+      "bytes": 1953
+    },
+    {
+      "path": "candidate_b/figure1.pdf",
+      "sha256": "1b054ed3e7e87e2fb00b76e17463b6a4c0ee7f023470b77801f48e19520d529b",
+      "bytes": 26159
+    },
+    {
+      "path": "candidate_b/figure1.png",
+      "sha256": "5460a0b2613d3ba8a7a5abf9c817e92749b8e112a0bca2ac3bee2d27d5a2ca0f",
+      "bytes": 394860
+    },
+    {
+      "path": "candidate_b/figure1.svg",
+      "sha256": "4e0af547db439cbe776cfa6949c209c1dd231e6d1feeb239bd34ed67200acca7",
+      "bytes": 42484
+    },
+    {
+      "path": "candidate_b/figure2.pdf",
+      "sha256": "be1aa43d9e8501e42ee79f90532847f6f0e18d5c0a5e9a6837b451207642761d",
+      "bytes": 21793
+    },
+    {
+      "path": "candidate_b/figure2.png",
+      "sha256": "995108eb557320fed29f7a957c785ee6a52f0b398bf3a527edff497502eb661d",
+      "bytes": 296843
+    },
+    {
+      "path": "candidate_b/figure2.svg",
+      "sha256": "98b0204a3f765db36bad6ba8dfdb6ea2584c74c563f4632c9f1efbd70bf6d654",
+      "bytes": 15034
+    },
+    {
+      "path": "candidate_b/figure3.pdf",
+      "sha256": "5d97ec46fb32cbc802fa72b78de05c80c35638c1d5fec6302f411c66e418c671",
+      "bytes": 12660
+    },
+    {
+      "path": "candidate_b/figure3.png",
+      "sha256": "43c6744d0d81a1f3dc981ed498b57370abd3f62fb2fe88fcad11c4c8f3990d93",
+      "bytes": 74353
+    },
+    {
+      "path": "candidate_b/figure3.svg",
+      "sha256": "a2d68c7d79e967e8973e285ab6d5890f6f77fbf10189254544c5b7ba4fb13662",
+      "bytes": 31125
+    }
+  ]
+}

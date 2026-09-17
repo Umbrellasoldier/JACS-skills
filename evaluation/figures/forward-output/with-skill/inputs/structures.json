@@ -1,0 +1,12 @@
+[
+  {
+    "id": "s1",
+    "label": "Isomer 1",
+    "smiles": "[CH3:1][C@H:2]([OH:3])[C:4](=[O:5])[OH:6]"
+  },
+  {
+    "id": "s2",
+    "label": "Isomer 2",
+    "smiles": "[CH3:1][C@@H:2]([OH:3])[C:4](=[O:5])[OH:6]"
+  }
+]

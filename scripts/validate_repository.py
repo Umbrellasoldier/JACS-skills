@@ -11,6 +11,8 @@ import re
 import subprocess
 from pathlib import Path
 
+from validate_figures import validate as validate_figures
+
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -20,7 +22,9 @@ def jsonl(path: Path) -> list[dict]:
     ]
 
 
-def validate(root: Path = ROOT, source_blocks: Path | None = None) -> dict:
+def validate(
+    root: Path = ROOT, source_blocks: Path | None = None, figure_sources: Path | None = None
+) -> dict:
     errors = []
     skills = root / "skills"
     spec = importlib.util.spec_from_file_location("installer", root / "scripts/install_skills.py")
@@ -131,6 +135,8 @@ def validate(root: Path = ROOT, source_blocks: Path | None = None) -> dict:
             text = path.read_text(encoding="utf-8")
             if "/mnt/sto3/" in text or "/home/caoxiangyu/" in text:
                 errors.append(f"Machine-specific private path in publication: {name}")
+    figures = validate_figures(root, figure_sources)
+    errors.extend(figures.pop("errors"))
     return {
         "skills": len(installer.NAMES),
         "papers": len(records),
@@ -138,6 +144,7 @@ def validate(root: Path = ROOT, source_blocks: Path | None = None) -> dict:
         "annotations": len(annotations),
         "rules": len(rules),
         "source_blocks_checked": source_blocks is not None,
+        "figures": figures,
         "errors": errors,
     }
 
@@ -145,8 +152,9 @@ def validate(root: Path = ROOT, source_blocks: Path | None = None) -> dict:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source-blocks", type=Path)
+    parser.add_argument("--figure-sources", type=Path)
     args = parser.parse_args()
-    report = validate(source_blocks=args.source_blocks)
+    report = validate(source_blocks=args.source_blocks, figure_sources=args.figure_sources)
     print(json.dumps(report, ensure_ascii=False, indent=2))
     return bool(report["errors"])
 

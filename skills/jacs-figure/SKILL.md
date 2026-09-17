@@ -1,0 +1,78 @@
+---
+name: jacs-figure
+description: Design, create, revise, and audit JACS scientific figures from data and chemical structures. Use for JACS 科研绘图、能量剖面、过渡态结构、多面板组图和 TOC 图; use jacs-polishing for caption-only prose edits.
+---
+
+# JACS scientific figures
+
+Create a reproducible figure that answers the author's scientific question and preserves the
+meaning of the supplied data. The bundled visual corpus covers selected reaction chemistry
+and molecular modeling papers; its observations are conditional, not a whole-journal style.
+
+## Route the request
+
+- **Plan:** identify the question, necessary evidence and panel roles. Missing measurements
+  can remain explicit gaps; plotting dependencies are unnecessary for a plan.
+- **Create or restructure:** read [figure contract](references/figure-contract.md) and the
+  relevant part of [chemistry figures](references/chemistry-figures.md).
+- **Revise:** preserve the existing data mapping, backend and unaffected design. A color or
+  label change does not authorize changing scientific content or rebuilding the whole figure.
+- **Audit or export:** read [QA](references/qa.md) and the applicable
+  [graphics policy](../jacs-shared/references/graphics-policy.md).
+- **Derive style from papers:** use the figure route in
+  [jacs-style-distill](../jacs-style-distill/SKILL.md); captions alone do not establish visual style.
+
+For a new rendering task use Python unless the user or supplied workflow establishes another
+backend. Respect an existing R or chemistry drawing workflow. Read-only review needs no
+backend choice. The bundled Python templates are optional tools, not the entire skill.
+
+## Scientific meaning before styling
+
+Record the claim, source data, panel roles, quantities/units, population and target format.
+Read [chemistry semantics](../jacs-shared/references/chemistry-semantics.md) when energies,
+transition states, pathways or model comparisons are involved. Keep generated candidates,
+frequency characterization, IRC and endpoint validation distinct. Preserve reaction IDs,
+atom mapping, stereochemistry, charge and the actual uncertainty definition.
+
+Use all relevant supplied observations by default. Document justified exclusions and any
+aggregation; never silently drop failures, outliers, nonpositive values or incomplete pairs
+to fit a template. Production figures require real supplied values. Example data remain
+explicitly marked synthetic in both the image and provenance.
+
+## Design and render
+
+Load [visual rules](references/visual-rules.md) when choosing composition, labels or colors.
+Select complementary panels for a shared question; equal-size comparisons and unequal-size
+explanatory panels are both valid. Reuse semantic colors across the manuscript and redundant
+markers/labels where helpful. Do not infer an official palette or panel-letter convention.
+
+Choose the narrowest column format that keeps the actual content readable. For a small
+structure pair or short stage sequence, inspect a single-column design before allocating
+double-column width. Keep IDs horizontal when possible; transpose a categorical residual
+plot if that makes paired observations easier to compare. Move repeated explanatory prose
+to the caption when the figure remains self-contained.
+
+The bundled [renderer](scripts/plot_figures.py) accepts JSON specifications and optional CSV
+data. [Examples and schema](references/figure-contract.md#bundled-specifications) describe the
+six families and SVG assembly. Resolve scripts and assets relative to this SKILL.md. Keep the
+input intact. Use an isolated output directory and the task's available environment; the
+repository's locked `figures` group supplies plotting dependencies and `chemistry` adds RDKit.
+
+Use chemical drawing software or real structure assets for molecules and TS panels. A 2D
+SMILES depiction is not a calculated 3D geometry. Do not infer bond distances from its pixels.
+The structure template draws SMILES or assembles supplied SVG; obtain a real geometry renderer
+for XYZ/SDF-based 3D views. Generated artwork must not substitute for measured/calculated data.
+
+## Verify and deliver
+
+Inspect the actual final PDF/SVG and a final-size preview after rendering. Run applicable
+data, dimension, text and layout checks; repair deterministic failures and inspect warnings.
+The bundled auditor explicitly leaves chemical correctness, many graphic collisions and
+unsupported objects to visual review. `MECHANICAL_PASS` is not complete scientific approval.
+Never report `UNKNOWN` as passed or reuse a QA report after changing its figure.
+
+Deliver requested formats with the specification, plotting source/version, data or source
+index, caption facts and concise QA notes. Keep source papers and private project data local.
+For prose-only captions use [jacs-polishing](../jacs-polishing/SKILL.md); when drafting Results
+use [jacs-writing](../jacs-writing/SKILL.md) with the verified figure facts. Do not upgrade the
+claim beyond the evidence. Apply submission-specific checks only to the requested deliverable.

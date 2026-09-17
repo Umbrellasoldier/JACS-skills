@@ -1,0 +1,17 @@
+reaction_id,method,reference_value,predicted,residual
+RX-001,Baseline,8,10,2
+RX-002,Baseline,12,8,-4
+RX-003,Baseline,17,20,3
+RX-004,Baseline,22,21,-1
+RX-005,Baseline,26,32,6
+RX-006,Baseline,31,29,-2
+RX-007,Baseline,35,36,1
+RX-008,Baseline,41,36,-5
+RX-001,Candidate,8,9,1
+RX-002,Candidate,12,10,-2
+RX-003,Candidate,17,19,2
+RX-004,Candidate,22,21.5,-0.5
+RX-005,Candidate,26,30,4
+RX-006,Candidate,31,30,-1
+RX-007,Candidate,35,35.7,0.7
+RX-008,Candidate,41,38,-3

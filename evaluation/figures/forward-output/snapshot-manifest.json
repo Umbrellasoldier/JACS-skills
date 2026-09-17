@@ -1,0 +1,24 @@
+[
+  {
+    "method": "baseline",
+    "source_script_original_sha256": "47455857bf1e5d8bfa3049a55135ea70e3f8fbfe94a03554f7177426774e295d",
+    "public_script_sha256": "b73e5bf38319f177c1426f13e3f38e7906a746d2aa4012c586ca7f717a5548ad",
+    "normalization": "Only machine-specific interpreter/source-directory strings replaced; drawing and checks unchanged",
+    "source_reference_snapshot_sha256": {}
+  },
+  {
+    "method": "with-skill",
+    "source_script_original_sha256": "fb6942adaff1000d0aa8a2c301ce796eb41f4ce1fd97421e7b300a585fc40594",
+    "public_script_sha256": "10d58ccacff00f78af95938cdf1d96dd7675a3594941ac3bff5f917b96e1d09f",
+    "normalization": "Only machine-specific interpreter/source-directory strings replaced; drawing and checks unchanged",
+    "source_reference_snapshot_sha256": {
+      "source/reference_snapshot/jacs-shared/references/graphics-policy.md": "2a75f2f9556fc030ea9e4f29a47436e8517d9de46224acca7e9868dcaf103328",
+      "source/reference_snapshot/jacs-shared/references/chemistry-semantics.md": "811778e5c0a8492604e640b609bd8d8bdae41a820f498b597f4e1feb5bf94419",
+      "source/reference_snapshot/jacs-figure/SKILL.md": "c2f323507be462458803531a0ecb31f62ea98abc7ec46e2f5286496bcb9179a9",
+      "source/reference_snapshot/jacs-figure/references/qa.md": "8d2b21412dc2c50b91a1a900c53d565197766bd154cd03cf7e69987392266399",
+      "source/reference_snapshot/jacs-figure/references/visual-rules.md": "8a2a4cb5533965e130eaaf2a4b6d0e13cf01df41777e2c5989565eb624311959",
+      "source/reference_snapshot/jacs-figure/references/chemistry-figures.md": "78dd5cd5d4d578fd417d1f0c5ecd99e1c9f0fca2c68f4d974528c707d470be05",
+      "source/reference_snapshot/jacs-figure/references/figure-contract.md": "5faeab6dc9b2538cf207444442b6cfb97a66b6f3cf2d0c4f7fd4eab1ef85ab8e"
+    }
+  }
+]

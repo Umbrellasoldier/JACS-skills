@@ -1,0 +1,44 @@
+{
+  "reviewer": "Codex task agent; no human review claimed",
+  "review_date": "2026-09-17",
+  "method": "Inspect actual exported PDF via PDFium, actual SVG via CairoSVG, and final-size grayscale preview",
+  "figures": {
+    "figure1_predictions": {
+      "pdf_sha256": "4449d323685a03ded8195f3a6ddb388824a0a43133210105a38ab78bfbb69d2d",
+      "svg_sha256": "be34836644719033257cdd3041049497c8add3662dc0a46ff57e395cb3611a66",
+      "notes": [
+        "Reviewed both PDF and SVG at a 96 dpi final-size preview and the PDF at 300 dpi.",
+        "Both methods and all eight reaction IDs are visible; open circles and filled squares remain distinguishable in grayscale.",
+        "The parity identity line and residual zero line are clear; unequal residual and energy axis scales are intentional.",
+        "Some close parity pairs overlap spatially, but both marker shapes remain visible and all pairs are independently readable in the residual panel. No observations were jittered in parity or excluded.",
+        "Energy symbol, unit and residual sign match the caption and supplied request. No clipping or text collision was observed."
+      ],
+      "visual_result": "No blocking problem observed; scope and limitations retained"
+    },
+    "figure2_stages": {
+      "pdf_sha256": "f95974dc2dd16993b831fc0ee576fd7bc0f0d10d9594761aed361e1220143d2b",
+      "svg_sha256": "0718b279e125a368accbccc841d128ed3b2937d789393fc9ae43127552279c06",
+      "notes": [
+        "Reviewed both PDF and SVG at a 96 dpi final-size preview and the PDF at 300 dpi.",
+        "All original stage labels, passed/failed/pending counts, earlier attrition counts and conditional fractions are visible.",
+        "Earlier attrition fills each row to the initial 199 reactions; the fraction column uses entrants 199, 150, 110 and 90.",
+        "Hatched failures and dotted pending segments remain distinct in grayscale. Narrow segments still show their count.",
+        "No text clipping or observed collision was found."
+      ],
+      "visual_result": "No blocking problem observed; scope and limitations retained"
+    },
+    "figure3_structures": {
+      "pdf_sha256": "6f9bd28d825108a51a0c1bb8ab788438e80dca3bd2f236aa4389dbc7a6afdff8",
+      "svg_sha256": "12e12e7f2c116666a685a2c19d1f8af45971e584129f75608ae412f8099faf7b",
+      "notes": [
+        "Reviewed both PDF and SVG at a 96 dpi final-size preview and the PDF at 300 dpi.",
+        "IDs s1 and s2 and original labels are visible; every map 1 through 6 appears in each molecular drawing.",
+        "Mapped C:2 has opposite hashed/solid stereochemical bonds to C:1 in the two matched 2D depictions.",
+        "Oxygen labels, hydroxyl hydrogens, carbonyl double bonds and their map labels are legible.",
+        "The input SMILES parse, mapped stereo roundtrip and opposite CIP descriptors were checked with RDKit. The picture is not a 3D geometry.",
+        "No observed bond/text or inter-panel collision. Automated embedded-panel layout remains UNKNOWN; this is an agent visual review, not a human chemical sign-off."
+      ],
+      "visual_result": "No blocking problem observed; scope and limitations retained"
+    }
+  }
+}

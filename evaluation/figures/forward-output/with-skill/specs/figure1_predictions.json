@@ -1,0 +1,29 @@
+{
+  "data_status": "synthetic",
+  "scale": "linear",
+  "kind": "parity",
+  "profile": "double",
+  "width_pt": 504,
+  "height_pt": 300,
+  "claim": "Descriptive prediction errors for eight shared synthetic reactions.",
+  "caption": "Figure 1. Synthetic comparison of activation Gibbs free energy predictions for the same eight reactions (RX-001–RX-008). (a) Predicted versus reference activation Gibbs free energy, with a dashed identity line. (b) Residuals (prediction minus reference), grouped by reaction ID; horizontal offsets separate methods. Every supplied prediction is shown. Energies are in kcal/mol, referenced to separated reactants, at 298.15 K and a 1 mol/L standard state. The calculation level and solvent settings are shared, but their identities were not supplied. MAE and RMSE describe these eight synthetic records per method; no uncertainty or significance is inferred.",
+  "input_csv": "../inputs/predictions.csv",
+  "quantity": "activation Gibbs free energy",
+  "unit": "kcal/mol",
+  "reference": "separated reactants",
+  "conditions": {
+    "temperature_K": 298.15,
+    "standard_state": "1 mol/L",
+    "theory": "shared illustrative setting; identity not supplied",
+    "solvent": "shared illustrative setting; identity not supplied"
+  },
+  "population": "same eight supplied reactions, RX-001 through RX-008",
+  "split": "not supplied; no generalization claim",
+  "colors": {
+    "Baseline": "#0072B2",
+    "Candidate": "#D55E00"
+  },
+  "residual_definition": "predicted minus reference",
+  "residual_x": "reaction_id; method offsets -0.13 and +0.13 are display-only",
+  "uncertainty": "not supplied and not inferred"
+}

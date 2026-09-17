@@ -1,0 +1,7 @@
+{
+  "rule_type": "project_preference",
+  "description": "Configurable colors; category order and redundant markers carry meaning.",
+  "categorical": ["#0072B2", "#D55E00", "#009E73", "#CC79A7", "#6A5ACD", "#555555"],
+  "markers": ["o", "s", "^", "D", "v", "P"],
+  "stages": {"passed": "#0072B2", "failed": "#D55E00", "pending": "#E6AB02", "previous_attrition": "#E4E4E4"}
+}

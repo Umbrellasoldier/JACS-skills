@@ -1,0 +1,24 @@
+{
+  "data_status": "synthetic",
+  "claim": "Demonstrate the figure contract using synthetic examples.",
+  "caption": "Synthetic demonstration only; values are not results of a chemical study.",
+  "kind": "workflow",
+  "profile": "toc",
+  "columns": 3,
+  "wrap_chars": 12,
+  "data": [
+    {
+      "id": "input",
+      "label": "Chemical inputs"
+    },
+    {
+      "id": "model",
+      "label": "Candidate generation"
+    },
+    {
+      "id": "check",
+      "label": "Path validation"
+    }
+  ],
+  "raster_class": "color"
+}

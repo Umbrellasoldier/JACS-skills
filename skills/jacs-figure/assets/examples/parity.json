@@ -1,0 +1,92 @@
+{
+  "data_status": "synthetic",
+  "claim": "Demonstrate the figure contract using synthetic examples.",
+  "caption": "Synthetic demonstration only; values are not results of a chemical study.",
+  "kind": "parity",
+  "profile": "double",
+  "height_pt": 260,
+  "quantity": "activation free energy",
+  "unit": "kcal/mol",
+  "reference": "separated reactants",
+  "conditions": {
+    "theory": "illustrative only",
+    "solvent": "illustrative only",
+    "temperature_K": 298.15,
+    "standard_state": "1 mol/L (illustrative)"
+  },
+  "data": [
+    {
+      "reaction_id": "r01",
+      "method": "Method A",
+      "reference_value": 10,
+      "predicted": 11
+    },
+    {
+      "reaction_id": "r02",
+      "method": "Method A",
+      "reference_value": 15,
+      "predicted": 13
+    },
+    {
+      "reaction_id": "r03",
+      "method": "Method A",
+      "reference_value": 20,
+      "predicted": 21.5
+    },
+    {
+      "reaction_id": "r04",
+      "method": "Method A",
+      "reference_value": 25,
+      "predicted": 24
+    },
+    {
+      "reaction_id": "r05",
+      "method": "Method A",
+      "reference_value": 30,
+      "predicted": 30.5
+    },
+    {
+      "reaction_id": "r06",
+      "method": "Method A",
+      "reference_value": 35,
+      "predicted": 37
+    },
+    {
+      "reaction_id": "r01",
+      "method": "Method B",
+      "reference_value": 10,
+      "predicted": 12
+    },
+    {
+      "reaction_id": "r02",
+      "method": "Method B",
+      "reference_value": 15,
+      "predicted": 11
+    },
+    {
+      "reaction_id": "r03",
+      "method": "Method B",
+      "reference_value": 20,
+      "predicted": 23
+    },
+    {
+      "reaction_id": "r04",
+      "method": "Method B",
+      "reference_value": 25,
+      "predicted": 22
+    },
+    {
+      "reaction_id": "r05",
+      "method": "Method B",
+      "reference_value": 30,
+      "predicted": 31
+    },
+    {
+      "reaction_id": "r06",
+      "method": "Method B",
+      "reference_value": 35,
+      "predicted": 39
+    }
+  ],
+  "raster_class": "color"
+}

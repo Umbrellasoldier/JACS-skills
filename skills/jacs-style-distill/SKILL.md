@@ -1,12 +1,17 @@
 ---
 name: jacs-style-distill
-description: Build a source-traceable JACS writing-style corpus from supplied full texts or public article records. Use for JACS 文风蒸馏、语料整理、段落修辞标注; not manuscript drafting or model parameter training.
+description: Build source-traceable JACS writing and figure-style corpora from supplied texts, figures or public records. Use for JACS 文风蒸馏、绘图风格蒸馏、语料整理 and source annotation; not manuscript drafting or model parameter training.
 ---
 
 # JACS style distillation
 
 Produce conditional writing guidance supported by identifiable article passages. The bundled
 pilot covers a small reaction-chemistry sample; expand its scope only with new source evidence.
+
+For **figure-style distillation**, read [figure workflow](references/figure-workflow.md) instead
+of the prose-specific annotation steps below. Inspect actual images; keep captions, visual
+observations and measured physical properties distinct. Use
+[jacs-figure](../jacs-figure/SKILL.md) to draw from established guidance and author data.
 
 ## Sources and split
 
