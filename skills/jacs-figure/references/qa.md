@@ -53,6 +53,15 @@ Intentional text over a fill may be acceptable. Explain a reviewed exception rat
 weakening a global threshold. A designed large explanatory panel need not match smaller ones;
 check comparable groups and their shared edges. Do not equate lack of collision with alignment.
 
+## Mixed illustrations
+
+For imagegen assets, apply the relevant [composition review](imagegen-workflow.md#provenance-and-final-review).
+Inspect the original asset and final export, verify its nonquantitative meaning, and keep exact
+chemistry/data layers tied to their sources. Measure effective raster resolution at final size;
+vector labels over a bitmap do not make its internal marks auditable. Preserve the generation
+record and applicable disclosure. The current TOC route excludes generated imagery, including
+backgrounds; see the [AI policy](../../jacs-shared/references/graphics-policy.md#ai-generated-artwork).
+
 ## Delivery
 
 Check caption facts against the figure and source data. A short QA note should state actual

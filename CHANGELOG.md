@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.6.0 — 2026-09-17
+
+Route image-generation requests by scientific meaning and publication destination. Keep data
+plots, structures, coordinates and simple workflows source-driven; support optional generated
+inserts for captioned conceptual figures and creative cover work. Add prompt cards, editable
+layer composition, per-asset provenance and final-size raster review guidance.
+
+Verify the ACS AI policy and explicitly exclude generated imagery from TOC graphics, correcting
+the earlier suggestion to prioritize imagegen for TOC artwork. Distinguish cover and captioned
+figure disclosures. Update skill routing, chemistry guidance, QA and submission review together.
+This is a guidance release: plotting code, dependency versions and the 17 synthetic gallery
+images are unchanged. No image-generation execution or visual-quality gain is claimed;
+see evaluation/figure-v6/REPORT.md for the validation scope.
+
 
 ## 0.5.0 — 2026-09-17
 

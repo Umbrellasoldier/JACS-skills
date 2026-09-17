@@ -18,8 +18,23 @@ Checked 2026-09-17 against [JACS author guidelines](https://researcher-resources
 | TOC purpose | Original unpublished artwork, a concise impression of the chemistry; not a dense results panel |
 
 The TOC guide also specifies authorship/originality and placement requirements; consult it
-when preparing the submission package. AI artwork is a distinct route requiring current
-ACS policy review, not automatically cleared by passing these technical checks.
+when preparing the submission package.
+
+## AI-generated artwork
+
+Checked 2026-09-17 against the [ACS AI policy](https://researcher-resources.acs.org/publish/aipolicy),
+whose displayed update date is 2024-12-13. Recheck for submission or if the intended use changes.
+
+| Destination | ACS policy snapshot |
+|---|---|
+| TOC | AI-generated images should not appear in TOC graphics. |
+| Captioned graphics | Explain AI use briefly in the caption; disclose when/how it was used in Acknowledgments, with fuller methods where substantial. Authors remain responsible for accuracy. |
+| Cover artwork | AI generation is permitted with the tool and its use identified in the submitted cover caption; check commercial-use and output-ownership terms. |
+
+Passing size or resolution checks does not establish compliance. For implementation choices,
+see [image-generation routing](../../jacs-figure/references/imagegen-workflow.md).
+Source-driven rendering is not a blanket exemption from disclosing AI-assisted design or code;
+record the actual use without mislabeling a generated image as an original measurement.
 
 The supplied 7–8 pt plot text, open axes, palettes and 1.5 pt alignment tolerance are project
 defaults, not additional ACS mandates. SI page layout is task-dependent. Accessible encoding

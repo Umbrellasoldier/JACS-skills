@@ -22,6 +22,7 @@ usable and identify the author facts needed to apply it; do not claim research s
 | Sequential accounting includes pending work | Declare the snapshot/window. Not-entered cases can include upstream failures and pending work; they are not all failures. Distinguish passed/entered from passed/initial cohort. |
 | Energy paths end at different energies | Identify distinct states (e.g., P_A/P_B) and their structures when supplied. Do not give an identical product two energies under one convention. A generic level tutorial is not a chemically specified mechanism. |
 | Workflow/TOC claims TS generation | Distinguish graph edits, 3D embedding and validation; define color emphasis. A product drawing alone does not establish a TS method. Dashed proposed links are not measured partial bonds or optimized geometry. |
+| A generated illustration is included | Establish its destination, origin and conceptual role using [image-generation guidance](imagegen-workflow.md). Keep it separate from data/geometry; check the applicable [AI policy](../../jacs-shared/references/graphics-policy.md#ai-generated-artwork), including the TOC exclusion. |
 
 ## Inspect the delivered scale
 

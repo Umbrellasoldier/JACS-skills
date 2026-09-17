@@ -1,6 +1,6 @@
 ---
 name: jacs-figure
-description: Design, create, revise, and audit JACS scientific figures from data and chemical structures. Use for JACS 科研绘图、箱线图、小提琴图、一致性散点、光谱、热图、能量剖面、多面板组图和 TOC 图; use jacs-polishing for caption-only prose edits.
+description: Design, create, revise, and audit JACS data figures, chemical schemes, method illustrations, TOC and cover artwork. Use for JACS 科研绘图、数据图、方法示意图、TOC、封面和 imagegen 绘图选择; use jacs-polishing for caption-only prose edits.
 ---
 
 # JACS scientific figures
@@ -17,6 +17,10 @@ materials and biological chemistry; its observations are conditional, not a whol
   relevant part of [chemistry figures](references/chemistry-figures.md).
 - **Revise:** preserve the existing data mapping, backend and unaffected design. A color or
   label change does not authorize changing scientific content or rebuilding the whole figure.
+- **Illustration, cover or imagegen choice:** read [image-generation routing and composition](references/imagegen-workflow.md).
+  Choose by the output's role and what each visual element asserts. ACS TOC graphics use no
+  AI-generated images under the current [policy snapshot](../jacs-shared/references/graphics-policy.md#ai-generated-artwork).
+  A request for a recommendation or plan does not itself request image generation.
 - **Audit or export:** read [QA](references/qa.md) and the applicable
   [graphics policy](../jacs-shared/references/graphics-policy.md).
 - **Submission readiness:** also read [submission review](references/submission-readiness.md)
@@ -24,9 +28,11 @@ materials and biological chemistry; its observations are conditional, not a whol
 - **Derive style from papers:** use the figure route in
   [jacs-style-distill](../jacs-style-distill/SKILL.md); captions alone do not establish visual style.
 
-For a new rendering task use Python unless the user or supplied workflow establishes another
-backend. Respect an existing R or chemistry drawing workflow. Read-only review needs no
-backend choice. The bundled Python templates are optional tools, not the entire skill.
+For a new quantitative rendering task use Python unless the user or supplied workflow establishes
+another backend. Respect an existing R or chemistry drawing workflow. Use editable vector tools
+for simple diagrams and chemical drawings; use available image-generation tools for suitable
+nonquantitative illustrations. Read-only review needs no backend choice. The bundled Python
+templates are optional tools, not the entire skill.
 
 ## Scientific meaning before styling
 
@@ -72,6 +78,10 @@ Use chemical drawing software or real structure assets for molecules and TS pane
 SMILES depiction is not a calculated 3D geometry. Do not infer bond distances from its pixels.
 The structure template draws SMILES or assembles supplied SVG; obtain a real geometry renderer
 for XYZ/SDF-based 3D views. Generated artwork must not substitute for measured/calculated data.
+In a mixed illustration, keep data marks, structures, labels and process arrows in source-backed
+layers. Generated raster assets may supply a conceptual visual where appropriate; adding vector
+labels or tracing an image does not remove its AI origin. A pale palette alone does not justify
+generating a new image. Improve scientific specificity and visual hierarchy first.
 
 ## Verify and deliver
 
@@ -94,6 +104,9 @@ can demonstrate a usable design; they cannot establish readiness of a research f
 
 Deliver requested formats with the specification, plotting source/version, data or source
 index, caption facts and concise QA notes. Keep source papers and private project data local.
+When generated assets are used, also retain their actual prompts, available tool/model metadata,
+original outputs, final placements and applicable disclosure. Inspect the exported composite;
+the PDF auditor cannot verify raster content or establish publication-policy compliance.
 For prose-only captions use [jacs-polishing](../jacs-polishing/SKILL.md); when drafting Results
 use [jacs-writing](../jacs-writing/SKILL.md) with the verified figure facts. Do not upgrade the
 claim beyond the evidence. Apply submission-specific checks only to the requested deliverable.

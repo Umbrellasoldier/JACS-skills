@@ -5,17 +5,19 @@
 面向计算反应化学、化学机器学习和生物正交反应的论文写作与科研绘图技能包。
 从作者事实起草、润色文字、制作可复现图表，并从可定位的 JACS 全文与实际图像中提炼规律。
 
-**v0.5.0 把投稿审阅问题落实到规则、工具和 17 幅示例。**
-新增实际 PDF 线宽检查、保留观测值的散点排布、带宽敏感性显示和共享坐标直方图分面。
-热图与区间图的摘要可从保留值复算；阶段统计区分未进入与失败，图注按论文语言编写并另附事实记录。
-所有示例仍是合成演示，技术通过不代表真实研究的投稿准备完成。
+**v0.6.0 增加 imagegen 的用途判断与混合插画制作流程。**
+按数据图、精确化学结构、流程图、正文概念插画、TOC 和封面选择工具，提供提示词模板、
+分层合成、来源记录和成图检查。依据 [ACS AI 政策](https://researcher-resources.acs.org/publish/aipolicy)，
+正式 TOC 不使用 AI 生成图像；正文插画和封面分别处理披露要求。
+本版更新技能规则，保留 v0.5 的 17 幅合成示例及其验证记录；没有新增生成图或声称画质提升。
 
 ![同一批合成反应的有符号误差与绝对误差覆盖率](examples/figures/showcase.png)
 
-查看[新版图库和图注](examples/figures/README.md)、[修复与逐图复核](evaluation/figure-v5/REPORT.md)、
-[投稿审阅规则](skills/jacs-figure/references/submission-readiness.md)。
+查看[工具选择与制作流程](skills/jacs-figure/references/imagegen-workflow.md)、
+[本版验证范围](evaluation/figure-v6/REPORT.md)、[图库和图注](examples/figures/README.md)、
+[逐图复核](evaluation/figure-v5/REPORT.md)和[投稿审阅规则](skills/jacs-figure/references/submission-readiness.md)。
 绘图文献证据仍为 [50 篇 JACS、199 幅实看图](skills/jacs-shared/references/figure-study-v3.md)，
-本轮依据实际示例的复核修复工作流，没有把文献覆盖量或机械检查当作成图质量证明。
+新流程不增加文献覆盖量，也不把机械检查当作成图质量证明。
 
 写作语料仍包含 34 篇候选题录、
 8 篇开发组全文的结构化处理、35 条来源标注及 5 条条件式文风规则。
@@ -63,6 +65,11 @@ python3 scripts/install_skills.py --destination "$HOME/.codex/skills"
 使用 $jacs-figure，根据这份预测表绘制 parity 和 residual 图，保留所有反应。
 另外绘制分阶段成功率，明确每阶段分母，导出 PDF、SVG、PNG 和检查记录。
 
+使用 $jacs-figure，把现有流程图改成正文方法示意图。
+按内容选择精确绘图或 imagegen，保留化学结构和数据来源，并交付可编辑合成文件。
+
+使用 $jacs-figure，判断这些图哪些适合 imagegen；本次只给工具选择和理由。
+
 使用 $jacs-style-distill，从这些全文中分析引言末段和机理讨论的写法。
 记录每条观察对应的 DOI 和段落位置。
 ```
@@ -72,7 +79,7 @@ python3 scripts/install_skills.py --destination "$HOME/.codex/skills"
 
 ## 绘图
 
-新建绘图默认使用 Python；已有 R 或化学绘图工程按原工作流处理。内置工具可直接运行：
+新建定量图默认使用 Python；已有 R 或化学绘图工程按原工作流处理。内置工具可直接运行：
 
 ```bash
 uv sync --locked --group dev --group figures --group chemistry
@@ -100,6 +107,11 @@ uv run --locked --group figures --group chemistry python skills/jacs-figure/scri
 输出含 PDF、SVG、PNG、可重跑规格、图注和实际 QA JSON；TOC 自动附 TIFF。
 结构模板生成二维图，三维 TS 面板需要真实结构和对应渲染器。
 机械检查通过后仍须查看成图，`UNKNOWN` 项不视为通过。
+
+imagegen 是合适插画任务的可选能力，不是安装或绘制数据图的前提。简单流程图保持矢量，
+复杂正文插画可把生成素材与精确结构、文字和箭头组合；具体用法见
+[imagegen 分工、提示词与检查](skills/jacs-figure/references/imagegen-workflow.md)。
+现有渲染器不调用图像生成服务，也不能自动判定素材来源或政策合规。
 
 见[原创合成示例](examples/figures/README.md)、[数据规格](skills/jacs-figure/references/figure-contract.md)、
 [标签与排版](skills/jacs-figure/references/labels-layout-scale.md)、[配色方案](skills/jacs-figure/references/color-design.md)、
