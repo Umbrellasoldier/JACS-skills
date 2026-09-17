@@ -1,0 +1,42 @@
+[
+  {
+    "case_id": "W7-01",
+    "output": "Transition-state generation requires coordinating bonding changes with three-dimensional structure and reaction-path connectivity. We introduce a hierarchical method that separates bonding hypotheses from conformational sampling, predicting a continuous bonding graph from atom-mapped endpoint graphs, generating coordinates conditioned on that graph, and validating candidate paths on a potential-energy surface. On a 120-reaction benchmark, bond-order prediction achieves a mean absolute error of 0.041. With predicted graphs, the median per-reaction lowest transition-state RMSD among 12 retained candidates is 0.18 Å before refinement. Frequency characterization and endpoint-verified intrinsic reaction coordinate calculations yield validated paths for 111 of 120 reactions; within this successful subset, the median reference-assisted lowest RMSD after refinement is 0.07 Å. On the cycloaddition set, 72 of 80 reactions yield successful paths at the same candidate budget. Among these successful reactions, reference-assisted selection of the candidate closest to each reference barrier gives a barrier MAE of 2.6 kcal mol−1 and a Spearman correlation of 0.91. These results connect bonding predictions to structurally accurate candidates and validated reaction paths through separately controlled bonding and conformational exploration."
+  },
+  {
+    "case_id": "W7-02",
+    "output": "公开反应数据为过渡态生成提供了学习基础，不同方法则依赖不同层次的结构信息。E 模型以优化后的三维端点为条件，从 SMILES 出发还需构建构象、优化几何、安排片段相对取向并配对端点；G 模型直接由二维反应图生成过渡态。图驱动路线也在延伸：近期方法 Q 结合反应物图与反应位点生成过渡态，方法 V 则将图条件生成接入势能面搜索。这些进展使键合状态与空间构象如何组织成为值得研究的问题。本文将键合假设与其构象采样分别控制，以便在不同键合状态之间探索，并在各假设下展开构象搜索。"
+  },
+  {
+    "case_id": "W7-03",
+    "output": "图 2a–c 评估了单输出模型 A 对 200 条测试反应的连续键级预测。参考键级由参考过渡态几何上的半经验计算得到，端点条件流模型以映射端点图编码化学环境并生成键级矩阵。原子对 MAE 为 0.052；以 0.12 为连接阈值，148/200 条反应的整图拓扑与参考一致（74%），整图离散键级完全匹配的为 116/200（58%）。这些结果分别从连续数值、连通关系和离散键级标签衡量预测质量：模型能够重现多数反应的参考连接模式，而精确到全图键级标签的匹配要求更为严格。\n\n图 2d 使用另一多候选模型 B，考察沿同一候选序列增加候选数 K 所带来的匹配率变化，两组面板对应不同的模型设置。随着 K 从 1 增至 8，关键原子对匹配率由 90% 提高至 98%，中心拓扑匹配率由 76% 提高至 94%；整图拓扑匹配率由 64% 提高至 89%，整图离散键级匹配率由 46% 提高至 62%。多假设采样同时扩大了局部反应中心和完整参考图的覆盖，其中整图拓扑匹配提高 25 个百分点，体现了探索多个键合假设对补充单次生成遗漏的连接模式的价值。至 K = 8，整图离散键级匹配率仍低于拓扑匹配率，表明获得正确连通关系与同时确定所有键级标签具有不同难度。"
+  },
+  {
+    "case_id": "W7-04",
+    "output": "A 在较小候选预算下即可获得较高的反应覆盖率。在相同的 100 个反应上，两种方法采用一致判据，按实际输入顺序逐个验证候选；反应成功率统计至少有一个候选成功的反应占比。仅验证首个候选时，A 和 B 的反应成功率分别为 84% 和 60%，A 高出 24 个百分点。达到至少 90% 覆盖率的最小已测预算分别为每反应 3 个和 7 个候选，即 300 与 700 次候选验证，A 所需的候选验证预算减少约 57%。A 在 k = 1–7 时保持更高的反应覆盖率；至 k = 8，B 的覆盖率为 93%，略高于 A 的 92%，因此 A 的覆盖优势主要体现在较小预算阶段。\n\n以 100k 为分母统计累计候选成功率，A 在全部已测预算下均保持较高的成功候选比例：随 k 从 1 增至 8，A 由 84% 降至 64%，B 由 60% 降至 51%，两者差距由 24 个百分点收窄至 13 个百分点。A 和 B 的累计候选成功率分别下降 20 和 9 个百分点，A 的降幅更大，但其在每个预算下的成功比例仍高于 B。结合首候选成功率和达到 90% 覆盖所需的预算，A 的优势集中体现为初始候选质量较高、较少的候选验证即可覆盖多数反应，以及整个已测预算范围内持续较高的候选成功比例。"
+  },
+  {
+    "case_id": "W7-05",
+    "output": "Model A organizes structural exploration around an explicit bonding hypothesis: fixing the graph samples conformations within that hypothesis, whereas changing the graph explores a different bonding state. On the same reaction set with equal sampling budgets, A yields a median within-reaction pairwise RMSD of 0.21 Å, compared with 0.58 Å for the architecturally distinct, endpoint-graph-only Model B. This more concentrated sampling is consistent with the intended separation of bonding and conformational exploration. With predicted hypotheses, representative selection preserves accurate structures in the retained pool, whose median per-reaction reference-assisted lowest RMSD is 0.16 Å, linking controlled sampling to a compact set of geometrically accurate candidates."
+  },
+  {
+    "case_id": "W7-06",
+    "output": "本方法以映射端点图为输入，将键合状态的预测与给定键合状态下的构象生成分为两个分别训练的模型：首先预测连续键级矩阵 B，再固定 B 作为条件生成坐标 X，从而分别控制键合假设及其构象采样。坐标生成的训练路径定义为 X_t = (1−t)X_0 + tX_1，其中 X_0 为高斯源中的样本，X_1 为训练目标坐标，t ∈ [0,1] 为路径参数，X_t 表示相应的插值坐标；该路径连接源分布与目标结构。参考过渡态图仅用于训练和条件生成能力测试，完整流程使用预测图。对每个反应，流程生成多个键合假设并在各假设下采样构象，再选取代表候选进行频率、IRC 和身份验证，三项均通过才判定候选成功。\n\n下表仅为 SI 编排计划；本次未提供 SI 文件，尚未完成或核查实际迁移。\n\n| 拟迁移内容 | 已知设置 | 拟定 SI 位置 |\n|---|---|---|\n| 训练参数 | 学习率 0.0002；batch 48；种子 19 | 模型训练细节 |\n| 采样积分 | 36 步 | 坐标采样设置 |\n| 候选预算与筛选 | 每反应 6 个图 × 每图 40 个构象；保留 12 个代表候选用于验证 | 候选生成与筛选 |\n| 运行记录 | 日志目录 runs/demo | 复现信息 |\n| 验证细节 | 频率、IRC 和身份验证的具体设置及判据尚未提供 | 路径验证流程，待补充 |"
+  },
+  {
+    "case_id": "W7-07",
+    "output": "1. 用具体结果及其科学作用突出优势，删去重复的自我否定和模板化的后续验证结尾；将必要限定直接嵌入结果句，使正文保持清晰、有力的论证语气。\n2. 将参考辅助最佳候选评价表述为候选池质量或候选池中的最低误差，并保留选择条件；未提供无参考选择结果时，不将其改称部署预测误差。\n3. 分别陈述设计功能、观察到的性能和可能的解释；未提供单组件对照时，不将优势归结为条件图的独立因果贡献，也不照搬修订稿中超出证据的“证明”措辞。"
+  },
+  {
+    "case_id": "W7-08",
+    "output": "Each accepted candidate has one imaginary frequency, and its two IRC endpoints match the intended reactant and product."
+  },
+  {
+    "case_id": "W7-09",
+    "output": "尚未完成正文与 SI 的分工：新版将核心表示、主公式和变量定义一并移出，使正文无法解释方法设计，应保留这些内容及关键工作流，将学习率、优化器阈值和种子等复现细节安排到 SI。由于本次未提供 SI 文件，无法确认这些细节是否已实际迁移，“全部方法见 SI S2”只能视为待核实的指引。"
+  },
+  {
+    "case_id": "W7-10",
+    "output": "结构改善见图 4b,c，能量精度见图 4d–f。\n\n在 150 个测试反应中，132 个至少获得一条成功路径（88%）；在该成功子集中，各反应经参考辅助选择所得最低 RMSD 的中位数为 0.09 Å。"
+  }
+]

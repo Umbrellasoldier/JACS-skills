@@ -1,0 +1,301 @@
+{
+  "files": [
+    {
+      "path": "skills/jacs-figure/SKILL.md",
+      "sha256": "4dc714bc1bda1d527ffea62613fad5423546bf03453e67b44c7d3c75d73b9c6f"
+    },
+    {
+      "path": "skills/jacs-figure/agents/openai.yaml",
+      "sha256": "bb43b479be013b9bfe09302a5722dcbb7ceb779e6a85314c73005f9292f00cfc"
+    },
+    {
+      "path": "skills/jacs-figure/assets/examples/agreement.json",
+      "sha256": "f670791769109afc0ddc213e01a03900ab8e56631468f2740e8a594045e33c8e"
+    },
+    {
+      "path": "skills/jacs-figure/assets/examples/boxplot.json",
+      "sha256": "c4f5554985f3aaa433023a8413aafb34695373cca2b6306794cecc9a6dc27c6c"
+    },
+    {
+      "path": "skills/jacs-figure/assets/examples/comparison.json",
+      "sha256": "95e1d22320e34cee832d35442a7c6fbd6e3113d66d5e55fda8b077a3cef8f284"
+    },
+    {
+      "path": "skills/jacs-figure/assets/examples/ecdf.json",
+      "sha256": "6ce97b74f955807c8526b331a83d5bca4142e3e5de162e9b95180df05f35e730"
+    },
+    {
+      "path": "skills/jacs-figure/assets/examples/energy.json",
+      "sha256": "3ca7129539b23e9b6b8104c5a1f915f321219c97b320ec01f57a7be9326d2ff3"
+    },
+    {
+      "path": "skills/jacs-figure/assets/examples/heatmap.json",
+      "sha256": "40e2eac95a86014899289644bd6faa99c01b6e7b85c3c7bfccf37b12fed850c5"
+    },
+    {
+      "path": "skills/jacs-figure/assets/examples/histogram.json",
+      "sha256": "24880a887f50e0ec8c85a18e16264b5ee17b8010e4e06996d3ae290e3b55f1e7"
+    },
+    {
+      "path": "skills/jacs-figure/assets/examples/intervals.json",
+      "sha256": "ba85065b55d1a6f8f96262ae6e6f5fa50940068605e59cc3cd63e3fc4a53ec11"
+    },
+    {
+      "path": "skills/jacs-figure/assets/examples/learning.json",
+      "sha256": "d0f05c97a2d4a3c27849fefc766a6f6f75019fc0790d4e5f1e508f1c45e3fb17"
+    },
+    {
+      "path": "skills/jacs-figure/assets/examples/parity.json",
+      "sha256": "684b024ffe181a279179f9fad36492e33478373d63f3dfdecaf2b4105ad97c96"
+    },
+    {
+      "path": "skills/jacs-figure/assets/examples/showcase.json",
+      "sha256": "30271e7402595453be6c8b407adeb2eb5a7237bef09d535734ac3a5f15b77f73"
+    },
+    {
+      "path": "skills/jacs-figure/assets/examples/spectra.json",
+      "sha256": "58505672edc462c7e0abacc5db58cc178fe910600cad15d6318cd2e65a25d494"
+    },
+    {
+      "path": "skills/jacs-figure/assets/examples/stages.json",
+      "sha256": "1aa913b1bf96baf593cc5bcb6a92217a239ddc0c0b9f2ca6a58102c7ba4cefe7"
+    },
+    {
+      "path": "skills/jacs-figure/assets/examples/structures.json",
+      "sha256": "6cd536ffac9f74847c253ef9db1f10d1cc190d2e3f7157b2528b6f5b1bbfd4c8"
+    },
+    {
+      "path": "skills/jacs-figure/assets/examples/toc.json",
+      "sha256": "4038cbe4ca434e361b47981091da64bf3977ca1694390302498327ac2efc3a51"
+    },
+    {
+      "path": "skills/jacs-figure/assets/examples/violin.json",
+      "sha256": "022b899da3640e7d0f4abe1de605a97c74dca5028838304f19a799c3f817a317"
+    },
+    {
+      "path": "skills/jacs-figure/assets/examples/workflow.json",
+      "sha256": "0c7de9dc38b82272f5380d82503c2d1e175fbc0a51a63b63ff8d73809c0d514f"
+    },
+    {
+      "path": "skills/jacs-figure/assets/jacs.mplstyle",
+      "sha256": "7648bdf69b2146e120e55ae6d48c75f732fce4fa3da79054723f55a4f5c7f08d"
+    },
+    {
+      "path": "skills/jacs-figure/assets/palettes.json",
+      "sha256": "41bee2d90c0edef9306839789586f1414f22994959f71551ada5e9a28cc5aed8"
+    },
+    {
+      "path": "skills/jacs-figure/references/chart-catalog.md",
+      "sha256": "1454acfb864ada07137681bf2aa373e50746c464281452db16be0871e638e434"
+    },
+    {
+      "path": "skills/jacs-figure/references/chemistry-figures.md",
+      "sha256": "fd7c5db21854ab31aa360bde85dd6fadcd36e1b905f33d67570a4f8df28b91ba"
+    },
+    {
+      "path": "skills/jacs-figure/references/color-design.md",
+      "sha256": "3a76e9481162ae6edd2042833e7b2850e0e206fc07b7fa7ca929153a48af5d4f"
+    },
+    {
+      "path": "skills/jacs-figure/references/data-design-patterns.md",
+      "sha256": "c505e634963e54163817ba6b3d7fa1280508f80b495cafd612c3deeccd38fd46"
+    },
+    {
+      "path": "skills/jacs-figure/references/figure-contract.md",
+      "sha256": "7e69a3fa373a7397e4517297dd0be35bd30a105f0936f014862d5d35a5e9e1cd"
+    },
+    {
+      "path": "skills/jacs-figure/references/imagegen-workflow.md",
+      "sha256": "85bdb28753af6cd7ca80766d9149ad86c6bcc409d97e132365cc2d1689c3c4be"
+    },
+    {
+      "path": "skills/jacs-figure/references/labels-layout-scale.md",
+      "sha256": "b085f385fbe063f5139661cd3f044aa7db3fe3bbe616b9df215c1f73bf1de60d"
+    },
+    {
+      "path": "skills/jacs-figure/references/qa.md",
+      "sha256": "e4cfecfbf38ac1924517f6953306e75732277a9c62a08c5a24157b75e2647749"
+    },
+    {
+      "path": "skills/jacs-figure/references/submission-readiness.md",
+      "sha256": "08ff06fffdb4ab032f4cb3444e752dbe99aaa7890cbf3ad1e16f56e946472312"
+    },
+    {
+      "path": "skills/jacs-figure/references/visual-rules.md",
+      "sha256": "b26353aa4616854e7c44f357b41c1cf41bf06fb24092aa65527d88ec0938bcfb"
+    },
+    {
+      "path": "skills/jacs-figure/scripts/audit_figure.py",
+      "sha256": "7e36a73f510a54dd74b4463df42204a789a8157dab0f489118ed23bce0804683"
+    },
+    {
+      "path": "skills/jacs-figure/scripts/audit_strokes.py",
+      "sha256": "5f638360023968e015a689c35e14bc604ac17a363c05e24822dec1a0cd25b869"
+    },
+    {
+      "path": "skills/jacs-figure/scripts/figure_caption.py",
+      "sha256": "6d316553eebb127f8abee00bcd940aa3b69081485487da6a133e17db79fff7d1"
+    },
+    {
+      "path": "skills/jacs-figure/scripts/figure_spec.py",
+      "sha256": "fac54085899714153373179ad856fffbb8d63e0a7239520fe03910d8a0ade47c"
+    },
+    {
+      "path": "skills/jacs-figure/scripts/figure_style.py",
+      "sha256": "78d407a2d31955919b23a822151122971e68aef6d0b0b6b839af9192f20e762a"
+    },
+    {
+      "path": "skills/jacs-figure/scripts/plot_figures.py",
+      "sha256": "30e3ef081c6df6bb14dfd23b7982d62a8a19784d8c7753f8ce40165444a6d9bf"
+    },
+    {
+      "path": "skills/jacs-figure/scripts/point_layout.py",
+      "sha256": "1d022f8261e8bc6725aa9553a5c4900bb6bec3092babeebfb0eeab05d2293e24"
+    },
+    {
+      "path": "skills/jacs-figure/scripts/preview_color.py",
+      "sha256": "61a97b6c4a124873e2b0910a43cc80cb05e9282d521fac83970eb53621548f1f"
+    },
+    {
+      "path": "skills/jacs-figure/scripts/statistical_figures.py",
+      "sha256": "9a79d1fb06f0b69628129347174a0ab2402556a8417fa1098c2f2b5389f15e36"
+    },
+    {
+      "path": "skills/jacs-figure/scripts/svg_panels.py",
+      "sha256": "c2d7c352cd7c8679384bf57b788d717489d9e0debfbabbdc05517018bad71327"
+    },
+    {
+      "path": "skills/jacs-polishing/SKILL.md",
+      "sha256": "fcec67fcc6e5a7e017a43c7cb889289dceaf8cf3a6654f380ad02aa091f99207"
+    },
+    {
+      "path": "skills/jacs-polishing/agents/openai.yaml",
+      "sha256": "bd4c10963944fb4c04ce4a27c56df0d8930fac4833d31abbfd11fd4669a53dbf"
+    },
+    {
+      "path": "skills/jacs-polishing/references/editing.md",
+      "sha256": "9281064df30b8c862d38e83d43df10b7514cb69a924cbf99b4e985e17b623245"
+    },
+    {
+      "path": "skills/jacs-shared/SKILL.md",
+      "sha256": "159da567890514c7514c56998069edf141eca849e2c4809b886447680d108ce3"
+    },
+    {
+      "path": "skills/jacs-shared/agents/openai.yaml",
+      "sha256": "b9e4b730da09e7c724df3a0aa81e6464784f5037e197c2c504dc448bee41dd61"
+    },
+    {
+      "path": "skills/jacs-shared/references/argument-and-evidence.md",
+      "sha256": "ded6e44d0b393673ee3f159b04afab9a9663a4a6d561fcdd30c9766a30e2d3db"
+    },
+    {
+      "path": "skills/jacs-shared/references/chemistry-semantics.md",
+      "sha256": "811778e5c0a8492604e640b609bd8d8bdae41a820f498b597f4e1feb5bf94419"
+    },
+    {
+      "path": "skills/jacs-shared/references/corpus-manifest.jsonl",
+      "sha256": "4b8c93fad2c63e1d5a310a513112c6e71e63a7ee006e5a8c3a6e62dd04af90dd"
+    },
+    {
+      "path": "skills/jacs-shared/references/figure-annotations.jsonl",
+      "sha256": "fb311b3d95d506dd61e1c580700e90af4ad9fb3d97716ada7deb16a91ef7c1bb"
+    },
+    {
+      "path": "skills/jacs-shared/references/figure-corpus-v3.jsonl",
+      "sha256": "2db804979c75ac76d6c5a6f0cab47669d7422465ac67946cc24385a208381e49"
+    },
+    {
+      "path": "skills/jacs-shared/references/figure-corpus.jsonl",
+      "sha256": "8530dbecf66dd5446ec713a26764d10d02714e1238eb018e826a404765293026"
+    },
+    {
+      "path": "skills/jacs-shared/references/figure-findings.md",
+      "sha256": "aa07579a7c3bbca62b1accfa27f57a6e01d4aa57c3ff8a8374048282dbd8a032"
+    },
+    {
+      "path": "skills/jacs-shared/references/figure-observations-v3.jsonl",
+      "sha256": "2d44a8cc2cc90f7e65dfb1cb2961a623fb4f9e3d473c5a4be69f06c248b70131"
+    },
+    {
+      "path": "skills/jacs-shared/references/figure-rules-v3.jsonl",
+      "sha256": "6a4ceec096ad20850dfafd5fd4196dd7f2d2aff9eb2b809f56fa91fef7bfc18f"
+    },
+    {
+      "path": "skills/jacs-shared/references/figure-rules.jsonl",
+      "sha256": "6b2997c18780fd1e03f043bdf2ce2ea26490385fe231838a689b89c3f80141c3"
+    },
+    {
+      "path": "skills/jacs-shared/references/figure-study-v3.md",
+      "sha256": "f142eb4d2237b11c8f8fce67a9d34ff0d4a2bc886a5f2a49675e3b1f97043d48"
+    },
+    {
+      "path": "skills/jacs-shared/references/graphics-policy.md",
+      "sha256": "9e7bcddd2f28b282bb8dad73b76028567b6260c34d3b8641a311ae577958d6e8"
+    },
+    {
+      "path": "skills/jacs-shared/references/journal-policy.md",
+      "sha256": "714e08518828af1396b033bd79c699677b683d1a6f71521717e2c7514a823499"
+    },
+    {
+      "path": "skills/jacs-shared/references/pilot-annotations.jsonl",
+      "sha256": "81d97af397282f868e94e26d3ae86b9805b1a898ee464148800698863bd6933a"
+    },
+    {
+      "path": "skills/jacs-shared/references/pilot-findings.md",
+      "sha256": "2ca1214a1e655c534f231b43a6051364f7cabffc81c80df8d8efc03124f3f624"
+    },
+    {
+      "path": "skills/jacs-shared/references/pilot-statistics.json",
+      "sha256": "4f3f492c0cef03b8dea1b68adb323a0ce7e6eb6aa547d6593d5d46c518998d54"
+    },
+    {
+      "path": "skills/jacs-shared/references/project-facts.md",
+      "sha256": "00a46cf8bc9acc282e393109f4d902fb3742b8e904a36a306ffddd4eac271dd3"
+    },
+    {
+      "path": "skills/jacs-shared/references/style-rules.jsonl",
+      "sha256": "c1bd586a81314168cbc2423e93ada920a7192a1d72ca5742c3ac08c90979f6e7"
+    },
+    {
+      "path": "skills/jacs-style-distill/SKILL.md",
+      "sha256": "aafc338fc42389452b26e83e9e46fb76936732938ddecf8ab866bb04427cced0"
+    },
+    {
+      "path": "skills/jacs-style-distill/agents/openai.yaml",
+      "sha256": "403690da04631acf932069ef7a748eb712577bd6155541e7de39250dd31021d0"
+    },
+    {
+      "path": "skills/jacs-style-distill/references/annotation-schema.md",
+      "sha256": "444370ceeaaeb0d4c018a4a6a63b65be100c31ae59ac1011830d759bea8c732d"
+    },
+    {
+      "path": "skills/jacs-style-distill/references/corpus-workflow.md",
+      "sha256": "361f390c34ea19739794eb0f9635a6f105c97ea0373809c4136a298ee927cef1"
+    },
+    {
+      "path": "skills/jacs-style-distill/references/figure-workflow.md",
+      "sha256": "c7ae39acf7e94aaf3b8d7a0470aa169032a0adfdbb8a1d17d7e5869cd9c13d29"
+    },
+    {
+      "path": "skills/jacs-style-distill/scripts/corpus.py",
+      "sha256": "d51144e0f5f60f530df6632efbfcbae07f7c634d918c7c072e086dd93dd80400"
+    },
+    {
+      "path": "skills/jacs-style-distill/scripts/figure_corpus.py",
+      "sha256": "2710b9b4fd8ce805e3af711bd2087cf4bfb1f56bc570ddad8d60e3b1fefb378d"
+    },
+    {
+      "path": "skills/jacs-writing/SKILL.md",
+      "sha256": "27a92c34cf9711379c5f3647076137f7ed301b7db093ba25a342801ab9d7805b"
+    },
+    {
+      "path": "skills/jacs-writing/agents/openai.yaml",
+      "sha256": "bcef91c39b22c7ee38d7143a22d59bfd012b060b29a0654e76b3019cb97eb14d"
+    },
+    {
+      "path": "skills/jacs-writing/references/sections.md",
+      "sha256": "4da6569ce2f0080ca459c2524a68f01cf50612b42dc1101729f9988d147a03b3"
+    }
+  ],
+  "requests_sha256": "b692d968046558923aef3871ba67e4441b020b9b173f786ef39c0ca5f414ecb9"
+}

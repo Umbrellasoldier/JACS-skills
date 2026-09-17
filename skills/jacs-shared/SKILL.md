@@ -13,6 +13,8 @@ Read only what the requesting task needs, then return to that skill's workflow.
   validation, selectivity, and model evaluation boundaries.
 - [Project facts](references/project-facts.md): author data and terminology, separate from
   journal-level observations.
+- [Argument and evidence](references/argument-and-evidence.md): contribution-focused prose,
+  paired author revisions, figure/text consistency and main-text/SI allocation.
 - [Pilot findings](references/pilot-findings.md): scope and reviewed interpretation of the
   first corpus pilot.
 - [Style rules](references/style-rules.jsonl): conditional corpus observations with locators.

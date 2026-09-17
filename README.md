@@ -5,16 +5,16 @@
 面向计算反应化学、化学机器学习和生物正交反应的论文写作与科研绘图技能包。
 从作者事实起草、润色文字、制作可复现图表，并从可定位的 JACS 全文与实际图像中提炼规律。
 
-**v0.6.0 增加 imagegen 的用途判断与混合插画制作流程。**
-按数据图、精确化学结构、流程图、正文概念插画、TOC 和封面选择工具，提供提示词模板、
-分层合成、来源记录和成图检查。依据 [ACS AI 政策](https://researcher-resources.acs.org/publish/aipolicy)，
-正式 TOC 不使用 AI 生成图像；正文插画和封面分别处理披露要求。
-本版更新技能规则，保留 v0.5 的 17 幅合成示例及其验证记录；没有新增生成图或声称画质提升。
+**v0.7.0 升级写作与润色：把方法优势写成清晰、完整的科学论证。**
+从作者提供的一组修改前后正文提炼条件式规则：连接中间预测、结构质量与下游验证，
+按测试集组织证据，先介绍参考与模型再解释结果，核对每条曲线和相邻数字的来源。
+减少技术报告式叙述与重复的自我否定，强化设计—结果—科学用途的联系，并明确正文与 SI 的分工。
+未公开文稿和真实结果保留在本地；公开评测使用另行编写的合成材料，不把作者偏好当作期刊统一规范。
 
 ![同一批合成反应的有符号误差与绝对误差覆盖率](examples/figures/showcase.png)
 
-查看[工具选择与制作流程](skills/jacs-figure/references/imagegen-workflow.md)、
-[本版验证范围](evaluation/figure-v6/REPORT.md)、[图库和图注](examples/figures/README.md)、
+查看[优势论证与证据规则](skills/jacs-shared/references/argument-and-evidence.md)、
+[本版试写与验证](evaluation/writing-v7/REPORT.md)、[imagegen 制作流程](skills/jacs-figure/references/imagegen-workflow.md)、[图库和图注](examples/figures/README.md)、
 [逐图复核](evaluation/figure-v5/REPORT.md)和[投稿审阅规则](skills/jacs-figure/references/submission-readiness.md)。
 绘图文献证据仍为 [50 篇 JACS、199 幅实看图](skills/jacs-shared/references/figure-study-v3.md)，
 新流程不增加文献覆盖量，也不把机械检查当作成图质量证明。
@@ -61,6 +61,12 @@ python3 scripts/install_skills.py --destination "$HOME/.codex/skills"
 保留已完成验证的范围，缺少的数据不要补写。
 
 使用 $jacs-polishing，压缩以下段落，仅返回英文正文。
+
+使用 $jacs-writing，对照我给出的两版正文和修订要求，学习论证顺序与强调方式。
+把适用的修改落实到新章节，保留各结果的真实定义和来源。
+
+使用 $jacs-polishing，突出这段结果的方法优势，减少技术报告口吻。
+将必要的条件简洁融入结果定义，并解释设计与性能之间的联系。
 
 使用 $jacs-figure，根据这份预测表绘制 parity 和 residual 图，保留所有反应。
 另外绘制分阶段成功率，明确每阶段分母，导出 PDF、SVG、PNG 和检查记录。

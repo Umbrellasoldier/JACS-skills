@@ -1,0 +1,27 @@
+{
+  "requests": 10,
+  "initial_outputs": 10,
+  "followup_case": "W7-04",
+  "frozen_instruction_files_per_snapshot": 74,
+  "snapshots_intact": true,
+  "final_skill_matches_followup_snapshot": true,
+  "english_words": {
+    "W7-01": 172,
+    "W7-05": 104
+  },
+  "synthetic_budget_arithmetic": {
+    "first_reaction_gap_pp": 24,
+    "first_observed_budget_at_90_percent": {
+      "A": 3,
+      "B": 7
+    },
+    "candidate_budget_reduction_percent": 57.142857142857146,
+    "candidate_decline_pp": {
+      "A": 20,
+      "B": 9
+    },
+    "last_candidate_gap_pp": 13,
+    "last_reaction_gap_A_minus_B_pp": -1
+  },
+  "scope": "Artifact integrity and arithmetic, not automatic prose-quality grading."
+}

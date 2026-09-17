@@ -1,0 +1,18 @@
+{
+  "input_files_read": [
+    "requests.json"
+  ],
+  "skill_and_reference_files_read": [
+    "skills/jacs-writing/SKILL.md",
+    "skills/jacs-writing/references/sections.md",
+    "skills/jacs-shared/references/chemistry-semantics.md",
+    "skills/jacs-shared/references/argument-and-evidence.md"
+  ],
+  "execution_limitations": [
+    "Used the synthetic request and the updated frozen skill/reference files in this follow-up directory only.",
+    "No browsing, external source discovery, publication, installation, private-manuscript inspection, or inspection of parent notes was performed.",
+    "The initial trial outputs and skill files were not modified.",
+    "Only supplied rates and directly derived arithmetic were used; no timing result or statistical significance was inferred.",
+    "No model identifier or human-evaluation claim is supplied, and the response was not graded."
+  ]
+}
