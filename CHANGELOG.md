@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.9.0 — 2026-10-26
+
+Expand `jacs-reaction-english` from a transition-state vocabulary layer into a manuscript/SI
+lexicon for computational reaction chemistry. Add terminology for Wiberg/Mayer bond-order
+analysis, dataset curation, symmetry-aware structural metrics, Hessian and IRC validation,
+paired thermochemistry, standard states, solvent corrections, SPAAC/indolyne selectivity, and
+resource accounting.
+
+Add staged-validation, quantum-method, application, and computational-cost sentence patterns.
+Calibrate the source list primarily with published work in reaction selectivity, reproducible
+free-energy profiles, TS-search benchmarks, Hessian potentials, and benchmarking frameworks.
+Keep ICLR/OpenReview papers and preprints in a separate, explicitly labeled discovery section.
+Add explicit scope checks for `prior-free`, `chemically valid`, `general-purpose`, `high-throughput`,
+`mechanistic fidelity`, and `end-to-end`.
+
 ## 0.8.0 — 2026-10-26
 
 Add `jacs-reaction-english`, a domain-language layer for computational reaction chemistry,
