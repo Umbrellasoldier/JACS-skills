@@ -19,6 +19,30 @@ not establish a preferred expression when a published source is available.
 | Duan et al., *Nat. Mach. Intell.* (2025) | [10.1038/s42256-025-01010-0](https://doi.org/10.1038/s42256-025-01010-0) | Separates single-shot and multi-shot sampling, cumulative probabilities, structural RMSD, barrier-height error, and chemical accuracy. |
 | Zhao et al., *Adv. Sci.* (2025) | [10.1002/advs.202506240](https://doi.org/10.1002/advs.202506240) | Uses `end-to-end TS search workflow`, `application-relevant` evaluation, and task-specific reliability language. |
 
+## Generative-model and flow-matching sources
+
+| Source | Status and DOI/link | Expression role |
+|---|---|---|
+| Kim, Woo, and Kim, *Nat. Commun.* (2024) | Peer-reviewed article; [10.1038/s41467-023-44629-6](https://doi.org/10.1038/s41467-023-44629-6) | Calibrates `diffusion-based generative AI`, 2D molecular graphs, TS-geometry exploration, and generated candidates as inputs to downstream chemistry. |
+| Morehead and Cheng, *Commun. Chem.* (2024) | Peer-reviewed article; [10.1038/s42004-024-01233-z](https://doi.org/10.1038/s42004-024-01233-z) | Uses `geometry-complete diffusion`, `SE(3)-equivariant`, graph topology, denoising, chirality, and energetic stability. |
+| Huang et al., *Nat. Commun.* (2024) | Peer-reviewed article; [10.1038/s41467-024-46569-1](https://doi.org/10.1038/s41467-024-46569-1) | Uses conditional equivariant diffusion, local/global molecular dynamics, target conditioning, and lead optimization. |
+| Vost et al., *Digital Discovery* (2025) | Peer-reviewed article; [10.1039/D4DD00331D](https://doi.org/10.1039/D4DD00331D) | Calibrates `structural plausibility`, property-conditioned training, distorted conformers, validity, and high-quality regions of learned space. |
+| Hu et al., *Nat. Commun.* (2025) | Peer-reviewed article; [10.1038/s41467-025-63245-0](https://doi.org/10.1038/s41467-025-63245-0) | Uses target-conditioned E(3)-equivariant diffusion, atom and bond diffusion, property guidance, and reverse generative process. |
+| Dunn and Koes, *Digital Discovery* (2026) | Peer-reviewed article; [10.1039/D5DD00363F](https://doi.org/10.1039/D5DD00363F) | Calibrates multimodal flow matching, self-conditioning, fake atoms, geometry distortion, and inference-time distribution drift. |
+| Tuo, Chen, and Li, *Nat. Commun.* (2026) | Peer-reviewed article; [10.1038/s41467-026-75654-w](https://doi.org/10.1038/s41467-026-75654-w) | Uses conditional flow matching, deterministic optimal transport, Gaussian priors, sub-second sampling, alternative TSs, and reaction-network rollout. |
+| Luo, Gu, and Sun, *Nat. Commun.* (2026) | Peer-reviewed article; [10.1038/s41467-026-74101-0](https://doi.org/10.1038/s41467-026-74101-0) | Uses probability-flow learning in molecular distance geometry rather than Cartesian coordinates and distinguishes conditional generation from geometry optimization. |
+| Li et al., *Nat. Commun.* (2026) | Peer-reviewed article; [10.1038/s41467-026-71441-9](https://doi.org/10.1038/s41467-026-71441-9) | Uses disentangled semantic embeddings, controlled denoising, latent-space optimization, property manipulation, and retrieval-augmented generation. |
+
+## Foundational diffusion and flow terminology
+
+| Source | Status and DOI/link | Expression role |
+|---|---|---|
+| Song et al., *ICLR* (2021) | Published conference paper; [OpenReview record](https://openreview.net/forum?id=PxTIG12RRHS) | Anchors `score-based generative modeling`, forward and reverse-time SDEs, score functions, and probability-flow ODEs. |
+| Lipman et al., *ICLR* (2023) | Published conference paper; [OpenReview record](https://openreview.net/forum?id=PqvMRDCJT9t) | Anchors `flow matching`, simulation-free training, conditional probability paths, vector-field regression, and optimal-transport displacement interpolation. |
+| Karras et al., *NeurIPS* (2022) | Published conference paper; [10.52202/068431-1926](https://doi.org/10.52202/068431-1926) | Separates diffusion design choices for preconditioning, score networks, noise schedules, training, and sampling. |
+| Albergo, Boffi, and Vanden-Eijnden, *JMLR* (2025) | Peer-reviewed article; [JMLR 26, 209](https://www.jmlr.org/papers/v26/23-1605.html) | Unifies stochastic interpolants, deterministic probability-flow equations, SDEs, velocity fields, likelihood control, and Schrödinger bridges. |
+| Holderrieth et al., *ICLR* (2025) | Published conference paper; [OpenReview record](https://openreview.net/forum?id=RuP17cJtZo) | Uses generator matching to unify diffusion, flow matching, and discrete diffusion through arbitrary Markov processes. |
+
 ## Quantum chemistry, thermochemistry, and selectivity sources
 
 | Source | Status and DOI/link | Expression role |
@@ -45,8 +69,6 @@ not establish a preferred expression when a published source is available.
 
 | Source | DOI/link | Expression role |
 |---|---|---|
-| Luo, Gu, and Sun, *Nat. Commun.* (2026) | [10.1038/s41467-026-74101-0](https://doi.org/10.1038/s41467-026-74101-0) | Calibrates `distance geometry`, `conditioned on`, `initial guess`, `nonlinear optimization`, and `generalization to unseen reactions`. |
-| Tuo, Chen, and Li, *Nat. Commun.* (2026) | [10.1038/s41467-026-75654-w](https://doi.org/10.1038/s41467-026-75654-w) | Uses `roll out reaction networks`, `without templates or hand-crafted rules`, `mechanistic fidelity`, and `alternative pathways`. |
 | Darouich et al., *J. Chem. Inf. Model.* (2026) | [10.1021/acs.jcim.5c02902](https://doi.org/10.1021/acs.jcim.5c02902) | Distinguishes `low-fidelity TS guesses`, `refinement`, `fixed-point inference`, and barrier-error reduction. |
 | Xu et al., *Nat. Commun.* (2026) | [10.1038/s41467-026-77230-8](https://doi.org/10.1038/s41467-026-77230-8) | Calibrates `general-purpose TS generation`, `unseen chemical systems`, `reliable initial guesses`, and mechanistic exploration. |
 | Darouich et al., *Nat. Comput. Sci.* (2026) | [10.1038/s43588-026-01034-5](https://doi.org/10.1038/s43588-026-01034-5) | Uses `targeted benchmarks`, `chemical and structural novelty`, `self-supervised pretraining`, and `low-data regimes`. |

@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.10.0 — 2026-10-26
+
+Add a dedicated generative-model reference for diffusion, score-based models, flow matching,
+probability paths, reverse-time SDEs, probability-flow ODEs, guidance, equivariant molecular
+generation, latent-space control, distribution drift, and candidate-pool evaluation.
+
+Add claim grammar that separates denoising or transport trajectories from chemically validated
+reaction pathways. Add terminology for sampling budgets, NFE, deterministic ODE sampling,
+conditional generation, self-conditioning, and validity, novelty, uniqueness, diversity, and
+coverage metrics. Expand the public source set with published reaction-generation, molecular-
+diffusion, flow-matching, and foundational generative-model papers. Preprints remain secondary.
+
 ## 0.9.0 — 2026-10-26
 
 Expand `jacs-reaction-english` from a transition-state vocabulary layer into a manuscript/SI
