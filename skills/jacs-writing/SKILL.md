@@ -7,6 +7,9 @@ description: Draft or restructure JACS manuscript sections from author facts, fi
 
 Write the requested passage at the requested scale. The initial domain coverage is
 computational reaction chemistry, chemical machine learning, and bioorthogonal reactions.
+For domain-specific English terminology and Chinese-to-English expression, also read
+[jacs-reaction-english](../jacs-reaction-english/SKILL.md); this skill remains responsible for
+the argument and section structure.
 
 ## Establish the task
 

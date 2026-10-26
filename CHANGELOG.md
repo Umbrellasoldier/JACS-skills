@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.8.0 — 2026-10-26
+
+Add `jacs-reaction-english`, a domain-language layer for computational reaction chemistry,
+transition-state generation and search, reaction-pathway modeling, and chemical machine learning.
+The skill provides a terminology ledger, section-specific claim grammar, Chinese-to-English
+translation protocol, and evidence-aware metric definitions. It separates TS graphs, generated
+geometries, stationary-point optimization, pathway validation, candidate success, reaction
+coverage, and barrier ranking.
+
+Calibrate the vocabulary against earlier JACS reaction-methods sources and recent 2025–2026
+primary papers on flow matching, distance geometry, TS refinement, unseen chemistry, reactive
+machine-learning potentials, and validated workflow coverage. Private HERMES drafts and results
+remain local; the public skill contains only paraphrased, source-linked guidance. The installer
+now handles six sibling skills.
+
 ## 0.7.0 — 2026-09-18
 
 Upgrade writing and polishing from a private paired author revision. Lead with supported

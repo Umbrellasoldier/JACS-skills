@@ -14,7 +14,7 @@ contracts, source-traceable guidance, reusable tooling and reviewable delivery r
 | Original gallery | Six families plus TOC generated as PDF/SVG/PNG; TOC also TIFF | Structure layout remains `UNKNOWN` to the automatic auditor and was inspected visually |
 | Corpus | 14 papers; 49 figures actually viewed | 40 development/calibration observations and 9 post-freeze held-out checks |
 | Frozen evidence | Annotation and rule hashes match [freeze record](rule-freeze.json) | Does not establish independent scientific validity of published results |
-| Skill packaging | All five entrypoints validated; complete installation and installed structure-render smoke check succeeded | Runtime dependencies stay in the separate project environment |
+| Skill packaging | All six entrypoints validated; complete installation and installed structure-render smoke check succeeded | Runtime dependencies stay in the separate project environment |
 | Archived forward programs | Both published program snapshots reran successfully in isolated local copies | Regenerated PDF metadata/hashes may differ from the evaluated originals |
 | Export checks | Physical PDF dimensions, transformed text sizes, declared panel alignment, TIFF pixel dimensions | Font embedding, arbitrary graphic collisions and embedded-image source DPI are not fully audited |
 
