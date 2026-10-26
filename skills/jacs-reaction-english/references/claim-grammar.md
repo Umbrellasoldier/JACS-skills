@@ -69,6 +69,32 @@ ordering].`
 Use `consistent with` for an ordering comparison unless the calculation also models the kinetic
 and experimental conditions needed for a quantitative product ratio.
 
+For a diffusion model, name the variables and process before the result:
+
+`The forward process perturbs [coordinates, categorical features, or both] according to [noise
+schedule], and the time-conditioned network learns [the score, noise, or denoised state]. During
+inference, [sampler] generates [candidates] conditioned on [input] after [NFE] network evaluations.`
+
+For a flow-matching model, name the path and transport object:
+
+`The model regresses a conditional velocity field along a [linear or optimal-transport]
+probability path that transports [source distribution] to [target distribution]. We integrate the
+resulting ODE with [solver] to generate [candidates] conditioned on [input].`
+
+Do not call a denoising or ODE trajectory a reaction pathway unless the manuscript validates
+chemical connectivity, endpoint identity, and the stated pathway criterion. Use `generative
+trajectory` or `transport trajectory` for the learned path in representation space.
+
+For a candidate-pool evaluation, separate generative and chemical metrics:
+
+`We report [validity, uniqueness, novelty, diversity] for the generated pool and [TS, IRC, or
+endpoint] success after downstream validation. These metrics use different denominators.`
+
+For deterministic flow sampling, state the latent condition:
+
+`With the initial latent, condition, solver, and numerical settings fixed, the ODE sampler is
+deterministic. Resampling the initial latent produces an ensemble of candidates.`
+
 ## Methods
 
 Use a compact operation–object–condition structure:
@@ -144,3 +170,7 @@ accuracy unless the selection rule is available at inference time.
 | `全流程` | `full workflow` or `end-to-end` only after listing the declared input and output stages. |
 | `加速` | `reduced elapsed time`, `reduced force evaluations`, or `reached the same coverage with fewer candidates`, depending on the measured quantity. |
 | `误差下界` | `error lower bound` only for a defined reference-assisted or oracle-like selection; otherwise use `attainable accuracy`. |
+| `扩散轨迹` | `denoising trajectory` or `diffusion trajectory`; reserve `reaction pathway` for chemical validation. |
+| `确定性流模型` | `deterministic ODE sampling under fixed initial conditions`; do not imply one output across resampled latents. |
+| `学习反应机理` | `learns a distribution over [representation]` or `generates mechanistic hypotheses`, unless a validated pathway mechanism was measured. |
+| `物理有效` | `physically plausible under [criterion]`; equivariance or geometric accuracy alone is insufficient. |

@@ -44,10 +44,27 @@ between sections.
 
 | Chinese concept | Preferred English |
 |---|---|
+| 扩散模型 | diffusion model / denoising diffusion model |
+| 基于分数的生成模型 | score-based generative model |
+| 正向加噪 | forward noising process / forward diffusion process |
+| 反向去噪 | reverse denoising process / reverse-time generative process |
+| 分数网络 | score network / time-conditioned score network |
+| 噪声调度 | noise schedule / variance schedule |
+| 去噪分数匹配 | denoising score matching |
+| 反向时间随机微分方程 | reverse-time stochastic differential equation (SDE) |
+| 概率流常微分方程 | probability-flow ordinary differential equation (ODE) |
 | 条件流匹配 | conditional flow matching |
 | 流匹配模型 | flow-matching model / conditional flow-matching model |
+| 条件概率路径 | conditional probability path |
+| 速度场 | velocity field / conditional velocity field |
+| 向量场回归 | vector-field regression |
 | 最优传输 | optimal transport (OT) |
 | 确定性输运 | deterministic transport |
+| 采样器 | sampler / numerical sampler |
+| 网络函数评估次数 | number of function evaluations (NFE) |
+| 分类器引导 | classifier guidance |
+| 无分类器引导 | classifier-free guidance |
+| 属性引导 | property guidance / property-conditioned sampling |
 | 等变网络 | equivariant neural network; `E(3)-equivariant` or `SE(3)-equivariant` as defined by the model |
 | 图条件生成 | graph-conditioned generation |
 | 端点条件 | endpoint-conditioned / conditioned on reactant and product endpoints |
@@ -69,6 +86,10 @@ between sections.
 | 端点身份核验 | endpoint-identity verification |
 | 能垒 | barrier height / activation barrier | Use `activation free energy` for ΔG‡ and `activation energy` for ΔE‡ only when the quantity is defined. |
 | 能垒排序 | barrier ranking / rank ordering of barriers |
+
+For the detailed diffusion, flow-matching, conditioning, and generative-evaluation rules, read
+[Generative models](generative-models.md). Keep a model's denoising or transport trajectory
+separate from a chemically validated reaction pathway.
 
 ## Metrics and comparisons
 
