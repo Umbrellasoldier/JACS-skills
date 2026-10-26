@@ -1,0 +1,4 @@
+interface:
+  display_name: "JACS Reaction English"
+  short_description: "Translate and polish computational reaction chemistry prose"
+  default_prompt: "Use $jacs-reaction-english to translate or polish professional English for computational reaction chemistry."

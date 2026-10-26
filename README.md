@@ -5,6 +5,10 @@
 面向计算反应化学、化学机器学习和生物正交反应的论文写作与科研绘图技能包。
 从作者事实起草、润色文字、制作可复现图表，并从可定位的 JACS 全文与实际图像中提炼规律。
 
+**v0.8.0 增加计算反应化学专业英语层。**
+`jacs-reaction-english` 为过渡态生成、反应路径建模、流匹配和化学机器学习提供术语、
+句式和中英翻译核查；公开文献只用于词汇校准，不覆盖作者事实或项目定义。
+
 **v0.7.0 升级写作与润色：把方法优势写成清晰、完整的科学论证。**
 从作者提供的一组修改前后正文提炼条件式规则：连接中间预测、结构质量与下游验证，
 按测试集组织证据，先介绍参考与模型再解释结果，核对每条曲线和相邻数字的来源。
@@ -34,6 +38,7 @@
 | [`jacs-polishing`](skills/jacs-polishing/SKILL.md) | 润色、翻译和精简已有文字，保持化学含义和证据范围。 |
 | [`jacs-figure`](skills/jacs-figure/SKILL.md) | 设计、绘制、修改、检查和导出科研图；保持数据与化学身份。 |
 | [`jacs-style-distill`](skills/jacs-style-distill/SKILL.md) | 获取／导入全文和图像，记录来源，提炼写作与绘图规律。 |
+| [`jacs-reaction-english`](skills/jacs-reaction-english/SKILL.md) | 翻译和修订计算反应化学英语，统一过渡态、反应路径、模型与指标的专业表达。 |
 | [`jacs-shared`](skills/jacs-shared/SKILL.md) | 其他技能共用的期刊要求、化学语义、项目事实及语料参考。 |
 
 要求、观察与事实分开管理：JACS 官方要求按文章类型和投稿阶段应用；样本文风规律作为
@@ -50,8 +55,8 @@ cd JACS-skills
 python3 scripts/install_skills.py --destination "$HOME/.codex/skills"
 ```
 
-安装器一起复制五个相邻技能目录并检查共享引用。遇到同名目录时默认停止；确认需要更新
-这五个技能后可加 `--replace`。其他技能目录不受影响。也可以把五个目录整体复制到兼容
+安装器一起复制六个相邻技能目录并检查共享引用。遇到同名目录时默认停止；确认需要更新
+这六个技能后可加 `--replace`。其他技能目录不受影响。也可以把六个目录整体复制到兼容
 `SKILL.md` 的工具所使用的技能目录。新任务中按名称使用所需技能。
 
 用法示例：
@@ -67,6 +72,9 @@ python3 scripts/install_skills.py --destination "$HOME/.codex/skills"
 
 使用 $jacs-polishing，突出这段结果的方法优势，减少技术报告口吻。
 将必要的条件简洁融入结果定义，并解释设计与性能之间的联系。
+
+使用 $jacs-reaction-english，把这段计算反应化学中文翻译成专业英文。
+先建立术语表，区分 TS 初猜、生成结构、鞍点验证和路径成功，不要改变数字或证据范围。
 
 使用 $jacs-figure，根据这份预测表绘制 parity 和 residual 图，保留所有反应。
 另外绘制分阶段成功率，明确每阶段分母，导出 PDF、SVG、PNG 和检查记录。

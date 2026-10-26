@@ -7,6 +7,9 @@ description: Polish, translate, or shorten existing JACS scientific prose while 
 
 Edit at the requested depth. A local grammar change needs the source sentence and affected
 facts, not a new manuscript plan. Preserve established terminology and earlier user choices.
+For computational reaction chemistry translation or field-specific terminology, read
+[jacs-reaction-english](../jacs-reaction-english/SKILL.md) alongside this general polishing
+workflow.
 
 Read [editing decisions](references/editing.md) when translation, compression, or structural
 edits require more than a local correction. For energy, TS validation, selectivity, or model

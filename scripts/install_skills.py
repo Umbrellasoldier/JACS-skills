@@ -10,7 +10,14 @@ import shutil
 import tempfile
 from pathlib import Path
 
-NAMES = ("jacs-shared", "jacs-style-distill", "jacs-writing", "jacs-polishing", "jacs-figure")
+NAMES = (
+    "jacs-shared",
+    "jacs-style-distill",
+    "jacs-writing",
+    "jacs-polishing",
+    "jacs-figure",
+    "jacs-reaction-english",
+)
 
 
 def check_links(root: Path) -> None:
@@ -86,7 +93,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--destination", type=Path, required=True)
     parser.add_argument(
-        "--replace", action="store_true", help="Replace only these five named skills"
+        "--replace", action="store_true", help="Replace only these six named skills"
     )
     args = parser.parse_args()
     try:
