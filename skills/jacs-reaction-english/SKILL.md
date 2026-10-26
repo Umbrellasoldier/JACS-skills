@@ -27,6 +27,9 @@ Read only the supporting reference needed for the current task:
   evidence-calibrated verbs.
 - [Translation protocol](references/translation-protocol.md) for a manuscript passage or a
   terminology-ledger workflow.
+- [Manuscript lexicon](references/manuscript-lexicon.md) when the passage includes quantum-
+  chemistry details, data curation, structural benchmarking, pathway validation,
+  thermochemistry, selectivity applications, or computational-cost accounting.
 - [Field sources](references/field-sources.md) when the user asks for recent literature,
   citation-aware phrasing, or an update of the field vocabulary.
 
@@ -42,21 +45,30 @@ Read only the supporting reference needed for the current task:
    conformers, reference-conditioned versus predicted-conditioned generation, single-shot
    versus multi-candidate sampling, selected subsets versus the full test set, and pre- versus
    post-refinement values.
-4. Prefer field-native verbs over literal Chinese calques: `encode`, `condition`, `sample`,
+4. When a passage contains a quantum-chemical or SI detail, name the operation and its level:
+   fixed-geometry single point, geometry optimization, frequency analysis, Hessian
+   classification, IRC tracing, qRRHO correction, implicit-solvent single point, and standard
+   state are distinct operations. Do not collapse an ML potential, a semiempirical label, and a
+   DFT reference into one generic `calculation`.
+5. Prefer field-native verbs over literal Chinese calques: `encode`, `condition`, `sample`,
    `generate`, `refine`, `relax`, `converge`, `recover`, `validate`, `quantify`, `rank`,
    `reproduce`, and `resolve` when their objects and evidence fit. Use `demonstrate`,
    `establish`, or `enable` only at the strength supported by the data.
-5. Preserve symbols, superscripts, units, denominators, dataset names, model names, and
+6. Preserve symbols, superscripts, units, denominators, dataset names, model names, and
    stereochemical descriptors. Write `kcal mol−1`, `Å`, `RMSD`, `DMAE`, `MAE`, `RMSE`,
    `R²`, and `Spearman ρ` consistently with the source or requested journal format.
-6. Translate for an English-speaking chemist rather than word-for-word. Reorder clauses so
+7. Translate for an English-speaking chemist rather than word-for-word. Reorder clauses so
    that the actor, operation, object, condition, and consequence are easy to identify.
    Keep a concise active voice in the abstract and Results; use passive voice only when the
    operation or material is more important than its actor.
-7. Do not silently strengthen a claim. `suggest`, `support`, and `are consistent with` are
+8. Use `chemically valid`, `prior-free`, `general-purpose`, `high-throughput`, and `end-to-end`
+   only with their operational scope. A graph can be chemically plausible before pathway
+   validation; a method can be free of hand-crafted templates without being free of learned or
+   physical priors; and a cost claim needs a defined timing boundary and resource budget.
+9. Do not silently strengthen a claim. `suggest`, `support`, and `are consistent with` are
    useful for an interpretation; `show` or `achieve` is appropriate for a measured result;
    `prove`, `solve`, `guarantee`, and `revolutionize` require unusually strong evidence.
-8. When a Chinese phrase is scientifically ambiguous, preserve the most defensible meaning
+10. When a Chinese phrase is scientifically ambiguous, preserve the most defensible meaning
    and flag the decision in a terminology ledger. Do not invent a citation, a validation,
    a causal ablation, or a missing configuration to make the English sound complete.
 

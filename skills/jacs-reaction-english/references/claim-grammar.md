@@ -51,6 +51,24 @@ For all curves in a figure, identify the metric and comparison before grouping t
 more slowly` only after checking the change from the first to the last point. Preserve a crossover
 when it changes the advertised comparison.
 
+For a staged validation result, use the stage as the grammatical subject:
+
+`After [TS optimization and frequency analysis], [n/N] candidates proceeded to [IRC tracing],
+of which [n/N] passed [endpoint-identity criterion].`
+
+This keeps a first-order saddle-point rate separate from validated-pathway coverage. A sentence
+may summarize the chain, but it should not call every Hessian-validated saddle a successful
+reaction pathway.
+
+For an application to competing channels, state the comparison unit before the interpretation:
+
+`For [reaction family], the calculated [forward activation free energies / ΔΔG‡ values] rank
+[channel A] below [channel B], consistent with the reported [regioselectivity or reactivity
+ordering].`
+
+Use `consistent with` for an ordering comparison unless the calculation also models the kinetic
+and experimental conditions needed for a quantitative product ratio.
+
 ## Methods
 
 Use a compact operation–object–condition structure:
@@ -62,6 +80,22 @@ and validated by [procedure].`
 Keep the meaning of core equations, variables, training/inference distinction, and claim-defining
 thresholds in the main text. Move exhaustive hyperparameters, seeds, file layouts, and environment
 details to the SI only when the SI actually contains them.
+
+For a quantum-chemical method description, use:
+
+`At the [level of theory], [software] was used to [optimize / compute a single point / evaluate
+frequencies]. [Thermochemical or solvation treatment] was then applied under [temperature,
+pressure, and standard state].`
+
+For a cost comparison, use:
+
+`Under a common [hardware/resource] budget, the workflow required [elapsed time or number of
+validated candidates] to reach [defined outcome]. The accounting includes [stages] and excludes
+[queueing, retries, or preparation] where applicable.`
+
+Do not translate a private accounting convention into the generic claim `the method is faster`.
+Use `lower elapsed time`, `fewer force evaluations`, `fewer validated candidates`, or
+`higher throughput` only when that exact quantity was measured.
 
 ## Discussion and conclusion
 
@@ -75,6 +109,21 @@ Use a calibrated causal ladder:
 Do not turn a comparison with multiple changed inputs into a component-causal proof. Do not end
 every favorable paragraph with a generic limitation. Keep a limitation when it changes the scope
 of the headline claim, and place it next to that claim.
+
+Use the following scope checks before high-impact adjectives:
+
+| Expression | Use only when |
+|---|---|
+| `prior-free` | The method avoids the named expert templates or hand-crafted rules; it can still use data, physical constraints, or learned priors. |
+| `chemically valid` | The manuscript defines and passes the relevant connectivity, charge, stereochemical, stationary-point, and pathway checks. |
+| `general-purpose` / `generalizable` | The test set probes the claimed chemical or elemental shift and the split is independent of training. |
+| `high-throughput` | A throughput or resource comparison is reported for a specified workflow and fidelity. |
+| `end-to-end` | The stated input and output cover all claimed stages without an unreported manual or oracle step. |
+| `mechanistic fidelity` | The comparison includes pathway or product identity, not only coordinate similarity. |
+
+`Attainable accuracy`, `candidate-pool ceiling`, and `retrospective reference-assisted selection`
+are appropriate for an upper-bound analysis. They should not be phrased as prospective prediction
+accuracy unless the selection rule is available at inference time.
 
 ## High-value Chinese calques to repair
 
@@ -90,3 +139,8 @@ of the headline claim, and place it next to that claim.
 | `能垒变化趋势` | `trend in barrier heights` or `barrier ranking`, depending on whether magnitude or order is measured. |
 | `反应成功率` | `reaction success rate` only if a reaction-level success definition is given. |
 | `候选成功率` | `candidate success rate` only if the candidate-level denominator is given. |
+| `化学有效结构` | `chemically plausible structure` before pathway checks; `validated reaction-path structure` after the full criterion is passed. |
+| `先验自由` | `free of hand-crafted templates` or `template-free`, unless the manuscript truly excludes all prior information. |
+| `全流程` | `full workflow` or `end-to-end` only after listing the declared input and output stages. |
+| `加速` | `reduced elapsed time`, `reduced force evaluations`, or `reached the same coverage with fewer candidates`, depending on the measured quantity. |
+| `误差下界` | `error lower bound` only for a defined reference-assisted or oracle-like selection; otherwise use `attainable accuracy`. |
